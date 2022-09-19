@@ -1,0 +1,145 @@
+---
+format: html
+---
+
+```{r, echo = FALSE, message = FALSE}
+# Define tooltip
+cc_tooltips <- function(cc_df = NULL) {
+
+  total_by_year <- cc_df |>
+    group_by(cr_year)  |>
+    summarise(cc_total_all = sum(cc_total),
+              cc_total_prop = sum(prop))
+
+
+  my_tooltips <-
+    cc_df |>
+      mutate(colors = case_when(
+        cc == "CC BY" ~ "#65BADA",
+        cc == "CC BY-SA" ~ "#068E8C",
+        cc == "CC BY-NC" ~ "#00A757",
+        cc == "CC BY-NC-SA" ~ "#E5BA52",
+        cc == "CC BY-ND" ~ "#D86F27",
+        cc == "CC BY-NC-ND" ~ "#C82E6B")) |>
+      mutate(tooltip = glue::glue('
+<tr>
+    <td style="text-align:left;padding-bottom:0"><span style="color:{colors}">■</span> {cc}<br></td>
+    <td style="text-align:right;padding-bottom:0">{format(cc_total, big.mark = ",")}</td>
+    <td style="text-align:right;">{round(prop * 100, 1)}%</td>
+</tr>')) |>
+      group_by(cr_year) |>
+      summarise(tooltip_group = paste(tooltip, collapse = "")) |>
+      inner_join(total_by_year, by = "cr_year") |>
+      mutate(tooltip_group = glue::glue('<h3><span class="text-muted">Articles with Creative Commons license<br></span>in <b>{cr_year}</h3><hr><table style="margin:8px 0 0;padding:0;width:100%">
+  <colgroup>
+       <col span="1" style="width: 50%;">
+       <col span="1" style="width: 30%;">
+       <col span="1" style="width: 20%;">
+      </colgroup>
+    <tbody>
+    {tooltip_group}
+    <tr style="padding-top:5px">
+    <td style="text-align:left;padding-bottom:0;font-weight:bold;"><span style="color:transparent">■</span> <b>Total</b></td>
+    <td style="text-align:right;font-weight:bold;padding-bottom:0;">{format(cc_total_all, big.mark = ",")}</td>
+    <td style="text-align:right;font-weight:bold;">{round(cc_total_prop * 100, 1)}%</td>
+</tr></tbody></table>'))
+
+  # Bringing it all together for ggplot
+  # Ranges for retangles plot, which we want to use for data hover by year
+  my_rects <- tibble::tibble(
+    starts = as.character(2017:2021),
+    ends = as.character(2018:2022),
+    group = seq_along(2017:2021),
+    my_tooltip = as.character(2018:2022),
+    max_prop = .6
+  ) |>
+    inner_join(my_tooltips, by = c("my_tooltip" = "cr_year"))
+  return(my_rects)
+}
+
+
+#' Plot Creative Commons license over time
+plot_cc_variants_by_year <- function(cc_df = NULL) {
+  my_rects <- cc_tooltips(cc_df)
+  ggplot(cc_df, aes(cr_year, prop, fill = forcats::fct_rev(cc), group = forcats::fct_rev(cc))) +
+    geom_area(
+      #aes(fill = cc, group = cc),
+      stat = "identity",
+      color = "white",
+      size = 0.3
+    ) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1L),
+                       expand = expansion(mult = c(0, 0.05)),
+                       breaks = c(0, .25, .5),
+                       limits = c(0, .7)) +
+    geom_rect_interactive(
+      data = my_rects,
+      inherit.aes = FALSE,
+      aes(
+        xmin = starts,
+        xmax = ends,
+        ymin = 0,
+        ymax = max_prop,
+        group = group,
+        tooltip = tooltip_group
+      ),
+      color = "transparent",
+      fill = "transparent",
+      alpha = 0.01
+    ) +
+    scale_fill_manual("License spectrum",
+                      values =  c(
+                        `CC BY` = "#65BADA",
+                        `CC BY-SA` = "#068E8C",
+                        `CC BY-NC` = "#00A757",
+                        `CC BY-NC-SA` = "#E5BA52",
+                        `CC BY-ND` = "#D86F27",
+                        `CC BY-NC-ND` = "#C82E6B"
+                      ), guide = guide_legend(nrow = 1)) +
+    theme_minimal(base_family = "Source Sans Pro", base_size = 20) +
+    labs(y = NULL, x = NULL) +
+    #       title = "Open Access in Hybrid Journals",
+    #       subtitle = "By Creative Commons license variant as provided by Crossref\n") +
+    theme(panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.minor.y = element_blank(),
+          panel.ontop = FALSE,
+          legend.position="top", legend.justification = "right",
+          legend.title=element_text(size = 14), 
+    legend.text=element_text(size = 12)) 
+}
+```
+
+::: {.panel-tabset}
+
+## Global
+
+```{r, message=FALSE}
+cc_global_plot <- plot_cc_variants_by_year(cc_ind_global())
+# Return SVG
+girafe(
+  ggobj = cc_global_plot,
+  width_svg = 9,
+  height_svg = 5 * 0.618,
+ options = list(opts_tooltip(
+    css="background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    opacity = .95)))
+```
+
+## Germany
+
+```{r, message=FALSE}
+cc_de_plot <- plot_cc_variants_by_year(cc_ind_de())
+# Return SVG
+girafe(
+  ggobj = cc_de_plot,
+  width_svg = 9,
+  height_svg = 5 * 0.618,
+ options = list(opts_tooltip(
+    css="background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    opacity = .95)))
+```
+
+:::

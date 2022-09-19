@@ -1,0 +1,546 @@
+---
+format: html
+---
+
+```{r, echo = FALSE}
+library(tidyverse)
+library(reactable)
+library(htmltools)
+library(crosstalk)
+```
+
+```{r, echo = FALSE}
+#' React bar chart helper
+#'
+#' From <https://glin.github.io/reactable/articles/building-twitter-followers.html>
+#'
+#' @importFrom htmltools div
+#'
+#' @noRd
+react_bar_chart <- function(label, width = "100%", height = "14px", fill = "#00bfc4", background = NULL) {
+  bar <- htmltools::div(style = list(background = fill, width = width, height = height))
+  chart <- htmltools::div(style = list(flexGrow = 1, marginLeft = "6px", background = background), bar)
+  htmltools::div(style = list(display = "flex", alignItems = "center", justifyContent = "flex-end"), label, chart) }
+```
+
+```{r publisher_data}
+jct_hybrid_jns <- readr::read_csv("data/jct_hybrid_jns.csv")
+
+
+cc_openalex_inst_jn_ind <- readr::read_csv("data/cc_openalex_inst_jn_ind.csv") |>
+  rename(jn_id = issn_l) |> 
+  dplyr::filter(jn_id %in% jct_hybrid_jns$issn_l) |>
+  dplyr::mutate(cr_year = as.character(cr_year)) |>
+  dplyr::mutate(cc = factor(
+    cc,
+    # Order by permissiveness
+    levels = c(
+      "CC BY",
+      "CC BY-SA",
+      "CC BY-NC",
+      "CC BY-NC-SA",
+      "CC BY-ND",
+      "CC BY-NC-ND"
+    )))
+  
+cc_jn_ind <- readr::read_csv("data/cc_jn_ind.csv") |>
+  rename(jn_id = issn_l) |>
+  dplyr::filter(jn_id %in% jct_hybrid_jns$issn_l) |>
+  mutate(cr_year = as.character(cr_year)) |>
+  dplyr::mutate(cc = factor(
+    cc,
+    # Order by permissiveness
+    levels = c(
+      "CC BY",
+      "CC BY-SA",
+      "CC BY-NC",
+      "CC BY-NC-SA",
+      "CC BY-ND",
+      "CC BY-NC-ND"
+    )))
+```
+
+```{r table_data}
+## Global
+cc_jn_ind_pub <- jct_hybrid_jns |>
+  select(jn_id = issn_l, esac_publisher) |>
+  inner_join(cc_jn_ind, by = "jn_id") |>
+  distinct()
+
+all_df <- cc_jn_ind_pub |>
+  distinct(cr_year, esac_publisher, jn_id, jn_all) |>
+  group_by(cr_year, esac_publisher) |>
+  summarise(
+    all_journals = n_distinct(jn_id),
+    all_articles = sum(jn_all))
+# Journals without OA
+jns_without_oa <- cc_jn_ind_pub |> 
+  group_by(jn_id, esac_publisher, cr_year) |> 
+  summarise(prop = sum(prop), .groups = "drop") |> 
+  filter(prop == 0) |>
+  group_by(esac_publisher, cr_year) |>
+  summarise(no_oa_journals = n_distinct(jn_id), .groups = "drop")
+
+# CC article volume
+cc_top <- cc_jn_ind_pub |>
+    ungroup() |>
+  filter(!is.na(cc)) |>
+  group_by(cr_year, esac_publisher) |>
+  summarise(cc_total = sum(cc_total, na.rm = TRUE)) |>
+  right_join(all_df, by = c("esac_publisher", "cr_year")) |>
+  mutate(prop = cc_total / all_articles) |>
+  ungroup() |>
+  tidyr::complete(cr_year, nesting(esac_publisher), fill = list(cc_total = 0, prop = 0)) |>
+  select(-all_journals, - all_articles)
+
+
+global_table_df <- all_df |>
+  left_join(jns_without_oa, by = c("cr_year", "esac_publisher")) |>
+  ungroup() |>
+  tidyr::complete(cr_year, nesting(esac_publisher), fill = list(no_oa_journals = 0)) |>   
+  mutate(oa_jn_prop = 1 - (no_oa_journals / all_journals)) |>
+  left_join(cc_top, by = c("cr_year", "esac_publisher")) |>
+  mutate(oa_jns = all_journals - no_oa_journals) |>
+  mutate_if(is.double, ~replace(., is.na(.), 0)) |>
+  # Order
+  select(cr_year, esac_publisher, cc_total,  all_articles, prop, oa_jns,  all_journals,  oa_jn_prop) |> 
+  mutate(cat = "Global")
+
+```
+
+```{r}
+## Germany
+de_df <- jct_hybrid_jns |>
+  distinct(jn_id = issn_l, esac_publisher) |>
+  inner_join(cc_openalex_inst_jn_ind, by = "jn_id") |>
+  distinct() |>
+  filter(country_code == "DE")
+
+de_total <- de_df |>
+    distinct(cr_year, jn_id, articles_total, esac_publisher) %>%
+    group_by(cr_year, esac_publisher) %>%
+    summarize(jn_all = sum(articles_total))
+
+de_top <- de_df |>
+    filter(!is.na(cc)) |>
+  # Create Other category
+    distinct(cr_year, jn_id, articles_under_cc_variant, cc, esac_publisher) |>
+    group_by(cr_year, esac_publisher) |>
+    summarize(cc_total = sum(articles_under_cc_variant),
+              oa_journals = n_distinct(jn_id)) |>
+  # We also wanna include journals without OA article in a single year
+    right_join(de_total, by = c("cr_year", "esac_publisher")) |>
+    mutate(cr_year = factor(cr_year)) %>%
+    mutate(prop = cc_total / jn_all) %>%
+    mutate_if(is.numeric, ~replace(., is.na(.), 0)) |>
+  ungroup() |>
+   tidyr::complete(esac_publisher, nesting(cr_year), fill = list(cc_total = 0, prop = 0, jn_all = 0, journals = 0)) |>
+  mutate(cat = "Germany")
+
+# prepare merge with Global table
+# add globally active journals
+de_table <- global_table_df |>
+  select(cr_year, esac_publisher, all_journals) |>
+  inner_join(de_top, by = c("cr_year", "esac_publisher")) |>
+  mutate(oa_jn_prop = oa_journals / all_journals) |>
+  select(cr_year, esac_publisher, cc_total,  all_articles = jn_all, prop, oa_jns = oa_journals,  all_journals,  oa_jn_prop, cat) 
+
+# bind together
+publisher_table_df <- bind_rows(global_table_df, de_table)
+```
+
+```{r table}
+# Prepare bar width relative to Crosstalk selection
+bar_max_width <- publisher_table_df |>
+  group_by(cr_year, cat)  %>%
+  summarize(
+    max_all_group = max(all_articles),
+    max_cc_group = max(cc_total, na.rm = TRUE),
+    max_jn_group = max(all_journals)
+  ) |>
+  ungroup()
+
+table_df <- publisher_table_df |>
+  inner_join(bar_max_width, by = c("cr_year", "cat"))
+# Crosstalk interactivity
+# Initialize shared Crosstalk data
+shared_publisher_df <- SharedData$new(table_df)
+
+g <- reactable::reactable(
+  shared_publisher_df,
+  pagination = TRUE,
+  highlight = TRUE,
+  defaultColDef = colDef(vAlign = "center", headerClass = "header"),
+  defaultSorted = "all_articles",
+  defaultSortOrder = "desc",
+  compact = TRUE,
+  columns = list(
+    # Hide
+    cr_year = colDef(show = FALSE),
+    # Publisher
+    esac_publisher = colDef(
+      "Publisher",
+      minWidth = 180,
+      align = "left",
+      sticky = "left",
+      class = "label"
+    ),
+    # Total Article Volume
+    all_articles = colDef(
+      "Total",
+      format = colFormat(separators = TRUE, locales = "en-GB"),
+      width = 150,
+      style = list(whiteSpace = "pre"),
+      class = "number",
+      cell = function(value, index) {
+        width <-
+          paste0(value * 100 / shared_publisher_df$data()$max_all_group[index], "%")
+        ### add a comma to the label
+        value <- format(value, big.mark = ",")
+        ### justify and provide padding with width
+        value <- format(value, width = 10, justify = "right")
+        ### create the barchart div
+        bar <- div(
+          ### with a class of 'bar-chart'
+          class = "bar-chart",
+          ### give the bar a margin
+          style = list(marginRight = "6px"),
+          ### create the *actual* bar, with the red economist color
+          div(
+            class = "bar",
+            style = list(width = width, backgroundColor = "#c3c3c3")
+          )
+        )
+        ### bring it all together, with the 'value' (number) preceding the bar itself
+        div(class = "bar-cell", span(class = "number", value), bar)
+      },
+      align = "center"
+    ),
+    # CC Article Volume
+    cc_total = colDef(
+      "OA with CC",
+      format = colFormat(separators = TRUE, locales = "en-GB"),
+      width = 150,
+      style = list(whiteSpace = "pre"),
+      class = "number  border-left",
+      cell = function(value, index) {
+        width <-
+          paste0(value * 100 / shared_publisher_df$data()$max_cc_group[index], "%")
+        ### add a comma to the label
+        value <- format(value, big.mark = ",")
+        ### justify and provide padding with width
+        value <- format(value, width = 10, justify = "right")
+        ### create the barchart div
+        bar <- div(
+          ### with a class of 'bar-chart'
+          class = "bar-chart",
+          ### give the bar a margin
+          style = list(marginRight = "6px"),
+          ### create the *actual* bar, with the red economist color
+          div(
+            class = "bar",
+            style = list(width = width, backgroundColor = "#fc5185")
+          )
+        )
+        ### bring it all together, with the 'value' (number) preceding the bar itself
+        div(class = "bar-cell", span(class = "number", value), bar)
+      },
+      align = "center"
+    ),
+    prop = colDef(
+      name = "% OA with CC",
+      cell = function(value) {
+        value <- paste0(format(round(value * 100, 1), nsmall = 1), "%")
+        value <- format(value, width = 5, justify = "right")
+        react_bar_chart(value,
+                        width = value,
+                        fill = "#fc5185",
+                        background = "#c3c3c3")
+      },
+      align = "center",
+      style = list(whiteSpace = "pre"),
+      class = "number",
+      html = TRUE,
+      minWidth = 100
+    ),
+    # All Journals
+    all_journals = colDef(
+      "Total",
+      format = colFormat(separators = TRUE, locales = "en-GB"),
+      width = 150,
+      style = list(whiteSpace = "pre"),
+      class = "number  border-left",
+      cell = function(value, index) {
+        width <-
+          paste0(value * 100 / shared_publisher_df$data()$max_jn_group[index], "%")
+        ### add a comma to the label
+        value <- format(value, big.mark = ",")
+        ### justify and provide padding with width
+        value <- format(value, width = 10, justify = "right")
+        ### create the barchart div
+        bar <- div(
+          ### with a class of 'bar-chart'
+          class = "bar-chart",
+          ### give the bar a margin
+          style = list(marginRight = "6px"),
+          ### create the *actual* bar, with the red economist color
+          div(
+            class = "bar",
+            style = list(width = width, backgroundColor = "#c3c3c3")
+          )
+        )
+        ### bring it all together, with the 'value' (number) preceding the bar itself
+        div(class = "bar-cell", span(class = "number", value), bar)
+      },
+      align = "center"
+    ),
+    # OA Journals
+    oa_jns = colDef(
+      "with CC articles",
+      format = colFormat(separators = TRUE, locales = "en-GB"),
+      width = 120,
+      style = list(whiteSpace = "pre"),
+      class = "number",
+      cell = function(value, index) {
+        width <-
+          paste0(value * 100 / shared_publisher_df$data()$max_jn_group[index],
+                 "%")
+        ### add a comma to the label
+        value <- format(value, big.mark = ",")
+        ### justify and provide padding with width
+        value <- format(value, width = 10, justify = "right")
+        ### create the barchart div
+        bar <- div(
+          ### with a class of 'bar-chart'
+          class = "bar-chart",
+          ### give the bar a margin
+          style = list(marginRight = "6px"),
+          ### create the *actual* bar, with the red economist color
+          div(
+            class = "bar",
+            style = list(width = width, backgroundColor = "#3fc1c9")
+          )
+        )
+        ### bring it all together, with the 'value' (number) preceding the bar itself
+        div(class = "bar-cell", span(class = "number", value), bar)
+      },
+      align = "center",
+      show = FALSE
+    ),
+    # Percentage with OA
+    oa_jn_prop = colDef(
+      "% ≥ 1 CC article",
+      # Render the bar charts using a custom cell render function
+      cell = function(value) {
+        value <- paste0(format(round(value * 100, 0), nsmall = 0), "%")
+        value <- format(value, width = 5, justify = "right")
+        react_bar_chart(value,
+                        width = value,
+                        fill = "#3fc1c9",
+                        background = "#c3c3c3")
+      },
+      align = "center",
+      style = list(whiteSpace = "pre"),
+      class = "number",
+      html = TRUE,
+      minWidth = 100
+    ),
+    max_cc_group = colDef(show = FALSE),
+    max_all_group = colDef(show = FALSE),
+    max_jn_group = colDef(show = FALSE),
+    cat = colDef(show = FALSE)
+  ),
+  # Create column groups
+  columnGroups = list(
+    colGroup(
+      name = "Article Volume",
+      columns = c("all_articles", "cc_total", "prop"),
+      headerClass = "group-header"
+    ),
+    colGroup(
+      name = "Hybrid Journals",
+      columns = c("oa_jns", "all_journals", "oa_jn_prop"),
+      headerClass = "group-header"
+    )
+  ),
+  searchable = FALSE,
+  defaultPageSize = 8,
+  language = reactableLang(
+    searchPlaceholder = "SEARCH",
+    noData = "No publisher found",
+    pageInfo = "{rowStart}\u2013{rowEnd} of {rows} publisher portfolios",
+    pagePrevious = "\u276e",
+    pageNext = "\u276f"
+  )
+)
+```
+
+```{r}
+htmltools::div(
+  class = "agreement-tbl",
+  # filters,
+  htmltools::div(class = "filters",
+                 htmltools::div(
+                   class = "filter-input",
+                   filter_select(
+                     "filter_publisher",
+                     "Search publisher",
+                     shared_publisher_df,
+                     ~ esac_publisher,
+                     multiple = TRUE
+                   )
+                 ),
+    htmltools::div(
+      class = "filter-input",
+      filter_select(
+        "filter_year",
+        "Publication Year",
+        shared_publisher_df,
+        ~ cr_year,
+        multiple = FALSE
+      )
+    ),
+    htmltools::div(
+      class = "filter-input",
+      filter_select(
+        "filter_input",
+        "Global / Germany",
+        shared_publisher_df,
+        ~ cat,
+        multiple = FALSE
+      )
+    ),
+  ),
+  # table
+  g,
+  # footer
+  htmltools::div(
+    class = "agreement-footer",
+    paste(
+      "Data sources: Journal Checker Tool, Crossref, OpenAlex. Last updated:",
+      Sys.Date(),
+      "."
+    )
+  )
+)
+```
+
+
+```{css}
+.my-tbl {
+  margin: 0 auto;
+  width: 575px;
+}
+.tbl-header {
+  margin: 18px 0;
+  font-size: 1.25em;
+}
+
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.filter-input {
+  margin-top: 4px;
+  margin-left: 32px;
+  flex: 1;
+  max-width: 250px;
+}
+
+.filter-input label {
+  color: hsl(0, 0%, 45%);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.group-header {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.filter-input select,
+.filter-input input[type="search"] {
+  padding: 0 6px;
+  height: 32px;
+}
+.filter-input input[type="search"] {
+  /* Reset Bootstrap 3 styles */
+  -webkit-appearance: searchfield;
+}
+.filter-input input[type="search"]::-webkit-search-cancel-button {
+  /* Reset Bootstrap 3 styles */
+  -webkit-appearance: searchfield-cancel-button;
+}
+.followers-tbl a {
+  color: inherit;
+}
+.header {
+  border-bottom: 2px solid #555;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header:hover {
+  background-color: #eee;
+}
+/* Highlight headers when sorting */
+.header:hover,
+.header[aria-sort="ascending"],
+.header[aria-sort="descending"] {
+  background-color: rgba(236, 236, 237, 1);
+}
+.agreement-footer {
+  margin: 18px 0;
+  font-size: 10px;
+  }
+  
+.agreement-tbl {
+  margin: 18px 0;
+  font-size: 14px;
+}
+.bar-cell {
+  display: flex;
+  align-items: center;
+}
+.number {
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre;
+}
+
+.label {
+  font-size: 14px;
+  white-space: pre;
+}
+.bar-chart {
+  flex-grow: 1;
+  margin-left: 6px;
+  height: 14px;
+}
+.bar {
+  height: 100%;
+}
+.border-left {
+  border-left: 1px solid #b5b5b5;
+}
+.name {
+  font-weight: 900;
+}
+```
+
+```{js, echo = FALSE}
+ /* https://stackoverflow.com/a/66216595 */
+$(document).ready(function() {
+    document.getElementById("filter_year").getElementsByClassName("selectized")[0].selectize.setValue("2021", false);
+     document.getElementById("filter_input").getElementsByClassName("selectized")[0].selectize.setValue("Global", false);
+});
+```
+

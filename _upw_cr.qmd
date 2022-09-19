@@ -1,0 +1,195 @@
+---
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(reactable)
+library(crosstalk)
+library(htmltools)
+```
+
+```{r cr_upw_data}
+upw_cr <- readr::read_csv("data/cc_upw_cr.csv") |> 
+  mutate(cat = "Global")
+
+upw_cr_de <- readr::read_csv("data/cc_upw_cr_de.csv") |> 
+  mutate(cat = "Germany")
+# Calculate Percentage Difference
+
+# Get absolute from publisher league table, there are slight difference between
+# BQ and calculated datasets ???
+all_articles <- publisher_table_df |>
+  select(cr_year, esac_publisher, all_articles, cat)
+
+upw_cr_df <- bind_rows(upw_cr, upw_cr_de)
+
+upw_cr_diff_year <- upw_cr_df |>
+  mutate(cr_year = as.character(cr_year)) |>
+  inner_join(all_articles, by = c("cr_year", "esac_publisher", "cat")) |>
+  mutate(perc_upw = upw_hybrid_total / all_articles,
+         perc_cr = cr_hybrid_total / all_articles) |>
+  mutate(perc_diff = perc_cr - perc_upw) |>
+  mutate(across(starts_with("perc_"), round, digits = 3)) |>
+  select(-contains("total"), -all_articles) |>
+  # From _country_league_table.qmd
+  mutate(esac_publisher = fct_relevel(esac_publisher, "All", top)) |>
+  relocate(perc_cr, .before = perc_upw)
+```
+
+```{r, echo = FALSE}
+#' React bar chart helper
+#'
+#' From <https://glin.github.io/reactable/articles/building-twitter-followers.html>
+#'
+#' @importFrom htmltools div
+#'
+#' @noRd
+react_bar_chart <- function(label, width = "100%", height = "14px", fill = "#00bfc4", background = NULL) {
+  bar <- htmltools::div(style = list(background = fill, width = width, height = height))
+  chart <- htmltools::div(style = list(flexGrow = 1, marginLeft = "6px", background = background), bar)
+  htmltools::div(style = list(display = "flex", alignItems = "center", justifyContent = "flex-end"), label, chart) }
+```
+
+```{r}
+# Table
+shared_upw_cr_diff_year <- SharedData$new(upw_cr_diff_year)
+
+upw_cr_react <- reactable::reactable(
+  shared_upw_cr_diff_year,
+  pagination = TRUE,
+  highlight = TRUE,
+  defaultColDef = colDef(vAlign = "center", headerClass = "header"),
+  defaultSortOrder = "desc",
+  compact = TRUE,
+  columns = list(
+    # Hide
+    cr_year = colDef(show = FALSE),
+    # Publisher
+    esac_publisher = colDef(
+      "Publisher",
+      minWidth = 180,
+      align = "left",
+      sticky = "left",
+      class = "label"
+    ),
+    perc_cr = colDef(
+      "Crossref % OA",
+      cell = function(value) {
+        value <- paste0(format(round(value * 100, 1), nsmall = 1), "%")
+        value <- format(value, width = 5, justify = "right")
+        react_bar_chart(value,
+                        width = value,
+                        fill = "#fc5185",
+                        background = "transparent")
+      },
+      align = "center",
+      style = list(whiteSpace = "pre"),
+      class = "number",
+      html = TRUE,
+      minWidth = 100
+    ),
+    perc_upw = colDef(
+      "Unpaywall % OA",
+      cell = function(value) {
+        value <- paste0(format(round(value * 100, 1), nsmall = 1), "%")
+        value <- format(value, width = 5, justify = "right")
+        react_bar_chart(value,
+                        width = value,
+                        fill = "#4d4d4d",
+                        background = "#transparent")
+      },
+      align = "center",
+      style = list(whiteSpace = "pre"),
+      class = "number",
+      html = TRUE,
+      minWidth = 100
+    ),
+    perc_diff  = colDef(
+      name = "% Difference",
+      format = colFormat(percent = TRUE, digits = 1),
+      class = "number",
+      align = "right",
+      width = 120,
+      style = function(value) {
+      if (value > 0) {
+        color <- "#fc5185"
+      } else if (value < 0) {
+        color <- "#4d4d4d"
+      } else {
+        color <- "#777"
+      }
+      list(color = color, fontWeight = "bold")
+    }
+    ),
+    cat = colDef(show = FALSE)
+    ),
+searchable = FALSE,
+  defaultPageSize = 8,
+  language = reactableLang(
+    searchPlaceholder = "SEARCH",
+    noData = "No publisher found",
+    pageInfo = "{rowStart}\u2013{rowEnd} of {rows} publisher portfolios",
+    pagePrevious = "\u276e",
+    pageNext = "\u276f"
+  )
+)
+```
+
+```{r}
+htmltools::div(
+  class = "agreement-tbl",
+  # filters,
+  htmltools::div(class = "filters",
+                 htmltools::div(
+                   class = "filter-input",
+                   filter_select(
+                     "filter_cr_publisher",
+                     "Search publisher",
+                     shared_upw_cr_diff_year,
+                     ~ esac_publisher,
+                     multiple = TRUE
+                   )
+                 ),
+    htmltools::div(
+      class = "filter-input",
+      filter_select(
+        "filter_cr_year",
+        "Publication Year",
+        shared_upw_cr_diff_year,
+        ~ cr_year,
+        multiple = FALSE
+      )
+    ),
+    htmltools::div(
+      class = "filter-input",
+      filter_select(
+        "filter_cr_input",
+        "Global / Germany",
+        shared_upw_cr_diff_year,
+        ~ cat,
+        multiple = FALSE
+      )
+    ),
+  ),
+  # table
+  upw_cr_react,
+  # footer
+  htmltools::div(
+    class = "agreement-footer",
+    paste(
+      "Data sources: Journal Checker Tool, Crossref, OpenAlex. Last updated:",
+      Sys.Date(),
+      "."
+    )
+  )
+)
+```
+
+```{js, echo = FALSE}
+ /* https://stackoverflow.com/a/66216595 */
+$(document).ready(function() {
+    document.getElementById("filter_cr_year").getElementsByClassName("selectized")[0].selectize.setValue("2021", false);
+     document.getElementById("filter_cr_input").getElementsByClassName("selectized")[0].selectize.setValue("Global", false);
+});
+```

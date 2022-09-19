@@ -1,0 +1,398 @@
+cr_year,esac_publisher,article_total,tdm_total,orcid_total,funder_total,abstract_total,ref_total,cat
+2018,IEEE,517,1,485,456,0,515,Global
+2020,IEEE,1462,0,1364,1224,0,1418,Global
+2017,IEEE,400,17,223,354,0,400,Global
+2022,IEEE,2855,0,2395,2270,0,1865,Global
+2021,IEEE,2599,0,2315,2180,0,2417,Global
+2019,IEEE,537,0,508,471,0,534,Global
+2022,Sage,3016,2979,2687,1186,2817,2830,Global
+2018,Sage,114,114,45,45,91,111,Global
+2021,Sage,4701,4586,3990,1821,4358,4392,Global
+2017,Sage,54,54,2,15,41,53,Global
+2020,Sage,3031,3007,2353,1128,2795,2797,Global
+2019,Sage,435,435,304,175,380,421,Global
+2017,Brill,82,82,0,1,67,31,Global
+2020,Brill,674,674,16,7,579,50,Global
+2018,Brill,106,106,2,2,81,36,Global
+2022,Brill,469,469,221,41,395,165,Global
+2019,Brill,216,216,2,1,152,12,Global
+2021,Brill,788,787,265,40,689,82,Global
+2017,Wiley,7558,7557,4632,5817,146,7484,Global
+2022,Wiley,29374,29374,25928,14010,188,28666,Global
+2021,Wiley,38694,38694,33516,18976,255,37985,Global
+2019,Wiley,16347,16347,12973,10325,152,16106,Global
+2018,Wiley,10755,10755,8005,8189,156,10618,Global
+2020,Wiley,30587,30581,26058,17518,217,29878,Global
+2018,Karger,236,236,110,0,207,106,Global
+2019,Karger,248,248,106,0,228,158,Global
+2021,Karger,905,905,548,0,869,874,Global
+2017,Karger,193,179,53,0,172,102,Global
+2020,Karger,473,473,219,0,452,439,Global
+2022,Karger,533,533,421,1,518,398,Global
+2022,Thieme,314,0,167,74,201,257,Global
+2018,Thieme,191,0,0,0,164,1,Global
+2017,Thieme,110,0,5,14,98,26,Global
+2019,Thieme,238,0,11,13,215,6,Global
+2021,Thieme,390,0,128,93,360,351,Global
+2020,Thieme,285,0,44,44,256,212,Global
+2018,Emerald,63,63,31,0,63,0,Global
+2017,Emerald,22,22,7,0,22,5,Global
+2021,Hogrefe,1,0,1,0,1,1,Global
+2019,Elsevier,18468,18468,7426,13794,0,18130,Global
+2022,Elsevier,44260,44260,20563,18460,0,43849,Global
+2020,Elsevier,27015,27015,8469,20139,4,26818,Global
+2021,Elsevier,44117,44117,20765,28784,0,43806,Global
+2017,Elsevier,13500,13500,3032,7800,0,13226,Global
+2018,Elsevier,15732,15732,5493,10614,0,15447,Global
+2021,IOS Press,629,0,17,0,599,603,Global
+2019,IOS Press,393,2,0,0,12,373,Global
+2022,IOS Press,474,0,18,0,455,460,Global
+2018,IOS Press,391,7,0,0,0,370,Global
+2017,IOS Press,344,0,0,0,1,324,Global
+2020,IOS Press,625,0,9,0,265,593,Global
+2018,EDP Sciences,326,115,107,38,214,322,Global
+2022,EDP Sciences,645,102,439,300,632,635,Global
+2020,EDP Sciences,829,156,435,178,818,822,Global
+2021,EDP Sciences,1135,276,698,533,1118,1122,Global
+2017,EDP Sciences,76,75,12,0,1,76,Global
+2019,EDP Sciences,625,86,279,127,556,620,Global
+2019,AIP Publishing,3,0,2,3,0,3,Global
+2020,AIP Publishing,1,0,1,1,0,1,Global
+2017,AIP Publishing,58,0,40,57,0,58,Global
+2018,AIP Publishing,11,0,9,11,0,11,Global
+2017,BMJ Publishing,2,0,0,1,2,2,Global
+2018,BMJ Publishing,10,0,5,5,8,10,Global
+2020,BMJ Publishing,1400,0,1316,891,1210,1363,Global
+2021,BMJ Publishing,1479,0,1392,1009,1246,1468,Global
+2019,BMJ Publishing,323,0,298,229,273,322,Global
+2022,BMJ Publishing,732,0,707,497,632,730,Global
+2021,Bioscientifica,73,73,22,0,69,0,Global
+2018,Bioscientifica,64,64,0,0,63,60,Global
+2017,Bioscientifica,66,66,0,0,64,65,Global
+2022,Bioscientifica,90,90,73,0,88,22,Global
+2019,Bioscientifica,58,58,0,0,57,34,Global
+2020,Bioscientifica,9,9,0,0,9,0,Global
+2021,IOP Publishing,3136,3136,2667,2153,2840,3101,Global
+2022,IOP Publishing,1925,1925,1646,1336,1896,1909,Global
+2017,IOP Publishing,1103,1103,285,596,11,1088,Global
+2019,IOP Publishing,2075,1305,1789,1278,880,2064,Global
+2018,IOP Publishing,1847,1196,1447,1136,2,1820,Global
+2020,IOP Publishing,2865,2865,2364,1911,2546,2843,Global
+2017,Portland Press,154,0,0,0,150,150,Global
+2020,Portland Press,510,0,497,0,509,508,Global
+2021,Portland Press,504,0,493,0,503,500,Global
+2019,Portland Press,155,0,150,0,154,154,Global
+2018,Portland Press,152,0,64,0,150,151,Global
+2022,Portland Press,207,0,193,0,207,204,Global
+2018,Springer Nature,19423,19386,10560,11194,847,18979,Global
+2017,Springer Nature,17764,17752,6677,10034,598,17478,Global
+2019,Springer Nature,21552,21514,14356,13401,7379,20942,Global
+2022,Springer Nature,29727,29727,23650,21049,27094,28477,Global
+2021,Springer Nature,46190,46190,35644,32657,42444,44181,Global
+2020,Springer Nature,33997,33918,23166,24126,30895,32907,Global
+2020,Taylor & Francis,8660,363,5442,3628,179,8236,Global
+2017,Taylor & Francis,4077,3977,1257,2158,11,3849,Global
+2019,Taylor & Francis,6636,3285,3589,2573,79,6314,Global
+2021,Taylor & Francis,15669,486,10580,7189,315,14731,Global
+2018,Taylor & Francis,2834,1955,1423,1747,20,2691,Global
+2022,Taylor & Francis,9678,366,6796,4897,181,9113,Global
+2021,The Royal Society,60,60,59,55,60,59,Global
+2020,The Royal Society,447,447,445,385,446,446,Global
+2020,Walter de Gruyter,1270,1267,309,278,1028,998,Global
+2018,Walter de Gruyter,425,416,26,12,304,357,Global
+2022,Walter de Gruyter,834,831,302,11,663,664,Global
+2017,Walter de Gruyter,379,379,10,5,263,313,Global
+2019,Walter de Gruyter,667,663,72,59,525,558,Global
+2021,Walter de Gruyter,1259,1252,422,15,1042,1052,Global
+2020,Microbiology Society,3,0,3,2,3,3,Global
+2021,Microbiology Society,13,0,9,9,12,13,Global
+2018,Microbiology Society,3,0,0,0,3,3,Global
+2022,Microbiology Society,61,0,54,36,53,59,Global
+2017,Microbiology Society,1,0,0,0,1,1,Global
+2019,Microbiology Society,6,0,4,0,6,6,Global
+2019,Company of Biologists,42,0,40,38,40,40,Global
+2017,Company of Biologists,29,0,27,25,27,27,Global
+2021,Company of Biologists,284,0,281,280,283,283,Global
+2018,Company of Biologists,38,0,37,35,37,37,Global
+2022,Company of Biologists,184,0,182,183,183,183,Global
+2020,Company of Biologists,63,0,60,59,60,60,Global
+2020,Wolters Kluwer Health,46,15,4,14,1,45,Global
+2022,Wolters Kluwer Health,221,0,221,4,208,200,Global
+2017,Wolters Kluwer Health,52,35,0,5,0,51,Global
+2018,Wolters Kluwer Health,31,9,0,2,0,30,Global
+2019,Wolters Kluwer Health,45,11,1,13,1,44,Global
+2021,Wolters Kluwer Health,260,0,219,39,202,258,Global
+2021,Oxford University Press,8531,254,6016,5783,7477,7744,Global
+2020,Oxford University Press,6086,432,3737,4432,5243,5696,Global
+2019,Oxford University Press,4640,320,2571,3461,3547,4283,Global
+2017,Oxford University Press,1757,138,430,1219,268,1670,Global
+2018,Oxford University Press,3599,161,1382,2701,677,3419,Global
+2022,Oxford University Press,3591,135,2772,2316,3103,3171,Global
+2022,Trans Tech Publications,389,0,150,0,389,382,Global
+2020,Trans Tech Publications,16,0,3,0,16,16,Global
+2019,Trans Tech Publications,83,0,13,0,83,83,Global
+2017,Trans Tech Publications,50,0,8,0,50,0,Global
+2021,Trans Tech Publications,7,0,2,0,7,7,Global
+2018,Trans Tech Publications,171,0,21,0,170,170,Global
+2018,Bristol University Press,23,23,0,0,23,0,Global
+2021,Bristol University Press,46,46,0,3,46,27,Global
+2022,Bristol University Press,62,62,3,23,57,24,Global
+2019,Bristol University Press,33,33,0,11,32,1,Global
+2020,Bristol University Press,34,34,0,2,32,8,Global
+2017,Bristol University Press,18,18,1,0,17,1,Global
+2021,American Chemical Society,6297,24,6279,5675,0,6277,Global
+2020,American Chemical Society,654,20,653,528,0,653,Global
+2019,American Chemical Society,70,40,44,60,0,69,Global
+2022,American Chemical Society,4167,15,4155,3789,0,4131,Global
+2018,American Chemical Society,53,45,19,47,0,53,Global
+2017,American Chemical Society,40,39,17,31,0,40,Global
+2022,American Physical Society,2056,0,1925,1921,0,2050,Global
+2018,American Physical Society,2744,0,0,2465,0,2727,Global
+2020,American Physical Society,3425,0,3035,3144,0,3416,Global
+2019,American Physical Society,2886,0,962,2617,0,2880,Global
+2017,American Physical Society,438,0,0,395,0,423,Global
+2021,American Physical Society,3472,0,3204,3238,0,3458,Global
+2020,John Benjamins Publishing,75,0,46,0,74,75,Global
+2022,John Benjamins Publishing,1224,0,292,0,715,984,Global
+2021,John Benjamins Publishing,68,0,48,0,64,67,Global
+2018,John Benjamins Publishing,9,0,5,0,6,9,Global
+2017,John Benjamins Publishing,14,0,4,0,12,14,Global
+2019,John Benjamins Publishing,45,0,31,0,43,45,Global
+2018,Bentham Science Publishers,193,127,0,6,44,32,Global
+2020,Bentham Science Publishers,1372,534,291,161,824,781,Global
+2021,Bentham Science Publishers,1003,1003,302,139,562,403,Global
+2019,Bentham Science Publishers,1228,98,97,174,621,742,Global
+2022,Bentham Science Publishers,71,71,33,28,71,53,Global
+2017,Bentham Science Publishers,14,7,0,0,2,0,Global
+2021,Cambridge University Press,5350,154,4129,670,5097,5206,Global
+2020,Cambridge University Press,3543,8,2461,0,2965,3449,Global
+2018,Cambridge University Press,839,15,305,12,809,826,Global
+2022,Cambridge University Press,3525,82,2857,976,3383,3422,Global
+2017,Cambridge University Press,590,7,119,8,578,582,Global
+2019,Cambridge University Press,1348,21,840,9,1282,1313,Global
+2021,Royal Society of Chemistry,3663,38,3265,2938,3663,3265,Global
+2022,Royal Society of Chemistry,2452,45,2119,2027,2451,2118,Global
+2020,Royal Society of Chemistry,3310,0,2849,2538,3310,2860,Global
+2018,Royal Society of Chemistry,2106,0,1776,1571,2104,1760,Global
+2017,Royal Society of Chemistry,677,0,619,407,676,637,Global
+2019,Royal Society of Chemistry,2579,0,2200,1943,2578,2190,Global
+2022,Canadian Science Publishing,24,24,12,10,24,24,Global
+2021,Canadian Science Publishing,1,1,1,1,1,1,Global
+2020,The Electrochemical Society,873,873,708,599,842,869,Global
+2019,The Electrochemical Society,815,45,814,496,45,814,Global
+2018,The Electrochemical Society,651,0,641,458,0,651,Global
+2022,The Electrochemical Society,364,364,363,271,363,363,Global
+2021,The Electrochemical Society,630,630,628,431,562,628,Global
+2022,European Respiratory Society,55,0,44,32,17,49,Global
+2019,European Respiratory Society,40,0,32,28,32,40,Global
+2021,European Respiratory Society,183,0,161,112,102,181,Global
+2020,European Respiratory Society,261,0,199,125,90,261,Global
+2018,European Respiratory Society,3,0,2,3,1,3,Global
+2018,National Academy of Sciences,1166,0,833,884,1164,1166,Global
+2021,National Academy of Sciences,1612,0,1583,1167,1534,1612,Global
+2022,National Academy of Sciences,2174,0,2026,1568,1927,2173,Global
+2019,National Academy of Sciences,1299,0,1067,1021,1261,1299,Global
+2017,National Academy of Sciences,212,0,128,164,212,212,Global
+2020,National Academy of Sciences,1564,0,1494,1183,1490,1564,Global
+2019,The Geological Society of London,72,0,58,16,34,72,Global
+2020,The Geological Society of London,67,0,65,12,54,67,Global
+2021,The Geological Society of London,62,0,60,20,60,62,Global
+2017,The Geological Society of London,79,1,15,7,40,79,Global
+2018,The Geological Society of London,60,0,36,12,33,59,Global
+2022,The Geological Society of London,40,0,38,6,39,32,Global
+2018,Association for Computing Machinery,19,10,15,16,6,19,Global
+2019,Association for Computing Machinery,44,24,36,34,16,44,Global
+2022,Association for Computing Machinery,83,18,70,64,19,52,Global
+2020,Association for Computing Machinery,91,37,70,66,40,89,Global
+2021,Association for Computing Machinery,145,61,123,123,60,136,Global
+2017,Association for Computing Machinery,36,25,9,25,6,36,Global
+2021,Royal College of General Practitioners,104,0,9,0,93,104,Global
+2022,Royal College of General Practitioners,62,0,16,0,50,62,Global
+2020,Royal College of General Practitioners,93,0,16,0,87,93,Global
+2019,IEEE,42,0,42,35,0,41,Germany
+2017,IEEE,11,0,7,8,0,11,Germany
+2020,IEEE,141,0,131,107,0,138,Germany
+2021,IEEE,207,0,190,149,0,197,Germany
+2022,IEEE,123,0,108,90,0,105,Germany
+2018,IEEE,12,0,11,10,0,12,Germany
+2017,Sage,1,1,0,0,0,1,Germany
+2021,Elsevier,2310,2310,1136,1571,0,2308,Germany
+2019,Elsevier,1166,1166,485,860,0,1161,Germany
+2017,Elsevier,821,821,167,483,0,818,Germany
+2018,Elsevier,986,986,330,686,0,984,Germany
+2022,Elsevier,1847,1847,924,838,0,1838,Germany
+2019,IOS Press,16,0,0,0,0,16,Germany
+2017,IOS Press,21,0,0,0,0,21,Germany
+2018,IOS Press,18,0,0,0,0,18,Germany
+2017,EDP Sciences,20,20,3,0,0,20,Germany
+2019,AIP Publishing,1,0,0,1,0,1,Germany
+2018,AIP Publishing,1,0,0,1,0,1,Germany
+2017,AIP Publishing,3,0,3,2,0,3,Germany
+2018,IOP Publishing,222,159,198,151,0,221,Germany
+2018,Taylor & Francis,176,140,72,99,0,164,Germany
+2017,Taylor & Francis,184,178,59,91,0,176,Germany
+2018,Wolters Kluwer Health,6,1,0,0,0,6,Germany
+2017,Wolters Kluwer Health,5,2,0,0,0,5,Germany
+2019,Wolters Kluwer Health,3,0,0,0,0,3,Germany
+2017,American Chemical Society,3,2,2,2,0,3,Germany
+2022,American Chemical Society,283,4,283,254,0,283,Germany
+2021,American Chemical Society,575,10,575,519,0,575,Germany
+2018,American Chemical Society,5,4,1,5,0,5,Germany
+2019,American Chemical Society,6,3,5,5,0,6,Germany
+2020,American Chemical Society,28,4,28,25,0,28,Germany
+2017,American Physical Society,47,0,0,45,0,47,Germany
+2019,American Physical Society,211,0,76,189,0,211,Germany
+2018,American Physical Society,216,0,0,198,0,215,Germany
+2021,American Physical Society,470,0,450,426,0,470,Germany
+2020,American Physical Society,479,0,438,414,0,479,Germany
+2022,American Physical Society,163,0,158,151,0,163,Germany
+2017,Bentham Science Publishers,1,0,0,0,0,0,Germany
+2018,The Electrochemical Society,63,0,62,47,0,63,Germany
+2017,The Geological Society of London,3,0,2,1,0,3,Germany
+2019,Association for Computing Machinery,4,1,3,3,0,4,Germany
+2018,Sage,2,2,0,1,1,2,Germany
+2017,Brill,1,1,0,0,1,0,Germany
+2018,Emerald,1,1,0,0,1,0,Germany
+2020,Elsevier,1499,1499,493,1149,1,1496,Germany
+2019,Bioscientifica,1,1,0,0,1,0,Germany
+2020,Trans Tech Publications,1,0,0,0,1,1,Germany
+2019,Bristol University Press,1,1,0,0,1,1,Germany
+2018,Bentham Science Publishers,2,1,0,0,1,1,Germany
+2022,European Respiratory Society,6,0,5,4,1,6,Germany
+2021,The Geological Society of London,1,0,1,0,1,1,Germany
+2019,The Geological Society of London,1,0,1,0,1,1,Germany
+2020,The Geological Society of London,1,0,1,0,1,1,Germany
+2021,Royal College of General Practitioners,1,0,0,0,1,1,Germany
+2020,Bioscientifica,2,2,0,0,2,0,Germany
+2017,IOP Publishing,101,101,30,59,2,100,Germany
+2022,Microbiology Society,2,0,2,2,2,2,Germany
+2017,Company of Biologists,2,0,2,2,2,2,Germany
+2021,Trans Tech Publications,2,0,0,0,2,2,Germany
+2022,Bristol University Press,2,2,0,0,2,1,Germany
+2022,Bentham Science Publishers,2,2,0,1,2,1,Germany
+2019,The Electrochemical Society,71,2,70,42,2,71,Germany
+2019,European Respiratory Society,4,0,3,2,2,4,Germany
+2022,The Geological Society of London,2,0,2,0,2,2,Germany
+2022,Association for Computing Machinery,3,2,3,3,2,3,Germany
+2017,Portland Press,3,0,0,0,3,3,Germany
+2020,Company of Biologists,3,0,3,3,3,3,Germany
+2019,Company of Biologists,3,0,3,3,3,3,Germany
+2020,European Respiratory Society,14,0,13,7,3,14,Germany
+2018,The Geological Society of London,5,0,4,2,3,5,Germany
+2021,The Royal Society,4,4,4,4,4,4,Germany
+2021,John Benjamins Publishing,4,0,4,0,4,4,Germany
+2019,John Benjamins Publishing,4,0,1,0,4,4,Germany
+2021,Bioscientifica,5,5,4,0,5,0,Germany
+2018,Company of Biologists,5,0,5,4,5,5,Germany
+2019,Bentham Science Publishers,15,0,0,1,5,7,Germany
+2018,Bioscientifica,6,6,0,0,6,6,Germany
+2019,Taylor & Francis,346,159,169,108,6,329,Germany
+2021,Bristol University Press,6,6,0,1,6,4,Germany
+2019,BMJ Publishing,14,0,14,11,7,14,Germany
+2017,Bioscientifica,7,7,0,0,7,7,Germany
+2018,Brill,9,9,0,0,8,3,Germany
+2022,Bioscientifica,8,8,6,0,8,1,Germany
+2020,Taylor & Francis,435,23,261,175,8,409,Germany
+2020,John Benjamins Publishing,8,0,5,0,8,8,Germany
+2022,John Benjamins Publishing,12,0,2,0,8,10,Germany
+2021,European Respiratory Society,15,0,15,8,8,15,Germany
+2018,Royal Society of Chemistry,264,0,252,208,264,252,Germany
+2018,Wiley,670,670,513,525,9,670,Germany
+2018,Portland Press,9,0,5,0,9,9,Germany
+2021,Bentham Science Publishers,15,15,7,4,9,5,Germany
+2020,Association for Computing Machinery,13,8,10,9,9,13,Germany
+2019,Brill,11,11,1,1,10,2,Germany
+2019,Portland Press,10,0,10,0,10,10,Germany
+2017,National Academy of Sciences,10,0,6,6,10,10,Germany
+2022,Taylor & Francis,325,15,245,191,11,312,Germany
+2021,Association for Computing Machinery,18,11,17,14,11,18,Germany
+2018,Karger,12,12,7,0,12,8,Germany
+2022,Wolters Kluwer Health,12,0,12,1,12,12,Germany
+2021,Wolters Kluwer Health,18,0,14,4,12,18,Germany
+2017,Oxford University Press,94,7,30,49,12,89,Germany
+2022,Trans Tech Publications,12,0,8,0,12,12,Germany
+2017,Karger,14,14,5,0,14,10,Germany
+2021,Taylor & Francis,649,29,467,361,14,626,Germany
+2020,IOS Press,33,0,0,0,15,32,Germany
+2022,Portland Press,15,0,14,0,15,15,Germany
+2020,Bentham Science Publishers,17,8,4,2,15,10,Germany
+2022,Brill,17,17,12,1,16,6,Germany
+2022,Wiley,4139,4139,3653,2193,16,4073,Germany
+2019,Karger,16,16,3,0,16,13,Germany
+2019,Trans Tech Publications,16,0,3,0,16,16,Germany
+2018,EDP Sciences,35,19,10,5,17,34,Germany
+2020,Portland Press,19,0,18,0,19,19,Germany
+2017,Cambridge University Press,19,1,5,0,19,19,Germany
+2022,Company of Biologists,20,0,19,20,20,20,Germany
+2022,Springer Nature,4684,4684,3423,4216,4117,4382,Germany
+2022,Karger,24,24,19,0,23,20,Germany
+2017,Trans Tech Publications,24,0,2,0,24,0,Germany
+2018,Cambridge University Press,24,1,11,1,24,24,Germany
+2022,The Electrochemical Society,24,24,24,15,24,24,Germany
+2022,IOS Press,28,0,0,0,27,28,Germany
+2020,Brill,28,28,2,1,28,2,Germany
+2019,Wiley,3630,3630,2753,2073,28,3601,Germany
+2017,Wiley,497,497,329,383,28,496,Germany
+2018,Oxford University Press,222,0,70,155,28,212,Germany
+2020,BMJ Publishing,37,0,36,29,30,35,Germany
+2018,Trans Tech Publications,30,0,3,0,30,30,Germany
+2021,Company of Biologists,31,0,31,30,31,31,Germany
+2021,Portland Press,32,0,31,0,32,32,Germany
+2022,BMJ Publishing,39,0,39,28,33,39,Germany
+2021,IOS Press,34,0,0,0,34,34,Germany
+2022,EDP Sciences,39,26,35,26,35,36,Germany
+2021,Brill,43,43,13,6,43,8,Germany
+2017,Thieme,45,0,1,2,43,2,Germany
+2017,Springer Nature,1032,1032,399,481,46,1004,Germany
+2020,The Royal Society,52,52,52,44,52,52,Germany
+2019,Sage,56,56,37,21,53,55,Germany
+2022,Thieme,59,0,17,13,53,50,Germany
+2021,The Electrochemical Society,58,58,58,41,55,58,Germany
+2018,Walter de Gruyter,64,64,2,1,56,54,Germany
+2020,Wiley,8681,8681,7426,5198,59,8586,Germany
+2018,Springer Nature,1198,1193,615,568,64,1161,Germany
+2021,Wiley,9668,9668,8028,4846,65,9550,Germany
+2018,Thieme,68,0,0,0,65,0,Germany
+2021,BMJ Publishing,75,0,69,42,67,75,Germany
+2017,Walter de Gruyter,78,78,2,1,67,75,Germany
+2020,The Electrochemical Society,73,73,59,50,72,73,Germany
+2021,Sage,355,350,316,149,329,337,Germany
+2019,National Academy of Sciences,86,0,74,55,78,86,Germany
+2020,Karger,87,87,36,0,86,84,Germany
+2019,Thieme,89,0,0,2,86,4,Germany
+2020,IOP Publishing,401,401,352,277,343,394,Germany
+2020,Oxford University Press,409,58,290,295,343,383,Germany
+2020,Thieme,91,0,6,11,88,55,Germany
+2022,National Academy of Sciences,98,0,96,61,89,98,Germany
+2018,National Academy of Sciences,90,0,68,62,90,90,Germany
+2021,Thieme,108,0,34,22,101,104,Germany
+2020,National Academy of Sciences,120,0,114,74,104,120,Germany
+2017,Royal Society of Chemistry,124,0,116,67,124,120,Germany
+2021,IOP Publishing,417,417,384,287,380,416,Germany
+2021,Karger,126,126,74,0,125,119,Germany
+2021,National Academy of Sciences,135,0,132,78,128,135,Germany
+2019,Royal Society of Chemistry,390,0,372,318,390,371,Germany
+2022,Oxford University Press,168,20,151,107,135,165,Germany
+2021,Springer Nature,11032,11032,7595,9588,9611,10125,Germany
+2019,EDP Sciences,159,10,77,31,153,159,Germany
+2022,IOP Publishing,158,158,140,106,153,156,Germany
+2022,Walter de Gruyter,221,221,60,2,153,129,Germany
+2019,Walter de Gruyter,182,182,11,21,155,161,Germany
+2019,Cambridge University Press,159,5,96,2,157,157,Germany
+2022,Sage,187,187,173,70,172,173,Germany
+2019,IOP Publishing,316,247,290,204,181,315,Germany
+2022,Cambridge University Press,188,11,157,62,183,183,Germany
+2020,Sage,199,196,169,80,188,191,Germany
+2020,Royal Society of Chemistry,444,0,429,376,444,428,Germany
+2020,Walter de Gruyter,217,216,50,76,189,181,Germany
+2020,Springer Nature,8751,8743,5085,6597,7615,8322,Germany
+2020,Cambridge University Press,206,0,144,0,196,199,Germany
+2022,Royal Society of Chemistry,196,9,189,175,196,189,Germany
+2021,Oxford University Press,546,48,432,381,468,519,Germany
+2021,Royal Society of Chemistry,476,5,465,409,476,464,Germany
+2021,Cambridge University Press,230,39,188,64,222,224,Germany
+2019,Springer Nature,1417,1411,835,678,484,1345,Germany
+2020,EDP Sciences,232,60,123,47,230,231,Germany
+2019,Oxford University Press,319,39,186,218,236,300,Germany
+2021,Walter de Gruyter,285,282,93,6,243,234,Germany
+2021,EDP Sciences,249,99,142,136,245,247,Germany

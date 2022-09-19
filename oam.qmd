@@ -1,0 +1,710 @@
+---
+title: "Hybrid Journals in Transformative Agreements: German Open Access Monitor"
+subtitle: "How open are hybrid journals in transformative agreements? This dashboard highlights the Open Access uptake in hybrid journals included in transformative agreements as listed by the German Open Access Monitor. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref."
+format:
+  html:
+    theme: default
+    toc: true
+    toc-location: right
+execute:
+  echo: false
+  warnings: false
+  message: false
+sidebar: false
+params:
+  jns: NULL
+---
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(ggiraph)
+library(patchwork)
+```
+
+
+
+
+```{r oam_data, message = FALSE}
+library(hoaddata)
+if(!is.null(params$jns)) 
+  oam_hybrid_jns <- oam_hybrid_jns |>
+    dplyr::filter(cr_journal_id %in% params$jns)
+
+cc_openalex_inst_jn_ind <- cc_openalex_inst_jn_ind |>
+  rename(jn_id = cr_journal_id) |>
+  dplyr::filter(jn_id %in% oam_hybrid_jns$cr_journal_id) |>
+  dplyr::mutate(cc = factor(
+    cc,
+    # Order by permissiveness
+    levels = c(
+      "CC BY",
+      "CC BY-SA",
+      "CC BY-NC",
+      "CC BY-NC-SA",
+      "CC BY-ND",
+      "CC BY-NC-ND"
+    )))
+
+ cc_jn_ind <- cc_jn_ind |>
+  rename(jn_id = cr_journal_id) |>
+  dplyr::filter(jn_id %in% oam_hybrid_jns$cr_journal_id) |>
+   dplyr::mutate(cc = factor(
+    cc,
+    # Order by permissiveness
+    levels = c(
+      "CC BY",
+      "CC BY-SA",
+      "CC BY-NC",
+      "CC BY-NC-SA",
+      "CC BY-ND",
+      "CC BY-NC-ND"
+    )))
+```
+
+The share of Open Access articles with a Creative Commons license in hybrid journals exposed by the [German Open Access Monitor from the FZ Jülich](https://open-access-monitor.de/) is as follows:
+
+{{< include _teaser.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Expand to learn about how publications from Germany were counted?
+
+Only journal articles from lead authors based in Germany were considered. A [lead author](https://en.wikipedia.org/wiki/Lead_author) is the first named author of a scholarly article who has usually undertaken most of the research presented in the article, although author roles can vary across discipline. We used [OpenAlex](https://openalex.org/) as data source to determine lead author affiliation.
+:::
+
+## Open Licensing
+
+Open access articles in hybrid journals are usually published under an Creative Commons license, preferably the Creative Commons Attribution licence (CC BY). The [ESAC guidelines](https://esac-initiative.org/about/transformative-agreements/guidelines-for-transformative-agreements/) and an increasing number of transformative agreements request that publishers register Creative Commons licensing information in their Crossref metadata. The following charts draw on this information to showcase the percentage of Creative Commons licensed open access articles over time by license type and publisher.
+
+### Creative Commons licenses over time
+
+Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types as provided by Crossref.
+
+{{< include _cc_over_year.qmd >}}
+
+### Creative Commons licenses over time by publisher
+
+Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types and Top 13 publishers in terms of total articles published between 2017 and 2022.
+
+```{r}
+cc_jn_ind_pub <- hoaddata::oam_hybrid_jns |>
+  select(jn_id = cr_journal_id, agreement,lead) |>
+  inner_join(cc_jn_ind, by = "jn_id") |>
+  mutate(esac_publisher = paste0(agreement, " (", lead, ")")) |>
+  distinct()
+
+all_df <- cc_jn_ind_pub |>
+  distinct(cr_year, esac_publisher, jn_id, jn_all) |>
+  group_by(cr_year, esac_publisher) |>
+  summarise(
+    journals = n_distinct(jn_id),
+    all_articles = sum(jn_all))
+
+top_cc_publisher <- cc_jn_ind_pub |>
+  filter(!is.na(cc)) |>
+  group_by(esac_publisher) |>
+  summarise(cc_total = sum(cc_total)) |>
+  arrange(desc(cc_total)) |>
+  pull(esac_publisher)
+
+top_publisher <- 
+  all_df |>
+  group_by(esac_publisher) |>
+  summarise(n = sum(all_articles))  |>
+  arrange(desc(n)) |>
+  pull(esac_publisher)
+
+top <- top_cc_publisher[1:13]
+
+all_top <- cc_jn_ind_pub |>
+   ungroup() |>
+  right_join(all_df, by = c("esac_publisher", "cr_year")) |>
+  mutate(publisher_fct = forcats::fct_other(esac_publisher, keep = top)) |>
+  mutate(publisher_fct = forcats::fct_relevel(publisher_fct, top, "Other")) |>
+  distinct(cr_year, publisher_fct, jn_id, jn_all) |>
+  group_by(cr_year, publisher_fct) |>
+  summarise(
+    journals = n_distinct(jn_id),
+    all_articles = sum(jn_all))
+
+
+cc_top <- cc_jn_ind_pub |>
+    ungroup() |>
+  filter(!is.na(cc)) |>
+  mutate(publisher_fct = forcats::fct_other(esac_publisher, keep = top)) |>
+  mutate(publisher_fct = forcats::fct_relevel(publisher_fct, top, "Other")) |>
+  group_by(cr_year, publisher_fct, cc) |>
+  summarise(cc_total = sum(cc_total)) |>
+  inner_join(all_top, by = c("publisher_fct", "cr_year")) |>
+  mutate(prop = cc_total / all_articles) |>
+  ungroup() |>
+  tidyr::complete(cc, nesting(cr_year, publisher_fct), fill = list(cc_total = 0, prop = 0))
+
+## Plot config
+
+### Tooltips
+
+total_by_year <- cc_top |>
+  group_by(cr_year, publisher_fct) |>
+  summarise(cc_total_all = sum(cc_total),
+              cc_total_prop = sum(prop))
+  
+ my_tooltips <-
+   cc_top |>
+   filter(!is.na(cc)) |>
+    mutate(colors = case_when(
+        cc == "CC BY" ~ "#65BADA",
+        cc == "CC BY-SA" ~ "#068E8C",
+        cc == "CC BY-NC" ~ "#00A757",
+        cc == "CC BY-NC-SA" ~ "#E5BA52",
+        cc == "CC BY-ND" ~ "#D86F27",
+        cc == "CC BY-NC-ND" ~ "#C82E6B")) |>
+      mutate(tooltip = glue::glue('
+<tr>
+    <td style="text-align:left;padding-bottom:0"><span style="color:{colors}">■</span> {cc}<br></td>
+    <td style="text-align:right;padding-bottom:0">{format(cc_total, big.mark = ",")}</td>
+    <td style="text-align:right;">{round(prop * 100, 1)}%</td>
+</tr>')) |>
+      group_by(cr_year, publisher_fct) |>
+      summarise(tooltip_group = paste(tooltip, collapse = "")) |>
+      inner_join(total_by_year, by = c("cr_year", "publisher_fct")) |>
+      mutate(tooltip_group = glue::glue('<h3><span class="text-muted">Articles with Creative Commons license<br></span>in <b>{cr_year}</h3><hr><table style="margin:8px 0 0;padding:0;width:100%">
+  <colgroup>
+       <col span="1" style="width: 50%;">
+       <col span="1" style="width: 30%;">
+       <col span="1" style="width: 20%;">
+      </colgroup>
+    <tbody>
+    {tooltip_group}
+ <tr style="padding-top:5px">
+    <td style="text-align:left;padding-bottom:0;font-weight:bold;"><span style="color:transparent">■</span> <b>Total</b></td>
+    <td style="text-align:right;font-weight:bold;padding-bottom:0;">{format(cc_total_all, big.mark = ",")}</td>
+    <td style="text-align:right;font-weight:bold;">{round(cc_total_prop * 100, 1)}%</td>
+</tr></tbody></table>'))
+ 
+
+ 
+pp <-  my_tooltips |>
+  ungroup() |>
+  mutate(max_ = max(cc_total_prop)) 
+
+
+## Plot Top 3
+p_top_3 <- cc_top |> 
+  filter(publisher_fct %in% top[1:3]) |> 
+  ggplot(aes(cr_year, prop,  fill = forcats::fct_rev(cc), group = forcats::fct_rev(cc))) +
+    geom_area(
+      #aes(fill = cc, group = cc),
+      stat = "identity",
+      color = "white",
+      size = 0.3
+    ) +
+  geom_bar_interactive(data = filter(pp, publisher_fct %in% top[1:3]), 
+                        inherit.aes = FALSE,
+                        aes(cr_year, max_, tooltip = tooltip_group),
+                        stat = "identity",
+                        color = "transparent",
+                        fill = "transparent",
+                        alpha = 0.01,
+                        width = 1,
+                        position = position_dodge2()
+                      ) + 
+  facet_wrap(~publisher_fct, scales = "fixed", nrow = 1) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L),
+                       expand = expansion(mult = c(0, 0.05)),
+                     breaks = scales::breaks_extended(3)) +
+  scale_fill_manual("License spectrum",
+                      values =  c(
+                        `CC BY` = "#65BADA",
+                        `CC BY-SA` = "#068E8C",
+                        `CC BY-NC` = "#00A757",
+                        `CC BY-NC-SA` = "#E5BA52",
+                        `CC BY-ND` = "#D86F27",
+                        `CC BY-NC-ND` = "#C82E6B"
+                      ),
+                      guide = guide_legend(nrow = 1)) +
+    theme_minimal(base_family = "Source Sans Pro", base_size = 20) +
+    labs(y = NULL, x = NULL) +
+    #       title = "Open Access in Hybrid Journals",
+    #       subtitle = "By Creative Commons license variant as provided by Crossref\n") +
+    theme(panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          axis.text.x=element_blank(),
+          panel.grid.minor.y = element_blank(),
+          panel.ontop = FALSE,
+          legend.position="top", legend.justification = "right",
+          legend.title=element_text(size = 14), 
+    legend.text=element_text(size = 12)) 
+
+
+p_other <-  cc_top |> 
+  filter(publisher_fct %in% top[4:13]) |> 
+  ggplot(aes(cr_year, prop,  fill = forcats::fct_rev(cc), group = forcats::fct_rev(cc))) +
+    geom_area(
+      #aes(fill = cc, group = cc),
+      stat = "identity",
+      color = "white",
+      size = 0.3
+    ) +
+  geom_bar_interactive(data = filter(pp, publisher_fct %in% top[4:13]), 
+                        inherit.aes = FALSE,
+                        aes(cr_year, max_, tooltip = tooltip_group),
+                        stat = "identity",
+                        color = "transparent",
+                        fill = "transparent",
+                        alpha = 0.01,
+                        width = 1,
+                        position = position_dodge2()
+                      ) + 
+  facet_wrap(~publisher_fct, scales = "fixed", ncol = 5,
+             labeller = label_wrap_gen(multi_line = TRUE)) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L),
+                       expand = expansion(mult = c(0, 0.05)),
+                     breaks = scales::breaks_extended(3)) +
+  scale_fill_manual("License spectrum",
+                      values =  c(
+                        `CC BY` = "#65BADA",
+                        `CC BY-SA` = "#068E8C",
+                        `CC BY-NC` = "#00A757",
+                        `CC BY-NC-SA` = "#E5BA52",
+                        `CC BY-ND` = "#D86F27",
+                        `CC BY-NC-ND` = "#C82E6B"
+                      )) +
+    theme_minimal(base_family = "Source Sans Pro", base_size = 14) +
+    labs(y = NULL, x = NULL) +
+    #       title = "Open Access in Hybrid Journals",
+    #       subtitle = "By Creative Commons license variant as provided by Crossref\n") +
+    theme(panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          axis.text.x=element_blank(),
+          panel.grid.minor.y = element_blank(),
+          panel.ontop = FALSE,
+          legend.position="none")
+
+
+
+# Merge into one plot
+
+publisher_p <-  p_top_3 / p_other +
+plot_layout(guides = 'keep')
+```
+
+```{r}
+### DE
+de_df <- hoaddata::oam_hybrid_jns |>
+  mutate(esac_publisher = paste0(agreement, " (", lead, ")")) |>
+  distinct(jn_id = cr_journal_id, esac_publisher) |>
+  mutate(publisher_fct = forcats::fct_other(esac_publisher, keep = top)) |>
+  mutate(publisher_fct = forcats::fct_relevel(publisher_fct, top, "Other")) |>
+  inner_join(cc_openalex_inst_jn_ind, by = "jn_id") |>
+  distinct() |>
+  filter(country_code == "DE")
+
+de_total <- de_df |>
+    distinct(cr_year, jn_id, articles_total, publisher_fct) %>%
+    group_by(cr_year, publisher_fct) %>%
+    summarize(jn_all = sum(articles_total))
+
+de_top <- de_df |>
+    filter(!is.na(cc)) |>
+  # Create Other category
+    mutate(publisher_fct = forcats::fct_other(esac_publisher, keep = top)) |>
+    mutate(publisher_fct = forcats::fct_relevel(publisher_fct, top, "Other")) |>
+    distinct(cr_year, jn_id, articles_under_cc_variant, cc, publisher_fct) |>
+    group_by(cr_year, cc, publisher_fct) |>
+    summarize(cc_total = sum(articles_under_cc_variant)) |>
+  # We also wanna include journals without OA article in a single year
+    right_join(de_total, by = c("cr_year", "publisher_fct")) |>
+    mutate(cr_year = factor(cr_year)) %>%
+    mutate(prop = cc_total / jn_all) %>%
+    mutate_if(is.numeric, ~replace(., is.na(.), 0)) |>
+  ungroup() |>
+   tidyr::complete(cc, nesting(cr_year, publisher_fct), fill = list(cc_total = 0, prop = 0))
+  
+  
+# # validate
+# sum(de_total$jn_all)
+# de_cc %>% ungroup() %>% 
+#   distinct(publisher_fct, cr_year, jn_all) %>%
+#   pull(jn_all) %>%
+#   sum()
+
+# 
+# de_top <- de_cc |>
+#   ungroup() |>
+#   mutate(publisher_fct = forcats::fct_other(esac_publisher, keep = top)) |>
+#   mutate(publisher_fct = forcats::fct_relevel(publisher_fct, top, "Other")) |>
+#   group_by(cr_year, publisher_fct, cc) |>
+#   summarise(cc_total = sum(cc_total), jn_all = sum(jn_all)) |>
+#   mutate(prop = cc_total / jn_all) |>
+#   ungroup() |>
+#   tidyr::complete(cc, nesting(cr_year, publisher_fct), fill = list(cc_total = 0, prop = 0))
+```
+
+```{r}
+## tooltips 
+total_by_year <- de_top |>
+  group_by(cr_year, publisher_fct) |>
+  summarise(cc_total_all = sum(cc_total),
+              cc_total_prop = sum(prop))
+  
+ my_tooltips <-
+   de_top |>
+   filter(!is.na(cc)) |>
+    mutate(colors = case_when(
+        cc == "CC BY" ~ "#65BADA",
+        cc == "CC BY-SA" ~ "#068E8C",
+        cc == "CC BY-NC" ~ "#00A757",
+        cc == "CC BY-NC-SA" ~ "#E5BA52",
+        cc == "CC BY-ND" ~ "#D86F27",
+        cc == "CC BY-NC-ND" ~ "#C82E6B")) |>
+      mutate(tooltip = glue::glue('
+<tr>
+    <td style="text-align:left;padding-bottom:0"><span style="color:{colors}">■</span> {cc}<br></td>
+    <td style="text-align:right;padding-bottom:0">{format(cc_total, big.mark = ",")}</td>
+    <td style="text-align:right;">{round(prop * 100, 1)}%</td>
+</tr>')) |>
+      group_by(cr_year, publisher_fct) |>
+      summarise(tooltip_group = paste(tooltip, collapse = "")) |>
+      inner_join(total_by_year, by = c("cr_year", "publisher_fct")) |>
+      mutate(tooltip_group = glue::glue('<h4><b>{publisher_fct}</b><br><span class="text-muted">Articles with Creative Commons license<br>in</span> <b>{cr_year}</b></h4><hr><table style="margin:8px 0 0;padding:0;width:100%">
+  <colgroup>
+       <col span="1" style="width: 50%;">
+       <col span="1" style="width: 30%;">
+       <col span="1" style="width: 20%;">
+      </colgroup>
+    <tbody>
+    {tooltip_group}
+ <tr style="padding-top:5px">
+    <td style="text-align:left;padding-bottom:0;font-weight:bold;"><span style="color:transparent">■</span> <b>Total</b></td>
+    <td style="text-align:right;font-weight:bold;padding-bottom:0;">{format(cc_total_all, big.mark = ",")}</td>
+    <td style="text-align:right;font-weight:bold;">{round(cc_total_prop * 100, 1)}%</td>
+</tr></tbody></table>'))
+ 
+
+pp <-  my_tooltips |>
+  ungroup() |>
+  mutate(max_ = max(cc_total_prop)) 
+```
+
+```{r}
+## Plot Top 3
+p_de_top_3 <- de_top |> 
+  filter(publisher_fct %in% top[1:3]) |> 
+  ggplot(aes(cr_year, prop,  fill = forcats::fct_rev(cc), group = forcats::fct_rev(cc))) +
+    geom_area(
+      #aes(fill = cc, group = cc),
+      stat = "identity",
+      color = "white",
+      size = 0.3
+    ) +
+   geom_bar_interactive(data = filter(pp, publisher_fct %in% top[1:3]), 
+                          inherit.aes = FALSE,
+                        aes(cr_year, max_, tooltip = tooltip_group),
+                        stat = "identity",
+                        color = "transparent",
+                        fill = "transparent",
+                        alpha = 0.01,
+                        width = 1,
+                        position = position_dodge2()
+                      ) + 
+  facet_wrap(~publisher_fct, scales = "fixed", nrow = 1) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L),
+                       expand = expansion(mult = c(0, 0.05)),
+                     breaks = scales::breaks_extended(4)) +
+  scale_fill_manual("License spectrum",
+                      values =  c(
+                        `CC BY` = "#65BADA",
+                        `CC BY-SA` = "#068E8C",
+                        `CC BY-NC` = "#00A757",
+                        `CC BY-NC-SA` = "#E5BA52",
+                        `CC BY-ND` = "#D86F27",
+                        `CC BY-NC-ND` = "#C82E6B"
+                      ),
+                      guide = guide_legend(nrow = 1)) +
+    theme_minimal(base_family = "Source Sans Pro", base_size = 20) +
+    labs(y = NULL, x = NULL) +
+    #       title = "Open Access in Hybrid Journals",
+    #       subtitle = "By Creative Commons license variant as provided by Crossref\n") +
+    theme(panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          axis.text.x=element_blank(),
+          panel.grid.minor.y = element_blank(),
+          panel.ontop = FALSE,
+          legend.position="top", legend.justification = "right",
+          legend.title=element_text(size = 14), 
+    legend.text=element_text(size = 12))
+
+
+p_de_other <-  de_top |> 
+  filter(publisher_fct %in% top[4:13]) |> 
+  ggplot(aes(cr_year, prop,  fill = forcats::fct_rev(cc), group = forcats::fct_rev(cc))) +
+    geom_area(
+      #aes(fill = cc, group = cc),
+      stat = "identity",
+      color = "white",
+      size = 0.3
+    ) +
+  geom_bar_interactive(data = filter(pp, publisher_fct %in% top[4:13]), 
+                        inherit.aes = FALSE,
+                        aes(cr_year, max_, tooltip = tooltip_group),
+                        stat = "identity",
+                        color = "transparent",
+                        fill = "transparent",
+                        alpha = 0.01,
+                        width = 1,
+                        position = position_dodge2()
+                      ) + 
+  facet_wrap(~publisher_fct, scales = "fixed", ncol = 5,
+                                labeller = label_wrap_gen(multi_line = TRUE)) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L),
+                       expand = expansion(mult = c(0, 0.05)),
+                     breaks = scales::breaks_extended(3)) +
+  scale_fill_manual("License spectrum",
+                      values =  c(
+                        `CC BY` = "#65BADA",
+                        `CC BY-SA` = "#068E8C",
+                        `CC BY-NC` = "#00A757",
+                        `CC BY-NC-SA` = "#E5BA52",
+                        `CC BY-ND` = "#D86F27",
+                        `CC BY-NC-ND` = "#C82E6B"
+                      )) +
+    theme_minimal(base_family = "Source Sans Pro", base_size = 14) +
+    labs(y = NULL, x = NULL) +
+    #       title = "Open Access in Hybrid Journals",
+    #       subtitle = "By Creative Commons license variant as provided by Crossref\n") +
+    theme(panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          axis.text.x=element_blank(),
+          panel.grid.minor.y = element_blank(),
+          panel.ontop = FALSE,
+          legend.position="none")
+
+
+
+# Merge into one plot
+
+publisher_p_de <-  p_de_top_3 / p_de_other +
+plot_layout(guides = 'keep')
+
+```
+
+::: panel-tabset
+## Global
+
+```{r}
+# Return SVG
+girafe(
+  ggobj = publisher_p,
+  width_svg = 9,
+  height_svg = 10 * 0.618,
+ options = list(opts_tooltip(
+    css="background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    opacity = .95)))
+```
+
+## Germany
+
+```{r}
+# Return SVG
+girafe(
+  ggobj = publisher_p_de,
+  width_svg = 9,
+  height_svg = 10 * 0.618,
+ options = list(opts_tooltip(
+    css="background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    opacity = .95)))
+```
+:::
+
+## Publishing Market
+
+Hybrid journal portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Note that only hybrid journals included in transformative agreements are shown.
+
+### Market Shares
+
+Publisher market shares as measured by articles published between 2017 and 2022 in hybrid journals included in transformative agreements.
+
+```{r}
+## Global
+
+## Total Article Volume
+all_publisher_league <- all_top |>
+  ungroup() |>
+  group_by(publisher_fct) |>
+  summarise(total_articles = sum(all_articles)) |>
+  mutate(prop = total_articles / sum(total_articles)) |>
+  mutate(cat = "Total Articles")
+
+## CC Article Volume
+cc_publisher_league <- cc_top |>
+  ungroup() |>
+  group_by(publisher_fct) |>
+  summarise(total_articles = sum(cc_total)) |>
+  mutate(prop = total_articles / sum(total_articles)) |>
+  mutate(cat = "Open Access Articles with Creative Commons License")
+
+pub_shares <- bind_rows(all_publisher_league, cc_publisher_league) |>
+  mutate(type = case_when(
+    publisher_fct == "Springer Hybrid (DEAL)" ~ "Springer Hybrid (DEAL)",
+    publisher_fct == "Wiley Hybrid (DEAL)" ~ "Wiley Hybrid (DEAL)",
+    publisher_fct %in% top_publisher[3:13] ~ "Top 4-13",
+    publisher_fct == "Other" ~ "Other"
+  ) ) |>
+  mutate(type = forcats::fct_inorder(type)) |>
+  mutate(cat = fct_rev(as.factor(cat))) |>
+  # Tooltips
+  mutate(my_tooltip = glue::glue('<p>{publisher_fct}</p>
+                              <p><big>{format(total_articles, big.mark = ",")}</big> <span class="text-muted">Articles</span></p>
+                              <p><big>{round(prop * 100, 1)}%</big><span class="text-muted"> <small>Market Share</small></span></p>'))
+
+pub_shares_global <- ggplot(pub_shares, aes(
+  x = "",
+  y = prop,
+  group = type,
+  fill = type
+)) +
+  geom_bar_interactive(
+    width = 1,
+    stat = "identity",
+    position = position_stack(reverse = TRUE),
+    color = "white",
+    aes(tooltip = my_tooltip)
+  ) +
+  coord_flip() +
+  scale_fill_manual(
+    "",
+    values = c(
+      "Springer Hybrid (DEAL)" = "#486a7e",
+      "Wiley Hybrid (DEAL)" = "#068853",
+      "Top 3-13" = "grey60",
+      "Other" = "grey90"
+    ),
+    guide = guide_legend(reverse = FALSE,  nrow = 1)
+  ) +
+  facet_wrap(~ cat, ncol = 1) +
+  scale_y_continuous(breaks = seq(0, 1, by = 0.1),
+                     labels = scales::percent_format(accuracy = 5L)) +
+  labs(x = NULL, y = NULL) +
+    theme_minimal(base_family = "Source Sans Pro", base_size = 14) +
+  theme(panel.grid.minor = element_blank()) +
+  theme(axis.ticks = element_blank()) +
+  theme(panel.grid.major.y = element_blank()) +
+  theme(panel.border = element_blank()) +
+  theme(strip.text.x = element_text(hjust = -0.01)) +
+  theme(legend.position = "bottom",
+        legend.justification = "center",
+        legend.text = element_text(size = 10)) 
+```
+
+::: panel-tabset
+## Global
+
+```{r}
+# Return SVG
+girafe(
+  ggobj = pub_shares_global,
+  width_svg = 6,
+  height_svg = 5 * 0.618,
+ options = list(opts_tooltip(
+    css="background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    opacity = .95)))
+```
+
+## Germany
+
+```{r}
+## Global
+
+## Total Article Volume
+all_publisher_league <- de_top |>
+  ungroup() |>
+  distinct(cr_year, publisher_fct, jn_all) |>
+  group_by(publisher_fct) |>
+  summarise(total_articles = sum(jn_all, na.rm =TRUE)) |>
+  mutate(prop = total_articles / sum(total_articles)) |>
+  mutate(cat = "Total Articles")
+
+## CC Article Volume
+cc_publisher_league <- de_top |>
+  ungroup() |>
+  group_by(publisher_fct) |>
+  summarise(total_articles = sum(cc_total)) |>
+  mutate(prop = total_articles / sum(total_articles)) |>
+  mutate(cat = "Open Access Articles with Creative Commons License")
+
+de_pub_shares <- bind_rows(all_publisher_league, cc_publisher_league) |>
+  mutate(type = case_when(
+    publisher_fct == "Springer Hybrid (DEAL)" ~ "Springer Hybrid (DEAL)",
+    publisher_fct == "Wiley Hybrid (DEAL)" ~ "Wiley Hybrid (DEAL)",
+    publisher_fct %in% top_publisher[3:13] ~ "Top 4-13",
+    publisher_fct == "Other" ~ "Other"
+  ) ) |>
+  mutate(type = forcats::fct_inorder(type)) |>
+  mutate(cat = fct_rev(as.factor(cat))) |>
+  # Tooltips
+  mutate(my_tooltip = glue::glue('<p>{publisher_fct}</p>
+                              <p><big>{format(total_articles, big.mark = ",")}</big> <span class="text-muted">Articles</span></p>
+                              <p><big>{round(prop * 100, 1)}%</big><span class="text-muted"> <small>Market Share</small></span></p>'))
+
+pub_share_de <- ggplot(de_pub_shares, aes(
+  x = "",
+  y = prop,
+  group = type,
+  fill = type
+)) +
+  geom_bar_interactive(
+    width = 1,
+    stat = "identity",
+    position = position_stack(reverse = TRUE),
+    color = "white",
+    aes(tooltip = my_tooltip)
+  ) +
+  coord_flip() +
+   scale_fill_manual(
+    "",
+    values = c(
+      "Springer Hybrid (DEAL)" = "#486a7e",
+      "Wiley Hybrid (DEAL)" = "#068853",
+      "Top 3-13" = "grey60",
+      "Other" = "grey90"
+    ),
+    guide = guide_legend(reverse = FALSE,  nrow = 1)
+  ) +
+  facet_wrap(~ cat, ncol = 1) +
+  scale_y_continuous(breaks = seq(0, 1, by = 0.1),
+                     labels = scales::percent_format(accuracy = 5L)) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal(base_family = "Source Sans Pro", base_size = 14) +
+  theme(panel.grid.minor = element_blank()) +
+  theme(axis.ticks = element_blank()) +
+  theme(panel.grid.major.y = element_blank()) +
+  theme(panel.border = element_blank()) +
+  theme(strip.text.x = element_text(hjust = -0.01)) +
+  theme(legend.position = "bottom",
+        legend.justification = "center",
+        legend.text = element_text(size = 10)) 
+```
+
+```{r}
+# Return SVG
+girafe(
+  ggobj = pub_share_de,
+  width_svg = 6,
+  height_svg = 5 * 0.618,
+ options = list(opts_tooltip(
+    css="background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    opacity = .95)))
+```
+:::
+
+### Publisher League
+
+This interactive table highlights the hybrid Open Access publisher output by year, sorted . It shows the number and proportion of Open Access articles provided under a Creative Commons license in hybrid journals included in transformative agreements. The table also illustrates the number of hybrid journals per portfolio, which published articles in the year, and the corresponding percentage of hybrid journals with at least one Open Access article. You can filter by publisher, publication year, and between a global and a country-specific view relative to lead author publications from Germany.
+
+::: column-body-outset
+{{< include _oam_publisher_league.qmd >}}
+:::
