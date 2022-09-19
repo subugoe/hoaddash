@@ -27,8 +27,7 @@ library(patchwork)
 ```{r oam_data, message = FALSE}
 library(hoaddata)
 if(!is.null(params$jns)) 
-  oam_hybrid_jns <- oam_hybrid_jns |>
-    dplyr::filter(cr_journal_id %in% params$jns)
+  oam_hybrid_jns <- hoaddata::oam_hybrid_jns
 
 cc_openalex_inst_jn_ind <- cc_openalex_inst_jn_ind |>
   rename(jn_id = cr_journal_id) |>
@@ -708,3 +707,30 @@ This interactive table highlights the hybrid Open Access publisher output by yea
 ::: column-body-outset
 {{< include _oam_publisher_league.qmd >}}
 :::
+
+### Open Access in Hybrid Journals by Country
+
+Percentage of Open Access Articles with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in hybrid journals included in transformative agreements between 2017 and 2022.
+
+::: column-body-outset
+{{< include _oam_country_top20.qmd >}}
+:::
+
+### Country League
+
+Publication volume in hybrid journals included in transformative agreements and Open Access share per country. You can search for specific countries, and filter by publisher and publication year.
+
+{{< include _oam_country_league_table.qmd >}}
+
+### License Metadata Gaps
+
+Comparision of license metadata in Crossref with Unpaywall per year. Additionally to Crossref license information, Unpaywall also parses publisher websites to determine whether an article was published under an open content license.
+
+{{< include _oam_upw_cr.qmd >}}
+
+### Crossref Metadata Coverage
+
+This interactive table shows the the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share links to full-texts for text-mining purposes,  persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
+
+{{< include _oam_open_md_coverage.qmd >}}
+

@@ -1,0 +1,27 @@
+project:
+  type: website
+  title: "HOAD Dashboard"
+  output-dir: docs
+
+website:
+  title: "HOAD"
+  navbar:
+    background: primary
+  page-footer:
+    left: |
+      Developed at the <a href="https://www.sub.uni-goettingen.de/sub-aktuell/">Göttingen State and University Library</a>
+    center:
+      - text: "About"
+        href: about.qmd
+      - text: "License"
+        href: license.qmd
+    right:
+      - icon: github
+        href: https://github.com/subugoe/
+        aria-label: Project GitHub
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
