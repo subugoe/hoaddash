@@ -1,0 +1,41 @@
+---
+title: "About"
+format:
+  html:
+    theme: default
+    toc: true
+---
+
+:::{.callout-warning}
+
+Under construction. We will add more details with the official launch end of 2022.
+
+:::
+
+This open source dashboard is currently developed at the Göttingen State and University Library, Germany, supported by the German Research Foundation on grant [416115939](https://gepris.dfg.de/gepris/projekt/416115939?context=projekt&task=showDetail&id=416115939&).
+
+## Data and Methods
+
+To engage with everyone, our open source data analysis combines open data from [Crossref](https://www.crossref.org/), [OpenAlex](https://openalex.org/) and [Unpaywall](https://unpaywall.org/) as follows:
+
+- Crossref is our main data source to determine the hybrid open access uptake, because the ESAC guidelines and many transformative agreements require that publisher make key metadata elements publicly available through Crossref like Creative Commons licensing information for open access articles.
+- To highlight potential gaps between Crossref and other open content license information provided by publishers, we used Unpaywall as an complementary data source for open access articles in hybrid journals
+- OpenAlex is our data source to determine country affiliations from lead authors. A lead author is the first named author of a scholarly article who has usually undertaken most of the research presented in the article, although author roles can vary across discipline. We used OpenAlex as data source to determine lead author affiliation.
+
+For more details, see our [blog post](https://subugoe.github.io/scholcomm_analytics/posts/oam_hybrid/).
+
+## Implementation
+
+tba
+
+## Contribute
+
+This dashboard has been developed in the open using open tools. There are a number of ways you can help make the dashboard better:
+
+If you don’t understand something, please let me know and submit an [issue](https://github.com/subugoe/hoaddash/issues).
+
+Feel free to add new features or fix bugs by sending a pull request.
+
+## Contact
+
+Feel free to contact Najko Jahn <najko.jahn@sub.uni-goettingen.de>

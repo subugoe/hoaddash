@@ -10,6 +10,7 @@ execute:
   echo: false
   warnings: false
   message: false
+  freeze: true
 sidebar: false
 params:
   jns: NULL
@@ -733,4 +734,13 @@ Comparision of license metadata in Crossref with Unpaywall per year. Additionall
 This interactive table shows the the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share links to full-texts for text-mining purposes,  persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
 
 {{< include _oam_open_md_coverage.qmd >}}
+
+
+## Journal Table
+
+This table presents the publication volume and Open Access share by journal between 2017 and 2022, comparing global metrics with metrics just for Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+
+::: column-body-outset
+
+{{< include _journal_listing.qmd >}}
 

@@ -7,6 +7,15 @@ website:
   title: "HOAD"
   navbar:
     background: primary
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "Dashboards"
+        menu:
+        - text: "Journal Checker Tool (JCT)" 
+          file: jct.qmd
+        - text: "FZ Jülich Open Access Monitor (OAM)"
+          file: oam.qmd 
   page-footer:
     left: |
       Developed at the <a href="https://www.sub.uni-goettingen.de/sub-aktuell/">Göttingen State and University Library</a>
@@ -15,9 +24,11 @@ website:
         href: about.qmd
       - text: "License"
         href: license.qmd
+      - text: "Imprint"
+        href: https://www.sub.uni-goettingen.de/impressum/
     right:
       - icon: github
-        href: https://github.com/subugoe/
+        href: https://github.com/subugoe/hoaddash/
         aria-label: Project GitHub
 
 format:
