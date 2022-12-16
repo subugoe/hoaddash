@@ -1,0 +1,484 @@
+---
+title: "Hybrid Journals in Transformative Agreements"
+subtitle: "How open are hybrid journals in transformative agreements? This open source dashboard highlights the Open Access uptake in hybrid journals included in transformative agreements as listed by the cOAlition S Journal Checker Tool. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref."
+format:
+  html:
+    theme: default
+    toc: true
+    toc-location: right
+execute:
+  echo: false
+  warnings: false
+  message: false
+  freeze: auto
+sidebar: false
+---
+
+<!-- Required R packages -->
+
+```{r setup}
+#| echo: false
+#| message: false
+source("R/setup.R")
+```
+
+<!-- data preparation -->
+
+```{r data prep}
+#| echo: false
+#| message: false
+jn_ind_df <- hoaddata::jn_ind |>
+dplyr::mutate(cr_year = as.character(cr_year)) |>
+  dplyr::mutate(cc = factor(
+    cc,
+    # Order by permissiveness
+    levels = c(
+      "CC BY",
+      "CC BY-SA",
+      "CC BY-NC",
+      "CC BY-NC-SA",
+      "CC BY-ND",
+      "CC BY-NC-ND"
+    ))) |>
+  # Journal selection
+  filter(issn_l %in% params$issn_l)
+
+jn_aff_df <- hoaddata::jn_aff |>
+dplyr::mutate(cr_year = as.character(cr_year)) |>
+  dplyr::mutate(cc = factor(
+    cc,
+    # Order by permissiveness
+    levels = c(
+      "CC BY",
+      "CC BY-SA",
+      "CC BY-NC",
+      "CC BY-NC-SA",
+      "CC BY-ND",
+      "CC BY-NC-ND"
+    ))) |>
+  # Journal selection
+  filter(issn_l %in% params$issn_l)
+```
+
+
+<!-- Teaser -->
+
+The share of Open Access articles with a Creative Commons license in hybrid journals exposed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/) is as follows:
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: asis
+source("R/teaser.R")
+basic_stat(jn_ind_df = jn_ind_df, jn_aff_df = jn_aff_df)
+```
+
+::: {.callout-note collapse="true"}
+## Expand to learn about how publications from Germany were counted?
+
+Only journal articles from lead authors based in Germany were considered. A [lead author](https://en.wikipedia.org/wiki/Lead_author) is the first named author of a scholarly article who has usually undertaken most of the research presented in the article, although author roles can vary across discipline. We used [OpenAlex](https://openalex.org/) as data source to determine lead author affiliation.
+:::
+
+<!-- Creative Commons license prevalence-->
+
+### Creative Commons licenses over time
+
+Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types as provided by Crossref.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/cc_over_year.R")
+```
+
+
+::: {.panel-tabset}
+
+## Global
+
+```{r, message=FALSE}
+cc_global_plot <- plot_cc_variants_by_year(cc_ind_global(jn_ind_df = jn_ind_df))
+# Return SVG
+girafe(
+  ggobj = cc_global_plot,
+  width_svg = 9,
+  height_svg = 5 * 0.618,
+ options = list(opts_tooltip(
+    css="background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    opacity = .95)))
+# download
+readr::write_csv(cc_ind_global(jn_ind_df = jn_ind_df), "cc_2017-22.csv")
+```
+
+<!-- <div style="text-align: right"><small>[Download data (csv)](cc_2017-22.csv)</small></div> -->
+
+## Germany
+
+```{r, message=FALSE}
+cc_de_plot <- plot_cc_variants_by_year(cc_ind_de(jn_aff_df = jn_aff_df))
+# Return SVG
+girafe(
+  ggobj = cc_de_plot,
+  width_svg = 9,
+  height_svg = 5 * 0.618,
+ options = list(opts_tooltip(
+    css="background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    opacity = .95)))
+readr::write_csv(cc_ind_de(jn_aff_df = jn_aff_df), "cc_2017-22_de.csv")
+```
+
+<!--  <div style="text-align: right"><small>[Download data (csv)](cc_2017-22_de.csv)</small></div> -->
+
+:::
+
+### Publisher market
+
+Hybrid journal portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Note that only hybrid journals included in transformative agreements are shown.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+# Data prep
+
+## All
+pub_df <- hoaddata::jn_ind |>
+  inner_join(hoaddata::jct_hybrid_jns, by = "issn_l") 
+pub_all <- pub_df |>
+  distinct(issn_l, cr_year, jn_all, esac_publisher) |>
+  group_by(esac_publisher, cr_year) |>
+  summarise(articles = sum(jn_all))
+pub_cc <-  pub_df |>
+  filter(!is.na(cc)) |> 
+  distinct(issn_l, cr_year, cc, cc_total, esac_publisher) |>
+  group_by(esac_publisher, cr_year) |>
+  summarise(oa_articles = sum(cc_total))
+
+pub_df_all <- left_join(pub_all, pub_cc, by = c("esac_publisher", "cr_year")) |> 
+  ungroup() |>
+  mutate_if(is.numeric, ~replace(., is.na(.), 0)) |>
+  mutate(collection = "global") 
+
+## DE
+pub_df_de <- hoaddata::jn_aff |>
+  inner_join(hoaddata::jct_hybrid_jns, by = "issn_l") |>
+  filter(country_code == "DE")
+pub_all_de <- pub_df_de |>
+  distinct(issn_l, cr_year, articles_total, esac_publisher) |>
+  group_by(esac_publisher, cr_year) |>
+  summarise(articles = sum(articles_total))
+pub_cc_de <-  pub_df_de |>
+  filter(!is.na(cc)) |> 
+  distinct(issn_l, cr_year, cc, articles_under_cc_variant, esac_publisher) |>
+  group_by(esac_publisher, cr_year) |>
+  summarise(oa_articles = sum(articles_under_cc_variant))
+pub_de <- left_join(pub_all_de, pub_cc_de, by = c("esac_publisher", "cr_year")) |>
+  mutate(collection = "de") |>
+  mutate(cr_year = as.factor(cr_year))
+
+my_df <- bind_rows(pub_df_all, pub_de) |>
+  mutate_if(is.numeric, ~replace(., is.na(.), 0)) |>
+  mutate(pub_col = ifelse(esac_publisher %in% params$publisher, "#0093C7", "#999999"))
+```
+
+::: {.panel-tabset}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/pub_scatter.R")
+```
+
+## Global
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+plot_scatterplot(my_df, collection = "global")
+```
+  
+## Germany
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+plot_scatterplot(my_df, collection = "de")
+```
+
+:::
+
+
+### Country test
+
+::: {.panel-tabset}
+
+## Global
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+pub_df <- hoaddata::jn_ind |>
+  inner_join(hoaddata::jct_hybrid_jns, by = "issn_l") 
+pub_all <- pub_df |>
+  distinct(issn_l, cr_year, jn_all, esac_publisher) |>
+  group_by(esac_publisher, cr_year) |>
+  summarise(articles = sum(jn_all))
+pub_cc <-  pub_df |>
+  filter(!is.na(cc)) |> 
+  distinct(issn_l, cr_year, cc, cc_total, esac_publisher) |>
+  group_by(esac_publisher, cr_year) |>
+  summarise(oa_articles = sum(cc_total))
+
+pub_df_all <- left_join(pub_all, pub_cc, by = c("esac_publisher", "cr_year")) |> 
+  ungroup() |>
+  mutate_if(is.numeric, ~replace(., is.na(.), 0)) |>
+  mutate(collection = "global") 
+
+pub_df <- pub_df_all |>
+  group_by(cr_year) |>
+  mutate(oa_prop = oa_articles / articles) |>
+  summarise(median_articles = median(articles),
+            median_oa = median(oa_prop)) |>
+  inner_join(pub_df_all, by = "cr_year")
+
+tt <- ggplot(pub_df,
+       aes(articles, oa_articles / articles, frame = cr_year)) +
+  geom_point(aes(size = oa_articles), alpha = .7) +
+  scale_x_log10(
+    labels = function(x)
+      format(x, scientific = FALSE, big.mark = ","),
+    
+  ) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L))  +
+  scale_size(
+    "OA articles",
+    labels = function(x)
+      format(x, big.mark = ",", scientific = FALSE)
+  ) +
+  coord_cartesian(xlim = c(100, max(pub_df_all$articles))) + 
+  scale_color_identity() +
+  geom_hline(
+    aes(yintercept = median_oa, frame = cr_year),
+    colour = "#d55e00",
+    linetype = "dashed",
+    size = 1
+  ) +
+  geom_vline(
+    aes(xintercept = median_articles, frame = cr_year),
+    colour = "#E69F00",
+    linetype = "dashed",
+    size = 1
+  ) +
+  theme_minimal(base_family = "Source Sans Pro", base_size = 16) +
+  labs(x = "Articles (log scale)", y = "OA") +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.minor.y = element_blank(),
+        panel.ontop = FALSE,
+        legend.position="top", legend.justification = "right") 
+
+library(plotly)
+plotly::ggplotly(tt, tooltip = c("label","x", "y", "oa_articles")) |>
+  animation_slider(
+    currentvalue = list(prefix = "Publication year: "),
+                        pad = list(t = "50")
+    ) |>
+  animation_button(visible = TRUE) 
+
+```
+
+## Germany
+
+:::
+
+## Country View
+
+This section shows how hybrid open access has been adopted in different parts of the world. The analysis is based on country-affiliations of lead authors. Lead authors are the first named authors of scholarly articles who have usually undertaken most of the research presented in the article, although author roles can vary across discipline. We used OpenAlex as data source to determine lead author affiliation.
+
+### Open Access in Hybrid Journals by Country
+
+Percentage of Open Access Articles with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in **`r params$publisher`** hybrid journals included in transformative agreements between 2017 and 2022.
+
+::: column-body-outset
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/country_top_20.R")
+
+ggiraph::girafe(
+  ggobj = country_multiple_plot,
+  width_svg = 8,
+  height_svg = 7 * 0.618,
+  options = list(opts_tooltip(
+    css="background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+    opacity = .95)))
+```
+:::
+
+
+### Country League
+
+Publication volume in **`r params$publisher`** hybrid journals included in transformative agreements and Open Access share per country. You can search for specific countries, and filter by publisher and publication year.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/country_league.R")
+```
+
+```{r}
+htmltools::div(
+  class = "agreement-tbl",
+  htmltools::div(
+    class = "filters",
+    htmltools::div(
+      class = "filter-input",
+      filter_select(
+        "filter_country",
+        "Countries",
+        shared_oa_country_df,
+        ~ country_name,
+        multiple = TRUE
+      )
+    ),
+    htmltools::div(
+      class = "filter-input",
+      filter_select(
+        "filter_country_year",
+        "Publication Year",
+        shared_oa_country_df,
+        ~ cr_year,
+        multiple = FALSE
+      )
+    )
+  ),
+  react_table_oa_country,
+  htmltools::div(class = "agreement-footer", "
+  Data sources: Journal Checker Tool, Crossref, OpenAlex")
+)
+```
+
+
+```{js,echo = FALSE}
+ /* https://stackoverflow.com/a/66216595 */
+$(document).ready(function() {
+    document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2021", false);
+});
+```
+
+```{css}
+.my-tbl {
+  margin: 0 auto;
+  width: 575px;
+}
+.tbl-header {
+  margin: 18px 0;
+  font-size: 1.25em;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.filter-input {
+  margin-top: 4px;
+  margin-left: 32px;
+  flex: 1;
+  max-width: 250px;
+}
+.filter-input label {
+  color: hsl(0, 0%, 45%);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.group-header {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.filter-input select,
+.filter-input input[type="search"] {
+  padding: 0 6px;
+  height: 32px;
+}
+.filter-input input[type="search"] {
+  /* Reset Bootstrap 3 styles */
+  -webkit-appearance: searchfield;
+}
+.filter-input input[type="search"]::-webkit-search-cancel-button {
+  /* Reset Bootstrap 3 styles */
+  -webkit-appearance: searchfield-cancel-button;
+}
+.followers-tbl a {
+  color: inherit;
+}
+.header {
+  border-bottom: 2px solid #555;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header:hover {
+  background-color: #eee;
+}
+/* Highlight headers when sorting */
+.header:hover,
+.header[aria-sort="ascending"],
+.header[aria-sort="descending"] {
+  background-color: rgba(236, 236, 237, 1);
+}
+.agreement-footer {
+  margin: 18px 0;
+  font-size: 10px;
+  }
+  
+.agreement-tbl {
+  margin: 18px 0;
+  font-size: 14px;
+}
+.bar-cell {
+  display: flex;
+  align-items: center;
+}
+.number {
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre;
+}
+.label {
+  font-size: 14px;
+  white-space: pre;
+}
+.bar-chart {
+  flex-grow: 1;
+  margin-left: 6px;
+  height: 14px;
+}
+.bar {
+  height: 100%;
+}
+.border-left {
+  border-left: 1px solid #b5b5b5;
+}
+.name {
+  font-weight: 900;
+}
+```
