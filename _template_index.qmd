@@ -136,6 +136,7 @@ readr::write_csv(cc_ind_de(jn_aff_df = jn_aff_df), "cc_2017-22_de.csv")
 
 :::
 
+
 ### Publisher market
 
 Hybrid journal portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Note that only hybrid journals included in transformative agreements are shown.
@@ -145,44 +146,10 @@ Hybrid journal portfolio analysis, showing publishing market shares in terms of 
 #| message: false
 #| warning: false
 # Data prep
-
-## All
-pub_df <- hoaddata::jn_ind |>
-  inner_join(hoaddata::jct_hybrid_jns, by = "issn_l") 
-pub_all <- pub_df |>
-  distinct(issn_l, cr_year, jn_all, esac_publisher) |>
-  group_by(esac_publisher, cr_year) |>
-  summarise(articles = sum(jn_all))
-pub_cc <-  pub_df |>
-  filter(!is.na(cc)) |> 
-  distinct(issn_l, cr_year, cc, cc_total, esac_publisher) |>
-  group_by(esac_publisher, cr_year) |>
-  summarise(oa_articles = sum(cc_total))
-
-pub_df_all <- left_join(pub_all, pub_cc, by = c("esac_publisher", "cr_year")) |> 
-  ungroup() |>
-  mutate_if(is.numeric, ~replace(., is.na(.), 0)) |>
-  mutate(collection = "global") 
-
-## DE
-pub_df_de <- hoaddata::jn_aff |>
-  inner_join(hoaddata::jct_hybrid_jns, by = "issn_l") |>
-  filter(country_code == "DE")
-pub_all_de <- pub_df_de |>
-  distinct(issn_l, cr_year, articles_total, esac_publisher) |>
-  group_by(esac_publisher, cr_year) |>
-  summarise(articles = sum(articles_total))
-pub_cc_de <-  pub_df_de |>
-  filter(!is.na(cc)) |> 
-  distinct(issn_l, cr_year, cc, articles_under_cc_variant, esac_publisher) |>
-  group_by(esac_publisher, cr_year) |>
-  summarise(oa_articles = sum(articles_under_cc_variant))
-pub_de <- left_join(pub_all_de, pub_cc_de, by = c("esac_publisher", "cr_year")) |>
-  mutate(collection = "de") |>
-  mutate(cr_year = as.factor(cr_year))
-
-my_df <- bind_rows(pub_df_all, pub_de) |>
-  mutate_if(is.numeric, ~replace(., is.na(.), 0)) |>
+source("R/data_prep.R")
+my_df <- summarize_pubs(var_summary = c(cr_year, esac_publisher)) |>
+  tidyr::complete(cr_year, esac_publisher, collection) |>
+  mutate_if(is.numeric, ~ replace(., is.na(.), 0)) |>
   mutate(pub_col = ifelse(esac_publisher %in% params$publisher, "#0093C7", "#999999"))
 ```
 
@@ -216,89 +183,6 @@ plot_scatterplot(my_df, collection = "de")
 :::
 
 
-### Country test
-
-::: {.panel-tabset}
-
-## Global
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-pub_df <- hoaddata::jn_ind |>
-  inner_join(hoaddata::jct_hybrid_jns, by = "issn_l") 
-pub_all <- pub_df |>
-  distinct(issn_l, cr_year, jn_all, esac_publisher) |>
-  group_by(esac_publisher, cr_year) |>
-  summarise(articles = sum(jn_all))
-pub_cc <-  pub_df |>
-  filter(!is.na(cc)) |> 
-  distinct(issn_l, cr_year, cc, cc_total, esac_publisher) |>
-  group_by(esac_publisher, cr_year) |>
-  summarise(oa_articles = sum(cc_total))
-
-pub_df_all <- left_join(pub_all, pub_cc, by = c("esac_publisher", "cr_year")) |> 
-  ungroup() |>
-  mutate_if(is.numeric, ~replace(., is.na(.), 0)) |>
-  mutate(collection = "global") 
-
-pub_df <- pub_df_all |>
-  group_by(cr_year) |>
-  mutate(oa_prop = oa_articles / articles) |>
-  summarise(median_articles = median(articles),
-            median_oa = median(oa_prop)) |>
-  inner_join(pub_df_all, by = "cr_year")
-
-tt <- ggplot(pub_df,
-       aes(articles, oa_articles / articles, frame = cr_year)) +
-  geom_point(aes(size = oa_articles), alpha = .7) +
-  scale_x_log10(
-    labels = function(x)
-      format(x, scientific = FALSE, big.mark = ","),
-    
-  ) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L))  +
-  scale_size(
-    "OA articles",
-    labels = function(x)
-      format(x, big.mark = ",", scientific = FALSE)
-  ) +
-  coord_cartesian(xlim = c(100, max(pub_df_all$articles))) + 
-  scale_color_identity() +
-  geom_hline(
-    aes(yintercept = median_oa, frame = cr_year),
-    colour = "#d55e00",
-    linetype = "dashed",
-    size = 1
-  ) +
-  geom_vline(
-    aes(xintercept = median_articles, frame = cr_year),
-    colour = "#E69F00",
-    linetype = "dashed",
-    size = 1
-  ) +
-  theme_minimal(base_family = "Source Sans Pro", base_size = 16) +
-  labs(x = "Articles (log scale)", y = "OA") +
-  theme(panel.grid.major.x = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        panel.grid.minor.y = element_blank(),
-        panel.ontop = FALSE,
-        legend.position="top", legend.justification = "right") 
-
-library(plotly)
-plotly::ggplotly(tt, tooltip = c("label","x", "y", "oa_articles")) |>
-  animation_slider(
-    currentvalue = list(prefix = "Publication year: "),
-                        pad = list(t = "50")
-    ) |>
-  animation_button(visible = TRUE) 
-
-```
-
-## Germany
-
-:::
 
 ## Country View
 
@@ -377,6 +261,123 @@ $(document).ready(function() {
     document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2021", false);
 });
 ```
+
+## Open Metadata
+
+Open and comprehensive metadata is a key requirement in many transformative agreements. The following tables illustrate potential gaps in Crossref metadata relative to Open Access articles in hybrid journals included in transformative agreements.
+
+### License Metadata Gaps
+
+Comparision of license metadata in Crossref with Unpaywall per year. Additionally to Crossref license information, Unpaywall also parses publisher websites to determine whether an article was published under an open content license.
+
+::: {.panel-tabset}
+
+## Global 
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/cr_upw.R")
+cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Global")
+```
+
+## Germany
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Germany")
+```
+
+:::
+
+### Crossref Metadata Coverage
+
+This interactive table shows the the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share links to full-texts for text-mining purposes,  persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/open_md.R")
+# Should be done in hoaddata  
+md_tmp <- hoaddata::cr_md |> 
+  tidyr::complete(cr_year, issn_l, cat) |>
+  mutate_all(~ifelse(is.na(.), 0, .))
+
+my_df <- shared_open_md_df(.data = md_tmp, issn_l = params$issn_l, publisher = params$publisher)
+
+htmltools::div(
+  class = "agreement-tbl",
+  # filters,
+  htmltools::div(
+    class = "filters",
+    htmltools::div(
+      class = "filter-input",
+      filter_select(
+        "filter_open_md_cat_input",
+        "Global / Germany",
+       my_df,
+        ~ cat,
+        multiple = FALSE
+      )
+    ),
+  ),
+  # table
+  open_md_react(
+    my_df
+    ),
+  # footer
+  htmltools::div(
+    class = "agreement-footer",
+    paste(
+      "Data sources: Journal Checker Tool, Crossref, OpenAlex. Last updated:",
+      Sys.Date(),
+      "."
+    )
+  )
+)
+```
+
+```{js,echo = FALSE}
+ /* https://stackoverflow.com/a/66216595 */
+$(document).ready(function() {
+    document.getElementById("filter_open_md_cat_input").getElementsByClassName("selectized")[0].selectize.setValue("Global", false);
+});
+```
+
+## Journal Table
+
+This table presents the publication volume and Open Access share by journal between 2017 and 2022, comparing global metrics with metrics just for Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+
+::: column-body-outset
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+my_df <- summarize_pubs(var_summary = c(cr_year, issn_l)) |>
+  filter(issn_l %in% params$issn_l) |>
+  tidyr::complete(cr_year, issn_l, collection) |>
+  mutate_if(is.numeric, ~ replace(., is.na(.), 0)) 
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/journal_tbl.R")
+htmltools::div(
+  class = "agreement-tbl",
+  journal_listing)
+```
+
+:::
 
 ```{css}
 .my-tbl {
