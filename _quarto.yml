@@ -2,6 +2,7 @@ project:
   type: website
   title: "HOAD Dashboard"
   output-dir: docs
+  execute-dir: project
 
 website:
   title: "HOAD"
