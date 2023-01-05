@@ -1,82 +1,56 @@
 # Publisher scatterplot
-
-# Tooltip prep
-## helper fxn
-create_scatter_tooltip <-
-  function(publisher = NULL,
-           plot_df = my_df) {
-    
-
-    tooltip_tmp <- plot_df |>
-      filter(esac_publisher == publisher) |>
-      janitor::adorn_totals() |>
-      mutate(oa_prop = round(oa_articles / articles * 100, 1)) |>
-      mutate(oa_prop = paste0(oa_prop, "%")) |>
-      select(
-        `Year` = cr_year,
-        `Total` = articles,
-        `OA` = oa_articles,
-        `% OA` = oa_prop
-      )
-    
-      kableExtra::kbl(tooltip_tmp,
-        align = "lrrr",
-        format.args = list(big.mark
-                           = ','),
-        caption = glue::glue("<h4>{publisher}</h4>")
-      ) |>
-      kableExtra::kable_styling(html_font = "Source Sans Pro") |>
-      kableExtra::row_spec(7, bold = TRUE) 
-  }
-## Call fxn
 scatter_pub <- function(my_df = my_df) {
-  tooltip_df <- my_df |>
-    mutate(my_tooltip = map(esac_publisher, function(x)
-      create_scatter_tooltip(x, my_df))) |>
-    distinct(esac_publisher, my_tooltip)
+
+  ### Benchmark lines (median)
+  pub_df <- my_df |>
+    group_by(cr_year) |>
+    mutate(oa_prop = oa_articles / articles) |>
+    summarise(median_articles = mean(articles, na.rm = TRUE),
+              median_oa = mean(oa_prop, na.rm = TRUE)) |>
+    inner_join(my_df, by = "cr_year")
   
-  plot_df_all <- my_df |>
-    group_by(esac_publisher, pub_col) |>
-    summarise(articles = sum(articles),
-              oa_articles = sum(oa_articles)) |>
-    inner_join(tooltip_df, by = "esac_publisher")
   
   plot_all <-
-    ggplot(plot_df_all,
-           aes(articles, oa_articles / articles, color = pub_col, label = esac_publisher)) +
-    geom_point_interactive(aes(size = oa_articles, tooltip = my_tooltip), alpha = .7) +
+    ggplot(pub_df,
+           aes(articles, oa_articles / articles, frame = cr_year, color = pub_col,
+               text = glue::glue(
+             "<b>{esac_publisher}</b> in {cr_year}
+
+       Articles: {format(articles, big.mark = ',')}
+       OA Articles: {format(oa_articles, big.mark = ',')} ({round(oa_articles / articles * 100, 1)}%)
+                  "))) +
+    geom_point(aes(size = oa_articles), alpha = .7) +
     scale_x_log10(
       labels = function(x)
         format(x, scientific = FALSE, big.mark = ","),
       
     ) +
-    coord_cartesian(xlim = c(100, max(plot_df_all$articles))) + 
     scale_y_continuous(labels = scales::percent_format(accuracy = 1L))  +
     scale_size(
       "OA articles",
       labels = function(x)
         format(x, big.mark = ",", scientific = FALSE)
     ) +
-    scale_color_identity() +
+    coord_cartesian(xlim = c(100, max(pub_df$articles))) + 
+    scale_color_identity(guide="none") +
     geom_hline(
-      aes(yintercept = median(oa_articles / articles)),
+      aes(yintercept = median_oa, frame = cr_year),
       colour = "#d55e00",
       linetype = "dashed",
       size = 1
     ) +
     geom_vline(
-      aes(xintercept = median(articles)),
+      aes(xintercept = median_articles, frame = cr_year),
       colour = "#E69F00",
       linetype = "dashed",
       size = 1
     ) +
-    theme_minimal(base_family = "Source Sans Pro") +
+    theme_minimal(base_family = "Source Sans Pro", base_size = 16) +
     labs(x = "Articles (log scale)", y = "OA") +
-    theme(panel.grid.major.x = element_blank(),
-          panel.grid.minor.x = element_blank(),
+    theme(panel.grid.minor.x = element_blank(),
           panel.grid.minor.y = element_blank(),
-          panel.ontop = FALSE,
-          legend.position="top", legend.justification = "right") 
+          legend.position = "none")
+  return(plot_all)
 }
 
 plot_scatterplot <-
@@ -85,16 +59,14 @@ plot_scatterplot <-
     plot_all <- my_df |>
       filter(collection == my_col) |>
       scatter_pub()
-    ggiraph::girafe(
-      ggobj = plot_all,
-      width_svg = 6,
-      height_svg = 5 * 0.618,
-      options = list(
-        opts_tooltip(
-          css = "background-color:white;
-;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
-          opacity = .95
-        )
-      )
-    )
+    plotly::ggplotly(plot_all, tooltip = c("text")) |>
+      style(hoverlabel = list(bgcolor = "white", font = list(
+        family = "Source Sans Pro",
+        size = 18))) |>
+      animation_slider(
+        currentvalue = list(prefix = "Publication year: "),
+        pad = list(t = "50")
+      ) |>
+      animation_button(visible = TRUE) |>
+      config(displayModeBar = FALSE)
   }

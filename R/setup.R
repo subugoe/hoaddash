@@ -5,6 +5,7 @@
 ### Data wrangling
 library(dplyr)
 library(purrr)
+library(tidyr)
 
 ### Hybrid OA data
 library(hoaddata)
@@ -14,6 +15,7 @@ library(ggplot2)
 library(cowplot)
 library(ggiraph)
 library(patchwork)
+library(plotly)
 
 ### Tables
 library(reactable)
