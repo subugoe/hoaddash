@@ -10,7 +10,7 @@ render_pubs <- function(publisher = NULL) {
     distinct(issn_l)
   }
   
-  dir_name <- tolower(gsub(" ", "", publisher))
+  dir_name <- tolower(gsub(" |[()]", "", publisher))
   fs::dir_create(paste0("publisher/", dir_name))
   ymlthis::yml() |>
     ymlthis::yml_params(issn_l = my_df$issn_l, publisher = publisher) |>
@@ -25,7 +25,7 @@ render_pubs <- function(publisher = NULL) {
 all <- hoaddata::jct_hybrid_jns |>
   distinct(issn_l)
 oam <- hoaddata::jct_hybrid_jns |>
-  inner_join(oam_hybrid_jns, by = "issn_l") |>
+  inner_join(hoaddata::oam_hybrid_jns, by = "issn_l") |>
   filter(vertrag == "Wiley Hybrid (DEAL)") |>
   distinct(issn_l) 
 
