@@ -54,10 +54,9 @@ plot_cc_variants_by_year <- function(cc_df = NULL) {
   
   ggplot(cc_df, aes(cr_year, prop, fill = forcats::fct_rev(cc), group = forcats::fct_rev(cc))) +
     geom_area(
-      #aes(fill = cc, group = cc),
       stat = "identity",
       color = "white",
-      size = 0.3
+      linewidth = 0.3
     ) +
     # Tooltip
     geom_bar_interactive(data = pp, 

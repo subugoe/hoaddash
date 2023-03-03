@@ -34,3 +34,86 @@ cr_upw_plot <- function(cr_upw_data = hoaddata::cr_upw, ...) {
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
       opacity = .95)))
 }
+
+## React table is used when we want to highlight gaps across publishers
+upw_cr_react <- function(.data = shared_upw_cr_diff_year) {
+reactable::reactable(
+  shared_upw_cr_diff_year,
+  pagination = TRUE,
+  highlight = TRUE,
+  defaultColDef = colDef(vAlign = "center", headerClass = "header"),
+  defaultSortOrder = "desc",
+  compact = TRUE,
+  columns = list(
+    # Hide
+    cr_year = colDef(show = FALSE),
+    # Publisher
+    esac_publisher = colDef(
+      "Publisher",
+      minWidth = 180,
+      align = "left",
+      sticky = "left",
+      class = "label"
+    ),
+    perc_cr = colDef(
+      "Crossref % OA",
+      cell = function(value) {
+        value <- paste0(format(round(value * 100, 1), nsmall = 1), "%")
+        value <- format(value, width = 5, justify = "right")
+        react_bar_chart(value,
+                        width = value,
+                        fill = "#fc5185",
+                        background = "transparent")
+      },
+      align = "center",
+      style = list(whiteSpace = "pre"),
+      class = "number",
+      html = TRUE,
+      minWidth = 100
+    ),
+    perc_upw = colDef(
+      "Unpaywall % OA",
+      cell = function(value) {
+        value <- paste0(format(round(value * 100, 1), nsmall = 1), "%")
+        value <- format(value, width = 5, justify = "right")
+        react_bar_chart(value,
+                        width = value,
+                        fill = "#4d4d4d",
+                        background = "#transparent")
+      },
+      align = "center",
+      style = list(whiteSpace = "pre"),
+      class = "number",
+      html = TRUE,
+      minWidth = 100
+    ),
+    perc_diff  = colDef(
+      name = "% Difference",
+      format = colFormat(percent = TRUE, digits = 1),
+      class = "number",
+      align = "right",
+      width = 120,
+      style = function(value) {
+        if (value > 0) {
+          color <- "#fc5185"
+        } else if (value < 0) {
+          color <- "#4d4d4d"
+        } else {
+          color <- "#777"
+        }
+        list(color = color, fontWeight = "bold")
+      }
+    ),
+    cat = colDef(show = FALSE)
+  ),
+  searchable = FALSE,
+  defaultPageSize = 8,
+  language = reactableLang(
+    searchPlaceholder = "SEARCH",
+    noData = "No publisher found",
+    pageInfo = "{rowStart}\u2013{rowEnd} of {rows} publisher portfolios",
+    pagePrevious = "\u276e",
+    pageNext = "\u276f"
+  )
+)
+}

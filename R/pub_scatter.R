@@ -19,7 +19,7 @@ scatter_pub <- function(my_df = my_df) {
        Articles: {format(articles, big.mark = ',')}
        OA Articles: {format(oa_articles, big.mark = ',')} ({round(oa_articles / articles * 100, 1)}%)
                   "))) +
-    geom_point(aes(size = oa_articles), alpha = .7) +
+    geom_point(aes(size = log(oa_articles)), alpha = .7) +
     scale_x_log10(
       labels = function(x)
         format(x, scientific = FALSE, big.mark = ","),

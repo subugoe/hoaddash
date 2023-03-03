@@ -141,7 +141,7 @@ journal_listing <- reactable::reactable(
           highlightSpotColor = "#00C7B3",
           minSpotColor = FALSE,
           maxSpotColor = FALSE,
-          spotColor = FALSE,
+          spotColor = "#00C7B3",
           lineWidth = 2.5,
           spotRadius = 4,
           width = 90
@@ -160,7 +160,7 @@ journal_listing <- reactable::reactable(
           highlightSpotColor = "#0093c7",
           minSpotColor = FALSE,
           maxSpotColor = FALSE,
-          spotColor = FALSE,
+          spotColor = "#0093c7",
           lineWidth = 2.5,
           spotRadius = 4,
           width = 90,

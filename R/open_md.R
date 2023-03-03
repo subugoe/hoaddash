@@ -77,8 +77,10 @@ make_color_pal <- function(colors, bias = 1) {
   function(x) rgb(get_color(x), maxColorValue = 255)
 }
 # http://vis4.net/palettes/#/9|s|00429d,96ffea,ffffe0|ffffe0,ff005e,93003a|1|1
-pct_color <- make_color_pal(c("#ffffe0","#ffdec7","#ffbcaf","#ff9895","#f4777f","#e4576b","#cf3759","#b41648","#93003a"), bias = 2)
+my_pal <- c("#ffffe0","#ffdec7","#ffbcaf","#ff9895","#f4777f","#e4576b","#cf3759","#b41648","#93003a")
+#my_pal <- c('#ffd4fa', '#e8cbf4', '#d1c3ee', '#babbe7', '#a2b3e1', '#88aadb', '#6ca2d5', '#4999ce', '#0091c8')
 
+pct_color <- make_color_pal(my_pal, bias =2)
 indicator_column <- function(maxWidth = 70, class = NULL, ...) {
   colDef(
     cell = format_pct,
