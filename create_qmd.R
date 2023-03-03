@@ -64,6 +64,8 @@ ta_dir_create(unique(ta_jns$dir_name))
 # Create templates
 lapply(unique(ta_jns$publisher), ta_template_create)
 
+# Move JCT overview
 
+fs::file_copy("_template_overview.qmd", "jct/index.qmd", overwrite = TRUE)
 
 
