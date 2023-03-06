@@ -7,7 +7,7 @@ render_pubs <- function(publisher = NULL) {
       distinct(issn_l)
   } else {
   my_df <- hoaddata::jct_hybrid_jns |>
-    distinct(issn_l)
+    distinct(issn_l) 
   }
   
   dir_name <- tolower(gsub(" |[()]", "", publisher))
