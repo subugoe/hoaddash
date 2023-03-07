@@ -49,12 +49,15 @@ facet_labels <- country_multiple_df |>
     glue::glue('<p style="text-align:center;color:#0093C7"><b>{country_name_fct}</b>'),
     glue::glue('<p style="text-align:center"><b>{country_name_fct}</b>')
   )) |>
+  mutate(total_string = case_when(
+    total < 1000 ~ as.character(total),
+    total < 1000000 ~ paste0(format(round(total / 1e3, 1), trim = TRUE), "K"),
+    total >= 1000000 ~ paste0(format(round(total / 1e6, 2), trim = TRUE), "M"))) |>
   mutate(
     facet_labels = glue::glue(
       '{country_name_tmp}<br><br>
-      {ifelse(total < 1000000, paste0(format(round(total / 1e3, 0), trim = TRUE), "K"), paste0(format(round(total / 1e6, 2), trim = TRUE), "Mio"))} | {paste(round(prop * 100, 1), "%")}</p>
-'
-    )
+      {total_string} | {paste(round(prop * 100, 1), "%")}</p>'
+      )
   ) |>
   distinct(country_name_fct, facet_labels) 
 
