@@ -87,7 +87,7 @@ plot_pub_shares <-
       scale_y_continuous(breaks = seq(0, 1, by = 0.1),
                          labels = scales::percent_format(accuracy = 5L)) +
       labs(x = NULL, y = NULL) +
-      theme_minimal(base_family = "Source Sans Pro", base_size = 14) +
+      theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 14) +
       theme(panel.grid.minor = element_blank()) +
       theme(axis.ticks = element_blank()) +
       theme(panel.grid.major.y = element_blank()) +

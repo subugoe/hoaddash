@@ -16,7 +16,7 @@ cr_upw_plot <- function(cr_upw_data = hoaddata::cr_upw, ...) {
     geom_bar_interactive(position = position_dodge2(preserve = "single"), stat = "identity") +
     scale_fill_manual("Data source", values = c("Crossref" = "#fc5185",
                                                 "Unpaywall" = "#4d4d4d")) +
-    theme_minimal(base_family = "Source Sans Pro", base_size = 20) +
+    theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 20) +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
     labs(y = NULL, x = NULL) +
     theme(panel.grid.major.x = element_blank(),
@@ -27,8 +27,8 @@ cr_upw_plot <- function(cr_upw_data = hoaddata::cr_upw, ...) {
   
   ggiraph::girafe(
     ggobj = my_plot,
-    width_svg = 8,
-    height_svg = 7 * 0.618,
+    width_svg = 9,
+    height_svg = 6 * 0.618,
     options = list(opts_tooltip(
       css="background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",

@@ -1,4 +1,6 @@
 
+
+```{r, message = FALSE, echo=FALSE}
 #' ## Global Creative Commons prevalence
 #'
 #' Calculate CC license variants by year. Returns absulote and relative values.
@@ -13,7 +15,7 @@ cc_ind_global <- function(jn_ind_df = jn_ind_df) {
   inner_join(cc_df, all_df) %>%
     filter(!is.na(cc)) %>%
     mutate(prop = cc_total / jn_all) %>%
-    # select(-jn_all) %>%
+   # select(-jn_all) %>%
     ungroup() %>%
     # missing combinations
     tidyr::complete(cr_year, cc, fill = list(cc_total = 0, prop = 0)) %>%
@@ -47,10 +49,8 @@ cc_publications_21 <- cc_ind_global(jn_ind_df = jn_ind_df) |>
 #' Calculate CC license variants by year. Returns absulote and relative values.
 cc_ind_de <- function(jn_aff_df = jn_aff_df) {
   de_df <- jn_aff_df |>
-    filter(country_code == "DE") |>
-    tidyr::complete(cr_year, cc) |>
-    mutate_if(is.numeric, ~replace(., is.na(.), 0))
-  
+    filter(country_code == "DE")
+
   de_total <- de_df |>
     distinct(cr_year, issn_l, articles_total) %>%
     group_by(cr_year) %>%
@@ -91,7 +91,7 @@ cc_publications_21_de <- cc_ind_de(jn_aff_df = jn_aff_df) |>
 
 ## Indicator display
 basic_stat <- function(...) {
-  glue::glue('<div class="grid">
+glue::glue('<div class="grid">
  <div class="g-col-lg-6 g-col-12">
  <p style="text-align: center;" class="text-muted">2017-2021</p>
   <table style="margin:auto;padding:0;width:80%;text-align: center;">
@@ -103,7 +103,7 @@ basic_stat <- function(...) {
       <tbody>
          <tr >
             <td colspan="1"  scope="row" style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%;">Global</td>
-            <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%; border-left: 1px solid rgb(26, 55, 113);">Germany*</td>
+            <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%; border-left: 1px solid rgb(26, 55, 113);">Germany</td>
          </tr>
           <tr >
             <td colspan="1"  scope="row" style="font-size: 157%;">{round(cc_publications / all_publications * 100, 1)}%</td>
@@ -127,7 +127,7 @@ basic_stat <- function(...) {
       <tbody>
          <tr >
             <td colspan="1"  scope="row" style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%;">Global</td>
-            <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%; border-left: 1px solid rgb(26, 55, 113);">Germany*</td>
+            <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%; border-left: 1px solid rgb(26, 55, 113);">Germany</td>
          </tr>
          <tr >
             <td colspan="1"  scope="row" style="font-size: 157%;">{round(cc_publications_21 / all_publications_2021 * 100, 1)}%</td>
@@ -141,5 +141,18 @@ basic_stat <- function(...) {
    </table>
 </div>
 </div>')
-}
-  
+  }
+```
+
+The share of Open Access articles with a Creative Commons license in hybrid journals exposed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/) is as follows:
+
+
+```{r, message = FALSE, results = 'asis', echo = FALSE}
+basic_stat(jn_ind_df = jn_ind_df, jn_aff_df = jn_aff_df)
+```
+
+::: {.callout-note collapse="true"}
+## Expand to learn about how publications from Germany were counted?
+
+Only journal articles from lead authors based in Germany were considered. A [lead author](https://en.wikipedia.org/wiki/Lead_author) is the first named author of a scholarly article who has usually undertaken most of the research presented in the article, although author roles can vary across discipline. We used [OpenAlex](https://openalex.org/) as data source to determine lead author affiliation.
+:::

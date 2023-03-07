@@ -99,7 +99,7 @@ react_table_oa_country <- reactable::reactable(
       }
     ),
     prop = colDef(
-      name = "% of total",
+      name = "% OA",
       format = colFormat(percent = TRUE, digits = 1),
       style = list(fontWeight = "bold"),
       class = "number",

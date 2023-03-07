@@ -33,7 +33,7 @@ top_13_plot <- function(.collection = NULL, ...) {
     scale_y_continuous(labels = scales::percent_format(accuracy = 1L),
                        expand = expansion(mult = c(0, 0.05)),
                        breaks = scales::breaks_extended(3)) +
-    scale_fill_manual("License spectrum",
+    scale_fill_manual("",
                       values =  c(
                         `CC BY` = "#65BADA",
                         `CC BY-SA` = "#068E8C",
@@ -43,7 +43,7 @@ top_13_plot <- function(.collection = NULL, ...) {
                         `CC BY-NC-ND` = "#C82E6B"
                       ),
                       guide = guide_legend(nrow = 1)) +
-    theme_minimal(base_family = "Source Sans Pro", base_size = 20) +
+    theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 20) +
     labs(y = NULL, x = NULL) +
     #       title = "Open Access in Hybrid Journals",
     #       subtitle = "By Creative Commons license variant as provided by Crossref\n") +
@@ -88,7 +88,7 @@ top_13_plot <- function(.collection = NULL, ...) {
                         `CC BY-ND` = "#D86F27",
                         `CC BY-NC-ND` = "#C82E6B"
                       )) +
-    theme_minimal(base_family = "Source Sans Pro", base_size = 14) +
+    theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 13) +
     labs(y = NULL, x = "2017-2022") +
     theme(panel.grid.major.x = element_blank(),
           panel.grid.minor.x = element_blank(),

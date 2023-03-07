@@ -1,6 +1,4 @@
 ---
-title: "Hybrid Journals in Transformative Agreements"
-subtitle: "How open are hybrid journals in transformative agreements? This open source dashboard highlights the Open Access uptake in hybrid journals included in transformative agreements as listed by the cOAlition S Journal Checker Tool. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref."
 format:
   html:
     theme: default
@@ -10,8 +8,8 @@ execute:
   echo: false
   warnings: false
   message: false
-  freeze: auto
-sidebar: false
+  freeze: false
+sidebar: true
 ---
 
 <!-- Required R packages -->
@@ -63,7 +61,7 @@ dplyr::mutate(cr_year = as.character(cr_year)) |>
 
 <!-- Teaser -->
 
-The share of Open Access articles with a Creative Commons license in hybrid journals exposed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/) is as follows:
+The share of Open Access articles with a Creative Commons license in **`r params$publisher`** hybrid journals exposed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/) is as follows:
 
 
 ```{r}
@@ -75,17 +73,13 @@ source("R/teaser.R")
 basic_stat(jn_ind_df = jn_ind_df, jn_aff_df = jn_aff_df)
 ```
 
-::: {.callout-note collapse="true"}
-## Expand to learn about how publications from Germany were counted?
-
-Only journal articles from lead authors based in Germany were considered. A [lead author](https://en.wikipedia.org/wiki/Lead_author) is the first named author of a scholarly article who has usually undertaken most of the research presented in the article, although author roles can vary across discipline. We used [OpenAlex](https://openalex.org/) as data source to determine lead author affiliation.
-:::
+<small>*Journal articles from lead authors based in Germany</small>
 
 <!-- Creative Commons license prevalence-->
 
 ### Creative Commons licenses over time
 
-Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types as provided by Crossref.
+Percentage of Open Access in **`r params$publisher`** hybrid journals included in transformative agreements by Creative Commons license types as provided by Crossref.
 
 ```{r}
 #| echo: false
@@ -105,18 +99,17 @@ cc_global_plot <- plot_cc_variants_by_year(cc_ind_global(jn_ind_df = jn_ind_df))
 girafe(
   ggobj = cc_global_plot,
   width_svg = 9,
-  height_svg = 5 * 0.618,
+  height_svg = 6 * 0.618,
  options = list(opts_tooltip(
     css="background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
     opacity = .95)))
-# download
-readr::write_csv(cc_ind_global(jn_ind_df = jn_ind_df), "cc_2017-22.csv")
+
 ```
 
 <!-- <div style="text-align: right"><small>[Download data (csv)](cc_2017-22.csv)</small></div> -->
 
-## Germany
+## Germany<sup>*</sup>
 
 ```{r, message=FALSE}
 cc_de_plot <- plot_cc_variants_by_year(cc_ind_de(jn_aff_df = jn_aff_df))
@@ -124,20 +117,21 @@ cc_de_plot <- plot_cc_variants_by_year(cc_ind_de(jn_aff_df = jn_aff_df))
 girafe(
   ggobj = cc_de_plot,
   width_svg = 9,
-  height_svg = 5 * 0.618,
+  height_svg = 6 * 0.618,
  options = list(opts_tooltip(
     css="background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
     opacity = .95)))
-readr::write_csv(cc_ind_de(jn_aff_df = jn_aff_df), "cc_2017-22_de.csv")
 ```
+
+<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
 
 <!--  <div style="text-align: right"><small>[Download data (csv)](cc_2017-22_de.csv)</small></div> -->
 
 :::
 
 
-### Publisher market
+## Publishing market
 
 Hybrid journal portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Note that only hybrid journals included in transformative agreements are shown.
 
@@ -171,7 +165,7 @@ source("R/pub_scatter.R")
 plot_scatterplot(my_df, collection = "global")
 ```
   
-## Germany
+## Germany<sup>*</sup>
 
 ```{r}
 #| echo: false
@@ -180,17 +174,19 @@ plot_scatterplot(my_df, collection = "global")
 plot_scatterplot(my_df, collection = "de")
 ```
 
+<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+
 :::
 
 
 
-## Country View
+## Country view
 
 This section shows how hybrid open access has been adopted in different parts of the world. The analysis is based on country-affiliations of lead authors. Lead authors are the first named authors of scholarly articles who have usually undertaken most of the research presented in the article, although author roles can vary across discipline. We used OpenAlex as data source to determine lead author affiliation.
 
-### Open Access in Hybrid Journals by Country
+### Open Access in hybrid journals by country
 
-Percentage of Open Access Articles with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in **`r params$publisher`** hybrid journals included in transformative agreements between 2017 and 2022.
+Percentage of Open Access Articles with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in **`r params$publisher`** hybrid journals included in transformative agreements between 2017 and 2022. The analysis is based on country-affiliations of lead authors.
 
 ::: column-body-outset
 ```{r}
@@ -201,7 +197,7 @@ source("R/country_top_20.R")
 
 ggiraph::girafe(
   ggobj = country_multiple_plot,
-  width_svg = 8,
+  width_svg = 9,
   height_svg = 7 * 0.618,
   options = list(opts_tooltip(
     css="background-color:white;
@@ -211,9 +207,10 @@ ggiraph::girafe(
 :::
 
 
-### Country League
+### Country league
 
-Publication volume in **`r params$publisher`** hybrid journals included in transformative agreements and Open Access share per country. You can search for specific countries, and filter by publisher and publication year.
+Publication volume in **`r params$publisher`** hybrid journals included in transformative agreements and Open Access share per country. You can search for specific countries, and filter by publisher and publication year. The analysis is based on country-affiliations of lead authors.
+
 
 ```{r}
 #| echo: false
@@ -258,17 +255,17 @@ htmltools::div(
 ```{js,echo = FALSE}
  /* https://stackoverflow.com/a/66216595 */
 $(document).ready(function() {
-    document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2021", false);
+    document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2022", false);
 });
 ```
 
-## Open Metadata
+## Open metadata
 
 Open and comprehensive metadata is a key requirement in many transformative agreements. The following tables illustrate potential gaps in Crossref metadata relative to Open Access articles in hybrid journals included in transformative agreements.
 
-### License Metadata Gaps
+### License metadata gaps
 
-Comparision of license metadata in Crossref with Unpaywall per year. Additionally to Crossref license information, Unpaywall also parses publisher websites to determine whether an article was published under an open content license.
+Comparision of license metadata as provided by **`r params$publisher`** to Crossref with Unpaywall per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publishers' websites to determine whether an article has been published under an open content license. A positive gap indicates a licensing delay by Unpaywall, while a negative gap indicates that the publisher has not provided licensing metadata for all Open Access articles to Crossref.
 
 ::: {.panel-tabset}
 
@@ -282,7 +279,7 @@ source("R/cr_upw.R")
 cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Global")
 ```
 
-## Germany
+## Germany<sup>*</sup>
 
 
 ```{r}
@@ -292,11 +289,13 @@ cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Global")
 cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Germany")
 ```
 
+<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+
 :::
 
-### Crossref Metadata Coverage
+### Crossref metadata coverage
 
-This interactive table shows the the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share links to full-texts for text-mining purposes,  persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
+This interactive table shows the the proportion of Crossref metadata that is publicly available for Open Access articles in **`r params$publisher`** hybrid journals included in transformative agreements. Publishers can use Crossref to share links to full-texts for text-mining purposes,  persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
 
 
 ```{r}
@@ -350,9 +349,9 @@ $(document).ready(function() {
 });
 ```
 
-## Journal Table
+## Journal table
 
-This table presents the publication volume and Open Access share by journal between 2017 and 2022, comparing global metrics with metrics just for Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+This table presents the publication volume and Open Access share by **`r params$publisher`** hybrid journal between 2017 and 2022, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
 
 ::: column-body-outset
 

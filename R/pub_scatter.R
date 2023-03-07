@@ -45,7 +45,7 @@ scatter_pub <- function(my_df = my_df) {
       linetype = "dashed",
       size = 1
     ) +
-    theme_minimal(base_family = "Source Sans Pro", base_size = 16) +
+    theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 16) +
     labs(x = "Articles (log scale)", y = "OA") +
     theme(panel.grid.minor.x = element_blank(),
           panel.grid.minor.y = element_blank(),

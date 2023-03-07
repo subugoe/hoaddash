@@ -74,7 +74,7 @@ plot_cc_variants_by_year <- function(cc_df = NULL) {
                        #    breaks = c(0, .25, .5),
                        #    limits = c(0, .7)
     )  +
-    scale_fill_manual("License spectrum",
+    scale_fill_manual("",
                       values =  c(
                         `CC BY` = "#65BADA",
                         `CC BY-SA` = "#068E8C",
@@ -83,7 +83,7 @@ plot_cc_variants_by_year <- function(cc_df = NULL) {
                         `CC BY-ND` = "#D86F27",
                         `CC BY-NC-ND` = "#C82E6B"
                       ), guide = guide_legend(nrow = 1)) +
-    theme_minimal(base_family = "Source Sans Pro", base_size = 20) +
+    theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 20) +
     labs(y = NULL, x = NULL) +
     #       title = "Open Access in Hybrid Journals",
     #       subtitle = "By Creative Commons license variant as provided by Crossref\n") +

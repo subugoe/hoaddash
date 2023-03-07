@@ -96,7 +96,7 @@ country_multiple_plot <- ggplot(country_multiple_df_plot, aes(cr_year, prop, fil
                      expand = expansion(mult = c(0, 0.05)),
                      breaks = scales::breaks_extended(4)) +
   scale_fill_identity() +
-  theme_minimal(base_family = "Source Sans Pro") +
+  theme_minimal(base_family = "Atkinson Hyperlegible") +
   labs(y = "OA Share", x = "2017 - 2022", 
        subtitle = "**Country**<br><br>Total Lead Author Articles | Global Market Share") +
   theme(panel.grid.major.x = element_blank(),

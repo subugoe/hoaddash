@@ -32,57 +32,76 @@ website:
         text: "GitHub Repo"
       - icon: bar-chart
         href: https://github.com/subugoe/hoaddata
-        text: "Data"
+        text: "Data Repo"
       - icon: person-fill
-        text: "Contact"
+        text: "mailto:najko.jahn@sub.uni-goettingen.de"
     style: "docked"
     search: true
-    collapse-level: 2
+    collapse-level: 1
     contents:
-      - section: "Hybrid Open Access Publishers"
-        contents:
-          - href: jct/index.qmd
-            text: Overview
-          - href: jct/elsevier/index.qmd
-            text: "Elsevier"
-          - href: jct/springernature/index.qmd
-            text: Springer Nature
-          - href: jct/wiley/index.qmd
-            text: Wiley
-          - section: "Others"
+          - text: Overview
+            href: jct/index.qmd
+          - section: "Publishers"
+            contents:
+              - href: jct/elsevier/index.qmd
+                text: "Elsevier"
+              - href: jct/springernature/index.qmd
+                text: Springer Nature
+              - href: jct/wiley/index.qmd
+                text: Wiley
+              - section: "Others"
+                contents: 
+                  - href: jct/taylor&francis/index.qmd
+                    text: Taylor & Francis
+                  - text: "IEEE"
+                    href: jct/ieee/index.qmd
+                  - text: American Chemical Society 
+                    href: jct/americanchemicalsociety/index.qmd
+                  - text: "Oxford University Press"
+                    href: jct/oxforduniversitypress/index.qmd
+                  - text: "Sage"
+                    href: jct/sage/index.qmd
+                  - text: "Royal Society of Chemistry"
+                    href: jct/royalsocietyofchemistry/index.qmd
+                  - text: "Cambridge University Press"
+                    href: jct/cambridgeuniversitypress/index.qmd
+                  - text: "IOP Publishing"
+                    href: jct/ioppublishing/index.qmd
+                  - text: "Walter de Gruyter"
+                    href: jct/walterdegruyter/index.qmd
+                  - text: "American Physical Society"
+                    href: jct/americanphysicalsociety/index.qmd
+                  - text: "Thieme"
+                    href: jct/thieme/index.qmd
+                  - text: "Karger"
+                    href: jct/karger/index.qmd
+                  - text: "BMJ Publishing"
+                    href: jct/bmjpublishing/index.qmd
+          - section: "Agreements with German consortia"
+            contents:
+              - text: "Overview"
+              - section: "Consortia"
+                contents:
+                  - section: "DEAL"
+                    contents:
+                      - text: "Springer"
+                        href: oam/springerhybriddeal/index.qmd
+                      - text: "Wiley"
+                        href: oam/wileyhybriddeal/index.qmd
+                  - section: "BSB"
+                    contents: 
+                      - text: "BMJ"
+                        href: oam/bmjhybrid/index.qmd
+                      - text: "CUP"
+                        href: oam/cupbsb/index.qmd
+                      - text: "Karger"
+                        href: oam/kargerbsb/index.qmd
+                      - text: "Sage"
+                        href: oam/sagebsb/index.qmd
+          - section: "About"
             contents: 
-               - href: jct/taylor&francis/index.qmd
-                 text: Taylor & Francis
-               - text: "IEEE"
-                 href: jct/ieee/index.qmd
-               - text: American Chemical Society 
-                 href: jct/americanchemicalsociety/index.qmd
-               - text: "Oxford University Press"
-                 href: jct/oxforduniversitypress/index.qmd
-               - text: "Sage"
-                 href: jct/sage/index.qmd
-               - text: "Royal Society of Chemistry"
-                 href: jct/royalsocietyofchemistry/index.qmd
-               - text: "Cambridge University Press"
-                 href: jct/cambridgeuniversitypress/index.qmd
-               - text: "IOP Publishing"
-                 href: jct/ioppublishing/index.qmd
-               - text: "Walter de Gruyter"
-                 href: jct/walterdegruyter/index.qmd
-               - text: "American Physical Society"
-                 href: jct/thieme/index.qmd
-               - text: "Thieme"
-                 href: jct/karger/index.qmd
-               - text: "Karger"
-                 href: jct/benthamsciencepublishers/index.qmd
-               - text: "Bentham Science Publishers"
-                 href: jct/benthamsciencepublishers/index.qmd
-               - text: "BMJ Publishing"
-                 href: jct/bmjpublishing/index.qmd
-      - section: "Germany-wide transformative agreements"
-        contents:
-          - href: oam/cupbsb/index.qmd
-            text: Overview
+               - text: "How it works"
+               - text: "Contribute"
 
 format:
   html:
@@ -91,4 +110,4 @@ format:
     mainfont: "Atkinson Hyperlegible"
       
 execute:
-  cache: true
+  cache: false

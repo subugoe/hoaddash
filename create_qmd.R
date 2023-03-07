@@ -1,4 +1,9 @@
 ## Generate reports based on config list
+library(dplyr)
+library(purrr)
+library(hoaddata)
+library(ymlthis)
+library(readr)
 
 # Load agreements
 my_ta <- readr::read_csv("config.csv")
@@ -39,6 +44,9 @@ ta_template_create <- function(.publisher = NULL) {
     dplyr::filter(publisher %in% .publisher) 
  # Template
  ymlthis::yml() |>
+   ymlthis::yml_title(paste0(unique(my_df$publisher),
+   ": Hybrid Journals in Transformative Agreements")) |>
+   ymlthis::yml_subtitle(paste0("How open are ", unique(my_df$publisher), " hybrid journals in transformative agreements? This open source dashboard highlights the Open Access uptake in hybrid journals included in transformative agreements as listed by the cOAlition S Journal Checker Tool. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")) |>
    ymlthis::yml_params(issn_l = my_df$issn_l, 
                        publisher = unique(my_df$publisher),
                        collection = unique(my_df$publisher)) |>
@@ -67,5 +75,3 @@ lapply(unique(ta_jns$publisher), ta_template_create)
 # Move JCT overview
 
 fs::file_copy("_template_overview.qmd", "jct/index.qmd", overwrite = TRUE)
-
-

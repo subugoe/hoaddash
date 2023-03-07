@@ -99,7 +99,8 @@ journal_listing <- reactable::reactable(
       ),
       html = TRUE,
       align = "center",
-      width = 130
+      width = 130,
+      class = "number"
     ),
     total_de = colDef(
       "Articles",
@@ -129,7 +130,8 @@ journal_listing <- reactable::reactable(
       ),
       html = TRUE,
       align = "center",
-      width = 130
+      width = 130,
+      class = "number"
     ),
     all_trend_spark = colDef(
       "Trend",
