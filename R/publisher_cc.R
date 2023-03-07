@@ -197,7 +197,7 @@ cc_plot_top_df <- hoaddata::jct_hybrid_jns |>
 
 # top publishers
 top_13 <- cc_plot_top_df |>
-  filter(collection == "global") |>
+  filter(collection == "global", !esac_publisher %in% "National Academy of Sciences") |>
   group_by(esac_publisher) |>
   summarise(oa = sum(cc_articles)) |>
   arrange(desc(oa)) |>
