@@ -41,7 +41,7 @@ dplyr::mutate(cr_year = as.character(cr_year)) |>
       "CC BY-NC-ND"
     ))) |>
     # only JCT journals
-    inner_join(hoaddata::jct_hybrid_jns, "issn_l")
+    filter(issn_l %in% hoaddata::jct_hybrid_jns$issn_l)
 
 jn_aff_df <- hoaddata::jn_aff |>
 dplyr::mutate(cr_year = as.character(cr_year)) |>
@@ -57,13 +57,13 @@ dplyr::mutate(cr_year = as.character(cr_year)) |>
       "CC BY-NC-ND"
     ))) |>
     # only JCT journals
-    inner_join(hoaddata::jct_hybrid_jns, "issn_l")
+    filter(issn_l %in% hoaddata::jct_hybrid_jns$issn_l)
 ```
 
 
 <!-- Teaser -->
 
-The share of Open Access articles with a Creative Commons license in `r length(unique(jn_ind_df$issn_l))` hybrid journals exposed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/) is as follows:
+The share of Open Access articles with a Creative Commons license in `r format(length(unique(jn_ind_df$issn_l)), big.mark = ",")` hybrid journals exposed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/) is as follows:
 
 
 ```{r teaser}
