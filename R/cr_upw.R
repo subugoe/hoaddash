@@ -36,7 +36,8 @@ cr_upw_plot <- function(cr_upw_data = hoaddata::cr_upw, ...) {
 }
 
 ## React table is used when we want to highlight gaps across publishers
-upw_cr_react <- function(.data = shared_upw_cr_diff_year) {
+upw_cr_react <- function(shared_upw_cr_diff_year, ...) {
+
 reactable::reactable(
   shared_upw_cr_diff_year,
   pagination = TRUE,
@@ -44,7 +45,20 @@ reactable::reactable(
   defaultColDef = colDef(vAlign = "center", headerClass = "header"),
   defaultSortOrder = "desc",
   compact = TRUE,
-  columns = list(
+  columns = upw_cols(...),
+  searchable = FALSE,
+  defaultPageSize = 8,
+  language = reactableLang(
+    searchPlaceholder = "SEARCH",
+    noData = "No publisher found",
+    pageInfo = "{rowStart}\u2013{rowEnd} of {rows} publisher portfolios",
+    pagePrevious = "\u276e",
+    pageNext = "\u276f"
+  )
+)
+}
+
+upw_col_ <- function() { list(
     # Hide
     cr_year = colDef(show = FALSE),
     # Publisher
@@ -105,15 +119,38 @@ reactable::reactable(
       }
     ),
     cat = colDef(show = FALSE)
-  ),
-  searchable = FALSE,
-  defaultPageSize = 8,
-  language = reactableLang(
-    searchPlaceholder = "SEARCH",
-    noData = "No publisher found",
-    pageInfo = "{rowStart}\u2013{rowEnd} of {rows} publisher portfolios",
-    pagePrevious = "\u276e",
-    pageNext = "\u276f"
   )
-)
 }
+
+upw_cols <- function(.collection = NULL, ...) {
+  my_cols <- upw_col_()
+  if(.collection == "jct") {
+    esac_publisher = colDef(
+      "Publisher",
+      minWidth = 180,
+      align = "left",
+      sticky = "left",
+      class = "label"
+    )
+    my_cols$esac_publisher <- esac_publisher
+    } else {
+       # Publisher
+      agreement = colDef(
+      "Agreement",
+      cell = function(value, index) {
+        lead <- shared_upw_cr_diff_year$data()$lead[index]
+        htmltools::tagList(htmltools::div(style = list(
+          fontWeight = 600, color = "#333"
+        ), value),
+        htmltools::div(style = list(fontSize = 10), lead))
+      },
+      width = 150,
+      align = "left",
+      sticky = "left"
+    )
+    my_cols$agreement <- agreement
+    my_cols$lead <- colDef(show = FALSE)
+    my_cols$esac_publisher <- colDef(show = FALSE)
+    }
+    return(my_cols)
+    }

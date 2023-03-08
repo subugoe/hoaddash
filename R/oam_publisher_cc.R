@@ -172,7 +172,7 @@ cc_all <- jn_cc_variants() |>
   mutate(collection = "global")
 cc_df <- bind_rows(cc_all, cc_de)
 
-cc_plot_top_df <- hoaddata::jct_hybrid_jns |>
+cc_plot_top_df <- oam |>
   distinct(issn_l, esac_publisher) |>
   inner_join(cc_df) |> 
   group_by(esac_publisher, cr_year, collection, cc) |>

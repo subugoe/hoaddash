@@ -39,14 +39,22 @@ ta_dir_create <- function(ta_dirs = NULL) {
 
 # Create templates
 
-ta_template_create <- function(.publisher = NULL) {
+ta_template_create <- function(.publisher = NULL, .collection = NULL) {
  my_df <- ta_jns |>
-    dplyr::filter(publisher %in% .publisher) 
+    dplyr::filter(publisher %in% .publisher)
+ # Title
+ if (.collection == "jct") {
+  my_title <- paste0(unique(my_df$publisher),
+   ": Hybrid Journals in Transformative Agreements")
+  my_subtitle <- paste0("This open source dashboard highlights the Open Access uptake in ", unique(my_df$publisher), " hybrid journals included in transformative agreements as listed by the cOAlition S Journal Checker Tool. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")
+ }  else {
+   my_title <- unique(my_df$publisher)
+   my_subtitle <- paste0("This open source dashboard highlights the Open Access uptake in hybrid journals included in the German consortial transformative agreement ", unique(my_df$publisher), " as listed by the Open Access Monitor. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")
+ } 
  # Template
  ymlthis::yml() |>
-   ymlthis::yml_title(paste0(unique(my_df$publisher),
-   ": Hybrid Journals in Transformative Agreements")) |>
-   ymlthis::yml_subtitle(paste0("How open are ", unique(my_df$publisher), " hybrid journals in transformative agreements? This open source dashboard highlights the Open Access uptake in hybrid journals included in transformative agreements as listed by the cOAlition S Journal Checker Tool. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")) |>
+   ymlthis::yml_title(my_title) |>
+   ymlthis::yml_subtitle(my_subtitle) |>
    ymlthis::yml_params(issn_l = my_df$issn_l, 
                        publisher = unique(my_df$publisher),
                        collection = unique(my_df$publisher)) |>
@@ -70,8 +78,11 @@ ta_jns <- purrr::pmap_df(list(publisher = my_ta$publisher, collection = my_ta$co
 ta_dir_create(unique(ta_jns$dir_name))
 
 # Create templates
-lapply(unique(ta_jns$publisher), ta_template_create)
+purrr::pmap(list(.publisher = my_ta$publisher, .collection = my_ta$collection), ta_template_create)
 
 # Move JCT overview
 
 fs::file_copy("_template_overview.qmd", "jct/index.qmd", overwrite = TRUE)
+
+# OAM overview
+fs::file_copy("_template_oam.qmd", "oam/index.qmd", overwrite = TRUE)

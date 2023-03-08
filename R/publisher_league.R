@@ -61,7 +61,10 @@ return(table_df)
 # Crosstalk interactivity
 # Initialize shared Crosstalk data
 
-publisher_league_reactable <- function(.data = NULL, ...) {
+publisher_league_reactable <- function(shared_publisher_df, ...) {
+
+  # Columns
+
   reactable::reactable(
   shared_publisher_df,
   pagination = TRUE,
@@ -70,17 +73,36 @@ publisher_league_reactable <- function(.data = NULL, ...) {
   defaultSorted = "articles",
   defaultSortOrder = "desc",
   compact = TRUE,
-  columns = list(
+  columns = publisher_col(...),
+  # Create column groups
+  columnGroups = list(
+    colGroup(
+      name = "Article Volume",
+      columns = c("articles", "oa_articles", "oa_prop"),
+      headerClass = "group-header"
+    ),
+    colGroup(
+      name = "Hybrid Journals",
+      columns = c("oa_journals", "all_journals", "journal_prop"),
+      headerClass = "group-header"
+    )
+  ),
+  searchable = FALSE,
+  defaultPageSize = 8,
+  language = reactableLang(
+    searchPlaceholder = "SEARCH",
+    noData = "No publisher found",
+    pageInfo = "{rowStart}\u2013{rowEnd} of {rows} publisher portfolios",
+    pagePrevious = "\u276e",
+    pageNext = "\u276f"
+  )
+  )}
+
+
+my_cols <- function() {
+  list(
     # Hide
     cr_year = colDef(show = FALSE),
-    # Publisher
-    esac_publisher = colDef(
-      "Publisher",
-      minWidth = 180,
-      align = "left",
-      sticky = "left",
-      class = "label"
-    ),
     # Total Article Volume
     articles = colDef(
       "Total",
@@ -90,7 +112,7 @@ publisher_league_reactable <- function(.data = NULL, ...) {
       class = "number border-left",
       cell = function(value, index) {
         width <-
-          paste0(value * 100 / .data$data()$max_all_group[index], "%")
+          paste0(value * 100 / shared_publisher_df$data()$max_all_group[index], "%")
         value <- format(value, big.mark = ",")
         value <- format(value, width = 10, justify = "right")
         bar <- div(
@@ -115,7 +137,7 @@ publisher_league_reactable <- function(.data = NULL, ...) {
       class = "number",
       cell = function(value, index) {
         width <-
-          paste0(value * 100 / .data$data()$max_cc_group[index], "%")
+          paste0(value * 100 / shared_publisher_df$data()$max_cc_group[index], "%")
         value <- format(value, big.mark = ",")
         value <- format(value, width = 10, justify = "right")
         bar <- div(
@@ -156,7 +178,7 @@ publisher_league_reactable <- function(.data = NULL, ...) {
       class = "number border-left",
       cell = function(value, index) {
         width <-
-          paste0(value * 100 / .data$data()$max_jn_group[index], "%")
+          paste0(value * 100 / shared_publisher_df$data()$max_jn_group[index], "%")
         value <- format(value, big.mark = ",")
         value <- format(value, width = 10, justify = "right")
         bar <- div(
@@ -198,27 +220,37 @@ publisher_league_reactable <- function(.data = NULL, ...) {
     max_all_group = colDef(show = FALSE),
     max_jn_group = colDef(show = FALSE),
     collection = colDef(show = FALSE)
-  ),
-  # Create column groups
-  columnGroups = list(
-    colGroup(
-      name = "Article Volume",
-      columns = c("articles", "oa_articles", "oa_prop"),
-      headerClass = "group-header"
-    ),
-    colGroup(
-      name = "Hybrid Journals",
-      columns = c("oa_journals", "all_journals", "journal_prop"),
-      headerClass = "group-header"
+  ) }
+
+publisher_col <- function(.collection = NULL, ...) {
+  my_cols <- my_cols()
+  if(.collection == "jct") {
+    esac_publisher = colDef(
+      "Publisher",
+      minWidth = 180,
+      align = "left",
+      sticky = "left",
+      class = "label"
     )
-  ),
-  searchable = FALSE,
-  defaultPageSize = 8,
-  language = reactableLang(
-    searchPlaceholder = "SEARCH",
-    noData = "No publisher found",
-    pageInfo = "{rowStart}\u2013{rowEnd} of {rows} publisher portfolios",
-    pagePrevious = "\u276e",
-    pageNext = "\u276f"
-  )
-  )}
+    my_cols$esac_publisher <- esac_publisher
+    } else {
+       # Publisher
+      agreement = colDef(
+      "Agreement",
+      cell = function(value, index) {
+        lead <- shared_publisher_df$data()$lead[index]
+        htmltools::tagList(htmltools::div(style = list(
+          fontWeight = 600, color = "#333"
+        ), value),
+        htmltools::div(style = list(fontSize = 10), lead))
+      },
+      width = 150,
+      align = "left",
+      sticky = "left"
+    )
+    my_cols$agreement <- agreement
+    my_cols$lead <- colDef(show = FALSE)
+    my_cols$esac_publisher <- colDef(show = FALSE)
+    }
+    return(my_cols)
+    }

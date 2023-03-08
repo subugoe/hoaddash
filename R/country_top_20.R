@@ -3,7 +3,7 @@ country_total <- jn_aff_df |>
   group_by(cr_year, country_code) |>
   summarise(articles = sum(articles_total))
 
-country_cc <- jn_aff_df  |>
+country_cc <- jn_aff_df |>
   filter(!is.na(cc)) |>
   distinct(issn_l, cr_year, articles_under_cc_variant, country_code, cc) |>
   group_by(cr_year, country_code) |>
@@ -12,27 +12,30 @@ country_cc <- jn_aff_df  |>
 country_df <- left_join(country_total, country_cc, by = c("cr_year", "country_code")) |>
   mutate(cr_year = factor(cr_year)) |>
   mutate(prop = cc_total / articles) |>
-  mutate_if(is.numeric, ~replace(., is.na(.), 0)) |>
+  mutate_if(is.numeric, ~ replace(., is.na(.), 0)) |>
   filter(!is.na(country_code)) |>
   mutate(
-    country_name = countrycode::countrycode(country_code, origin = "iso2c", destination = "country.name")) 
+    country_name = countrycode::countrycode(country_code, origin = "iso2c", destination = "country.name")
+  )
 
 
 # top 20 countries in terms of total publication volume
-top_20 <- country_df |> 
-  group_by(country_name) |> 
-  summarise(n = sum(articles)) |> 
+top_20 <- country_df |>
+  group_by(country_name) |>
+  summarise(n = sum(articles)) |>
   arrange(desc(n)) |>
   head(20)
 
 ## Order of multiples, sort by the most productive (Top 20)
 
-country_multiple_df <- country_df |> 
+country_multiple_df <- country_df |>
   mutate(country_name_fct = forcats::fct_other(country_name, keep = top_20$country_name)) |>
   mutate(country_name_fct = forcats::fct_relevel(country_name_fct, top_20$country_name, "Other")) |>
   group_by(country_name_fct, cr_year) |>
-  summarise(articles = sum(articles),
-            cc_total = sum(cc_total)) |>
+  summarise(
+    articles = sum(articles),
+    cc_total = sum(cc_total)
+  ) |>
   mutate(prop = cc_total / articles) |>
   # remove cases where we could not retrieve a country name |>
   filter(!is.na(country_name_fct))
@@ -52,14 +55,15 @@ facet_labels <- country_multiple_df |>
   mutate(total_string = case_when(
     total < 1000 ~ as.character(total),
     total < 1000000 ~ paste0(format(round(total / 1e3, 1), trim = TRUE), "K"),
-    total >= 1000000 ~ paste0(format(round(total / 1e6, 2), trim = TRUE), "M"))) |>
+    total >= 1000000 ~ paste0(format(round(total / 1e6, 2), trim = TRUE), "M")
+  )) |>
   mutate(
     facet_labels = glue::glue(
       '{country_name_tmp}<br><br>
       {total_string} | {paste(round(prop * 100, 1), "%")}</p>'
-      )
+    )
   ) |>
-  distinct(country_name_fct, facet_labels) 
+  distinct(country_name_fct, facet_labels)
 
 country_facet_labels <- as.character(facet_labels$facet_labels)
 names(country_facet_labels) <- facet_labels$country_name_fct
@@ -93,22 +97,27 @@ country_multiple_plot <- ggplot(country_multiple_df_plot, aes(cr_year, prop, fil
     fill = "transparent",
     alpha = 0.01,
     width = 1,
-    position = position_dodge2()) +
+    position = position_dodge2()
+  ) +
   facet_wrap(~country_name_fct, nrow = 3, labeller = as_labeller(country_facet_labels)) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L),
-                     expand = expansion(mult = c(0, 0.05)),
-                     breaks = scales::breaks_extended(4)) +
+  scale_y_continuous(
+    labels = scales::percent_format(accuracy = 1L),
+    expand = expansion(mult = c(0, 0.05)),
+    breaks = scales::breaks_extended(4)
+  ) +
   scale_fill_identity() +
   theme_minimal(base_family = "Atkinson Hyperlegible") +
-  labs(y = "OA Share", x = "2017 - 2022", 
-       subtitle = "**Country**<br><br>Total Lead Author Articles | Global Market Share") +
-  theme(panel.grid.major.x = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        panel.grid.minor.y = element_blank(),
-        axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        strip.text = ggtext::element_markdown(),
-        plot.subtitle = ggtext::element_markdown(hjust = 0.5),
-        panel.spacing = unit(1, "lines"))
-
-
+  labs(
+    y = "OA Share", x = "2017 - 2022",
+    subtitle = "**Country**<br><br>Total Lead Author Articles | Global Market Share"
+  ) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    strip.text = ggtext::element_markdown(),
+    plot.subtitle = ggtext::element_markdown(hjust = 0.5),
+    panel.spacing = unit(1, "lines")
+  )

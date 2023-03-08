@@ -1,6 +1,6 @@
 ---
-title: "How Open are Hybrid Journals in Transformative Agreements?"
-subtitle: "Open Access uptake in hybrid journals included in transformative agreements. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref."
+title: "How Open are Hybrid Journals in Transformative Agreements with Consortia in Germany?"
+subtitle: "Open Access uptake in hybrid journals included in consortial transformative agreements in Germany. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref."
 format:
   html:
     theme: default
@@ -27,8 +27,12 @@ source("R/utils.R")
 ```{r data prep}
 #| echo: false
 #| message: false
+oam <- hoaddata::oam_hybrid_jns |>
+      dplyr::distinct(issn_l, esac_publisher = vertrag) 
+
 jn_ind_df <- hoaddata::jn_ind |>
-dplyr::mutate(cr_year = as.character(cr_year)) |>
+  dplyr::inner_join(oam, by = "issn_l") |>
+  dplyr::mutate(cr_year = as.character(cr_year)) |>
   dplyr::mutate(cc = factor(
     cc,
     # Order by permissiveness
@@ -39,12 +43,11 @@ dplyr::mutate(cr_year = as.character(cr_year)) |>
       "CC BY-NC-SA",
       "CC BY-ND",
       "CC BY-NC-ND"
-    ))) |>
-    # only JCT journals
-    inner_join(hoaddata::jct_hybrid_jns, "issn_l")
+    ))) 
 
 jn_aff_df <- hoaddata::jn_aff |>
-dplyr::mutate(cr_year = as.character(cr_year)) |>
+  dplyr::inner_join(oam, by = "issn_l") |>
+  dplyr::mutate(cr_year = as.character(cr_year)) |>
   dplyr::mutate(cc = factor(
     cc,
     # Order by permissiveness
@@ -55,15 +58,13 @@ dplyr::mutate(cr_year = as.character(cr_year)) |>
       "CC BY-NC-SA",
       "CC BY-ND",
       "CC BY-NC-ND"
-    ))) |>
-    # only JCT journals
-    inner_join(hoaddata::jct_hybrid_jns, "issn_l")
+    ))) 
 ```
 
 
 <!-- Teaser -->
 
-The share of Open Access articles with a Creative Commons license in `r length(unique(jn_ind_df$issn_l))` hybrid journals exposed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/) is as follows:
+The share of Open Access articles with a Creative Commons license in hybrid journals exposed by the [German Open Access Monitor Team](https://doi.org/10.26165/JUELICH-DATA/VTQXLM) is as follows:
 
 
 ```{r teaser}
@@ -137,7 +138,7 @@ Percentage of Open Access in hybrid journals included in transformative agreemen
 #| message: false
 #| warning: false
 # Data prep
-source("R/data_prep.R")
+source("R/oam_data_prep.R")
 ```
 
 ::: panel-tabset
@@ -148,7 +149,7 @@ source("R/data_prep.R")
 #| echo: false
 #| message: false
 #| warning: false
-source("R/publisher_cc.R")
+source("R/oam_publisher_cc.R")
 
 # Return SVG
 girafe(
@@ -195,7 +196,7 @@ Hybrid journal publisher portfolio analysis, showing publishing market shares in
 #| message: false
 #| warning: false
 # Data prep
-source("R/data_prep.R")
+source("R/oam_data_prep.R")
 my_df <- summarize_pubs(var_summary = c(cr_year, esac_publisher)) |>
   tidyr::complete(cr_year, esac_publisher, collection) |>
   mutate_if(is.numeric, ~ replace(., is.na(.), 0)) |>
@@ -239,7 +240,7 @@ Publisher market shares as measured by articles published between 2017 and 2022 
 
 ```{r}
 #| echo: FALSE
-source("R/publisher_market_share.R")
+source("R/oam_publisher_market_share.R")
 ```
 
 ::: panel-tabset
@@ -287,13 +288,19 @@ This interactive table highlights the hybrid Open Access publisher output by yea
 #| message: false
 source("R/publisher_league.R")
 # Prepare data
-table_df <- publisher_league_data_prep()
+table_df <- publisher_league_data_prep() |>
+mutate(agreement_ = strsplit(esac_publisher, " \\(")) |>
+  mutate(agreement = map_chr(agreement_, 1)) |>
+  mutate(lead = map_chr(agreement_, 2)) |>
+  mutate(lead = gsub(")", "", lead)) |>
+  relocate(c(agreement, lead), .after = esac_publisher) |>
+  select(-agreement_)
 
 # Crosstalk init
 shared_publisher_df <- SharedData$new(table_df)
 
 # React table
-g <- publisher_league_reactable(shared_publisher_df, .collection = "jct")
+g <- publisher_league_reactable(shared_publisher_df, .collection = "oam")
 
 htmltools::div(
   class = "agreement-tbl",
@@ -302,10 +309,20 @@ htmltools::div(
                  htmltools::div(
                    class = "filter-input",
                    filter_select(
-                     "filter_publisher",
-                     "Search publisher",
+                     "filter_cr_publisher",
+                     "Agreement",
                      shared_publisher_df,
                      ~ esac_publisher,
+                     multiple = TRUE
+                   )
+                 ),
+                 htmltools::div(
+                   class = "filter-input",
+                   filter_select(
+                     "filter_cr_publisher",
+                     "CONSORTIUM LEAD",
+                     shared_publisher_df,
+                     ~ lead,
                      multiple = TRUE
                    )
                  ),
@@ -459,9 +476,15 @@ Comparison of open licence metadata in Crossref with Unpaywall per year. You can
 #| message: false
 #| warning: false
 upw_cr_diff_year <- hoaddata::cr_upw |>
-  inner_join(esac_df, by = "issn_l") |>
+  dplyr::inner_join(oam, by = "issn_l") |>
+  mutate(agreement_ = strsplit(esac_publisher, " \\(")) |>
+  mutate(agreement = map_chr(agreement_, 1)) |>
+  mutate(lead = map_chr(agreement_, 2)) |>
+  mutate(lead = gsub(")", "", lead)) |>
+  relocate(c(agreement, lead), .after = esac_publisher) |>
+  select(-agreement_) |>
   mutate(esac_publisher = forcats::fct_relevel(forcats::as_factor(esac_publisher), publ_league)) |>
-  group_by(cr_year, esac_publisher, cat) |>
+  group_by(cr_year, esac_publisher, cat, lead, agreement) |>
   summarise(
     article_total = sum(article_total),
     upw_hybrid_total = sum(upw_hybrid_total),
@@ -478,8 +501,10 @@ upw_cr_diff_year <- hoaddata::cr_upw |>
 ```{r upw_cr_license_gaps_data_table}
 source("R/cr_upw.R")
 
-shared_upw_cr_diff_year <- SharedData$new(upw_cr_diff_year)
-upw_cr_react_tbl <- upw_cr_react(shared_upw_cr_diff_year, "jct")
+shared_upw_cr_diff_year <- upw_cr_diff_year |>
+  arrange(esac_publisher) |>
+  SharedData$new()
+upw_cr_react_tbl <- upw_cr_react(shared_upw_cr_diff_year, "oam")
 ```
 
 ```{r}
@@ -491,9 +516,19 @@ htmltools::div(
                    class = "filter-input",
                    filter_select(
                      "filter_cr_publisher",
-                     "Publisher",
+                     "Agreement",
                      shared_upw_cr_diff_year,
                      ~ esac_publisher,
+                     multiple = TRUE
+                   )
+                 ),
+                 htmltools::div(
+                   class = "filter-input",
+                   filter_select(
+                     "filter_cr_publisher",
+                     "CONSORTIUM LEAD",
+                     shared_upw_cr_diff_year,
+                     ~ lead,
                      multiple = TRUE
                    )
                  ),
@@ -552,8 +587,7 @@ This interactive table shows the the proportion of Crossref metadata that is pub
 #| warning: false
 source("R/open_md.R")
 # Should be done in hoaddata  
-pub_md <- hoaddata::jct_hybrid_jns |> 
-  distinct(issn_l, esac_publisher) |> 
+pub_md <-  oam |>
   inner_join(hoaddata::cr_md) |> 
   tidyr::complete(esac_publisher, cr_year, issn_l, cat) |>
   mutate(esac_publisher = forcats::fct_relevel(forcats::as_factor(esac_publisher), publ_league)) |> 
@@ -570,7 +604,7 @@ htmltools::div(
       class = "filter-input",
       filter_select(
         "filter_open_md_cat_publisher",
-        "Publisher",
+        "Agreement",
         open_md_df,
         ~ esac_publisher,
         multiple = TRUE
