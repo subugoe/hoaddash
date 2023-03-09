@@ -50,33 +50,37 @@ website:
               - href: jct/wiley/index.qmd
                 text: Wiley
               - section: "Others"
-                contents: 
-                  - href: jct/taylor&francis/index.qmd
-                    text: Taylor & Francis
-                  - text: "IEEE"
-                    href: jct/ieee/index.qmd
+                contents:
                   - text: American Chemical Society 
                     href: jct/americanchemicalsociety/index.qmd
-                  - text: "Oxford University Press"
-                    href: jct/oxforduniversitypress/index.qmd
-                  - text: "Sage"
-                    href: jct/sage/index.qmd
-                  - text: "Royal Society of Chemistry"
-                    href: jct/royalsocietyofchemistry/index.qmd
-                  - text: "Cambridge University Press"
-                    href: jct/cambridgeuniversitypress/index.qmd
-                  - text: "IOP Publishing"
-                    href: jct/ioppublishing/index.qmd
-                  - text: "Walter de Gruyter"
-                    href: jct/walterdegruyter/index.qmd
                   - text: "American Physical Society"
                     href: jct/americanphysicalsociety/index.qmd
-                  - text: "Thieme"
-                    href: jct/thieme/index.qmd
-                  - text: "Karger"
-                    href: jct/karger/index.qmd
                   - text: "BMJ Publishing"
                     href: jct/bmjpublishing/index.qmd
+                  - text: "Cambridge University Press"
+                    href: jct/cambridgeuniversitypress/index.qmd
+                  - text: "EDP Sciences"
+                    href: jct/edpsciences/index.qmd
+                  - text: "Karger"
+                    href: jct/karger/index.qmd
+                  - text: "IEEE"
+                    href: jct/ieee/index.qmd
+                  - text: "IOP Publishing"
+                    href: jct/ioppublishing/index.qmd
+                  - text: "Oxford University Press"
+                    href: jct/oxforduniversitypress/index.qmd
+                  - text: "Royal Society of Chemistry"
+                    href: jct/royalsocietyofchemistry/index.qmd
+                  - text: "Sage"
+                    href: jct/sage/index.qmd
+                  - href: jct/taylor&francis/index.qmd
+                    text: Taylor and Francis
+                  - text: "The Royal Society"
+                    href: jct/theroyalsociety/index.qmd
+                  - text: "Thieme"
+                    href: jct/thieme/index.qmd
+                  - text: "Walter de Gruyter"
+                    href: jct/walterdegruyter/index.qmd
           - section: "Agreements with German consortia"
             contents:
               - text: "Overview"
@@ -91,13 +95,45 @@ website:
                   - section: "BSB"
                     contents: 
                       - text: "BMJ"
-                        href: oam/bmjhybrid/index.qmd
+                        href: oam/bmjbsb/index.qmd
                       - text: "CUP"
                         href: oam/cupbsb/index.qmd
                       - text: "Karger"
                         href: oam/kargerbsb/index.qmd
                       - text: "Sage"
                         href: oam/sagebsb/index.qmd
+                  - section: "hebis"
+                    contents: 
+                      - text: "ACM"
+                        href: oam/acmhebis/index.qmd
+                  - section: "MPDL"
+                    contents:
+                      - text: "Nature"
+                        href: oam/naturempdl/index.qmd
+                  - section: "SUB Göttingen"
+                    contents:
+                       - text: "De Gruyter"
+                         href: oam/degruytersubgöttingen/index.qmd
+                       - text: "Hogrefe"
+                         href: oam/hogrefesubgöttingen/index.qmd
+                  - section: "TIB"
+                    contents:
+                        - text: "AIP"
+                          href: oam/aiptib/index.qmd
+                        - text: "ESC"
+                          href: oam/esctib/index.qmd 
+                        - text: "IOP"
+                          href: oam/ioptib/index.qmd 
+                        - text: "Portland Press"
+                          href: oam/portlandpresstib/index.qmd
+                        - text: "RSC"
+                          href: oam/rsctib/index.qmd
+                        - text: "SPIE"
+                          href: oam/spietib/index.qmd
+                  - section: "ZBW"
+                    contents:
+                       - text: "Taylor and Francis"
+                         href: oam/taylorfranciszbw
           - section: "About"
             contents: 
                - text: "How it works"
