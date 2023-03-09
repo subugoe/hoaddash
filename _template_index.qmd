@@ -18,6 +18,9 @@ sidebar: true
 #| echo: false
 #| message: false
 source("R/setup.R")
+if(params$collection == "oam")
+  oam <- hoaddata::oam_hybrid_jns |>
+    dplyr::distinct(issn_l, esac_publisher = vertrag) 
 ```
 
 <!-- data preparation -->
@@ -61,7 +64,7 @@ dplyr::mutate(cr_year = as.character(cr_year)) |>
 
 <!-- Teaser -->
 
-The share of Open Access articles with a Creative Commons license in **`r params$publisher`** hybrid journals exposed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/) is as follows:
+The share of Open Access articles with a Creative Commons license in `r format(length(unique(jn_ind_df$issn_l)), big.mark = ",")` hybrid journals is as follows:
 
 
 ```{r}
@@ -73,11 +76,11 @@ source("R/teaser.R")
 basic_stat(jn_ind_df = jn_ind_df, jn_aff_df = jn_aff_df)
 ```
 
-<small>*Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 <!-- Creative Commons license prevalence-->
 
-### Creative Commons licenses over time
+## Creative Commons licenses over time
 
 Percentage of Open Access in **`r params$publisher`** hybrid journals included in transformative agreements by Creative Commons license types as provided by Crossref.
 
@@ -124,7 +127,7 @@ girafe(
     opacity = .95)))
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 <!--  <div style="text-align: right"><small>[Download data (csv)](cc_2017-22_de.csv)</small></div> -->
 
@@ -140,7 +143,14 @@ Hybrid journal portfolio analysis, showing publishing market shares in terms of 
 #| message: false
 #| warning: false
 # Data prep
-source("R/data_prep.R")
+if(params$collection == "oam") {
+  oam <- hoaddata::oam_hybrid_jns |>
+      dplyr::distinct(issn_l, esac_publisher = vertrag) 
+  source("R/oam_data_prep.R")
+} else {
+  source("R/data_prep.R")
+}
+
 my_df <- summarize_pubs(var_summary = c(cr_year, esac_publisher)) |>
   tidyr::complete(cr_year, esac_publisher, collection) |>
   mutate_if(is.numeric, ~ replace(., is.na(.), 0)) |>
@@ -174,7 +184,7 @@ plot_scatterplot(my_df, collection = "global")
 plot_scatterplot(my_df, collection = "de")
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
 
@@ -289,7 +299,7 @@ cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Global")
 cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Germany")
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
 

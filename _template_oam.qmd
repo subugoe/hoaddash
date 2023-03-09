@@ -1,6 +1,6 @@
 ---
-title: "How Open are Hybrid Journals in Transformative Agreements with Consortia in Germany?"
-subtitle: "Open Access uptake in hybrid journals included in consortial transformative agreements in Germany. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref."
+title: "Hybrid Open Access Dashboard: Consortial Transformative Agreements in Germany"
+subtitle: "How open are hybrid journals in transformative agreements with library consortia based in Germany? You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref."
 format:
   html:
     theme: default
@@ -64,8 +64,7 @@ jn_aff_df <- hoaddata::jn_aff |>
 
 <!-- Teaser -->
 
-The share of Open Access articles with a Creative Commons license in hybrid journals exposed by the [German Open Access Monitor Team](https://doi.org/10.26165/JUELICH-DATA/VTQXLM) is as follows:
-
+The share of Open Access articles with a Creative Commons license in `r format(length(unique(oam$issn_l)), big.mark = ",")` hybrid journals included in consortial transformative agreements in Germany is as follows:
 
 ```{r teaser}
 #| echo: false
@@ -76,13 +75,13 @@ source("R/teaser.R")
 basic_stat(jn_ind_df = jn_ind_df, jn_aff_df = jn_aff_df)
 ```
 
-<small>*Journal articles from lead authors based in Germany</small>
+<small>*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 <!-- Creative Commons license prevalence-->
 
-### Creative Commons licenses over time
+## Creative Commons licenses over time
 
-Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types as provided by Crossref.
+Percentage of Open Access in hybrid journals included in consortial transformative agreements in Germany by Creative Commons license types as provided by Crossref.
 
 ```{r cc_over_year_data}
 #| echo: false
@@ -125,13 +124,13 @@ girafe(
     opacity = .95)))
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
 
 ### Creative Commons licenses over time by publisher
 
-Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types and Top 13 publishers in terms of total articles published between 2017 and 2022.
+Percentage of Open Access in hybrid journals included in consortial transformative agreements in Germany by Creative Commons license types as provided by Crossref. Top 13 publishers in terms of total articles published between 2017 and 2022 are shown. 
 
 ```{r}
 #| echo: false
@@ -180,7 +179,7 @@ girafe(
     opacity = .95)))
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
 
@@ -188,7 +187,7 @@ girafe(
 
 ### Publishing market over time
 
-Hybrid journal publisher portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Note that only hybrid journals included in transformative agreements are shown.
+Hybrid journal publisher portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Note that only hybrid journals included in consortial transformative agreements in Germany are shown.
 
 
 ```{r}
@@ -230,13 +229,13 @@ plot_scatterplot(my_df, collection = "global")
 plot_scatterplot(my_df, collection = "de")
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
 
 ### Market shares
 
-Publisher market shares as measured by articles published between 2017 and 2022 in hybrid journals included in transformative agreements.
+Publisher market shares as measured by articles published between 2017 and 2022 in hybrid journals included in consortial transformative agreements in Germany.
 
 ```{r}
 #| echo: FALSE
@@ -273,13 +272,13 @@ girafe(
     opacity = .95)))
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
 
 ### Publisher league: Hybrid Open Access output
 
-This interactive table highlights the hybrid Open Access publisher output by year, sorted . It shows the number and proportion of Open Access articles provided under a Creative Commons license in hybrid journals included in transformative agreements. The table also illustrates the number of hybrid journals per portfolio, which published articles in the year, and the corresponding percentage of hybrid journals with at least one Open Access article. You can filter by publisher, publication year, and between a global and a country-specific view relative to lead author publications from Germany.
+This interactive table highlights the hybrid Open Access publisher output by year, sorted by yearly total publication volume. It shows the number and proportion of Open Access articles provided under a Creative Commons license in hybrid journals included in consortial transformative agreements in Germany. The table also illustrates the number of hybrid journals per portfolio, which published articles in the year, and the corresponding percentage of hybrid journals with at least one Open Access article. You can filter by publisher, publication year, and between a global and a country-specific view relative to lead author publications from Germany.
 
 ::: column-body-outset
 
@@ -353,7 +352,7 @@ htmltools::div(
   htmltools::div(
     class = "agreement-footer",
     paste(
-      "Data sources: Journal Checker Tool, Crossref, OpenAlex. Last updated:",
+      "Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated:",
       Sys.Date(),
       "."
     )
@@ -379,7 +378,7 @@ This section shows how hybrid open access has been adopted in different parts of
 
 ### Open Access in hybrid journals by country
 
-Percentage of Open Access Articles with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in hybrid journals included in transformative agreements between 2017 and 2022. The analysis is based on country-affiliations of lead authors.
+Percentage of Open Access Articles with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in hybrid journals included in consortial transformative agreements in Germany between 2017 and 2022. The analysis is based on country-affiliations of lead authors. 
 
 ::: column-body-outset
 ```{r}
@@ -399,9 +398,11 @@ ggiraph::girafe(
 ```
 :::
 
-### Country League
+<small>Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated: `r Sys.Date()`.</small> 
 
-Publication volume in hybrid journals included in transformative agreements and Open Access share per country. You can search for specific countries, and filter by publisher and publication year. The analysis is based on country-affiliations of lead authors.
+### Country league
+
+Publication volume in hybrid journals included in consortial transformative agreements in Germany and Open Access share per country. You can search for specific countries, and filter by publisher and publication year. The analysis is based on country-affiliations of lead authors.
 
 ```{r}
 #| echo: false
@@ -448,8 +449,15 @@ htmltools::div(
     )
   ),
   react_table_oa_country,
-  htmltools::div(class = "agreement-footer", "
-  Data sources: Journal Checker Tool, Crossref, OpenAlex")
+   # footer
+  htmltools::div(
+    class = "agreement-footer",
+    paste(
+      "Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated:",
+      Sys.Date(),
+      "."
+    )
+  )
 )
 ```
 
@@ -464,11 +472,11 @@ $(document).ready(function() {
 
 ## Open metadata
 
-Open and comprehensive metadata is a key requirement in many transformative agreements. The following tables illustrate potential gaps in Crossref metadata relative to Open Access articles in hybrid journals included in transformative agreements.
+Open and comprehensive metadata is a key requirement in many transformative agreements. The following tables illustrate potential gaps in Crossref metadata relative to Open Access articles in hybrid journals included in consortial transformative agreements in Germany.
 
 ### License metadata gaps
 
-Comparison of open licence metadata in Crossref with Unpaywall per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publishers' websites to determine whether an article has been published under an open content licence. A positive gap indicates a licensing delay by Unpaywall, while a negative gap indicates that the publisher has not provided licensing metadata to Crossref.
+Comparison of open licence metadata in Crossref with Unpaywall per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publishers' websites to determine whether an article has been published under an open content licence. More Open Access articles derived from Crossref suggests a gap in Unpaywall-indexing, while more Open Access articles identified by Unpaywall suggests that publishers have not deposited licensing metadata in Crossref for all articles.
 
 
 ```{r upw_cr_license_gaps_data_prep}
@@ -556,10 +564,11 @@ htmltools::div(
   # table
   upw_cr_react_tbl,
   # footer
+  # footer
   htmltools::div(
     class = "agreement-footer",
     paste(
-      "Data sources: Journal Checker Tool, Crossref, OpenAlex. Last updated:",
+      "Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated:",
       Sys.Date(),
       "."
     )
@@ -578,7 +587,7 @@ $(document).ready(function() {
 
 ### Crossref metadata coverage
 
-This interactive table shows the the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share links to full-texts for text-mining purposes,  persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
+This interactive table shows the the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in consortial transformative agreements in Germany. Publishers can use Crossref to share links to full-texts for text-mining purposes,  persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
 
 
 ```{r}
@@ -639,7 +648,7 @@ htmltools::div(
   htmltools::div(
     class = "agreement-footer",
     paste(
-      "Data sources: Journal Checker Tool, Crossref, OpenAlex. Last updated:",
+      "Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated:",
       Sys.Date(),
       "."
     )
@@ -677,7 +686,17 @@ my_df <- summarize_pubs(var_summary = c(cr_year, issn_l)) |>
 source("R/journal_tbl.R")
 htmltools::div(
   class = "agreement-tbl",
-  journal_listing)
+  journal_listing,
+  # footer
+  htmltools::div(
+    class = "agreement-footer",
+    paste(
+      "Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated:",
+      Sys.Date(),
+      "."
+    )
+  )
+)
 ```
 
 :::
@@ -751,7 +770,7 @@ htmltools::div(
 }
 .agreement-footer {
   margin: 18px 0;
-  font-size: 10px;
+  ;
   }
   
 .agreement-tbl {

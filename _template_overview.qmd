@@ -1,6 +1,6 @@
 ---
-title: "How Open are Hybrid Journals in Transformative Agreements?"
-subtitle: "Open Access uptake in hybrid journals included in transformative agreements. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref."
+title: "Hybrid Open Access Dashboard"
+subtitle: "How open are hybrid journals in transformative agreements? You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref."
 format:
   html:
     theme: default
@@ -75,7 +75,7 @@ source("R/teaser.R")
 basic_stat(jn_ind_df = jn_ind_df, jn_aff_df = jn_aff_df)
 ```
 
-<small>*Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 <!-- Creative Commons license prevalence-->
 
@@ -124,7 +124,7 @@ girafe(
     opacity = .95)))
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
 
@@ -179,7 +179,7 @@ girafe(
     opacity = .95)))
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
 
@@ -229,7 +229,7 @@ plot_scatterplot(my_df, collection = "global")
 plot_scatterplot(my_df, collection = "de")
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
 
@@ -272,7 +272,7 @@ girafe(
     opacity = .95)))
 ```
 
-<small><sup>*</sup>Journal articles from lead authors based in Germany</small>
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
 

@@ -43,13 +43,13 @@ ta_template_create <- function(.publisher = NULL, .collection = NULL) {
  my_df <- ta_jns |>
     dplyr::filter(publisher %in% .publisher)
  # Title
- if (.collection == "jct") {
+ if (unique(my_df$collection) == "jct") {
   my_title <- paste0(unique(my_df$publisher),
    ": Hybrid Journals in Transformative Agreements")
-  my_subtitle <- paste0("This open source dashboard highlights the Open Access uptake in ", unique(my_df$publisher), " hybrid journals included in transformative agreements as listed by the cOAlition S Journal Checker Tool. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")
+  my_subtitle <- paste0("This open source dashboard highlights the Open Access uptake in ", unique(my_df$publisher), " hybrid journals in its transformative agreements as listed by the cOAlition S Journal Checker Tool. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")
  }  else {
    my_title <- unique(my_df$publisher)
-   my_subtitle <- paste0("This open source dashboard highlights the Open Access uptake in hybrid journals included in the German consortial transformative agreement ", unique(my_df$publisher), " as listed by the Open Access Monitor. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")
+   my_subtitle <- paste0("How open are hybrid journals included in the consortial transformative agreement ", unique(my_df$publisher), " ? This open source dashboard highlights the Open Access uptake in hybrid journals included in the German consortial transformative agreement ", unique(my_df$publisher), " as listed by the Open Access Monitor. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")
  } 
  # Template
  ymlthis::yml() |>
@@ -57,7 +57,7 @@ ta_template_create <- function(.publisher = NULL, .collection = NULL) {
    ymlthis::yml_subtitle(my_subtitle) |>
    ymlthis::yml_params(issn_l = my_df$issn_l, 
                        publisher = unique(my_df$publisher),
-                       collection = unique(my_df$publisher)) |>
+                       collection = unique(my_df$collection)) |>
    ymlthis::yml_discard(c("author", "date")) |>
    ymlthis::use_rmarkdown(path = paste0(unique(my_df$dir_name), "/index.qmd"),
                           template = "_template_index.qmd",
@@ -82,7 +82,7 @@ purrr::pmap(list(.publisher = my_ta$publisher, .collection = my_ta$collection), 
 
 # Move JCT overview
 
-fs::file_copy("_template_overview.qmd", "jct/index.qmd", overwrite = TRUE)
+fs::file_copy("_template_overview.qmd", "index.qmd", overwrite = TRUE)
 
 # OAM overview
 fs::file_copy("_template_oam.qmd", "oam/index.qmd", overwrite = TRUE)

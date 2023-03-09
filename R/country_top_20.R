@@ -109,7 +109,7 @@ country_multiple_plot <- ggplot(country_multiple_df_plot, aes(cr_year, prop, fil
   theme_minimal(base_family = "Atkinson Hyperlegible") +
   labs(
     y = "OA Share", x = "2017 - 2022",
-    subtitle = "**Country**<br><br>Total Lead Author Articles | Global Market Share"
+    subtitle = "**Country**<br><br>Total Lead Author Articles | Country Share"
   ) +
   theme(
     panel.grid.major.x = element_blank(),
