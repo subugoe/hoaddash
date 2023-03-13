@@ -1,0 +1,41 @@
+Package: hoaddash
+Title: Hybrid Open Access Dashboards with R and Quarto
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Najko", "Jahn", , "najko.jahn@sub.uni-goettingen.de", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-5105-1463")),
+    person("Anne", "Hobert", role = c("aut")),
+    person("Inke", "Achterberg", role = c("aut")),
+    person("Nick", "Haupka", role = c("aut")),
+    person(
+        given = "German Research Foundation",
+        role = c("spn"),
+        comment = "Projektnummer #416115939"
+      ))
+Description: Source code repository for the Hybrid Open Access Dashboards.
+URL: https://subugoe.github.io/hoaddash, https://github.com/subugoe/hoaddash
+BugReports: https://github.com/subugoe/hoaddash/issues
+License: CC0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    dplyr,
+    readr,
+    purrr,
+    knitr,
+    curl,
+    lubridate,
+    ggplot2,
+    cowplot,
+    ggiraph,
+    patchwork,
+    plotly,
+    reactable,
+    sparkline,
+    kableExtra,
+    htmltools,
+    fs,
+    crosstalk (== 1.1.1)
+Remotes: 
+    subugoe/hoaddata
