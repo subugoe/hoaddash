@@ -63,7 +63,7 @@ dplyr::mutate(cr_year = as.character(cr_year)) |>
 
 <!-- Teaser -->
 
-The share of Open Access articles with a Creative Commons license in `r format(length(unique(jn_ind_df$issn_l)), big.mark = ",")` hybrid journals exposed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/) is as follows:
+The share of Open Access articles with a Creative Commons license in `r format(length(unique(jn_ind_df$issn_l)), big.mark = ",")` hybrid journals derived from [cOAlition S Transformative Agreement Public Data](https://journalcheckertool.org/transformative-agreements/) is as follows:
 
 
 ```{r teaser}
@@ -79,7 +79,7 @@ basic_stat(jn_ind_df = jn_ind_df, jn_aff_df = jn_aff_df)
 
 <!-- Creative Commons license prevalence-->
 
-### Creative Commons licenses over time
+## Creative Commons licenses over time
 
 Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types as provided by Crossref.
 
@@ -130,7 +130,7 @@ girafe(
 
 ### Creative Commons licenses over time by publisher
 
-Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types and Top 13 publishers in terms of total articles published between 2017 and 2022.
+Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2022.
 
 ```{r}
 #| echo: false
@@ -278,7 +278,7 @@ girafe(
 
 ### Publisher league: Hybrid Open Access output
 
-This interactive table highlights the hybrid Open Access publisher output by year, sorted . It shows the number and proportion of Open Access articles provided under a Creative Commons license in hybrid journals included in transformative agreements. The table also illustrates the number of hybrid journals per portfolio, which published articles in the year, and the corresponding percentage of hybrid journals with at least one Open Access article. You can filter by publisher, publication year, and between a global and a country-specific view relative to lead author publications from Germany.
+This interactive table highlights the output of hybrid Open Access publishers by year, sorted by total annual publication volume. It shows the number and proportion of Open Access articles made available under a Creative Commons licence in hybrid journals included in transformative agreements. The table also shows the number of hybrid journals per portfolio and the corresponding percentage of hybrid journals with at least one OA article. You can filter by publisher, publication year and between a global and a country-specific view with respect to lead author publications from Germany.
 
 ::: column-body-outset
 
@@ -358,11 +358,11 @@ $(document).ready(function() {
 
 ## Country view
 
-This section shows how hybrid open access has been adopted in different parts of the world. The analysis is based on country-affiliations of lead authors. Lead authors are the first named authors of scholarly articles who have usually undertaken most of the research presented in the article, although author roles can vary across discipline. We used OpenAlex as data source to determine lead author affiliation.
+This section shows how hybrid open access has been adopted in different parts of the world. The analysis is based on the country affiliation of lead authors. Lead authors are the first named authors of scholarly articles, who have typically conducted most of the research presented in the article, although the role of lead authors can vary across disciplines. We used OpenAlex as a data source to determine the affiliation of lead authors.
 
 ### Open Access in hybrid journals by country
 
-Percentage of Open Access Articles with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in hybrid journals included in transformative agreements between 2017 and 2022. The analysis is based on country-affiliations of lead authors.
+Percentage of Open Access articles with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in transformative agreements between 2017 and 2022. The analysis is based on the country affiliation of the lead authors.
 
 ::: column-body-outset
 ```{r}
@@ -447,11 +447,11 @@ $(document).ready(function() {
 
 ## Open metadata
 
-Open and comprehensive metadata is a key requirement in many transformative agreements. The following tables illustrate potential gaps in Crossref metadata relative to Open Access articles in hybrid journals included in transformative agreements.
+Open and comprehensive metadata is a key requirement of many transformative agreements. The following tables illustrate potential gaps in Crossref metadata for Open Access articles in hybrid journals included in transformative agreements.
 
 ### License metadata gaps
 
-Comparison of open licence metadata in Crossref with Unpaywall per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publishers' websites to determine whether an article has been published under an open content licence. A positive gap indicates a licensing delay by Unpaywall, while a negative gap indicates that the publisher has not provided licensing metadata to Crossref.
+Comparison of open licence metadata in Crossref with Unpaywall per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publisher websites to determine whether an article has been published under an open content licence. More Open Access articles derived from Crossref may indicate an offset between metadata changes and Unpaywall-indexing, while more Open Access articles identified by Unpaywall suggest that publishers have not deposited licensing metadata in Crossref for all articles.
 
 
 ```{r upw_cr_license_gaps_data_prep}
@@ -647,6 +647,8 @@ htmltools::div(
 ```
 
 :::
+
+<small>Dashboard last compiled on `r format(Sys.time(), '%d %B, %Y')`</small>
 
 ```{css}
 .my-tbl {

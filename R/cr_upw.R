@@ -102,8 +102,10 @@ upw_col_ <- function() { list(
       minWidth = 100
     ),
     perc_diff  = colDef(
-      name = "% Difference",
-      format = colFormat(percent = TRUE, digits = 1),
+      name = "Difference",
+      cell = function(value) {
+      value <- paste0(format(round(value * 100, 1), nsmall = 1), "pp")
+      },
       class = "number",
       align = "right",
       width = 120,

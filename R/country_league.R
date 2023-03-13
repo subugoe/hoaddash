@@ -27,6 +27,7 @@ country_pub_df <-
 
 shared_oa_country_df <- SharedData$new(country_pub_df)
 
+# From https://connorrothschild.github.io/v2/post/economist-table-replication-using-reactable/
 react_table_oa_country <- reactable::reactable(
   shared_oa_country_df,
   style = list(),

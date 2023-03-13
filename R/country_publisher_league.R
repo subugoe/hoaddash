@@ -1,5 +1,9 @@
+if(exists("oam")) {
+  esac_df <- oam
+} else {
 esac_df <- hoaddata::jct_hybrid_jns |>
-  distinct(issn_l, esac_publisher) 
+  distinct(issn_l, esac_publisher)
+}
 
 country_total <- jn_aff_df |>
   distinct(issn_l, cr_year, country_code, articles_total) |>
@@ -20,11 +24,21 @@ country_df_by_publisher <- left_join(country_total, country_cc, by = c("cr_year"
   mutate_if(is.numeric, ~replace(., is.na(.), 0)) |>
   filter(!is.na(country_code)) |>
   mutate(
-    country_name = countrycode::countrycode(country_code, origin = "iso2c", destination = "country.name")) 
+    country_name = 
+    countrycode::countrycode(
+      country_code, origin = "iso2c", destination = "country.name"
+      )
+    ) |>
+    mutate(country_name = gsub("&", "and", country_name)) |>
+    mutate(esac_publisher = forcats::fct_relevel(
+      forcats::as_factor(esac_publisher), publ_league)
+      )
+
 
 country_pub_league <- country_df |>
   mutate(esac_publisher = "All") |>
-  bind_rows(country_df_by_publisher)
+  bind_rows(country_df_by_publisher) |>
+  mutate(esac_publisher = forcats::fct_relevel(forcats::as_factor(esac_publisher), c("All", publ_league)))
 
 # Max values to define width of bar charts
 bar_max_width <- country_pub_league |>
@@ -124,7 +138,7 @@ react_table_oa_country <- reactable::reactable(
       }
     ),
     prop = colDef(
-      name = "% of total",
+      name = "% OA",
       format = colFormat(percent = TRUE, digits = 1),
       style = list(fontWeight = "bold"),
       class = "number",

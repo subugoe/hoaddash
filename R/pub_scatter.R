@@ -45,7 +45,7 @@ scatter_pub <- function(my_df = my_df) {
       linetype = "dashed",
       size = 1
     ) +
-    theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 16) +
+    theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 15) +
     labs(x = "Articles (log scale)", y = "OA") +
     theme(panel.grid.minor.x = element_blank(),
           panel.grid.minor.y = element_blank(),
@@ -61,11 +61,12 @@ plot_scatterplot <-
       scatter_pub()
     plotly::ggplotly(plot_all, tooltip = c("text")) |>
       style(hoverlabel = list(bgcolor = "white", font = list(
-        family = "Source Sans Pro",
+        family = "Atkinson Hyperlegible",
         size = 18))) |>
       animation_slider(
         currentvalue = list(prefix = "Publication year: "),
-        pad = list(t = "50")
+        redraw = FALSE,
+        pad = list(t = 50, r = 50)
       ) |>
       animation_button(visible = TRUE) |>
       config(displayModeBar = FALSE)

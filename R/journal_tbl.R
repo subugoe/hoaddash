@@ -7,7 +7,7 @@ venues_df <- venues |>
     !is.na(homepage_url) ~ glue::glue('{display_name}<a href="{homepage_url}" target="_blank"><sup><small><i class="bi bi-box-arrow-up-right"></i></small></sup></a>'),
     is.na(homepage_url) ~ display_name)
   ) |>
-  mutate(issn_link = glue::glue('ISSN-L: <a href="https://zdb-katalog.de/list.xhtml?t={issn_l}&key=iss&frm=O&asc=false" target="_blank">{issn_l}</a> | OpenAlex: <a href="{id}" target="_blank">{gsub("https://openalex.org/", "", id)}</a>')) |>
+  mutate(issn_link = glue::glue('ISSN-L: <a href="https://zdb-katalog.de/list.xhtml?t={issn_l}&key=iss&frm=O&asc=false" target="_blank">{issn_l}</a>')) |>
   mutate(journal_display = glue::glue('<div><div style="font-weight:bold">{journal_name}</div><div style="font-size: 0.7rem">{issn_link}</div></div>'))
 
 # Sparkline

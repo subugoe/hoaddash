@@ -21,7 +21,9 @@ jn_league_df <- left_join(journals_per_publisher, journals_with_oa_per_publisher
 pub_league <- summarize_pubs(var_summary = c(cr_year, esac_publisher)) |>
   right_join(jn_league_df, by = c("cr_year", "esac_publisher", "collection")) |>
   mutate_if(is.numeric, ~ replace(., is.na(.), 0)) |> 
-  mutate(oa_prop = oa_articles / articles)
+  mutate(oa_prop = oa_articles / articles) |>
+  mutate(esac_publisher = forcats::fct_relevel(forcats::as_factor(esac_publisher), publ_league))
+
 
 # Prepare bar width relative to Crosstalk selection
 bar_max_width <- pub_league |>
