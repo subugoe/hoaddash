@@ -38,7 +38,8 @@ Imports:
     fs,
     hoaddata,
     crosstalk,
-    ymlthis
+    ymlthis,
+    forcats
 Remotes: 
     subugoe/hoaddata,
     rstudio/crosstalk@v1.1.1
