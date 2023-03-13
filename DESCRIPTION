@@ -39,7 +39,8 @@ Imports:
     hoaddata,
     crosstalk,
     ymlthis,
-    forcats
+    forcats,
+    countrycode
 Remotes: 
     subugoe/hoaddata,
     rstudio/crosstalk@v1.1.1
