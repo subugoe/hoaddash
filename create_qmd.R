@@ -49,7 +49,7 @@ funding_cp <- function(ta_dirs = NULL) {
 
 # Create templates
 
-ta_template_create <- function(.publisher = NULL, .collection = NULL) {
+ta_template_create <- function(.publisher = NULL, ...) {
   my_df <- ta_jns |>
     dplyr::filter(publisher %in% .publisher)
   # Title
@@ -97,7 +97,7 @@ ta_dir_create(unique(ta_jns$dir_name))
 funding_cp(unique(ta_jns$dir_name))
 
 # Create templates
-purrr::pmap(list(.publisher = my_ta$publisher, .collection = my_ta$collection), ta_template_create)
+purrr::walk(my_ta$publisher, ta_template_create)
 
 # Move JCT overview
 
