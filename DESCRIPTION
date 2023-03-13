@@ -35,7 +35,9 @@ Imports:
     sparkline,
     kableExtra,
     htmltools,
-    fs
+    fs,
+    hoaddata,
+    crosstalk
 Remotes: 
     subugoe/hoaddata,
     rstudio/crosstalk@v1.1.1
