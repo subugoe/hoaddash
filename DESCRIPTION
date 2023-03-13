@@ -37,7 +37,8 @@ Imports:
     htmltools,
     fs,
     hoaddata,
-    crosstalk
+    crosstalk,
+    ymlthis
 Remotes: 
     subugoe/hoaddata,
     rstudio/crosstalk@v1.1.1
