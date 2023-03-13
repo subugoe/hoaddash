@@ -40,7 +40,8 @@ Imports:
     crosstalk,
     ymlthis,
     forcats,
-    countrycode
+    countrycode,
+    ggtext
 Remotes: 
     subugoe/hoaddata,
     rstudio/crosstalk@v1.1.1
