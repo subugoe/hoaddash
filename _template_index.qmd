@@ -1,0 +1,515 @@
+---
+format:
+  html:
+    theme: default
+    toc: true
+    toc-location: right
+execute:
+  echo: false
+  warnings: false
+  message: false
+  freeze: false
+sidebar: true
+---
+
+<!-- Required R packages -->
+
+```{r setup}
+#| echo: false
+#| message: false
+source("R/setup.R")
+if (params$collection == "oam") {
+    oam <- hoaddata::oam_hybrid_jns |>
+        dplyr::distinct(issn_l, esac_publisher = vertrag)
+}
+```
+
+<!-- data preparation -->
+
+```{r data prep}
+#| echo: false
+#| message: false
+jn_ind_df <- hoaddata::jn_ind |>
+    dplyr::mutate(cr_year = as.character(cr_year)) |>
+    dplyr::mutate(cc = factor(
+        cc,
+        # Order by permissiveness
+        levels = c(
+            "CC BY",
+            "CC BY-SA",
+            "CC BY-NC",
+            "CC BY-NC-SA",
+            "CC BY-ND",
+            "CC BY-NC-ND"
+        )
+    )) |>
+    # Journal selection
+    filter(issn_l %in% params$issn_l)
+
+jn_aff_df <- hoaddata::jn_aff |>
+    dplyr::mutate(cr_year = as.character(cr_year)) |>
+    dplyr::mutate(cc = factor(
+        cc,
+        # Order by permissiveness
+        levels = c(
+            "CC BY",
+            "CC BY-SA",
+            "CC BY-NC",
+            "CC BY-NC-SA",
+            "CC BY-ND",
+            "CC BY-NC-ND"
+        )
+    )) |>
+    # Journal selection
+    filter(issn_l %in% params$issn_l)
+```
+
+```{r ta_text}
+#| echo: false
+#| message: false
+if (params$collection == "oam") {
+    ta_text <- paste0("hybrid journals included in the German consortial transformative agreement **", params$publisher, "**")
+} else {
+    ta_text <- paste0("**", params$publisher, "**", " hybrid journals included in transformative agreements")
+}
+```
+
+<!-- Teaser -->
+
+The share of Open Access articles with a Creative Commons license in `r format(length(unique(jn_ind_df$issn_l)), big.mark = ",")` hybrid journals is as follows:
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: asis
+source("R/teaser.R")
+basic_stat(jn_ind_df = jn_ind_df, jn_aff_df = jn_aff_df)
+```
+
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
+
+<!-- Creative Commons license prevalence-->
+
+## Creative Commons licenses over time
+
+Percentage of Open Access in `r ta_text` by Creative Commons license types as provided by Crossref.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/cc_over_year.R")
+```
+
+
+::: {.panel-tabset}
+
+## Global
+
+```{r, message=FALSE}
+cc_global_plot <- plot_cc_variants_by_year(cc_ind_global(jn_ind_df = jn_ind_df))
+# Return SVG
+girafe(
+    ggobj = cc_global_plot,
+    width_svg = 9,
+    height_svg = 6 * 0.618,
+    options = list(opts_tooltip(
+        css = "background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+        opacity = .95
+    ))
+)
+
+```
+
+<!-- <div style="text-align: right"><small>[Download data (csv)](cc_2017-22.csv)</small></div> -->
+
+## Germany<sup>*</sup>
+
+```{r, message=FALSE}
+cc_de_plot <- plot_cc_variants_by_year(cc_ind_de(jn_aff_df = jn_aff_df))
+# Return SVG
+girafe(
+    ggobj = cc_de_plot,
+    width_svg = 9,
+    height_svg = 6 * 0.618,
+    options = list(opts_tooltip(
+        css = "background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+        opacity = .95
+    ))
+)
+```
+
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
+
+<!--  <div style="text-align: right"><small>[Download data (csv)](cc_2017-22_de.csv)</small></div> -->
+
+:::
+
+
+## Publishing market
+
+Hybrid journal portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Note that only hybrid journals included in transformative agreements are shown.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+# Data prep
+if (params$collection == "oam") {
+    oam <- hoaddata::oam_hybrid_jns |>
+        dplyr::distinct(issn_l, esac_publisher = vertrag)
+    source("R/oam_data_prep.R")
+} else {
+    source("R/data_prep.R")
+}
+
+my_df <- summarize_pubs(var_summary = c(cr_year, esac_publisher)) |>
+    tidyr::complete(cr_year, esac_publisher, collection) |>
+    mutate_if(is.numeric, ~ replace(., is.na(.), 0)) |>
+    mutate(pub_col = ifelse(esac_publisher %in% params$publisher, "#0093C7", "#999999"))
+```
+
+::: {.panel-tabset}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/pub_scatter.R")
+```
+
+## Global
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+plot_scatterplot(my_df, collection = "global")
+```
+  
+## Germany<sup>*</sup>
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+plot_scatterplot(my_df, collection = "de")
+```
+
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
+
+:::
+
+
+
+## Country view
+
+This section shows how hybrid open access has been adopted in different parts of the world. The analysis is based on the country affiliation of lead authors. Lead authors are the first named authors of scholarly articles, who have typically conducted most of the research presented in the article, although the role of lead authors can vary across disciplines. We used OpenAlex as a data source to determine the affiliation of lead authors.
+
+### Open Access in hybrid journals by country
+
+Percentage of Open Access Articles with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in `r ta_text` between 2017 and 2022. The analysis is based on the country affiliation of the lead authors.
+
+::: column-body-outset
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/country_top_20.R")
+
+ggiraph::girafe(
+    ggobj = country_multiple_plot,
+    width_svg = 9,
+    height_svg = 7 * 0.618,
+    options = list(opts_tooltip(
+        css = "background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+        opacity = .95
+    ))
+)
+```
+:::
+
+
+### Country league
+
+Publication volume and Open Access share per country in `r ta_text`. You can search for specific countries, and filter by publisher and publication year. The analysis is based on country-affiliations of lead authors.
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/country_league.R")
+```
+
+```{r}
+htmltools::div(
+    class = "agreement-tbl",
+    htmltools::div(
+        class = "filters",
+        htmltools::div(
+            class = "filter-input",
+            filter_select(
+                "filter_country",
+                "Countries",
+                shared_oa_country_df,
+                ~country_name,
+                multiple = TRUE
+            )
+        ),
+        htmltools::div(
+            class = "filter-input",
+            filter_select(
+                "filter_country_year",
+                "Publication Year",
+                shared_oa_country_df,
+                ~cr_year,
+                multiple = FALSE
+            )
+        )
+    ),
+    react_table_oa_country,
+    htmltools::div(class = "agreement-footer", "
+  Data sources: Crossref, OpenAlex.")
+)
+```
+
+
+```{js,echo = FALSE}
+ /* https://stackoverflow.com/a/66216595 */
+$(document).ready(function() {
+    document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2022", false);
+});
+```
+
+## Open metadata
+
+Open and comprehensive metadata is a key requirement of many transformative agreements. The following tables illustrate potential gaps in Crossref metadata for Open Access articles in hybrid journals included in transformative agreements.
+
+### License metadata gaps
+
+**`r params$publisher`**: Comparison of open licence metadata in Crossref with Unpaywall per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publisher websites to determine whether an article has been published under an open content licence. More Open Access articles derived from Crossref may indicate an offset between metadata changes and Unpaywall-indexing, while more Open Access articles identified by Unpaywall suggest that publishers have not deposited licensing metadata in Crossref for all articles.
+
+::: {.panel-tabset}
+
+## Global 
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/cr_upw.R")
+cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Global")
+```
+
+## Germany<sup>*</sup>
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Germany")
+```
+
+<small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
+
+:::
+
+### Crossref metadata coverage
+
+This interactive table shows the proportion of Crossref metadata that is publicly available for Open Access articles in `r ta_text`. Publishers can use Crossref to share links to full-texts for text-mining purposes, persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/open_md.R")
+# Should be done in hoaddata
+md_tmp <- hoaddata::cr_md |>
+    tidyr::complete(cr_year, issn_l, cat) |>
+    mutate_all(~ ifelse(is.na(.), 0, .))
+
+my_df <- shared_open_md_df(.data = md_tmp, issn_l = params$issn_l, publisher = params$publisher)
+
+htmltools::div(
+    class = "agreement-tbl",
+    # filters,
+    htmltools::div(
+        class = "filters",
+        htmltools::div(
+            class = "filter-input",
+            filter_select(
+                "filter_open_md_cat_input",
+                "Global / Germany",
+                my_df,
+                ~cat,
+                multiple = FALSE
+            )
+        ),
+    ),
+    # table
+    open_md_react(
+        my_df
+    ),
+    # footer
+    htmltools::div(
+        class = "agreement-footer",
+        paste0(
+            "Data sources: Crossref, OpenAlex. Last updated: ",
+            Sys.Date(),
+            "."
+        )
+    )
+)
+```
+
+```{js,echo = FALSE}
+ /* https://stackoverflow.com/a/66216595 */
+$(document).ready(function() {
+    document.getElementById("filter_open_md_cat_input").getElementsByClassName("selectized")[0].selectize.setValue("Global", false);
+});
+```
+
+## Journal table
+
+**`r params$publisher`**: This table presents the publication volume and Open Access share by  hybrid journal between 2017 and 2022, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+
+::: column-body-outset
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+my_df <- summarize_pubs(var_summary = c(cr_year, issn_l)) |>
+    filter(issn_l %in% params$issn_l) |>
+    tidyr::complete(cr_year, issn_l, collection) |>
+    mutate_if(is.numeric, ~ replace(., is.na(.), 0))
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("R/journal_tbl.R")
+htmltools::div(
+    class = "agreement-tbl",
+    journal_listing
+)
+```
+
+:::
+
+<small>Dashboard last compiled on `r format(Sys.time(), '%d %B, %Y')`.</small>
+
+```{css}
+.my-tbl {
+  margin: 0 auto;
+  width: 575px;
+}
+.tbl-header {
+  margin: 18px 0;
+  font-size: 1.25em;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.filter-input {
+  margin-top: 4px;
+  margin-left: 32px;
+  flex: 1;
+  max-width: 250px;
+}
+.filter-input label {
+  color: hsl(0, 0%, 45%);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.group-header {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.filter-input select,
+.filter-input input[type="search"] {
+  padding: 0 6px;
+  height: 32px;
+}
+.filter-input input[type="search"] {
+  /* Reset Bootstrap 3 styles */
+  -webkit-appearance: searchfield;
+}
+.filter-input input[type="search"]::-webkit-search-cancel-button {
+  /* Reset Bootstrap 3 styles */
+  -webkit-appearance: searchfield-cancel-button;
+}
+.followers-tbl a {
+  color: inherit;
+}
+.header {
+  border-bottom: 2px solid #555;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header:hover {
+  background-color: #eee;
+}
+/* Highlight headers when sorting */
+.header:hover,
+.header[aria-sort="ascending"],
+.header[aria-sort="descending"] {
+  background-color: rgba(236, 236, 237, 1);
+}
+.agreement-footer {
+  margin: 18px 0;
+  font-size: 10px;
+  }
+  
+.agreement-tbl {
+  margin: 18px 0;
+  font-size: 14px;
+}
+.bar-cell {
+  display: flex;
+  align-items: center;
+}
+.number {
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre;
+}
+.label {
+  font-size: 14px;
+  white-space: pre;
+}
+.bar-chart {
+  flex-grow: 1;
+  margin-left: 6px;
+  height: 14px;
+}
+.bar {
+  height: 100%;
+}
+.border-left {
+  border-left: 1px solid #b5b5b5;
+}
+.name {
+  font-weight: 900;
+}
+```

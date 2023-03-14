@@ -1,0 +1,58 @@
+# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
+# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+name: build
+
+jobs:
+  CICD:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      R_KEEP_PKG_SOURCE: yes
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install Google Fonts
+        run: |
+          wget -O Atkinson_Hyperlegible.zip https://fonts.google.com/download?family=Atkinson%20Hyperlegible
+          unzip -d Atkinson_Hyperlegible/ Atkinson_Hyperlegible.zip
+          mv Atkinson_Hyperlegible /usr/share/fonts/
+          fc-cache -fv
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - run: |
+          quarto --version
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+          
+      - uses: r-lib/actions/setup-r-dependencies@v2
+      
+      - name: Create dashboard documents
+        run: |
+         source("create_qmd.R")
+        shell: Rscript {0}
+
+      - name: Staging - Render and Publish
+        if: github.event_name == 'pull_request'
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: netlify
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+ 
+      - name: Productive - Render and Publish 
+        if: github.event_name == 'push'
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

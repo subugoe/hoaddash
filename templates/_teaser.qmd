@@ -1,0 +1,158 @@
+
+
+```{r, message = FALSE, echo=FALSE}
+#' ## Global Creative Commons prevalence
+#'
+#' Calculate CC license variants by year. Returns absulote and relative values.
+cc_ind_global <- function(jn_ind_df = jn_ind_df) {
+  cc_df <- jn_ind_df %>%
+    group_by(cr_year, cc) %>%
+    summarise(cc_total = sum(cc_total))
+  all_df <- jn_ind_df %>%
+    distinct(cr_year, issn_l, jn_all) %>%
+    group_by(cr_year) %>%
+    summarise(jn_all = sum(jn_all))
+  inner_join(cc_df, all_df) %>%
+    filter(!is.na(cc)) %>%
+    mutate(prop = cc_total / jn_all) %>%
+   # select(-jn_all) %>%
+    ungroup() %>%
+    # missing combinations
+    tidyr::complete(cr_year, cc, fill = list(cc_total = 0, prop = 0)) %>%
+    distinct() %>%
+    ungroup()
+}
+#' Publications 2017 - 2021
+all_publications <- cc_ind_global(jn_ind_df = jn_ind_df) |>
+  distinct(cr_year, jn_all) |>
+  pull(jn_all) |>
+  sum(na.rm = TRUE)
+#' Publications 2021
+all_publications_2021 <-
+  cc_ind_global(jn_ind_df = jn_ind_df) |>
+  distinct(cr_year, jn_all) |>
+  filter(cr_year == "2021") |>
+  pull(jn_all) |>
+  sum(na.rm = TRUE)
+#' CC publications 2017 - 2021
+cc_publications <- cc_ind_global(jn_ind_df = jn_ind_df) |>
+  pull(cc_total) |>
+  sum(na.rm = TRUE)
+#' CC publications 2021
+cc_publications_21 <- cc_ind_global(jn_ind_df = jn_ind_df) |>
+  filter(cr_year == "2021") |>
+  pull(cc_total) |>
+  sum(na.rm = TRUE)
+
+#' ## Germany Creative Commons prevalence
+#'
+#' Calculate CC license variants by year. Returns absulote and relative values.
+cc_ind_de <- function(jn_aff_df = jn_aff_df) {
+  de_df <- jn_aff_df |>
+    filter(country_code == "DE")
+
+  de_total <- de_df |>
+    distinct(cr_year, issn_l, articles_total) %>%
+    group_by(cr_year) %>%
+    summarize(jn_all = sum(articles_total))
+  de_cc <- de_df |>
+    filter(!is.na(cc)) |>
+    distinct(cr_year, issn_l, articles_under_cc_variant, cc) |>
+    group_by(cr_year, cc) |>
+    summarize(cc_total = sum(articles_under_cc_variant))
+  left_join(de_total, de_cc, by = c("cr_year")) |>
+    mutate(cr_year = factor(cr_year)) %>%
+    mutate(prop = cc_total / jn_all) %>%
+    mutate_if(is.numeric, ~replace(., is.na(.), 0))
+}
+
+#' Publications 2017 - 2021
+all_publications_de <- cc_ind_de(jn_aff_df = jn_aff_df) |>
+  distinct(cr_year, jn_all) |>
+  pull(jn_all) |>
+  sum(na.rm = TRUE)
+#' Publications 2021
+all_publications_2021_de <-
+  cc_ind_de(jn_aff_df = jn_aff_df) |>
+  distinct(cr_year, jn_all) |>
+  filter(cr_year == "2021") |>
+  pull(jn_all) |>
+  sum(na.rm = TRUE)
+#' CC publications 2017 - 2021
+cc_publications_de <- cc_ind_de(jn_aff_df = jn_aff_df) |>
+  pull(cc_total) |>
+  sum(na.rm = TRUE)
+#' CC publications 2021
+cc_publications_21_de <- cc_ind_de(jn_aff_df = jn_aff_df) |>
+  filter(cr_year == "2021") |>
+  pull(cc_total) |>
+  sum(na.rm = TRUE)
+
+
+## Indicator display
+basic_stat <- function(...) {
+glue::glue('<div class="grid">
+ <div class="g-col-lg-6 g-col-12">
+ <p style="text-align: center;" class="text-muted">2017-2021</p>
+  <table style="margin:auto;padding:0;width:80%;text-align: center;">
+  <colgroup>
+       <col span="1" style="width: 50%;">
+       <col span="1" style="width: 50%;">
+      </colgroup>
+    <tbody>
+      <tbody>
+         <tr >
+            <td colspan="1"  scope="row" style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%;">Global</td>
+            <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%; border-left: 1px solid rgb(26, 55, 113);">Germany</td>
+         </tr>
+          <tr >
+            <td colspan="1"  scope="row" style="font-size: 157%;">{round(cc_publications / all_publications * 100, 1)}%</td>
+            <td colspan="1"  style="font-size: 157%; border-left: 1px solid rgb(26, 55, 113);">{round(cc_publications_de / all_publications_de * 100, 1)}%</td>
+         </tr>
+         <tr >
+            <td colspan="1"  scope="row" style="border-top: 1px solid rgb(255, 255, 255); color: rgb(102, 102, 102); font-size: 91%;">{paste0(format(round(cc_publications / 1e3, 0), trim = TRUE), "K")} out of {paste0(format(round(all_publications / 1e6, 1), trim = TRUE), "Mio")}</td>
+            <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); color: rgb(102, 102, 102); font-size: 91%; border-left: 1px solid rgb(26, 55, 113);">{paste0(format(round(cc_publications_de / 1e3, 0), trim = TRUE), "K")} out of {paste0(format(round(all_publications_de / 1e3, 0), trim = TRUE), "K")}</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+ <div class="g-col-lg-6 g-col-12">
+ <p style="text-align: center;" class="text-muted">2021</p>
+ <table style="margin:auto;padding:0;width:80%;text-align: center;">
+  <colgroup>
+       <col span="1" style="width: 50%;">
+       <col span="1" style="width: 50%;">
+      </colgroup>
+    <tbody>
+      <tbody>
+         <tr >
+            <td colspan="1"  scope="row" style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%;">Global</td>
+            <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%; border-left: 1px solid rgb(26, 55, 113);">Germany</td>
+         </tr>
+         <tr >
+            <td colspan="1"  scope="row" style="font-size: 157%;">{round(cc_publications_21 / all_publications_2021 * 100, 1)}%</td>
+            <td colspan="1"  style="font-size: 157%; border-left: 1px solid rgb(26, 55, 113);">{round(cc_publications_21_de / all_publications_2021_de * 100, 1)}%</td>
+         </tr>
+         <tr >
+            <td colspan="1"  scope="row" style="border-top: 1px solid rgb(255, 255, 255); color: rgb(102, 102, 102); font-size: 91%;">{paste0(format(round(cc_publications_21 / 1e3, 0), trim = TRUE), "K")} out of {paste0(format(round(all_publications_2021 / 1e3, 0), trim = TRUE), "K")}</td>
+            <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); color: rgb(102, 102, 102); font-size: 91%; border-left: 1px solid rgb(26, 55, 113);">{paste0(format(round(cc_publications_21_de / 1e3, 0), trim = TRUE), "K")} out of {paste0(format(round(all_publications_2021_de / 1e3, 0), trim = TRUE), "K")}</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+</div>')
+  }
+```
+
+The share of Open Access articles with a Creative Commons license in hybrid journals exposed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/) is as follows:
+
+
+```{r, message = FALSE, results = 'asis', echo = FALSE}
+basic_stat(jn_ind_df = jn_ind_df, jn_aff_df = jn_aff_df)
+```
+
+::: {.callout-note collapse="true"}
+## Expand to learn about how publications from Germany were counted?
+
+Only journal articles from lead authors based in Germany were considered. A [lead author](https://en.wikipedia.org/wiki/Lead_author) is the first named author of a scholarly article who has usually undertaken most of the research presented in the article, although author roles can vary across discipline. We used [OpenAlex](https://openalex.org/) as data source to determine lead author affiliation.
+:::

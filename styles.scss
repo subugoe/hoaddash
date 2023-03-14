@@ -1,4 +1,9 @@
 /*-- scss:defaults --*/
 
-$navbar-bg: #1a3771;
-$link-color: #1a3771;
+@import 'https://fonts.bunny.net/css2?family=Atkinson+Hyperlegible&display=swap';
+@import 'https://fonts.bunny.net/css2?family=Fira+Mono&display=swap';
+
+$font-family: "Atkinson Hyperlegible", sans-serif;
+$font-family: 'Fira Mono', monospace;
+
+$primary: #006bd5;
