@@ -323,7 +323,7 @@ cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Germany")
 
 ### Crossref metadata coverage
 
-This interactive table shows the the proportion of Crossref metadata that is publicly available for Open Access articles in `r ta_text`. Publishers can use Crossref to share links to full-texts for text-mining purposes, persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
+This interactive table shows the proportion of Crossref metadata that is publicly available for Open Access articles in `r ta_text`. Publishers can use Crossref to share links to full-texts for text-mining purposes, persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
 
 
 ```{r}
@@ -407,7 +407,7 @@ htmltools::div(
 
 :::
 
-<small>Dashboard last compiled on `r format(Sys.time(), '%d %B, %Y')`</small>
+<small>Dashboard last compiled on `r format(Sys.time(), '%d %B, %Y')`.</small>
 
 ```{css}
 .my-tbl {

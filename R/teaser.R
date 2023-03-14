@@ -60,7 +60,7 @@ cc_ind_de <- function(jn_aff_df = jn_aff_df) {
     distinct(cr_year, issn_l, articles_under_cc_variant, cc) |>
     group_by(cr_year, cc) |>
     summarize(cc_total = sum(articles_under_cc_variant))
-  left_join(de_total, de_cc, by = c("cr_year")) |>
+  left_join(de_total, de_cc, by = c("cr_year"), multiple = "all") |>
     mutate(cr_year = factor(cr_year)) %>%
     mutate(prop = cc_total / jn_all) %>%
     mutate_if(is.numeric, ~replace(., is.na(.), 0))

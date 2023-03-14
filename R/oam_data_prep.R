@@ -13,7 +13,7 @@ summarise_oa_all <-
   function(.data = hoaddata::jn_ind,
            var_summary = NULL) {
     pub_df <- .data |>
-      inner_join(oam, by = "issn_l")
+      inner_join(oam, by = "issn_l", multiple = "all")
     pub_all <- pub_df |>
       distinct(issn_l, cr_year, jn_all, esac_publisher) |>
       group_by(across({
@@ -44,7 +44,7 @@ summarise_oa_de <-
   function(.data = hoaddata::jn_aff,
            var_summary = NULL) {
     pub_df_de <- .data |>
-      inner_join(oam, by = "issn_l") |>
+      inner_join(oam, by = "issn_l", multiple = "all") |>
       filter(country_code == "DE") |>
       mutate(cr_year = as.factor(cr_year))
     pub_all_de <- pub_df_de |>

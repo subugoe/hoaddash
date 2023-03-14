@@ -31,7 +31,7 @@ oam <- hoaddata::oam_hybrid_jns |>
       dplyr::distinct(issn_l, esac_publisher = vertrag) 
 
 jn_ind_df <- hoaddata::jn_ind |>
-  dplyr::inner_join(oam, by = "issn_l") |>
+  dplyr::inner_join(oam, by = "issn_l", multiple = "all") |>
   dplyr::mutate(cr_year = as.character(cr_year)) |>
   dplyr::mutate(cc = factor(
     cc,
@@ -46,7 +46,7 @@ jn_ind_df <- hoaddata::jn_ind |>
     ))) 
 
 jn_aff_df <- hoaddata::jn_aff |>
-  dplyr::inner_join(oam, by = "issn_l") |>
+  dplyr::inner_join(oam, by = "issn_l", multiple = "all") |>
   dplyr::mutate(cr_year = as.character(cr_year)) |>
   dplyr::mutate(cc = factor(
     cc,
@@ -130,7 +130,7 @@ girafe(
 
 ### Creative Commons licenses over time by publisher
 
-Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2022.
+Percentage of Open Access in hybrid journals included in consortial transformative agreements in Germany by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2022.
 
 ```{r}
 #| echo: false
@@ -278,7 +278,7 @@ girafe(
 
 ### Publisher league: Hybrid Open Access output
 
-This interactive table highlights the output of hybrid Open Access publishers by year, sorted by total annual publication volume. It shows the number and proportion of Open Access articles made available under a Creative Commons licence in hybrid journals included in transformative agreements. The table also shows the number of hybrid journals per portfolio and the corresponding percentage of hybrid journals with at least one OA article. You can filter by publisher, publication year and between a global and a country-specific view with respect to lead author publications from Germany.
+This interactive table highlights the output of hybrid Open Access publishers by year, sorted by total annual publication volume. It shows the number and proportion of Open Access articles made available under a Creative Commons licence in hybrid journals included in consortial transformative agreements in Germany. The table also shows the number of hybrid journals per portfolio and the corresponding percentage of hybrid journals with at least one OA article. You can filter by publisher, publication year and between a global and a country-specific view with respect to lead author publications from Germany.
 
 ::: column-body-outset
 
@@ -378,7 +378,7 @@ This section shows how hybrid open access has been adopted in different parts of
 
 ### Open Access in hybrid journals by country
 
-Percentage of Open Access articles with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in transformative agreements between 2017 and 2022. The analysis is based on the country affiliation of the lead authors.
+Percentage of Open Access articles with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in consortial transformative agreements in Germany between 2017 and 2022. The analysis is based on the country affiliation of the lead authors.
 
 ::: column-body-outset
 ```{r}
@@ -398,11 +398,10 @@ ggiraph::girafe(
 ```
 :::
 
-<small>Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated: `r Sys.Date()`.</small> 
 
 ### Country league
 
-Publication volume in hybrid journals included in consortial transformative agreements in Germany and Open Access share per country. You can search for specific countries, and filter by publisher and publication year. The analysis is based on country-affiliations of lead authors.
+Publication volume and Open Access share in hybrid journals included in consortial transformative agreements in Germany. You can search for specific countries, and filter by publisher and publication year. The analysis is based on country-affiliations of lead authors.
 
 ```{r}
 #| echo: false
@@ -472,7 +471,7 @@ $(document).ready(function() {
 
 ## Open metadata
 
-Open and comprehensive metadata is a key requirement of many transformative agreements. The following tables illustrate potential gaps in Crossref metadata for Open Access articles in hybrid journals included in transformative agreements.
+Open and comprehensive metadata is a key requirement of many transformative agreements. The following tables illustrate potential gaps in Crossref metadata for Open Access articles in hybrid journals included in consortial transformative agreements in Germany.
 
 ### License metadata gaps
 
@@ -586,7 +585,7 @@ $(document).ready(function() {
 
 ### Crossref metadata coverage
 
-This interactive table shows the the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in consortial transformative agreements in Germany. Publishers can use Crossref to share links to full-texts for text-mining purposes,  persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
+This interactive table shows the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in consortial transformative agreements in Germany. Publishers can use Crossref to share links to full-texts for text-mining purposes,  persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
 
 
 ```{r}
@@ -664,7 +663,7 @@ $(document).ready(function() {
 
 ## Journal table
 
-This table presents the publication volume and Open Access share by journal between 2017 and 2022, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+This table presents the publication volume and Open Access share by hybrid journal included in consortial transformative agreements in Germany between 2017 and 2022, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
 
 ::: column-body-outset
 
@@ -700,7 +699,7 @@ htmltools::div(
 
 :::
 
-<small>Dashboard last compiled on `r format(Sys.time(), '%d %B, %Y')`</small>
+<small>Dashboard last compiled on `r format(Sys.time(), '%d %B, %Y')`.</small>
 
 ```{css}
 .my-tbl {
