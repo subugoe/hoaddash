@@ -26,7 +26,7 @@ HOAD is open source and licensed under CC0. We believe that in order to overcome
 
 To engage with everyone, our open source dashboards combine open data from multiple sources as follows:
 
-- Journals included in transformative agreements are obtained from the [cOAlition S Transformative Agreements Public Data](https://journalcheckertool.org/transformative-agreements/) (July 2021 and July 2022 snapshots) and [Germany's Open Access Monitor](https://doi.org/10.26165/JUELICH-DATA/VTQXLM) (March 2022). We have enriched both journal data sources with ISSN-L, a linking identifier for ISSN variants. Then, we excluded fully open access journals from the cOAlition S Transformative Agreements Public Data by cross-checking with several datasets of fully open access journals: the [Directory of Open Access Journals (DOAJ)](https://doaj.org/), [Bielefeld GOLD OA](https://doi.org/10.4119/unibi/2961544) and [Unpaywall](https://unpaywall.org/).
+- Journals included in transformative agreements were obtained from the [cOAlition S Transformative Agreements Public Data](https://journalcheckertool.org/transformative-agreements/) (July 2021 and July 2022 snapshots). Agreements with German consortia were derived from [Germany's Open Access Monitor](https://doi.org/10.26165/JUELICH-DATA/VTQXLM) (March 2022). We enriched both journal data sources with ISSN-L, a linking identifier for ISSN variants. Then, we excluded fully open access journals from the cOAlition S Transformative Agreements Public Data by cross-checking with several datasets of fully open access journals: the [Directory of Open Access Journals (DOAJ)](https://doaj.org/), [Bielefeld GOLD OA](https://doi.org/10.4119/unibi/2961544) and [Unpaywall](https://unpaywall.org/).
 - [Crossref](https://www.crossref.org/) is our main data source for determining the publication volume in hybrid journals including the uptake of Open Access through Creative Commons licenses. The [ESAC guidelines](https://esac-initiative.org/about/transformative-agreements/reference-guide/), a community recommendation for negotiating transformative agreements, require publishers to make key metadata elements publicly available through Crossref, such as Creative Commons licensing information for Open Access articles. As a [Crossref Metadata Plus subscriber](https://www.crossref.org/services/metadata-retrieval/metadata-plus/), we used monthly Crossref snapshots to derive publication data.
 - [OpenAlex](https://openalex.org/) is our data source for determining the country affiliation of lead authors. A [lead author](https://en.wikipedia.org/wiki/Lead_author) is the first named author of a scholarly article who has usually carried out most of the research presented in the article, although author roles can vary across disciplines. We used OpenAlex monthly snaphots as a data source to determine lead author affiliations.
 - To highlight potential gaps between Crossref open licensing metadata and information provided via journal webpages, we used [Unpaywall](https://unpaywall.org/) via OpenAlex as a complementary data source for Open Access articles in hybrid journals.
@@ -35,7 +35,7 @@ This compiled data is openly available through an R package, [hoaddata](https://
 
 ## Dashboard implementation
 
-HOAD is made with [Quarto](https://quarto.org/), an open source tool for scientific and technical publishing. Quarto documents contain text and analytical source code, in our case R, and are rendered as HTML. More specifically, we created parameterised reports from which Quarto generates publisher-specific views. The resulting website is published on GitHub pages.
+HOAD is made with [Quarto](https://quarto.org/), an open source tool for scientific and technical publishing. Quarto documents contain text and analytical source code, in our case R, and are rendered to HTML. More specifically, we created parameterised reports from which Quarto generates publisher-specific views. The resulting website is published on GitHub pages.
 
 As statistical tools, we used a bunch of [tidyverse](https://www.tidyverse.org/) packages. Visualisations were made interactive through [ggiraph](https://davidgohel.github.io/ggiraph/) and [plotly](https://plotly.com/r/). Interactive tables were implemented using [reactable](https://glin.github.io/reactable/). These packages have great documentation with lots of examples that has helped us to build HOAD 😀.
 
@@ -52,7 +52,7 @@ To better understand the strengths and limitations of our data work, we commissi
 
 ## Funding
 
-HOAD is a scholarly communications analytics project funded by the [German Research Foundation (DFG)](https://gepris.dfg.de/gepris/projekt/416115939) to [support the implementation of consortial transformative agreements in Germany](https://doi.org/10.5282/o-bib/2017H2S87-95). The work is carried out at the [Göttingen State and University Library (SUB Göttingen)](https://www.sub.uni-goettingen.de/sub-aktuell/).
+HOAD is a scholarly communication analytics project funded by the [German Research Foundation (DFG)](https://gepris.dfg.de/gepris/projekt/416115939) to [support the implementation of consortial transformative agreements in Germany](https://doi.org/10.5282/o-bib/2017H2S87-95). The work is carried out by the [scholarly communication analytics team](https://subugoe.github.io/scholcomm_analytics/about.html) at the [Göttingen State and University Library (SUB Göttingen)](https://www.sub.uni-goettingen.de/sub-aktuell/).
 
 ## Contribute
 
@@ -65,7 +65,7 @@ This dashboard has been developed in the open using open tools. There are a numb
 
 ## Contributors
 
-SUB Göttingen Team: Dr. Inke Achterberg, Nick Haupka, Dr. Anne Hobert, Najko Jahn.
+SUB Göttingen Team: Dr. Inke Achterberg, Nick Haupka, Dr. Anne Hobert, Najko Jahn, Dr. Birgit Schmidt.
 
 ## License
 

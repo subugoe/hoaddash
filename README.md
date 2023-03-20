@@ -2,7 +2,7 @@
 
 Source code repository for building and hosting dashboards to highlight Open Access uptake in hybrid journals.
 
-The dashboards are built using [Quarto](https://quarto.org/), an open source tool for scientific and technical publishing. Quarto documents contain text and analytical source code, in our case R, and are rendered as HTML. More specifically, we created parameterised reports from which Quarto generates publisher-specific views. The resulting website is published on GitHub pages.
+The dashboards are built using [Quarto](https://quarto.org/), an open source tool for scientific and technical publishing. Quarto documents contain text and analytical source code, in our case R, and are rendered to HTML. More specifically, we created parameterised reports from which Quarto generates publisher-specific views. The resulting website is published on GitHub pages.
 
 The dashboards are built using GitHub Actions. 
 
@@ -21,7 +21,7 @@ This repository contains templates that are used to build specific Quarto docume
 
 ## Software dependencies
 
-Underlying data analysis uses the R programming language. `DESCRIPTION` give a detailed overview of our R package dependencies. The `R` folder contains a collection of R functions and scripts used to build the dashboards.
+Underlying data analysis uses the R programming language. [`DESCRIPTION`](DESCRIPTION) gives a detailed overview of our R package dependencies. The `R` folder contains a collection of R functions and scripts used to build the dashboards.
 
 ## Data
 
@@ -42,7 +42,7 @@ This dashboard has been developed in the open using open tools. There are a numb
 
 ## Contributors
 
-SUB Göttingen Team: Dr. Inke Achterberg, Nick Haupka, Dr. Anne Hobert, Najko Jahn.
+SUB Göttingen Team: Dr. Inke Achterberg, Nick Haupka, Dr. Anne Hobert, Najko Jahn, Dr. Birgit Schmidt.
 
 ## Contact
 
@@ -50,6 +50,6 @@ Najko Jahn: najko.jahn@sub.uni-goettingen.de
 
 ## License
 
-CC-0
+[CC 0](LICENSE.md)
 
 
