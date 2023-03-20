@@ -74,7 +74,7 @@ ta_template_create <- function(.publisher = NULL, ...) {
     ymlthis::yml_discard(c("author", "date")) |>
     ymlthis::use_rmarkdown(
       path = paste0(unique(my_df$dir_name), "/index.qmd"),
-      template = "_template_index.qmd",
+      template = "_portfolio_template.qmd",
       include_yaml = TRUE,
       open_doc = FALSE,
       overwrite = TRUE
@@ -100,8 +100,8 @@ purrr::walk(my_ta$publisher, ta_template_create)
 
 # Move JCT overview
 
-fs::file_copy("_template_overview.qmd", "index.qmd", overwrite = TRUE)
+fs::file_copy("_jct_overview.qmd", "index.qmd", overwrite = TRUE)
 
 # OAM overview
-fs::file_copy("_template_oam.qmd", "oam/index.qmd", overwrite = TRUE)
+fs::file_copy("_oam_overview.qmd", "oam/index.qmd", overwrite = TRUE)
 funding_cp("oam/")
