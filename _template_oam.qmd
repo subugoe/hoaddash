@@ -187,7 +187,7 @@ girafe(
 
 ### Publishing market over time
 
-Hybrid journal publisher portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Note that only hybrid journals included in consortial transformative agreements in Germany are shown.
+Hybrid journal publisher portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Dashed lines represent median OA percentage (red) and median publication output (orange). Note that only hybrid journals included in consortial transformative agreements in Germany are shown.
 
 
 ```{r}
@@ -378,7 +378,7 @@ This section shows how hybrid open access has been adopted in different parts of
 
 ### Open Access in hybrid journals by country
 
-Percentage of Open Access articles with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in consortial transformative agreements in Germany between 2017 and 2022. The analysis is based on the country affiliation of the lead authors.
+Open Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in consortial transformative agreements in Germany between 2017 and 2022. The analysis is based on lead author country affiliations.
 
 ::: column-body-outset
 ```{r}
@@ -475,7 +475,7 @@ Open and comprehensive metadata is a key requirement of many transformative agre
 
 ### License metadata gaps
 
-Comparison of open licence metadata in Crossref with Unpaywall per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publisher websites to determine whether an article has been published under an open content licence. More Open Access articles derived from Crossref may indicate an offset between metadata changes and Unpaywall-indexing, while more Open Access articles identified by Unpaywall suggest that publishers have not deposited licensing metadata in Crossref for all articles.
+Comparison of open licence metadata in Crossref with Unpaywall per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publisher websites to determine whether an article has been published under an open content licence. More Open Access articles derived from Crossref may indicate a delay between metadata changes and Unpaywall-indexing, while more Open Access articles identified by Unpaywall suggest that publishers have not deposited licensing metadata in Crossref for all articles.
 
 
 ```{r upw_cr_license_gaps_data_prep}
@@ -585,7 +585,7 @@ $(document).ready(function() {
 
 ### Crossref metadata coverage
 
-This interactive table shows the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in consortial transformative agreements in Germany. Publishers can use Crossref to share links to full-texts for text-mining purposes,  persistent links to authors (ORCID) and funder information. They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
+This table shows the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share [links to full-texts for text-mining purposes](https://www.crossref.org/blog/evolving-our-support-for-text-and-data-mining/ ),  persistent links to authors (ORCID) and [funder information](https://www.crossref.org/community/funders/). They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
 
 
 ```{r}
