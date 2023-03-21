@@ -5,8 +5,8 @@ scatter_pub <- function(my_df = my_df) {
   pub_df <- my_df |>
     group_by(cr_year) |>
     mutate(oa_prop = oa_articles / articles) |>
-    summarise(median_articles = mean(articles, na.rm = TRUE),
-              median_oa = mean(oa_prop, na.rm = TRUE)) |>
+    summarise(median_articles = median(articles, na.rm = TRUE),
+              median_oa = median(oa_prop, na.rm = TRUE)) |>
     inner_join(my_df, by = "cr_year")
   
   

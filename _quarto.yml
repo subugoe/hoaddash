@@ -77,8 +77,6 @@ website:
                     href: jct/sage/index.qmd
                   - href: jct/taylorandfrancis/index.qmd
                     text: Taylor and Francis
-                  - text: "The Royal Society"
-                    href: jct/theroyalsociety/index.qmd
                   - text: "Thieme"
                     href: jct/thieme/index.qmd
                   - text: "Walter de Gruyter"
@@ -105,10 +103,6 @@ website:
                         href: oam/kargerbsb/index.qmd
                       - text: "Sage"
                         href: oam/sagebsb/index.qmd
-                  - section: "hebis"
-                    contents: 
-                      - text: "ACM"
-                        href: oam/acmhebis/index.qmd
                   - section: "MPDL"
                     contents:
                       - text: "Nature"
@@ -121,8 +115,6 @@ website:
                          href: oam/hogrefesubgöttingen/index.qmd
                   - section: "TIB"
                     contents:
-                        - text: "AIP"
-                          href: oam/aiptib/index.qmd
                         - text: "ESC"
                           href: oam/ecstib/index.qmd 
                         - text: "IOP"
@@ -131,8 +123,6 @@ website:
                           href: oam/portlandpresstib/index.qmd
                         - text: "RSC"
                           href: oam/rsctib/index.qmd
-                        - text: "SPIE"
-                          href: oam/spietib/index.qmd
                   - section: "ZBW"
                     contents:
                        - text: "Taylor and Francis"

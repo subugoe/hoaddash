@@ -42,9 +42,8 @@ ta_dir_create <- function(ta_dirs = NULL) {
 # Copy funder logo
 funding_cp <- function(ta_dirs = NULL) {
   lapply(ta_dirs, function(x) {
-  fs::file_copy(c("funding_note.md", "dfg_logo.jpg", "sub_logo.svg"), x, overwrite = TRUE)
-  }
-  )
+    fs::file_copy(c("funding_note.md", "dfg_logo.jpg", "sub_logo.svg"), x, overwrite = TRUE)
+  })
 }
 
 # Create templates
@@ -58,7 +57,7 @@ ta_template_create <- function(.publisher = NULL, ...) {
       unique(my_df$publisher),
       ": Hybrid Journals in Transformative Agreements"
     )
-    my_subtitle <- paste0("This open source dashboard highlights the Open Access uptake in ", unique(my_df$publisher), " hybrid journals in its transformative agreements as listed by the cOAlition S Journal Checker Tool. You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")
+    my_subtitle <- paste0("How open are ", unique(my_df$publisher), "'s hybrid journals included in transformative agreements, as listed by the [cOAlition S Journal Checker Tool](https://journalcheckertool.org/transformative-agreements/)? You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")
   } else {
     my_title <- unique(my_df$publisher)
     my_subtitle <- paste0("How open are hybrid journals included in the German consortial transformative agreement ", unique(my_df$publisher), "? You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref.")
@@ -75,7 +74,7 @@ ta_template_create <- function(.publisher = NULL, ...) {
     ymlthis::yml_discard(c("author", "date")) |>
     ymlthis::use_rmarkdown(
       path = paste0(unique(my_df$dir_name), "/index.qmd"),
-      template = "_template_index.qmd",
+      template = "_portfolio_template.qmd",
       include_yaml = TRUE,
       open_doc = FALSE,
       overwrite = TRUE
@@ -101,8 +100,8 @@ purrr::walk(my_ta$publisher, ta_template_create)
 
 # Move JCT overview
 
-fs::file_copy("_template_overview.qmd", "index.qmd", overwrite = TRUE)
+fs::file_copy("_jct_overview.qmd", "index.qmd", overwrite = TRUE)
 
 # OAM overview
-fs::file_copy("_template_oam.qmd", "oam/index.qmd", overwrite = TRUE)
+fs::file_copy("_oam_overview.qmd", "oam/index.qmd", overwrite = TRUE)
 funding_cp("oam/")
