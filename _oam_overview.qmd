@@ -587,7 +587,7 @@ $(document).ready(function() {
 
 ### Crossref metadata coverage
 
-This table shows the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share [links to full-texts for text-mining purposes](https://www.crossref.org/blog/evolving-our-support-for-text-and-data-mining/ ),  persistent links to authors (ORCID) and [funder information](https://www.crossref.org/community/funders/). They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
+This table shows the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to [support Text and Data Mining (TDM)](https://www.crossref.org/blog/evolving-our-support-for-text-and-data-mining/ ),  persistent links to authors through [ORCID](https://orcid.org/) and [funder information](https://www.crossref.org/community/funders/). They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
 
 
 ```{r}
