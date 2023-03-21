@@ -66,7 +66,7 @@ jn_aff_df <- hoaddata::jn_aff |>
 
 <!-- Teaser -->
 
-The share of Open Access articles with a Creative Commons license in `r format(length(unique(oam$issn_l)), big.mark = ",")` hybrid journals included in consortial transformative agreements in Germany is as follows:
+The share of Open Access articles with a Creative Commons license in `r format(length(unique(jn_ind_df$issn_l)), big.mark = ",")` hybrid journals included in consortial transformative agreements in Germany is as follows:
 
 ```{r teaser}
 #| echo: false
