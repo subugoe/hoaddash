@@ -11,6 +11,8 @@ execute:
   warnings: false
   message: false
 sidebar: true
+aliases:
+  - jct.html
 ---
 
 <!-- Required R packages -->

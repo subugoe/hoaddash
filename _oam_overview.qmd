@@ -11,6 +11,8 @@ execute:
   warnings: false
   message: false
 sidebar: true
+aliases:
+  - oam.html
 ---
 
 <!-- Required R packages -->
