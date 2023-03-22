@@ -1,6 +1,11 @@
+# hoaddash
+
+<!-- badges: start -->
+[![build.yaml](https://github.com/subugoe/hoaddash/actions/workflows/build.yaml/badge.svg)](https://github.com/subugoe/hoaddash/actions/workflows/build.yaml)
+
 ## About 
 
-Source code repository for building and hosting dashboards to highlight Open Access uptake in hybrid journals.
+Source code repository for building and hosting dashboards to highlight Open Access uptake in hybrid journals included in transformative agreements.
 
 The dashboards are built using [Quarto](https://quarto.org/), an open source tool for scientific and technical publishing. Quarto documents contain text and analytical source code, in our case R, and are rendered to HTML. More specifically, we created parameterised reports from which Quarto generates publisher-specific views. The resulting website is published on GitHub pages.
 
