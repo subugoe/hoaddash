@@ -24,3 +24,4 @@ library(kableExtra)
 library(htmltools)
 
 library(crosstalk)
+source("R/utils.R")

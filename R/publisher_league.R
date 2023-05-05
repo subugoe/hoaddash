@@ -69,6 +69,7 @@ publisher_league_reactable <- function(shared_publisher_df, ...) {
 
   reactable::reactable(
   shared_publisher_df,
+  elementId = "shared-publisher-df-table",
   pagination = TRUE,
   highlight = TRUE,
   defaultColDef = colDef(vAlign = "center", headerClass = "header"),

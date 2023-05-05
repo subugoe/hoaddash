@@ -3,62 +3,62 @@ cr_upw_data <- function(cr_upw = hoaddata::cr_upw, my_cat = "Global", ...) {
     dplyr::filter(issn_l %in% params$issn_l) |>
     dplyr::filter(cat == my_cat) |>
     group_by(cr_year, cat) |>
-    summarise(article_total = sum(article_total),
-              `Crossref` = sum(cr_hybrid_total),
-              `Unpaywall` = sum(upw_hybrid_total)) |>
+    summarise(
+      article_total = sum(article_total),
+      `Crossref` = sum(cr_hybrid_total),
+      `Unpaywall` = sum(upw_hybrid_total)
+    ) |>
     tidyr::pivot_longer(cols = c(`Crossref`, `Unpaywall`))
 }
 
 cr_upw_plot <- function(cr_upw_data = hoaddata::cr_upw, ...) {
   plot_df <- cr_upw_data(cr_upw_data, ...)
-  my_plot <- ggplot(plot_df, aes(cr_year, value / article_total, fill = name, 
-             tooltip = glue::glue('<small>{name}</small><br><b>{format(value, big.mark = ",")} / {round((value / article_total) * 100, 1)}%</b><br><small>articles with CC license in {cr_year}</small>'))) +
+  my_plot <- ggplot(plot_df, aes(cr_year, value / article_total,
+    fill = name,
+    tooltip = glue::glue('<small>{name}</small><br><b>{format(value, big.mark = ",")} / {round((value / article_total) * 100, 1)}%</b><br><small>articles with CC license in {cr_year}</small>')
+  )) +
     geom_bar_interactive(position = position_dodge2(preserve = "single"), stat = "identity") +
-    scale_fill_manual("Data source", values = c("Crossref" = "#fc5185",
-                                                "Unpaywall" = "#4d4d4d")) +
+    scale_fill_manual("Data source", values = c(
+      "Crossref" = "#fc5185",
+      "Unpaywall" = "#4d4d4d"
+    )) +
     theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 20) +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
     labs(y = NULL, x = NULL) +
-    theme(panel.grid.major.x = element_blank(),
-          panel.grid.minor.x = element_blank(),
-          panel.grid.minor.y = element_blank(),
-          panel.ontop = FALSE,
-          legend.position="top", legend.justification = "right")
-  
-  ggiraph::girafe(
-    ggobj = my_plot,
-    width_svg = 9,
-    height_svg = 6 * 0.618,
-    options = list(opts_tooltip(
-      css="background-color:white;
-;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
-      opacity = .95)))
+    theme(
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor.x = element_blank(),
+      panel.grid.minor.y = element_blank(),
+      panel.ontop = FALSE,
+      legend.position = "top", legend.justification = "right"
+    )
+  return(my_plot)
 }
 
 ## React table is used when we want to highlight gaps across publishers
 upw_cr_react <- function(shared_upw_cr_diff_year, ...) {
-
-reactable::reactable(
-  shared_upw_cr_diff_year,
-  pagination = TRUE,
-  highlight = TRUE,
-  defaultColDef = colDef(vAlign = "center", headerClass = "header"),
-  defaultSortOrder = "desc",
-  compact = TRUE,
-  columns = upw_cols(...),
-  searchable = FALSE,
-  defaultPageSize = 8,
-  language = reactableLang(
-    searchPlaceholder = "SEARCH",
-    noData = "No publisher found",
-    pageInfo = "{rowStart}\u2013{rowEnd} of {rows} publisher portfolios",
-    pagePrevious = "\u276e",
-    pageNext = "\u276f"
+  reactable::reactable(
+    shared_upw_cr_diff_year,
+    pagination = TRUE,
+    highlight = TRUE,
+    defaultColDef = colDef(vAlign = "center", headerClass = "header"),
+    defaultSortOrder = "desc",
+    compact = TRUE,
+    columns = upw_cols(...),
+    searchable = FALSE,
+    defaultPageSize = 8,
+    language = reactableLang(
+      searchPlaceholder = "SEARCH",
+      noData = "No publisher found",
+      pageInfo = "{rowStart}\u2013{rowEnd} of {rows} publisher portfolios",
+      pagePrevious = "\u276e",
+      pageNext = "\u276f"
+    )
   )
-)
 }
 
-upw_col_ <- function() { list(
+upw_col_ <- function() {
+  list(
     # Hide
     cr_year = colDef(show = FALSE),
     # Publisher
@@ -75,9 +75,10 @@ upw_col_ <- function() { list(
         value <- paste0(format(round(value * 100, 1), nsmall = 1), "%")
         value <- format(value, width = 5, justify = "right")
         react_bar_chart(value,
-                        width = value,
-                        fill = "#fc5185",
-                        background = "transparent")
+          width = value,
+          fill = "#fc5185",
+          background = "transparent"
+        )
       },
       align = "center",
       style = list(whiteSpace = "pre"),
@@ -91,9 +92,10 @@ upw_col_ <- function() { list(
         value <- paste0(format(round(value * 100, 1), nsmall = 1), "%")
         value <- format(value, width = 5, justify = "right")
         react_bar_chart(value,
-                        width = value,
-                        fill = "#4d4d4d",
-                        background = "#transparent")
+          width = value,
+          fill = "#4d4d4d",
+          background = "#transparent"
+        )
       },
       align = "center",
       style = list(whiteSpace = "pre"),
@@ -101,10 +103,10 @@ upw_col_ <- function() { list(
       html = TRUE,
       minWidth = 100
     ),
-    perc_diff  = colDef(
+    perc_diff = colDef(
       name = "Difference",
       cell = function(value) {
-      value <- paste0(format(round(value * 100, 1), nsmall = 1), "pp")
+        value <- paste0(format(round(value * 100, 1), nsmall = 1), "pp")
       },
       class = "number",
       align = "right",
@@ -126,8 +128,8 @@ upw_col_ <- function() { list(
 
 upw_cols <- function(.collection = NULL, ...) {
   my_cols <- upw_col_()
-  if(.collection == "jct") {
-    esac_publisher = colDef(
+  if (.collection == "jct") {
+    esac_publisher <- colDef(
       "Publisher",
       minWidth = 180,
       align = "left",
@@ -135,16 +137,18 @@ upw_cols <- function(.collection = NULL, ...) {
       class = "label"
     )
     my_cols$esac_publisher <- esac_publisher
-    } else {
-       # Publisher
-      agreement = colDef(
+  } else {
+    # Publisher
+    agreement <- colDef(
       "Agreement",
       cell = function(value, index) {
         lead <- shared_upw_cr_diff_year$data()$lead[index]
-        htmltools::tagList(htmltools::div(style = list(
-          fontWeight = 600, color = "#333"
-        ), value),
-        htmltools::div(style = list(fontSize = 10), lead))
+        htmltools::tagList(
+          htmltools::div(style = list(
+            fontWeight = 600, color = "#333"
+          ), value),
+          htmltools::div(style = list(fontSize = 10), lead)
+        )
       },
       width = 150,
       align = "left",
@@ -153,6 +157,6 @@ upw_cols <- function(.collection = NULL, ...) {
     my_cols$agreement <- agreement
     my_cols$lead <- colDef(show = FALSE)
     my_cols$esac_publisher <- colDef(show = FALSE)
-    }
-    return(my_cols)
-    }
+  }
+  return(my_cols)
+}

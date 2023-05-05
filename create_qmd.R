@@ -69,8 +69,8 @@ ta_template_create <- function(.publisher = NULL, ...) {
     ymlthis::yml_params(
       issn_l = my_df$issn_l,
       publisher = unique(my_df$publisher),
-      collection = unique(my_df$collection)
-    ) |>
+      collection = unique(my_df$collection),
+      download_path =  unique(my_df$dir_name)) |>
     ymlthis::yml_discard(c("author", "date")) |>
     ymlthis::use_rmarkdown(
       path = paste0(unique(my_df$dir_name), "/index.qmd"),
