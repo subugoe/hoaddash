@@ -46,7 +46,8 @@ upw_cr_react <- function(shared_upw_cr_diff_year, ...) {
     compact = TRUE,
     columns = upw_cols(...),
     searchable = FALSE,
-    defaultPageSize = 8,
+    defaultPageSize = 10,
+    showPageSizeOptions = TRUE,
     language = reactableLang(
       searchPlaceholder = "SEARCH",
       noData = "No publisher found",

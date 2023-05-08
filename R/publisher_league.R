@@ -91,7 +91,8 @@ publisher_league_reactable <- function(shared_publisher_df, ...) {
     )
   ),
   searchable = FALSE,
-  defaultPageSize = 8,
+  defaultPageSize = 10,
+  showPageSizeOptions = TRUE,
   language = reactableLang(
     searchPlaceholder = "SEARCH",
     noData = "No publisher found",

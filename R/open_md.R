@@ -35,6 +35,7 @@ open_md_react <- function(...) {
             pagination = TRUE,
             highlight = TRUE,
             compact = TRUE,
+            showPageSizeOptions = TRUE,
             sortable = FALSE,
             columns = list(
               esac_publisher = colDef("Publisher",

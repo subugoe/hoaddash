@@ -113,6 +113,7 @@ react_table_oa_country <- reactable::reactable(
     max_group = colDef(show = FALSE)
   ),
   compact = TRUE,
+  showPageSizeOptions = TRUE,
   language = reactableLang(
     searchPlaceholder = "SEARCH COUNTRIES",
     noData = "No country found",
