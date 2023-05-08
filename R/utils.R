@@ -52,7 +52,11 @@ csv_export <- function(.data = NULL,
   # Remove columns
   my_df <- .data[, !(names(.data) %in% .drops)]
   # Save data
-  readr::write_csv(my_df, tolower(paste0(.path, "/", .csv_file)))
+  if(!is.null(.path)) {
+    readr::write_csv(my_df, tolower(paste0(.path, "/", .csv_file)))
+  } else {
+    readr::write_csv(my_df, .csv_file)
+  }
 }
 
 #' Export plot helper
@@ -68,10 +72,17 @@ svg_export <- function(.plot = NULL,
                        width = NULL,
                        height = NULL) {
   # Save plot
-  ggplot2::ggsave(
-    filename = tolower(paste0(.path, "/", .svg_file)),
-    plot = .plot, device = "svg", width = width, height = height
-  )
+  if(!is.null(.path)) {
+    ggplot2::ggsave(
+      filename = tolower(paste0(.path, "/", .svg_file)),
+      plot = .plot, device = "svg", width = width, height = height
+    )
+  } else {
+    ggplot2::ggsave(
+      filename = .svg_file,
+      plot = .plot, device = "svg", width = width, height = height
+    )
+  }
 }
 
 #' Download helper
@@ -92,12 +103,15 @@ export_files <- function(.data = NULL, .plot = NULL, width = NULL, height = NULL
       style = "text-align: right",
       htmltools::tags$small(
         htmltools::p(
-          "Download: ",
           htmltools::tags$a(
+            class = "text-decoration-none",
+            htmltools::tags$i(class = "bi bi-download"),
             href = .csv_file, "Data (.csv)"
           ),
           " | ",
           htmltools::tags$a(
+            class = "text-decoration-none",
+            htmltools::tags$i(class = "bi bi-download"),
             href = .svg_file, "Plot (.svg)"
           )
         )
@@ -108,12 +122,12 @@ export_files <- function(.data = NULL, .plot = NULL, width = NULL, height = NULL
       style = "text-align: right",
       htmltools::tags$small(
         htmltools::p(
-          "Download: ",
           htmltools::tags$a(
+            class = "text-decoration-none",
+            htmltools::tags$i(class = "bi bi-download"),
             href = .csv_file, "Data (.csv)"
           )
-        )
       )
-    )
+    ))
   }
 }

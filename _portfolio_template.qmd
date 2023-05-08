@@ -423,15 +423,6 @@ htmltools::div(
     # table
     open_md_react(
         my_df
-    ),
-    # footer
-    htmltools::div(
-        class = "agreement-footer",
-        paste0(
-            "Data sources: Crossref, OpenAlex. Last updated: ",
-            Sys.Date(),
-            "."
-        )
     )
 )
 
