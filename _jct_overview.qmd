@@ -347,6 +347,7 @@ This interactive table highlights the output of hybrid Open Access publishers by
 ```{r publisher_league}
 #| echo: false
 #| message: false
+#| warning: false
 source("R/publisher_league.R")
 # Prepare data
 table_df <- publisher_league_data_prep()

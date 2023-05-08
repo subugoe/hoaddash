@@ -22,6 +22,7 @@ params:
 ```{r setup}
 #| echo: false
 #| message: false
+#| warning: false
 source("R/setup.R")
 source("R/utils.R")
 ```
@@ -31,6 +32,7 @@ source("R/utils.R")
 ```{r data prep}
 #| echo: false
 #| message: false
+#| warning: false
 oam <- hoaddata::oam_hybrid_jns |>
       dplyr::distinct(issn_l, esac_publisher = vertrag) 
 
@@ -346,6 +348,7 @@ This interactive table highlights the output of hybrid Open Access publishers by
 ```{r publisher_league}
 #| echo: false
 #| message: false
+#| warning: false
 source("R/publisher_league.R")
 # Prepare data
 table_df <- publisher_league_data_prep() |>
@@ -570,7 +573,7 @@ upw_cr_diff_year <- hoaddata::cr_upw |>
 source("R/cr_upw.R")
 
 shared_upw_cr_diff_year <- SharedData$new(upw_cr_diff_year)
-upw_cr_react_tbl <- upw_cr_react(shared_upw_cr_diff_year, "jct")
+upw_cr_react_tbl <- upw_cr_react(shared_upw_cr_diff_year, "oam")
 
 htmltools::div(
   class = "agreement-tbl",
