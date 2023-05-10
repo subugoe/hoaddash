@@ -143,7 +143,7 @@ export_files(.data =  cc_ind_de(jn_aff_df = jn_aff_df), .plot = cc_de_plot,  wid
 
 ### Creative Commons licenses over time by publisher
 
-Percentage of Open Access in hybrid journals included in consortial transformative agreements in Germany by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2022.
+Percentage of Open Access in hybrid journals included in consortial transformative agreements in Germany by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2023.
 
 ```{r}
 #| echo: false
@@ -278,7 +278,7 @@ my_df |>
 
 ### Market shares
 
-Publisher market shares as measured by articles published between 2017 and 2022 in hybrid journals included in consortial transformative agreements in Germany.
+Publisher market shares as measured by articles published between 2017 and 2023 in hybrid journals included in consortial transformative agreements in Germany.
 
 ```{r}
 #| echo: FALSE
@@ -438,7 +438,7 @@ This section shows how hybrid open access has been adopted in different parts of
 
 ### Open Access in hybrid journals by country
 
-Open Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in consortial transformative agreements in Germany between 2017 and 2022. The analysis is based on lead author country affiliations.
+Open Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in consortial transformative agreements in Germany between 2017 and 2023. The analysis is based on lead author country affiliations.
 
 ::: column-body-outset
 ```{r country_top_20}
@@ -699,7 +699,7 @@ $(document).ready(function() {
 
 ## Journal table
 
-This table presents the publication volume and Open Access share by hybrid journal included in consortial transformative agreements in Germany between 2017 and 2022, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+This table presents the publication volume and Open Access share by hybrid journal included in consortial transformative agreements in Germany between 2017 and 2023, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
 
 ::: column-body-outset
 

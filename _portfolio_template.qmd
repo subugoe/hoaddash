@@ -216,7 +216,7 @@ This section shows how hybrid open access has been adopted in different parts of
 
 ### Open Access in hybrid journals by country
 
-Open Access uptake in hybrid journals with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in `r ta_text` between 2017 and 2022. The analysis is based on lead author country affiliations.
+Open Access uptake in hybrid journals with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in `r ta_text` between 2017 and 2023. The analysis is based on lead author country affiliations.
 
 ::: column-body-outset
 ```{r country_top_20}
@@ -286,9 +286,7 @@ htmltools::div(
             )
         )
     ),
-    react_table_oa_country,
-    htmltools::div(class = "agreement-footer", "
-  Data sources: Crossref, OpenAlex.")
+    react_table_oa_country
 )
 
 export_files(
@@ -438,7 +436,7 @@ $(document).ready(function() {
 
 ## Journal table
 
-**`r params$publisher`**: This table presents the publication volume and Open Access share by  hybrid journal between 2017 and 2022, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+**`r params$publisher`**: This table presents the publication volume and Open Access share by  hybrid journal between 2017 and 2023, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
 
 ::: column-body-outset
 

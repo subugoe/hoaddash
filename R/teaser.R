@@ -110,7 +110,7 @@ basic_stat <- function(...) {
 
   glue::glue('<div class="grid">
  <div class="g-col-lg-6 g-col-12">
- <p style="text-align: center;" class="text-muted">2017-2022</p>
+ <p style="text-align: center;" class="text-muted">2017-2023</p>
   <table style="margin:auto;padding:0;width:80%;text-align: center;">
   <colgroup>
        <col span="1" style="width: 50%;">
