@@ -61,6 +61,7 @@ journal_listing <- reactable::reactable(
   pagination = TRUE,
   searchable = TRUE,
   compact = TRUE,
+  showPageSizeOptions = TRUE,
   defaultColDef = colDef(vAlign = "center", headerClass = "header"),
   defaultSorted = "journal_display",
   defaultSortOrder = "desc",
@@ -192,7 +193,7 @@ journal_listing <- reactable::reactable(
       headerClass = "group-header"
     )
   ),
-  defaultPageSize = 8,
+  defaultPageSize = 10,
   language = reactableLang(
     pageInfo = "{rowStart}\u2013{rowEnd} of {rows} hybrid journals",
     pagePrevious = "\u276e",
