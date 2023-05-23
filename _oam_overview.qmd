@@ -13,6 +13,8 @@ execute:
 sidebar: true
 aliases:
   - oam.html
+params:
+  download_path: oam/
 ---
 
 <!-- Required R packages -->
@@ -20,6 +22,7 @@ aliases:
 ```{r setup}
 #| echo: false
 #| message: false
+#| warning: false
 source("R/setup.R")
 source("R/utils.R")
 ```
@@ -29,6 +32,7 @@ source("R/utils.R")
 ```{r data prep}
 #| echo: false
 #| message: false
+#| warning: false
 oam <- hoaddata::oam_hybrid_jns |>
       dplyr::distinct(issn_l, esac_publisher = vertrag) 
 
@@ -97,33 +101,40 @@ source("R/cc_over_year.R")
 
 ## Global
 
-```{r cc_over_year_global, message=FALSE}
+```{r cc_global_plot, message=FALSE}
 cc_global_plot <- plot_cc_variants_by_year(cc_ind_global(jn_ind_df = jn_ind_df))
 # Return SVG
 girafe(
-  ggobj = cc_global_plot,
-  width_svg = 9,
-  height_svg = 6 * 0.618,
- options = list(opts_tooltip(
-    css="background-color:white;
+    ggobj = cc_global_plot,
+    width_svg = 9,
+    height_svg = 6 * 0.618,
+    options = list(opts_tooltip(
+        css = "background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
-    opacity = .95)))
+        opacity = .95
+    ),
+    opts_toolbar(saveaspng = FALSE))
+)
+export_files(.data = cc_ind_global(jn_ind_df = jn_ind_df), .plot = cc_global_plot, width = 9, height = 6 * 0.618)
 ```
-
 
 ## Germany<sup>*</sup>
 
-```{r, message=FALSE}
+```{r cc_de_plot, message=FALSE}
 cc_de_plot <- plot_cc_variants_by_year(cc_ind_de(jn_aff_df = jn_aff_df))
 # Return SVG
 girafe(
-  ggobj = cc_de_plot,
-  width_svg = 9,
-  height_svg = 6 * 0.618,
- options = list(opts_tooltip(
-    css="background-color:white;
+    ggobj = cc_de_plot,
+    width_svg = 9,
+    height_svg = 6 * 0.618,
+    options = list(opts_tooltip(
+        css = "background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
-    opacity = .95)))
+        opacity = .95
+    ),
+    opts_toolbar(saveaspng = FALSE))
+)
+export_files(.data =  cc_ind_de(jn_aff_df = jn_aff_df), .plot = cc_de_plot,  width = 9, height = 6 * 0.618)
 ```
 
 <small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
@@ -132,7 +143,7 @@ girafe(
 
 ### Creative Commons licenses over time by publisher
 
-Percentage of Open Access in hybrid journals included in consortial transformative agreements in Germany by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2022.
+Percentage of Open Access in hybrid journals included in consortial transformative agreements in Germany by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2023.
 
 ```{r}
 #| echo: false
@@ -146,39 +157,58 @@ source("R/oam_data_prep.R")
 
 ## Global
 
-```{r}
+```{r publisher_cc}
 #| echo: false
 #| message: false
 #| warning: false
 source("R/oam_publisher_cc.R")
 
+top_13_global <- top_13_plot("global")
 # Return SVG
 girafe(
-  ggobj = top_13_plot("global") ,
+  ggobj = top_13_global ,
   width_svg = 9,
   height_svg = 10 * 0.618,
  options = list(opts_tooltip(
     css="background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
-    opacity = .95)))
+    opacity = .95),
+    opts_toolbar(saveaspng = FALSE)))
+
+export_files(
+    .data = top_13_global$data,
+    .plot = top_13_global,
+    width = 9,
+    height = 10 * 0.618,
+    .drops = c("tooltip_group", "publisher_fct"))
 ```
 
 ## Germany<sup>*</sup>
 
-```{r}
+```{r publisher_cc_de}
 #| echo: false
 #| message: false
 #| warning: false
 
+top_13_de <- top_13_plot("de")
+
 # Return SVG
 girafe(
-  ggobj = top_13_plot("de"),
+  ggobj = top_13_de,
   width_svg = 9,
   height_svg = 10 * 0.618,
  options = list(opts_tooltip(
     css="background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
-    opacity = .95)))
+    opacity = .95),
+    opts_toolbar(saveaspng = FALSE)))
+
+export_files(
+    .data = top_13_de$data,
+    .plot = top_13_de,
+    width = 9,
+    height = 10 * 0.618,
+    .drops = c("tooltip_group", "publisher_fct"))
 ```
 
 <small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
@@ -215,20 +245,31 @@ source("R/pub_scatter.R")
 
 ## Global
 
-```{r}
+```{r publishing_market_global}
 #| echo: false
 #| message: false
 #| warning: false
 plot_scatterplot(my_df, collection = "global")
+# Export
+my_df |>
+  dplyr::filter(collection == "global") |>
+  mutate(oa_prop = oa_articles / articles) |>
+  export_files(.drop = c("pub_col"))
 ```
   
 ## Germany<sup>*</sup>
 
-```{r}
+```{r publishing_market_de}
 #| echo: false
 #| message: false
 #| warning: false
 plot_scatterplot(my_df, collection = "de")
+# Export
+
+my_df |>
+  dplyr::filter(collection == "de") |>
+  mutate(oa_prop = oa_articles / articles) |>
+  export_files(.drop = c("pub_col"))
 ```
 
 <small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
@@ -237,7 +278,7 @@ plot_scatterplot(my_df, collection = "de")
 
 ### Market shares
 
-Publisher market shares as measured by articles published between 2017 and 2022 in hybrid journals included in consortial transformative agreements in Germany.
+Publisher market shares as measured by articles published between 2017 and 2023 in hybrid journals included in consortial transformative agreements in Germany.
 
 ```{r}
 #| echo: FALSE
@@ -248,30 +289,50 @@ source("R/oam_publisher_market_share.R")
 
 ## Global
 
-```{r}
+```{r market_shares}
 # Return SVG
+market_shares_global <- plot_pub_shares(.cat = "global")
+
 girafe(
-  ggobj = plot_pub_shares(.cat = "global"),
+  ggobj = market_shares_global,
   width_svg = 6,
   height_svg = 5 * 0.618,
  options = list(opts_tooltip(
     css="background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
-    opacity = .95)))
+    opacity = .95),
+    opts_toolbar(saveaspng = FALSE)))
+
+export_files(
+    .data = market_shares_global$data,
+    .plot = market_shares_global,
+    width = 6,
+    height = 5 * 0.618,
+    .drops = c("my_tooltip"))
 ```
 
 ## Germany<sup>*</sup>
 
-```{r}
+```{r market_shares_de}
 # Return SVG
+market_shares_de <- plot_pub_shares(.cat = "de")
+
 girafe(
-  ggobj = plot_pub_shares(.cat = "de"),
+  ggobj = market_shares_de,
   width_svg = 6,
   height_svg = 5 * 0.618,
  options = list(opts_tooltip(
     css="background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
-    opacity = .95)))
+    opacity = .95),
+    opts_toolbar(saveaspng = FALSE)))
+
+export_files(
+    .data = market_shares_de$data,
+    .plot = market_shares_de,
+    width = 6,
+    height = 5 * 0.618,
+    .drops = c("my_tooltip"))
 ```
 
 <small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
@@ -284,9 +345,10 @@ This interactive table highlights the output of hybrid Open Access publishers by
 
 ::: column-body-outset
 
-```{r}
+```{r publisher_league}
 #| echo: false
 #| message: false
+#| warning: false
 source("R/publisher_league.R")
 # Prepare data
 table_df <- publisher_league_data_prep() |>
@@ -349,16 +411,12 @@ htmltools::div(
     ),
   ),
   # table
-  g,
-  # footer
-  htmltools::div(
-    class = "agreement-footer",
-    paste0(
-      "Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated: ",
-      Sys.Date(),
-      "."
-    )
-  )
+  g
+)
+
+export_files(
+    .data = table_df,
+    .drops = c("max_all_group", "max_cc_group", "max_jn_group")
 )
 ```
 
@@ -380,10 +438,10 @@ This section shows how hybrid open access has been adopted in different parts of
 
 ### Open Access in hybrid journals by country
 
-Open Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in consortial transformative agreements in Germany between 2017 and 2022. The analysis is based on lead author country affiliations.
+Open Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in consortial transformative agreements in Germany between 2017 and 2023. The analysis is based on lead author country affiliations.
 
 ::: column-body-outset
-```{r}
+```{r country_top_20}
 #| echo: false
 #| message: false
 #| warning: false
@@ -396,7 +454,16 @@ ggiraph::girafe(
   options = list(opts_tooltip(
     css="background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
-    opacity = .95)))
+    opacity = .95),
+    opts_toolbar(saveaspng = FALSE)))
+
+export_files(
+    .data = country_multiple_plot$data,
+    .plot = country_multiple_plot,
+    width = 9,
+    height = 7 * 0.618,
+    .drops = c("my_cols", "tooltip_text", ".group", "max_")
+)
 ```
 :::
 
@@ -412,8 +479,7 @@ Publication volume and Open Access share in hybrid journals included in consorti
 source("R/country_publisher_league.R")
 ```
 
-
-```{r}
+```{r country_league}
 htmltools::div(
   class = "agreement-tbl",
   htmltools::div(
@@ -449,16 +515,12 @@ htmltools::div(
       )
     )
   ),
-  react_table_oa_country,
-   # footer
-  htmltools::div(
-    class = "agreement-footer",
-    paste0(
-      "Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated: ",
-      Sys.Date(),
-      "."
-    )
-  )
+  react_table_oa_country
+)
+
+export_files(
+    .data = shared_oa_country_df$data(), 
+    .drops = c("max_group", "max_all_group")
 )
 ```
 
@@ -510,13 +572,9 @@ upw_cr_diff_year <- hoaddata::cr_upw |>
 ```{r upw_cr_license_gaps_data_table}
 source("R/cr_upw.R")
 
-shared_upw_cr_diff_year <- upw_cr_diff_year |>
-  arrange(esac_publisher) |>
-  SharedData$new()
+shared_upw_cr_diff_year <- SharedData$new(upw_cr_diff_year)
 upw_cr_react_tbl <- upw_cr_react(shared_upw_cr_diff_year, "oam")
-```
 
-```{r}
 htmltools::div(
   class = "agreement-tbl",
   # filters,
@@ -525,19 +583,9 @@ htmltools::div(
                    class = "filter-input",
                    filter_select(
                      "filter_cr_publisher",
-                     "Agreement",
+                     "Publisher",
                      shared_upw_cr_diff_year,
                      ~ esac_publisher,
-                     multiple = TRUE
-                   )
-                 ),
-                 htmltools::div(
-                   class = "filter-input",
-                   filter_select(
-                     "filter_cr_publisher",
-                     "CONSORTIUM LEAD",
-                     shared_upw_cr_diff_year,
-                     ~ lead,
                      multiple = TRUE
                    )
                  ),
@@ -563,17 +611,10 @@ htmltools::div(
     ),
   ),
   # table
-  upw_cr_react_tbl,
-  # footer
-  htmltools::div(
-    class = "agreement-footer",
-    paste0(
-      "Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated: ",
-      Sys.Date(),
-      "."
-    )
-  )
+  upw_cr_react_tbl
 )
+
+export_files(.data =  shared_upw_cr_diff_year$data())
 ```
 
 ```{js, echo = FALSE}
@@ -590,7 +631,7 @@ $(document).ready(function() {
 This table shows the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share information about [Text and Data Mining (TDM)](https://www.crossref.org/blog/evolving-our-support-for-text-and-data-mining/ ), authors [(ORCID)](https://orcid.org/) and [funding](https://www.crossref.org/community/funders/). They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
 
 
-```{r}
+```{r crossref_md_coverage}
 #| echo: false
 #| message: false
 #| warning: false
@@ -613,7 +654,7 @@ htmltools::div(
       class = "filter-input",
       filter_select(
         "filter_open_md_cat_publisher",
-        "Agreement",
+        "Publisher",
         open_md_df,
         ~ esac_publisher,
         multiple = TRUE
@@ -643,17 +684,10 @@ htmltools::div(
   # table
   open_md_react(
     open_md_df
-    ),
-  # footer
-  htmltools::div(
-    class = "agreement-footer",
-    paste0(
-      "Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated: ",
-      Sys.Date(),
-      "."
     )
-  )
 )
+
+export_files(.data =  open_md_df$data())
 ```
 
 ```{js,echo = FALSE}
@@ -665,7 +699,7 @@ $(document).ready(function() {
 
 ## Journal table
 
-This table presents the publication volume and Open Access share by hybrid journal included in consortial transformative agreements in Germany between 2017 and 2022, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+This table presents the publication volume and Open Access share by hybrid journal included in consortial transformative agreements in Germany between 2017 and 2023, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
 
 ::: column-body-outset
 
@@ -679,24 +713,16 @@ my_df <- summarize_pubs(var_summary = c(cr_year, issn_l)) |>
   mutate_if(is.numeric, ~ replace(., is.na(.), 0)) 
 ```
 
-```{r}
+```{r journal_indicators}
 #| echo: false
 #| message: false
 #| warning: false
 source("R/journal_tbl.R")
 htmltools::div(
   class = "agreement-tbl",
-  journal_listing,
-  # footer
-  htmltools::div(
-    class = "agreement-footer",
-    paste0(
-      "Data sources: Open Access Monitor (transformative agreement data), Crossref (article-level data including Open Access), OpenAlex (lead author country-affiliation). Last updated: ",
-      Sys.Date(),
-      "."
-    )
-  )
-)
+  journal_listing)
+ 
+export_files(.data =  my_df)
 ```
 
 :::

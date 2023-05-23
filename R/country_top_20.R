@@ -108,7 +108,7 @@ country_multiple_plot <- ggplot(country_multiple_df_plot, aes(cr_year, prop, fil
   scale_fill_identity() +
   theme_minimal(base_family = "Atkinson Hyperlegible") +
   labs(
-    y = "OA Share", x = "2017 - 2022",
+    y = "OA Share", x = "2017 - 2023",
     subtitle = "**Country**<br><br>Total Lead Author Articles | Country Share"
   ) +
   theme(

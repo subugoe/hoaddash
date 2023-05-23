@@ -133,7 +133,8 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, styles.scss]
+      - cosmo
+      - styles.scss
     mainfont: "Atkinson Hyperlegible"
       
 execute:

@@ -103,12 +103,11 @@ Percentage of Open Access in `r ta_text` by Creative Commons license types as pr
 source("R/cc_over_year.R")
 ```
 
-
 ::: {.panel-tabset}
 
 ## Global
 
-```{r, message=FALSE}
+```{r cc_global_plot, message=FALSE}
 cc_global_plot <- plot_cc_variants_by_year(cc_ind_global(jn_ind_df = jn_ind_df))
 # Return SVG
 girafe(
@@ -119,16 +118,15 @@ girafe(
         css = "background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
         opacity = .95
-    ))
+    ),
+    opts_toolbar(saveaspng = FALSE))
 )
-
+export_files(.data = cc_ind_global(jn_ind_df = jn_ind_df), .plot = cc_global_plot, width = 9, height = 6 * 0.618)
 ```
-
-<!-- <div style="text-align: right"><small>[Download data (csv)](cc_2017-22.csv)</small></div> -->
 
 ## Germany<sup>*</sup>
 
-```{r, message=FALSE}
+```{r cc_de_plot, message=FALSE}
 cc_de_plot <- plot_cc_variants_by_year(cc_ind_de(jn_aff_df = jn_aff_df))
 # Return SVG
 girafe(
@@ -139,16 +137,15 @@ girafe(
         css = "background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
         opacity = .95
-    ))
+    ),
+    opts_toolbar(saveaspng = FALSE))
 )
+export_files(.data =  cc_ind_de(jn_aff_df = jn_aff_df), .plot = cc_de_plot,  width = 9, height = 6 * 0.618)
 ```
 
 <small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
-<!--  <div style="text-align: right"><small>[Download data (csv)](cc_2017-22_de.csv)</small></div> -->
-
 :::
-
 
 ## Publishing market
 
@@ -175,7 +172,7 @@ my_df <- summarize_pubs(var_summary = c(cr_year, esac_publisher)) |>
 
 ::: {.panel-tabset}
 
-```{r}
+```{r publishing_market}
 #| echo: false
 #| message: false
 #| warning: false
@@ -184,27 +181,34 @@ source("R/pub_scatter.R")
 
 ## Global
 
-```{r}
+```{r publishing_market_global}
 #| echo: false
 #| message: false
 #| warning: false
 plot_scatterplot(my_df, collection = "global")
+my_df |>
+  dplyr::filter(collection == "global") |>
+  mutate(oa_prop = oa_articles / articles) |>
+  export_files(.drop = c("pub_col"))
 ```
   
 ## Germany<sup>*</sup>
 
-```{r}
+```{r publishing_market_de}
 #| echo: false
 #| message: false
 #| warning: false
 plot_scatterplot(my_df, collection = "de")
+
+my_df |>
+  dplyr::filter(collection == "de") |>
+  mutate(oa_prop = oa_articles / articles) |>
+  export_files(.drop = c("pub_col"))
 ```
 
 <small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
 
 :::
-
-
 
 ## Country view
 
@@ -212,10 +216,10 @@ This section shows how hybrid open access has been adopted in different parts of
 
 ### Open Access in hybrid journals by country
 
-Open Access uptake in hybrid journals with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in `r ta_text` between 2017 and 2022. The analysis is based on lead author country affiliations.
+Open Access uptake in hybrid journals with a Creative Commons license per country. Showing the Top 20 most productive countries in terms of articles published in `r ta_text` between 2017 and 2023. The analysis is based on lead author country affiliations.
 
 ::: column-body-outset
-```{r}
+```{r country_top_20}
 #| echo: false
 #| message: false
 #| warning: false
@@ -229,7 +233,16 @@ ggiraph::girafe(
         css = "background-color:white;
 ;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
         opacity = .95
-    ))
+    ),
+    opts_toolbar(saveaspng = FALSE))
+)
+
+export_files(
+    .data = country_multiple_plot$data,
+    .plot = country_multiple_plot,
+    width = 9,
+    height = 7 * 0.618,
+    .drops = c("my_cols", "tooltip_text", ".group", "max_")
 )
 ```
 :::
@@ -247,7 +260,7 @@ Publication volume and Open Access share per country in `r ta_text`. You can sea
 source("R/country_league.R")
 ```
 
-```{r}
+```{r country_league}
 htmltools::div(
     class = "agreement-tbl",
     htmltools::div(
@@ -273,9 +286,12 @@ htmltools::div(
             )
         )
     ),
-    react_table_oa_country,
-    htmltools::div(class = "agreement-footer", "
-  Data sources: Crossref, OpenAlex.")
+    react_table_oa_country
+)
+
+export_files(
+    .data = shared_oa_country_df$data(), 
+    .drops = c("max_group", "max_all_group")
 )
 ```
 
@@ -299,22 +315,70 @@ Open and comprehensive metadata is a key requirement of many transformative agre
 
 ## Global 
 
-```{r}
+```{r cr_upw_global}
 #| echo: false
 #| message: false
 #| warning: false
 source("R/cr_upw.R")
-cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Global")
+cr_upw_global_plot <- cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Global")
+
+ggiraph::girafe(
+    ggobj = cr_upw_global_plot,
+    width_svg = 9,
+    height_svg = 6 * 0.618,
+    options = list(
+        opts_tooltip(
+            css = "background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+            opacity = .95
+        ),
+        opts_toolbar(saveaspng = FALSE)
+    )
+)
+
+export_files(
+    .data = cr_upw_data(hoaddata::cr_upw, params$issn_l, my_cat = "Global") |>
+        dplyr::mutate(oa_share = value / article_total) |>
+        dplyr::rename(oa_articles = value),
+    .plot = cr_upw_global_plot,
+    width = 9,
+    height = 6 * 0.618,
+    .drops = c("my_cols", "tooltip_text", ".group", "max_")
+)
 ```
 
 ## Germany<sup>*</sup>
 
 
-```{r}
+```{r cr_upw_de}
 #| echo: false
 #| message: false
 #| warning: false
-cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Germany")
+cr_upw_de_plot <- cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Germany")
+
+ggiraph::girafe(
+    ggobj = cr_upw_de_plot,
+    width_svg = 9,
+    height_svg = 6 * 0.618,
+    options = list(
+        opts_tooltip(
+            css = "background-color:white;
+;font-size:1.15em;padding:10px;border-radius:5px;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)",
+            opacity = .95
+        ),
+        opts_toolbar(saveaspng = FALSE)
+    )
+)
+
+export_files(
+    .data = cr_upw_data(hoaddata::cr_upw, params$issn_l, my_cat = "Germany") |>
+        dplyr::mutate(oa_share = value / article_total) |>
+        dplyr::rename(oa_articles = value),
+    .plot = cr_upw_de_plot,
+    width = 9,
+    height = 6 * 0.618,
+    .drops = c("my_cols", "tooltip_text", ".group", "max_")
+)
 ```
 
 <small><sup>*</sup>Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.</small>
@@ -326,7 +390,7 @@ cr_upw_plot(cr_upw_data = hoaddata::cr_upw, params$issn_l, my_cat = "Germany")
 This table shows the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share information about [Text and Data Mining (TDM)](https://www.crossref.org/blog/evolving-our-support-for-text-and-data-mining/ ), authors [(ORCID)](https://orcid.org/) and [funding](https://www.crossref.org/community/funders/). They can also open up [abstracts](https://i4oa.org/) and [reference lists](https://i4oc.org/) through Crossref.
 
 
-```{r}
+```{r crossref_md_coverage}
 #| echo: false
 #| message: false
 #| warning: false
@@ -357,17 +421,10 @@ htmltools::div(
     # table
     open_md_react(
         my_df
-    ),
-    # footer
-    htmltools::div(
-        class = "agreement-footer",
-        paste0(
-            "Data sources: Crossref, OpenAlex. Last updated: ",
-            Sys.Date(),
-            "."
-        )
     )
 )
+
+export_files(.data =  my_df$data())
 ```
 
 ```{js,echo = FALSE}
@@ -379,7 +436,7 @@ $(document).ready(function() {
 
 ## Journal table
 
-**`r params$publisher`**: This table presents the publication volume and Open Access share by  hybrid journal between 2017 and 2022, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+**`r params$publisher`**: This table presents the publication volume and Open Access share by  hybrid journal between 2017 and 2023, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
 
 ::: column-body-outset
 
@@ -394,7 +451,7 @@ my_df <- summarize_pubs(var_summary = c(cr_year, issn_l)) |>
     mutate_if(is.numeric, ~ replace(., is.na(.), 0))
 ```
 
-```{r}
+```{r journal_indicators}
 #| echo: false
 #| message: false
 #| warning: false
@@ -403,6 +460,8 @@ htmltools::div(
     class = "agreement-tbl",
     journal_listing
 )
+
+export_files(.data =  my_df)
 ```
 
 :::

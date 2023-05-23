@@ -152,6 +152,7 @@ react_table_oa_country <- reactable::reactable(
     esac_publisher = colDef(show = FALSE)
   ),
   compact = TRUE,
+  showPageSizeOptions = TRUE,
   language = reactableLang(
     searchPlaceholder = "SEARCH COUNTRIES",
     noData = "No country found",
