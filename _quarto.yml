@@ -2,6 +2,8 @@ project:
   type: website
   title: "HOAD Dashboard"
   output-dir: docs
+  resources:
+    - fonts/*
   execute-dir: project
 
 website:
@@ -132,10 +134,9 @@ website:
     footer: funding_note.md
 format:
   html:
-    theme:
-      - cosmo
-      - styles.scss
-    mainfont: "Atkinson Hyperlegible"
+    theme: [cosmo, styles.scss]
+    grid:
+      sidebar-width: 300px
       
 execute:
   cache: false
