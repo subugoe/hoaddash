@@ -522,7 +522,7 @@ Open and comprehensive metadata are a key requirement of many transformative agr
 
 ### License metadata gaps
 
-Comparison of open licence metadata in Crossref with Unpaywall per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publisher websites to determine whether an article has been published under an open licence. More Open Access articles derived from Crossref may indicate a delay between metadata changes and Unpaywall-indexing, while more Open Access articles identified by Unpaywall suggest that publishers have not deposited licensing metadata in Crossref for all articles.
+Comparison of open licence metadata in Crossref with Unpaywall via OpenAlex per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publisher websites to determine whether an article has been published under an open licence. More Open Access articles derived from Crossref may indicate a delay between metadata changes and Unpaywall-indexing, while more Open Access articles identified by Unpaywall suggest that publishers have not deposited licensing metadata in Crossref for all articles.
 
 
 ```{r upw_cr_license_gaps_data_prep}
