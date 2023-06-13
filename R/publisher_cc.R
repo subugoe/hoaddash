@@ -32,7 +32,7 @@ top_13_plot <- function(.collection = NULL, ...) {
     facet_wrap(~publisher_fct, scales = "fixed", nrow = 1) +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1L),
                        expand = expansion(mult = c(0, 0.05)),
-                       breaks = scales::breaks_extended(3)) +
+                       breaks = scales::breaks_extended(4)) +
     scale_fill_manual("",
                       values =  c(
                         `CC BY` = "#65BADA",
@@ -78,7 +78,7 @@ top_13_plot <- function(.collection = NULL, ...) {
                labeller = label_wrap_gen(multi_line = TRUE)) +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1L),
                        expand = expansion(mult = c(0, 0.05)),
-                       breaks = scales::breaks_extended(3)) +
+                       breaks = scales::breaks_extended(4)) +
     scale_fill_manual("License spectrum",
                       values =  c(
                         `CC BY` = "#65BADA",

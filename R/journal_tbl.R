@@ -15,7 +15,8 @@ trend_df <- my_df |>
   mutate(prop = oa_articles / articles) |>
   mutate(prop = replace(prop, is.nan(prop), 0)) |>
   group_by(issn_l, collection) |>
-  mutate(across(contains("prop"), ~ round(., 3) * 100)) |>
+  mutate(across(contains("prop"), ~ round(. * 100, 1))) |>
+  #mutate(across(contains("prop"), ~ round(., 1))) |>
   mutate(cc_trend = list(prop)) |> 
   distinct(issn_l, collection, cc_trend)
 
@@ -62,7 +63,7 @@ journal_listing <- reactable::reactable(
   searchable = TRUE,
   compact = TRUE,
   showPageSizeOptions = TRUE,
-  defaultColDef = colDef(vAlign = "center", headerClass = "header"),
+  defaultColDef = colDef(vAlign = "center", headerClass = "header", format = colFormat(locales = "en-GB", separators = TRUE)),
   defaultSorted = "journal_display",
   defaultSortOrder = "desc",
   columns = list(
@@ -74,13 +75,13 @@ journal_listing <- reactable::reactable(
     ),
     total_global = colDef(
       "Articles",
-      format = colFormat(separators = TRUE, locales = "en-GB"),
       width = 90,
       style = list(whiteSpace = "pre"),
       class = "number border-left",
     ),
     prop_global = colDef(
       "% OA",
+      format = colFormat(digits = 1, locales = "en-GB"),
       cell = JS(
         "function(cellInfo) {
         const sliceColor = cellInfo.row['global_color']
@@ -105,13 +106,13 @@ journal_listing <- reactable::reactable(
     ),
     total_de = colDef(
       "Articles",
-      format = colFormat(separators = TRUE, locales = "en-GB"),
       width = 90,
       style = list(whiteSpace = "pre"),
       class = "number border-left",
     ),
     prop_de = colDef(
       "% OA",
+      format = colFormat(digits = 1, locales = "en-GB"),
       cell = JS(
         "function(cellInfo) {
         const sliceColor = cellInfo.row['germany_color']
@@ -200,3 +201,4 @@ journal_listing <- reactable::reactable(
     pageNext = "\u276f"
   )
 )
+
