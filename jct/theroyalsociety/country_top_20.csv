@@ -1,148 +1,148 @@
 country_name_fct,cr_year,articles,cc_total,prop
-United States,'17,626,0,0
-United States,'18,608,0,0
-United States,'19,669,0,0
-United States,'20,668,111,0.1661676646706587
-United States,'21,537,9,0.01675977653631285
-United States,'22,550,0,0
-United States,'23,183,0,0
-United Kingdom,'17,534,0,0
-United Kingdom,'18,511,0,0
-United Kingdom,'19,492,0,0
-United Kingdom,'20,566,155,0.27385159010600707
-United Kingdom,'21,505,21,0.041584158415841586
-United Kingdom,'22,416,0,0
-United Kingdom,'23,111,0,0
-Germany,'17,145,0,0
-Germany,'18,160,0,0
-Germany,'19,119,0,0
-Germany,'20,182,53,0.29120879120879123
-Germany,'21,157,4,0.025477707006369428
-Germany,'22,163,0,0
-Germany,'23,53,0,0
-Australia,'17,144,0,0
+United States,'17,557,0,0
+United States,'18,555,0,0
+United States,'19,676,0,0
+United States,'20,674,112,0.1661721068249258
+United States,'21,558,9,0.016129032258064516
+United States,'22,568,0,0
+United States,'23,226,0,0
+United Kingdom,'17,463,0,0
+United Kingdom,'18,472,0,0
+United Kingdom,'19,511,0,0
+United Kingdom,'20,573,156,0.27225130890052357
+United Kingdom,'21,513,22,0.042884990253411304
+United Kingdom,'22,431,0,0
+United Kingdom,'23,155,0,0
+Germany,'17,129,0,0
+Germany,'18,150,0,0
+Germany,'19,124,0,0
+Germany,'20,186,54,0.2903225806451613
+Germany,'21,168,4,0.023809523809523808
+Germany,'22,167,0,0
+Germany,'23,69,0,0
+Australia,'17,134,0,0
 Australia,'18,113,0,0
-Australia,'19,122,0,0
-Australia,'20,118,10,0.0847457627118644
-Australia,'21,106,3,0.02830188679245283
-Australia,'22,98,0,0
-Australia,'23,30,0,0
-France,'17,105,0,0
-France,'18,97,0,0
-France,'19,106,0,0
-France,'20,115,12,0.10434782608695652
-France,'21,94,4,0.0425531914893617
-France,'22,101,0,0
-France,'23,34,0,0
-Canada,'17,78,0,0
-Canada,'18,87,0,0
-Canada,'19,82,0,0
+Australia,'19,123,0,0
+Australia,'20,119,10,0.08403361344537816
+Australia,'21,108,3,0.027777777777777776
+Australia,'22,101,0,0
+Australia,'23,40,0,0
+France,'17,86,0,0
+France,'18,91,0,0
+France,'19,113,0,0
+France,'20,121,12,0.09917355371900827
+France,'21,101,4,0.039603960396039604
+France,'22,106,0,0
+France,'23,40,0,0
+Canada,'17,72,0,0
+Canada,'18,89,0,0
+Canada,'19,85,0,0
 Canada,'20,86,11,0.12790697674418605
-Canada,'21,96,3,0.03125
+Canada,'21,97,3,0.030927835051546393
 Canada,'22,97,0,0
-Canada,'23,32,0,0
-China,'17,67,0,0
-China,'18,64,0,0
-China,'19,92,0,0
-China,'20,88,5,0.056818181818181816
+Canada,'23,41,0,0
+China,'17,68,0,0
+China,'18,62,0,0
+China,'19,94,0,0
+China,'20,91,5,0.054945054945054944
 China,'21,79,0,0
-China,'22,87,0,0
-China,'23,35,0,0
-Switzerland,'17,57,0,0
-Switzerland,'18,71,0,0
-Switzerland,'19,57,0,0
-Switzerland,'20,59,16,0.2711864406779661
-Switzerland,'21,57,3,0.05263157894736842
-Switzerland,'22,62,0,0
-Switzerland,'23,20,0,0
-Italy,'17,42,0,0
-Italy,'18,53,0,0
-Italy,'19,64,0,0
-Italy,'20,50,7,0.14
-Italy,'21,63,0,0
-Italy,'22,75,0,0
-Italy,'23,16,0,0
-Netherlands,'17,37,0,0
-Netherlands,'18,38,0,0
-Netherlands,'19,46,0,0
-Netherlands,'20,49,15,0.30612244897959184
-Netherlands,'21,63,2,0.031746031746031744
-Netherlands,'22,51,0,0
-Netherlands,'23,17,0,0
-Japan,'17,52,0,0
+China,'22,90,0,0
+China,'23,50,0,0
+Switzerland,'17,55,0,0
+Switzerland,'18,70,0,0
+Switzerland,'19,60,0,0
+Switzerland,'20,62,17,0.27419354838709675
+Switzerland,'21,58,3,0.05172413793103448
+Switzerland,'22,64,0,0
+Switzerland,'23,23,0,0
+Italy,'17,41,0,0
+Italy,'18,49,0,0
+Italy,'19,67,0,0
+Italy,'20,54,7,0.12962962962962962
+Italy,'21,64,0,0
+Italy,'22,80,0,0
+Italy,'23,20,0,0
+Netherlands,'17,32,0,0
+Netherlands,'18,37,0,0
+Netherlands,'19,49,0,0
+Netherlands,'20,54,16,0.2962962962962963
+Netherlands,'21,65,2,0.03076923076923077
+Netherlands,'22,52,0,0
+Netherlands,'23,21,0,0
+Japan,'17,50,0,0
 Japan,'18,47,0,0
-Japan,'19,41,0,0
+Japan,'19,42,0,0
 Japan,'20,36,8,0.2222222222222222
-Japan,'21,55,3,0.05454545454545454
-Japan,'22,52,0,0
-Japan,'23,17,0,0
+Japan,'21,59,3,0.05084745762711865
+Japan,'22,55,0,0
+Japan,'23,20,0,0
 Spain,'17,35,0,0
-Spain,'18,45,0,0
-Spain,'19,50,0,0
-Spain,'20,49,1,0.02040816326530612
-Spain,'21,40,0,0
-Spain,'22,39,0,0
-Spain,'23,17,0,0
-Sweden,'17,49,0,0
-Sweden,'18,39,0,0
+Spain,'18,42,0,0
+Spain,'19,52,0,0
+Spain,'20,51,1,0.0196078431372549
+Spain,'21,41,1,0.024390243902439025
+Spain,'22,43,0,0
+Spain,'23,23,0,0
+Sweden,'17,48,0,0
+Sweden,'18,34,0,0
 Sweden,'19,33,0,0
-Sweden,'20,41,16,0.3902439024390244
-Sweden,'21,40,1,0.025
-Sweden,'22,32,0,0
-Sweden,'23,10,0,0
-India,'17,21,0,0
-India,'18,21,0,0
-India,'19,31,0,0
+Sweden,'20,43,16,0.37209302325581395
+Sweden,'21,41,1,0.024390243902439025
+Sweden,'22,34,0,0
+Sweden,'23,12,0,0
+India,'17,23,0,0
+India,'18,19,0,0
+India,'19,32,0,0
 India,'20,40,0,0
-India,'21,18,0,0
-India,'22,38,0,0
-India,'23,19,0,0
-Belgium,'17,28,0,0
-Belgium,'18,32,0,0
-Belgium,'19,18,0,0
-Belgium,'20,20,4,0.2
-Belgium,'21,17,0,0
-Belgium,'22,16,0,0
-Belgium,'23,12,0,0
-Israel,'17,19,0,0
-Israel,'18,20,0,0
-Israel,'19,24,0,0
-Israel,'20,23,1,0.043478260869565216
-Israel,'21,19,0,0
-Israel,'22,17,0,0
-Israel,'23,17,0,0
+India,'21,19,0,0
+India,'22,39,0,0
+India,'23,22,0,0
 Russia,'17,17,0,0
 Russia,'18,16,0,0
-Russia,'19,24,0,0
-Russia,'20,25,2,0.08
-Russia,'21,20,0,0
-Russia,'22,25,0,0
+Russia,'19,26,0,0
+Russia,'20,26,2,0.07692307692307693
+Russia,'21,22,0,0
+Russia,'22,27,0,0
 Russia,'23,11,0,0
-Austria,'17,16,0,0
-Austria,'18,11,0,0
+Belgium,'17,26,0,0
+Belgium,'18,27,0,0
+Belgium,'19,20,0,0
+Belgium,'20,20,4,0.2
+Belgium,'21,18,0,0
+Belgium,'22,16,0,0
+Belgium,'23,16,0,0
+Israel,'17,17,0,0
+Israel,'18,17,0,0
+Israel,'19,25,0,0
+Israel,'20,23,1,0.043478260869565216
+Israel,'21,19,0,0
+Israel,'22,18,0,0
+Israel,'23,21,0,0
+Austria,'17,14,0,0
+Austria,'18,14,0,0
 Austria,'19,19,0,0
-Austria,'20,19,8,0.42105263157894735
-Austria,'21,35,1,0.02857142857142857
-Austria,'22,18,0,0
-Austria,'23,11,0,0
-Finland,'17,26,0,0
-Finland,'18,19,0,0
-Finland,'19,23,0,0
+Austria,'20,20,8,0.4
+Austria,'21,37,1,0.02702702702702703
+Austria,'22,19,0,0
+Austria,'23,14,0,0
+Finland,'17,23,0,0
+Finland,'18,18,0,0
+Finland,'19,26,0,0
 Finland,'20,24,7,0.2916666666666667
 Finland,'21,12,0,0
-Finland,'22,18,0,0
-Finland,'23,7,0,0
-New Zealand,'17,12,0,0
-New Zealand,'18,14,0,0
-New Zealand,'19,25,0,0
-New Zealand,'20,21,2,0.09523809523809523
-New Zealand,'21,29,0,0
-New Zealand,'22,17,0,0
-New Zealand,'23,5,0,0
-Other,'17,166,0,0
-Other,'18,169,0,0
-Other,'19,207,0,0
-Other,'20,207,45,0.21739130434782608
-Other,'21,231,9,0.03896103896103896
-Other,'22,223,0,0
-Other,'23,61,0,0
+Finland,'22,19,0,0
+Finland,'23,9,0,0
+Norway,'17,21,0,0
+Norway,'18,17,0,0
+Norway,'19,23,0,0
+Norway,'20,19,14,0.7368421052631579
+Norway,'21,22,5,0.22727272727272727
+Norway,'22,19,0,0
+Norway,'23,7,0,0
+Other,'17,161,0,0
+Other,'18,167,0,0
+Other,'19,231,0,0
+Other,'20,218,34,0.1559633027522936
+Other,'21,256,4,0.015625
+Other,'22,229,0,0
+Other,'23,89,0,0
