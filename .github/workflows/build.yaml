@@ -24,7 +24,7 @@ jobs:
         run: |
           wget -O Atkinson_Hyperlegible.zip https://fonts.google.com/download?family=Atkinson%20Hyperlegible
           unzip -d Atkinson_Hyperlegible/ Atkinson_Hyperlegible.zip
-          mv Atkinson_Hyperlegible /usr/share/fonts/
+          mv Atkinson_Hyperlegible ~/Library/Fonts/
           fc-cache -fv
 
       - uses: quarto-dev/quarto-actions/setup@v2
