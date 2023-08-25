@@ -117,7 +117,7 @@ country_multiple_plot <- ggplot(country_multiple_df_plot, aes(cr_year, prop, fil
     panel.grid.minor.y = element_blank(),
     axis.text.x = element_blank(),
     axis.ticks.x = element_blank(),
-  #  strip.text = ggtext::element_markdown(),
-  #  plot.subtitle = ggtext::element_markdown(hjust = 0.5),
+    strip.text = ggtext::element_markdown(),
+    plot.subtitle = ggtext::element_markdown(hjust = 0.5),
     panel.spacing = unit(1, "lines")
   )
