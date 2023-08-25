@@ -43,5 +43,5 @@ Imports:
     countrycode,
     ggtext
 Remotes: 
-    subugoe/hoaddata@3199c35,
+    subugoe/hoaddata,
     rstudio/crosstalk@v1.1.1
