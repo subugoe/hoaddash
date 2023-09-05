@@ -1,8 +1,8 @@
 cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2017,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.076,0.069,0.007
 2017,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.088,0.081,0.006
-2017,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.049,0.051,-0.002
-2017,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.041,0.044,-0.004
+2017,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.05,0.051,-0.001
+2017,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.042,0.044,-0.003
 2017,Sage (BSB),Germany,BSB,Sage,0.002,0.022,-0.02
 2017,Sage (BSB),Global,BSB,Sage,0.002,0.023,-0.021
 2017,RSC (TIB),Germany,TIB,RSC,0.088,0.188,-0.1
@@ -10,7 +10,7 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2017,CUP (BSB),Germany,BSB,CUP,0.044,0.042,0.002
 2017,CUP (BSB),Global,BSB,CUP,0.024,0.025,-0.001
 2017,IOP (TIB),Germany,TIB,IOP,0.115,0.123,-0.009
-2017,IOP (TIB),Global,TIB,IOP,0.058,0.06,-0.002
+2017,IOP (TIB),Global,TIB,IOP,0.059,0.06,-0.001
 2017,AIP (TIB),Germany,TIB,AIP,0.001,0.079,-0.078
 2017,AIP (TIB),Global,TIB,AIP,0.001,0.134,-0.133
 2017,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.073,0.073,0
@@ -20,7 +20,7 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2017,BMJ (BSB),Germany,BSB,BMJ,0,0.169,-0.169
 2017,BMJ (BSB),Global,BSB,BMJ,0.001,0.118,-0.117
 2017,Karger (BSB),Germany,BSB,Karger,0.032,0.035,-0.003
-2017,Karger (BSB),Global,BSB,Karger,0.039,0.041,-0.002
+2017,Karger (BSB),Global,BSB,Karger,0.039,0.041,-0.001
 2017,ACM (hebis),Germany,hebis,ACM,0,0,0
 2017,ACM (hebis),Global,hebis,ACM,0,0,0
 2017,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.037,0.005,0.033
@@ -41,8 +41,8 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2017,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0,0,0
 2018,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.085,0.085,0
 2018,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.092,0.093,-0.001
-2018,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.062,0.065,-0.003
-2018,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.054,0.057,-0.004
+2018,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.063,0.065,-0.002
+2018,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.055,0.057,-0.002
 2018,Sage (BSB),Germany,BSB,Sage,0.008,0.026,-0.018
 2018,Sage (BSB),Global,BSB,Sage,0.005,0.024,-0.02
 2018,RSC (TIB),Germany,TIB,RSC,0.196,0.196,0
@@ -60,7 +60,7 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2018,BMJ (BSB),Germany,BSB,BMJ,0.007,0.113,-0.106
 2018,BMJ (BSB),Global,BSB,BMJ,0.004,0.129,-0.125
 2018,Karger (BSB),Germany,BSB,Karger,0.034,0.037,-0.003
-2018,Karger (BSB),Global,BSB,Karger,0.046,0.048,-0.002
+2018,Karger (BSB),Global,BSB,Karger,0.046,0.047,-0.001
 2018,ACM (hebis),Germany,hebis,ACM,0,0,0
 2018,ACM (hebis),Global,hebis,ACM,0,0.001,-0.001
 2018,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.005,0.005,0
@@ -81,8 +81,8 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2018,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.008,0.008,0
 2019,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.099,0.101,-0.001
 2019,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.097,0.099,-0.002
-2019,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.358,0.342,0.015
-2019,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.081,0.083,-0.002
+2019,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.36,0.342,0.018
+2019,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.083,0.083,-0
 2019,Sage (BSB),Germany,BSB,Sage,0.067,0.141,-0.073
 2019,Sage (BSB),Global,BSB,Sage,0.015,0.031,-0.016
 2019,RSC (TIB),Germany,TIB,RSC,0.299,0.299,0
@@ -121,8 +121,8 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2019,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.022,0.011,0.011
 2020,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.584,0.582,0.002
 2020,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.139,0.142,-0.003
-2020,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.747,0.69,0.057
-2020,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.137,0.13,0.007
+2020,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.754,0.69,0.064
+2020,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.14,0.13,0.01
 2020,Sage (BSB),Germany,BSB,Sage,0.249,0.215,0.035
 2020,Sage (BSB),Global,BSB,Sage,0.098,0.087,0.01
 2020,RSC (TIB),Germany,TIB,RSC,0.352,0.35,0.002
@@ -130,7 +130,7 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2020,CUP (BSB),Germany,BSB,CUP,0.426,0.418,0.008
 2020,CUP (BSB),Global,BSB,CUP,0.13,0.127,0.003
 2020,IOP (TIB),Germany,TIB,IOP,0.507,0.498,0.009
-2020,IOP (TIB),Global,TIB,IOP,0.108,0.107,0.001
+2020,IOP (TIB),Global,TIB,IOP,0.108,0.107,0.002
 2020,AIP (TIB),Germany,TIB,AIP,0,0.178,-0.178
 2020,AIP (TIB),Global,TIB,AIP,0,0.181,-0.181
 2020,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.183,0.18,0.003
@@ -139,14 +139,14 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2020,Nature (MPDL),Global,MPDL,Nature,0.015,0.028,-0.014
 2020,BMJ (BSB),Germany,BSB,BMJ,0.218,0.218,0
 2020,BMJ (BSB),Global,BSB,BMJ,0.18,0.181,-0.001
-2020,Karger (BSB),Germany,BSB,Karger,0.187,0.187,0
+2020,Karger (BSB),Germany,BSB,Karger,0.189,0.189,0
 2020,Karger (BSB),Global,BSB,Karger,0.096,0.1,-0.004
 2020,ACM (hebis),Germany,hebis,ACM,0,0,0
 2020,ACM (hebis),Global,hebis,ACM,0,0.001,-0.001
 2020,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.039,0.031,0.008
 2020,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.111,0.087,0.024
 2020,ECS (TIB),Germany,TIB,ECS,0.692,0.684,0.009
-2020,ECS (TIB),Global,TIB,ECS,0.425,0.421,0.004
+2020,ECS (TIB),Global,TIB,ECS,0.426,0.421,0.005
 2020,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.092,0.076,0.017
 2020,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.09,0.052,0.038
 2020,SPIE (TIB),Germany,TIB,SPIE,0,0.516,-0.516
@@ -161,8 +161,8 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2020,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.078,0.07,0.008
 2021,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.686,0.692,-0.005
 2021,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.169,0.172,-0.004
-2021,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.839,0.562,0.277
-2021,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.177,0.116,0.061
+2021,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.844,0.562,0.281
+2021,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.179,0.116,0.063
 2021,Sage (BSB),Germany,BSB,Sage,0.484,0.379,0.105
 2021,Sage (BSB),Global,BSB,Sage,0.151,0.12,0.031
 2021,RSC (TIB),Germany,TIB,RSC,0.394,0.392,0.002
@@ -180,7 +180,7 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2021,BMJ (BSB),Germany,BSB,BMJ,0.466,0.46,0.006
 2021,BMJ (BSB),Global,BSB,BMJ,0.229,0.227,0.002
 2021,Karger (BSB),Germany,BSB,Karger,0.288,0.298,-0.01
-2021,Karger (BSB),Global,BSB,Karger,0.155,0.159,-0.004
+2021,Karger (BSB),Global,BSB,Karger,0.156,0.16,-0.004
 2021,ACM (hebis),Germany,hebis,ACM,0,0.005,-0.005
 2021,ACM (hebis),Global,hebis,ACM,0,0.003,-0.003
 2021,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.062,0.062,0
@@ -201,8 +201,8 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2021,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.078,0.078,0
 2022,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.755,0.754,0.001
 2022,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.184,0.186,-0.002
-2022,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.823,0.476,0.346
-2022,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.257,0.138,0.119
+2022,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.826,0.476,0.35
+2022,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.263,0.138,0.124
 2022,Sage (BSB),Germany,BSB,Sage,0.52,0.345,0.175
 2022,Sage (BSB),Global,BSB,Sage,0.17,0.112,0.059
 2022,RSC (TIB),Germany,TIB,RSC,0.494,0.488,0.007
@@ -241,8 +241,8 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2022,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.093,0.093,0
 2023,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.783,0.602,0.181
 2023,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.216,0.161,0.055
-2023,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.816,0.594,0.222
-2023,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.319,0.211,0.108
+2023,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.823,0.594,0.229
+2023,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.327,0.211,0.116
 2023,Sage (BSB),Germany,BSB,Sage,0.541,0.24,0.301
 2023,Sage (BSB),Global,BSB,Sage,0.209,0.082,0.127
 2023,RSC (TIB),Germany,TIB,RSC,0.522,0.429,0.093
@@ -260,7 +260,7 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2023,BMJ (BSB),Germany,BSB,BMJ,0.44,0.381,0.06
 2023,BMJ (BSB),Global,BSB,BMJ,0.212,0.179,0.033
 2023,Karger (BSB),Germany,BSB,Karger,0.281,0.266,0.016
-2023,Karger (BSB),Global,BSB,Karger,0.249,0.151,0.098
+2023,Karger (BSB),Global,BSB,Karger,0.249,0.152,0.097
 2023,ACM (hebis),Germany,hebis,ACM,0,0,0
 2023,ACM (hebis),Global,hebis,ACM,0,0.005,-0.005
 2023,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.362,0.157,0.205
