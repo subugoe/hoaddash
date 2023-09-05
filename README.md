@@ -5,7 +5,7 @@
 
 ## About 
 
-Source code repository for building and hosting dashboards to highlight Open Access uptake in hybrid journals included in transformative agreements.
+Source code repository for building and hosting the Hybrid Open Access Dashboard (HOAD). A [blog post](https://www.coalition-s.org/blog/introducing-the-hybrid-open-access-dashboard-hoad/) introduces the aim of the dashboard and some key functionalities.
 
 The dashboards are built using [Quarto](https://quarto.org/), an open source tool for scientific and technical publishing. Quarto documents contain text and analytical source code, in our case R, and are rendered to HTML. More specifically, we created parameterised reports from which Quarto generates publisher-specific views. The resulting website is published on GitHub pages.
 
@@ -26,7 +26,7 @@ This repository contains templates that are used to build specific Quarto docume
 
 ## Software dependencies
 
-Underlying data analysis uses the R programming language. [`DESCRIPTION`](DESCRIPTION) gives a detailed overview of our R package dependencies. The `R` folder contains a collection of R functions and scripts used to build the dashboards.
+Underlying data analysis uses the R programming language. [`DESCRIPTION`](DESCRIPTION) gives a detailed overview of R package dependencies. The `R` folder contains a collection of R functions and scripts used to build the dashboards.
 
 ## Data
 
