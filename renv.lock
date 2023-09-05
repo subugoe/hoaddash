@@ -624,7 +624,7 @@
     },
     "hoaddata": {
       "Package": "hoaddata",
-      "Version": "0.2.6",
+      "Version": "0.2.7",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -632,12 +632,12 @@
       "RemoteUsername": "subugoe",
       "RemotePkgRef": "subugoe/hoaddata",
       "RemoteRef": "HEAD",
-      "RemoteSha": "14e9cc3f0af1a38851699de1323cc250e0d1574f",
+      "RemoteSha": "4c2f4ca04f0b883928dacfdbf2f8f56bddf9c5e6",
       "Requirements": [
         "R",
         "tibble"
       ],
-      "Hash": "3359c9589dec63714dfcf81c675c59a6"
+      "Hash": "b06b442b9452601d56f6ca000608ffdf"
     },
     "htmltools": {
       "Package": "htmltools",
