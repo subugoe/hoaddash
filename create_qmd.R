@@ -7,7 +7,7 @@ library(readr)
 library(fs)
 
 # Load agreements
-my_ta <- readr::read_csv("config.csv")
+my_ta <- readr::read_csv("config.csv") 
 # Get ISSNs
 get_ta_jns <- function(publisher = NULL, collection = c("jct", "oam")) {
   match.arg(collection)
