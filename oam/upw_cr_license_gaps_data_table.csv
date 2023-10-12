@@ -1,4 +1,6 @@
 cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
+2017,Elsevier (DEAL),Germany,DEAL,Elsevier,0.054,0.077,-0.022
+2017,Elsevier (DEAL),Global,DEAL,Elsevier,0.031,0.058,-0.027
 2017,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.076,0.07,0.006
 2017,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.088,0.081,0.006
 2017,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.05,0.052,-0.002
@@ -35,10 +37,10 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2017,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.013,0.011,0.002
 2017,Portland Press (TIB),Germany,TIB,Portland Press,0.125,0.125,0
 2017,Portland Press (TIB),Global,TIB,Portland Press,0.21,0.208,0.001
-2017,Thieme 2 (ZB MED),Germany,ZB MED,Thieme 2,0.021,0.021,0
-2017,Thieme 2 (ZB MED),Global,ZB MED,Thieme 2,0.03,0.033,-0.004
-2017,Thieme 1 (ZB MED),Germany,ZB MED,Thieme 1,0,0,0
-2017,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0,0,0
+2017,Thieme (ZB MED),Germany,ZB MED,Thieme,0.014,0.014,0
+2017,Thieme (ZB MED),Global,ZB MED,Thieme,0.024,0.027,-0.003
+2018,Elsevier (DEAL),Germany,DEAL,Elsevier,0.065,0.089,-0.024
+2018,Elsevier (DEAL),Global,DEAL,Elsevier,0.034,0.061,-0.026
 2018,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.085,0.085,-0
 2018,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.092,0.094,-0.001
 2018,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.063,0.065,-0.002
@@ -75,10 +77,10 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2018,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.022,0.02,0.002
 2018,Portland Press (TIB),Germany,TIB,Portland Press,0.229,0.229,0
 2018,Portland Press (TIB),Global,TIB,Portland Press,0.211,0.213,-0.001
-2018,Thieme 2 (ZB MED),Germany,ZB MED,Thieme 2,0.03,0.045,-0.015
-2018,Thieme 2 (ZB MED),Global,ZB MED,Thieme 2,0.041,0.048,-0.006
-2018,Thieme 1 (ZB MED),Germany,ZB MED,Thieme 1,0.071,0.071,0
-2018,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.008,0.008,0
+2018,Thieme (ZB MED),Germany,ZB MED,Thieme,0.037,0.049,-0.012
+2018,Thieme (ZB MED),Global,ZB MED,Thieme,0.035,0.04,-0.005
+2019,Elsevier (DEAL),Germany,DEAL,Elsevier,0.078,0.104,-0.026
+2019,Elsevier (DEAL),Global,DEAL,Elsevier,0.038,0.076,-0.038
 2019,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.099,0.101,-0.002
 2019,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.097,0.099,-0.001
 2019,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.359,0.343,0.016
@@ -115,10 +117,10 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2019,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.044,0.038,0.006
 2019,Portland Press (TIB),Germany,TIB,Portland Press,0.208,0.208,0
 2019,Portland Press (TIB),Global,TIB,Portland Press,0.22,0.214,0.006
-2019,Thieme 2 (ZB MED),Germany,ZB MED,Thieme 2,0.107,0.107,0
-2019,Thieme 2 (ZB MED),Global,ZB MED,Thieme 2,0.074,0.076,-0.002
-2019,Thieme 1 (ZB MED),Germany,ZB MED,Thieme 1,0.25,0.125,0.125
-2019,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.022,0.011,0.011
+2019,Thieme (ZB MED),Germany,ZB MED,Thieme,0.12,0.108,0.012
+2019,Thieme (ZB MED),Global,ZB MED,Thieme,0.064,0.064,0
+2020,Elsevier (DEAL),Germany,DEAL,Elsevier,0.107,0.125,-0.018
+2020,Elsevier (DEAL),Global,DEAL,Elsevier,0.052,0.087,-0.035
 2020,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.584,0.582,0.002
 2020,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.139,0.142,-0.003
 2020,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.752,0.692,0.06
@@ -139,7 +141,7 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2020,Nature (MPDL),Global,MPDL,Nature,0.015,0.028,-0.014
 2020,BMJ (BSB),Germany,BSB,BMJ,0.217,0.217,0
 2020,BMJ (BSB),Global,BSB,BMJ,0.18,0.181,-0.001
-2020,Karger (BSB),Germany,BSB,Karger,0.194,0.194,0
+2020,Karger (BSB),Germany,BSB,Karger,0.192,0.192,0
 2020,Karger (BSB),Global,BSB,Karger,0.096,0.1,-0.004
 2020,ACM (hebis),Germany,hebis,ACM,0,0.006,-0.006
 2020,ACM (hebis),Global,hebis,ACM,0,0.002,-0.002
@@ -155,10 +157,10 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2020,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.057,0.053,0.004
 2020,Portland Press (TIB),Germany,TIB,Portland Press,0.529,0.529,0
 2020,Portland Press (TIB),Global,TIB,Portland Press,0.599,0.597,0.001
-2020,Thieme 2 (ZB MED),Germany,ZB MED,Thieme 2,0.036,0.054,-0.018
-2020,Thieme 2 (ZB MED),Global,ZB MED,Thieme 2,0.058,0.064,-0.006
-2020,Thieme 1 (ZB MED),Germany,ZB MED,Thieme 1,0.438,0.375,0.062
-2020,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.078,0.07,0.008
+2020,Thieme (ZB MED),Germany,ZB MED,Thieme,0.125,0.125,0
+2020,Thieme (ZB MED),Global,ZB MED,Thieme,0.062,0.065,-0.003
+2021,Elsevier (DEAL),Germany,DEAL,Elsevier,0.161,0.172,-0.01
+2021,Elsevier (DEAL),Global,DEAL,Elsevier,0.08,0.105,-0.025
 2021,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.685,0.69,-0.005
 2021,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.169,0.172,-0.004
 2021,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.843,0.583,0.26
@@ -179,7 +181,7 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2021,Nature (MPDL),Global,MPDL,Nature,0.049,0.056,-0.007
 2021,BMJ (BSB),Germany,BSB,BMJ,0.457,0.451,0.006
 2021,BMJ (BSB),Global,BSB,BMJ,0.229,0.227,0.002
-2021,Karger (BSB),Germany,BSB,Karger,0.287,0.299,-0.012
+2021,Karger (BSB),Germany,BSB,Karger,0.29,0.302,-0.012
 2021,Karger (BSB),Global,BSB,Karger,0.155,0.159,-0.004
 2021,ACM (hebis),Germany,hebis,ACM,0,0.005,-0.005
 2021,ACM (hebis),Global,hebis,ACM,0,0.003,-0.003
@@ -195,10 +197,10 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2021,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.198,0.194,0.004
 2021,Portland Press (TIB),Germany,TIB,Portland Press,0.646,0.646,0
 2021,Portland Press (TIB),Global,TIB,Portland Press,0.611,0.602,0.008
-2021,Thieme 2 (ZB MED),Germany,ZB MED,Thieme 2,0.304,0.304,0
-2021,Thieme 2 (ZB MED),Global,ZB MED,Thieme 2,0.12,0.12,0
-2021,Thieme 1 (ZB MED),Germany,ZB MED,Thieme 1,0.308,0.308,0
-2021,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.078,0.078,0
+2021,Thieme (ZB MED),Germany,ZB MED,Thieme,0.304,0.304,0
+2021,Thieme (ZB MED),Global,ZB MED,Thieme,0.113,0.113,0
+2022,Elsevier (DEAL),Germany,DEAL,Elsevier,0.214,0.204,0.01
+2022,Elsevier (DEAL),Global,DEAL,Elsevier,0.106,0.111,-0.005
 2022,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.754,0.754,0.001
 2022,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.184,0.186,-0.002
 2022,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.827,0.528,0.299
@@ -219,8 +221,8 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2022,Nature (MPDL),Global,MPDL,Nature,0.127,0.137,-0.009
 2022,BMJ (BSB),Germany,BSB,BMJ,0.441,0.428,0.013
 2022,BMJ (BSB),Global,BSB,BMJ,0.188,0.185,0.003
-2022,Karger (BSB),Germany,BSB,Karger,0.342,0.336,0.007
-2022,Karger (BSB),Global,BSB,Karger,0.223,0.206,0.017
+2022,Karger (BSB),Germany,BSB,Karger,0.343,0.337,0.007
+2022,Karger (BSB),Global,BSB,Karger,0.222,0.205,0.017
 2022,ACM (hebis),Germany,hebis,ACM,0,0.005,-0.005
 2022,ACM (hebis),Global,hebis,ACM,0,0.006,-0.006
 2022,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.54,0.433,0.107
@@ -235,10 +237,10 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2022,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.278,0.287,-0.009
 2022,Portland Press (TIB),Germany,TIB,Portland Press,0.792,0.792,0
 2022,Portland Press (TIB),Global,TIB,Portland Press,0.635,0.631,0.004
-2022,Thieme 2 (ZB MED),Germany,ZB MED,Thieme 2,0.364,0.364,0
-2022,Thieme 2 (ZB MED),Global,ZB MED,Thieme 2,0.211,0.211,0
-2022,Thieme 1 (ZB MED),Germany,ZB MED,Thieme 1,0.294,0.294,0
-2022,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.093,0.093,0
+2022,Thieme (ZB MED),Germany,ZB MED,Thieme,0.34,0.34,0
+2022,Thieme (ZB MED),Global,ZB MED,Thieme,0.179,0.179,0
+2023,Elsevier (DEAL),Germany,DEAL,Elsevier,0.225,0.164,0.061
+2023,Elsevier (DEAL),Global,DEAL,Elsevier,0.123,0.087,0.036
 2023,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.784,0.592,0.192
 2023,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.216,0.161,0.055
 2023,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.823,0.587,0.236
@@ -260,7 +262,7 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2023,BMJ (BSB),Germany,BSB,BMJ,0.443,0.402,0.041
 2023,BMJ (BSB),Global,BSB,BMJ,0.212,0.176,0.037
 2023,Karger (BSB),Germany,BSB,Karger,0.287,0.287,0
-2023,Karger (BSB),Global,BSB,Karger,0.254,0.166,0.088
+2023,Karger (BSB),Global,BSB,Karger,0.255,0.166,0.09
 2023,ACM (hebis),Germany,hebis,ACM,0,0.006,-0.006
 2023,ACM (hebis),Global,hebis,ACM,0,0.007,-0.007
 2023,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.456,0.163,0.293
@@ -275,7 +277,5 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2023,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.291,0.22,0.071
 2023,Portland Press (TIB),Germany,TIB,Portland Press,0.417,0.333,0.083
 2023,Portland Press (TIB),Global,TIB,Portland Press,0.663,0.584,0.079
-2023,Thieme 2 (ZB MED),Germany,ZB MED,Thieme 2,0.37,0.37,0
-2023,Thieme 2 (ZB MED),Global,ZB MED,Thieme 2,0.188,0.178,0.01
-2023,Thieme 1 (ZB MED),Germany,ZB MED,Thieme 1,0.5,0.5,0
-2023,Thieme 1 (ZB MED),Global,ZB MED,Thieme 1,0.132,0.118,0.013
+2023,Thieme (ZB MED),Germany,ZB MED,Thieme,0.387,0.387,0
+2023,Thieme (ZB MED),Global,ZB MED,Thieme,0.173,0.162,0.011
