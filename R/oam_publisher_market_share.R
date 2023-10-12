@@ -3,17 +3,17 @@
 pub_shares <- my_df |>
   mutate(
     type = case_when(
+      esac_publisher == "Elsevier (DEAL)" ~ "Elsevier (DEAL)",
       esac_publisher == "Springer Hybrid (DEAL)" ~ "Springer Hybrid (DEAL)",
       esac_publisher == "Wiley Hybrid (DEAL)" ~ "Wiley Hybrid (DEAL)",
-      esac_publisher == "Wiley" ~ "Wiley",
-      esac_publisher %in% top_13[3:13] ~ "Top 3-13",
+      esac_publisher %in% top_13[3:13] ~ "Top 4-13",
       is.character(esac_publisher) ~ "Other"
     )
   ) |>
   mutate(type =
            forcats::fct_relevel(
              type,
-             c("Springer Hybrid (DEAL)", "Wiley Hybrid (DEAL)", "Top 3-13", "Other")
+             c("Elsevier (DEAL)", "Springer Hybrid (DEAL)", "Wiley Hybrid (DEAL)", "Top 4-13", "Other")
            )) |>
   mutate(cat = forcats::fct_rev(as.factor(collection))) |>
   group_by(cat, type, esac_publisher) |>
@@ -75,9 +75,10 @@ plot_pub_shares <-
       scale_fill_manual(
         "",
         values = c(
+          "Elsevier (DEAL)" = "#e9711c",
           "Springer Hybrid (DEAL)" = "#486a7e",
           "Wiley Hybrid (DEAL)" = "#068853",
-          "Top 3-13" = "grey60",
+          "Top 4-13" = "grey60",
           "Other" = "grey90"
         ),
         guide = guide_legend(reverse = FALSE,  nrow = 1)
@@ -86,6 +87,7 @@ plot_pub_shares <-
       scale_y_continuous(breaks = seq(0, 1, by = 0.1),
                          labels = scales::percent_format(accuracy = 5L)) +
       labs(x = NULL, y = NULL) +
+      guides(fill = guide_legend(nrow = 2)) +
       theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 14) +
       theme(panel.grid.minor = element_blank()) +
       theme(axis.ticks = element_blank()) +

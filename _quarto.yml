@@ -89,6 +89,8 @@ website:
                 contents:
                   - section: "DEAL"
                     contents:
+                      - text: "Elsevier"
+                        href: "oam/elsevierdeal/index.qmd"
                       - text: "Springer"
                         href: oam/springerhybriddeal/index.qmd
                       - text: "Wiley"
@@ -123,10 +125,14 @@ website:
                           href: oam/portlandpresstib/index.qmd
                         - text: "RSC"
                           href: oam/rsctib/index.qmd
+                  - section: "ZB MED"
+                    contents:
+                       - text: "Thieme"
+                         href: oam/thiemezbmed/index.qmd
                   - section: "ZBW"
                     contents:
                        - text: "Taylor and Francis"
-                         href: oam/taylorfranciszbw
+                         href: oam/taylorfranciszbw/index.qmd
           - text: "About"
             href: "about.qmd"
     footer: funding_note.md
