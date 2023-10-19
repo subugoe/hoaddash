@@ -3,7 +3,7 @@ cr_year,country_name,cc_total,articles,prop
 2017,Australia,0,13,0
 2017,Belgium,0,1,0
 2017,Bulgaria,0,3,0
-2017,Brazil,0,35,0
+2017,Brazil,0,36,0
 2017,Canada,0,9,0
 2017,Switzerland,0,8,0
 2017,China,0,24,0
@@ -54,7 +54,7 @@ cr_year,country_name,cc_total,articles,prop
 2018,Canada,1,18,0.05555555555555555
 2018,Switzerland,0,9,0
 2018,Chile,0,1,0
-2018,China,0,40,0
+2018,China,0,41,0
 2018,Cyprus,0,1,0
 2018,Czechia,0,3,0
 2018,Germany,3,81,0.037037037037037035
@@ -202,13 +202,13 @@ cr_year,country_name,cc_total,articles,prop
 2021,Egypt,0,3,0
 2021,Spain,0,23,0
 2021,Finland,0,2,0
-2021,France,5,21,0.23809523809523808
+2021,France,5,22,0.22727272727272727
 2021,United Kingdom,5,39,0.1282051282051282
 2021,Ghana,0,1,0
 2021,Greece,0,9,0
 2021,Hungary,0,1,0
 2021,Indonesia,0,1,0
-2021,Ireland,0,3,0
+2021,Ireland,0,4,0
 2021,Israel,1,6,0.16666666666666666
 2021,India,0,8,0
 2021,Iran,0,9,0
@@ -244,8 +244,8 @@ cr_year,country_name,cc_total,articles,prop
 2022,China,11,83,0.13253012048192772
 2022,Cyprus,0,1,0
 2022,Germany,17,50,0.34
-2022,Denmark,0,5,0
-2022,Spain,5,26,0.19230769230769232
+2022,Denmark,0,6,0
+2022,Spain,5,27,0.18518518518518517
 2022,Finland,0,1,0
 2022,France,3,20,0.15
 2022,United Kingdom,5,30,0.16666666666666666
@@ -283,28 +283,28 @@ cr_year,country_name,cc_total,articles,prop
 2023,Canada,0,6,0
 2023,Switzerland,2,6,0.3333333333333333
 2023,Chile,0,2,0
-2023,China,13,60,0.21666666666666667
-2023,Germany,12,31,0.3870967741935484
-2023,Denmark,0,6,0
-2023,Spain,1,15,0.06666666666666667
+2023,China,14,64,0.21875
+2023,Germany,14,35,0.4
+2023,Denmark,0,7,0
+2023,Spain,1,17,0.058823529411764705
 2023,Finland,1,3,0.3333333333333333
 2023,France,2,6,0.3333333333333333
 2023,United Kingdom,0,10,0
-2023,Greece,0,3,0
+2023,Greece,0,4,0
 2023,Hungary,0,1,0
 2023,India,0,6,0
 2023,Iran,0,3,0
-2023,Italy,1,18,0.05555555555555555
-2023,Japan,2,12,0.16666666666666666
+2023,Italy,1,22,0.045454545454545456
+2023,Japan,3,13,0.23076923076923078
 2023,South Korea,1,4,0.25
 2023,Morocco,1,1,1
 2023,Mexico,0,1,0
 2023,Nigeria,1,1,1
-2023,Netherlands,3,7,0.42857142857142855
+2023,Netherlands,4,8,0.5
 2023,Norway,1,3,0.3333333333333333
 2023,Pakistan,0,1,0
 2023,Poland,1,2,0.5
-2023,Portugal,0,4,0
+2023,Portugal,0,5,0
 2023,Serbia,0,1,0
 2023,Russia,0,1,0
 2023,Sweden,1,4,0.25
@@ -312,4 +312,5 @@ cr_year,country_name,cc_total,articles,prop
 2023,Tunisia,0,1,0
 2023,Turkey,0,7,0
 2023,Taiwan,0,4,0
-2023,United States,4,29,0.13793103448275862
+2023,United States,4,31,0.12903225806451613
+2023,Vietnam,0,1,0
