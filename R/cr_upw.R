@@ -13,7 +13,7 @@ cr_upw_data <- function(cr_upw = hoaddata::cr_upw, my_cat = "Global", ...) {
 
 cr_upw_plot <- function(cr_upw_data = hoaddata::cr_upw, ...) {
   plot_df <- cr_upw_data(cr_upw_data, ...)
-  my_plot <- ggplot(plot_df, aes(cr_year, value / article_total,
+  my_plot <- ggplot(plot_df, aes(as.character(cr_year), value / article_total,
     fill = name,
     tooltip = glue::glue('<small>{name}</small><br><b>{format(value, big.mark = ",")} / {round((value / article_total) * 100, 1)}%</b><br><small>articles with CC license in {cr_year}</small>')
   )) +

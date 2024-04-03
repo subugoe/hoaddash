@@ -139,6 +139,8 @@ website:
 format:
   html:
     theme: [cosmo, styles.scss]
+    toc: true
+    toc-location: right
     grid:
       sidebar-width: 300px
       

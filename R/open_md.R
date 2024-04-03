@@ -59,6 +59,7 @@ open_md_react <- function(...) {
               `2021` = indicator_column(name = "2021"),
               `2022` = indicator_column(name = "2022"),
               `2023` = indicator_column(name = "2023"),
+              `2024` = indicator_column(name = "2024"),
               cat = colDef(show = FALSE)
             ))
   
