@@ -1,11 +1,6 @@
 ---
 title: "Hybrid Open Access Dashboard"
 subtitle: "How open are hybrid journals in transformative agreements? You can analyse progress made over time by open license, publisher and country. You can also monitor the availability of publisher-provided metadata in Crossref."
-format:
-  html:
-    theme: default
-    toc: true
-    toc-location: right
 execute:
   echo: false
   warnings: false
@@ -142,7 +137,7 @@ export_files(.data = cc_df, .plot = cc_de_plot, width = 9, height = 6 * 0.618)
 
 ### Creative Commons licenses over time by publisher
 
-Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2023.
+Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2024.
 
 ```{r}
 #| echo: false
@@ -277,7 +272,7 @@ my_df |>
 
 ### Market shares
 
-Publisher market shares as measured by articles published between 2017 and 2023 in hybrid journals included in transformative agreements.
+Publisher market shares as measured by articles published between 2017 and 2024 in hybrid journals included in transformative agreements.
 
 ```{r}
 #| echo: FALSE
@@ -409,7 +404,7 @@ export_files(
 ```{js, echo = FALSE}
  /* https://stackoverflow.com/a/66216595 */
 $(document).ready(function() {
-    document.getElementById("filter_year").getElementsByClassName("selectized")[0].selectize.setValue("2022", false);
+    document.getElementById("filter_year").getElementsByClassName("selectized")[0].selectize.setValue("2023", false);
      document.getElementById("filter_input").getElementsByClassName("selectized")[0].selectize.setValue("Global", false);
 });
 ```
@@ -421,7 +416,7 @@ This section shows how hybrid open access has been adopted in different parts of
 
 ### Open Access in hybrid journals by country
 
-Open Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in transformative agreements between 2017 and 2023. The analysis is based on lead author country affiliations.
+Open Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in transformative agreements between 2017 and 2024. The analysis is based on lead author country affiliations.
 
 ::: column-body-outset
 ```{r country_top_20}
@@ -511,7 +506,7 @@ export_files(
 ```{js,echo = FALSE}
  /* https://stackoverflow.com/a/66216595 */
 $(document).ready(function() {
-    document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2022", false);
+    document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2023", false);
     document.getElementById("filter_country_deal").getElementsByClassName("selectized")[0].selectize.setValue("All", false);
 });
 ```
@@ -597,7 +592,7 @@ export_files(.data =  shared_upw_cr_diff_year$data())
 ```{js, echo = FALSE}
  /* https://stackoverflow.com/a/66216595 */
 $(document).ready(function() {
-    document.getElementById("filter_cr_year").getElementsByClassName("selectized")[0].selectize.setValue("2022", false);
+    document.getElementById("filter_cr_year").getElementsByClassName("selectized")[0].selectize.setValue("2023", false);
      document.getElementById("filter_cr_input").getElementsByClassName("selectized")[0].selectize.setValue("Global", false);
 });
 ```
@@ -677,7 +672,7 @@ $(document).ready(function() {
 
 ## Journal table
 
-This table presents the publication volume and Open Access share by journal between 2017 and 2023, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+This table presents the publication volume and Open Access share by journal between 2017 and 2024, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
 
 ::: column-body-outset
 
