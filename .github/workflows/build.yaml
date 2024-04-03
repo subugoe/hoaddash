@@ -20,11 +20,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Google Fonts
+      - name: Provide Fonts
         run: |
-          wget -O Atkinson_Hyperlegible.zip https://fonts.google.com/download?family=Atkinson%20Hyperlegible
-          unzip -FF Atkinson_Hyperlegible -d Atkinson_Hyperlegible.zip
-          mv Atkinson_Hyperlegible /usr/share/fonts/
+          mv fonts /usr/share/fonts/Atkinson_Hyperlegible
           fc-cache -fv
 
       - uses: quarto-dev/quarto-actions/setup@v2
