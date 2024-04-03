@@ -22,7 +22,8 @@ jobs:
 
       - name: Provide Fonts
         run: |
-          mv fonts /usr/share/fonts/Atkinson_Hyperlegible
+          mkdir /usr/share/fonts/Atkinson_Hyperlegible
+          cp -r fonts/ /usr/share/fonts/Atkinson_Hyperlegible/
           fc-cache -fv
 
       - uses: quarto-dev/quarto-actions/setup@v2
