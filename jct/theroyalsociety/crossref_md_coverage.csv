@@ -1,11 +1,11 @@
-esac_publisher,cat,name,2017,2018,2019,2020,2021,2022,2023
-The Royal Society,Germany,TDM Support,NA,NA,NA,1,1,NA,NA
-The Royal Society,Germany,ORCID,NA,NA,NA,1,1,NA,NA
-The Royal Society,Germany,Funder info,NA,NA,NA,0.8518518518518519,1,NA,NA
-The Royal Society,Germany,Open Abstracts,NA,NA,NA,1,1,NA,NA
-The Royal Society,Germany,Open Citations,NA,NA,NA,1,1,NA,NA
-The Royal Society,Global,TDM Support,NA,NA,NA,1,1,NA,1
-The Royal Society,Global,ORCID,NA,NA,NA,0.9955357142857143,0.9830508474576272,NA,1
-The Royal Society,Global,Funder info,NA,NA,NA,0.8616071428571429,0.9152542372881356,NA,0.5
-The Royal Society,Global,Open Abstracts,NA,NA,NA,0.9977678571428571,1,NA,1
-The Royal Society,Global,Open Citations,NA,NA,NA,0.9977678571428571,1,NA,1
+esac_publisher,cat,name,2017,2018,2019,2020,2021,2022,2023,2024
+The Royal Society,Germany,TDM Support,NA,NA,NA,1,1,1,1,1
+The Royal Society,Germany,ORCID,NA,NA,NA,1,1,0,1,0.9090909090909091
+The Royal Society,Germany,Funder info,NA,NA,NA,0.8518518518518519,1,1,0.96,0.8181818181818182
+The Royal Society,Germany,Open Abstracts,NA,NA,NA,1,1,1,1,1
+The Royal Society,Germany,Open Citations,NA,NA,NA,1,1,0,1,1
+The Royal Society,Global,TDM Support,NA,NA,NA,1,1,1,1,1
+The Royal Society,Global,ORCID,NA,NA,NA,0.9955357142857143,0.9833333333333333,0,0.9693877551020408,0.9559748427672956
+The Royal Society,Global,Funder info,NA,NA,NA,0.8616071428571429,0.9,0.6666666666666666,0.75,0.7610062893081762
+The Royal Society,Global,Open Abstracts,NA,NA,NA,0.9977678571428571,1,1,0.9540816326530612,0.9182389937106918
+The Royal Society,Global,Open Citations,NA,NA,NA,0.9977678571428571,1,0,0.9642857142857143,0.9685534591194969
