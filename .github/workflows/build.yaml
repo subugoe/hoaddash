@@ -30,8 +30,8 @@ jobs:
         id: check_commit_message
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%B)
-          if [[ "$COMMIT_MSG" != "Render dashboard"* ]]; then
-            echo "Commit message does not start with 'Render dashboard'."
+          if [[ "$COMMIT_MSG" != "Render HOAD"* ]]; then
+            echo "Commit message does not start with 'Render HOAD'."
             echo "result=0" >> $GITHUB_ENV
           else
             echo "result=1" >> $GITHUB_ENV
