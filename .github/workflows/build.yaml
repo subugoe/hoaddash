@@ -30,6 +30,7 @@ jobs:
         id: check_commit_message
         run: |
           COMMIT_MSG=$(git log -1 --pretty=%B)
+          echo "Commit_MSG: ${COMMIT_MSG}"
           if [[ "$COMMIT_MSG" != "Render HOAD"* ]]; then
             echo "Commit message does not start with 'Render HOAD'."
             echo "result=0" >> $GITHUB_ENV
