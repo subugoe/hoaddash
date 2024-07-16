@@ -82,6 +82,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Updated docs folder"
           branch: update-docs-folder-${{ steps.date.outputs.date }}
+          base: gh-pages
           title: 'Automatic PR to update docs folder'
           body: 'This is an auto-generated PR with the updates to the docs folder.'
           labels: 'website, automated pr'
