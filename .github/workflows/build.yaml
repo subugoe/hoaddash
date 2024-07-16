@@ -8,6 +8,11 @@ on:
 
 name: build
 
+# you need these permissions to publish to GitHub pages
+# permissions: 
+     contents: write
+     pages: write
+
 jobs:
   CICD:
     runs-on: ubuntu-latest
@@ -62,10 +67,6 @@ jobs:
           target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
-      - name: Get the current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y%m%d%H%M%S')"
-
       - name: Commit rendered dashboard documents
         if: env.result == '1'
         run: |
@@ -81,7 +82,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Updated docs folder"
-          branch: update-docs-folder-${{ steps.date.outputs.date }}
+          branch: update-docs-folder
+          branch-suffix: timestamp
           base: gh-pages
           title: 'Automatic PR to update docs folder'
           body: 'This is an auto-generated PR with the updates to the docs folder.'
