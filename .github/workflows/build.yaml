@@ -62,21 +62,27 @@ jobs:
           target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
+      - name: Get the current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y%m%d%H%M%S')"
+
       - name: Commit rendered dashboard documents
         if: env.result == '1'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          DATE=$(date +'%Y-%m-%d %H:%M:%S')
           git add docs/
-          git commit --allow-empty -m "Auto-update of the HOAD on $DATE" -a
+          git commit -m "Auto-update of the HOAD"
           git push origin ${{ github.head_ref }}
- 
-      - name: Publish to GitHub Pages
-        if: env.result == '1' && github.event.pull_request.merged == 'true'
-        uses: quarto-dev/quarto-actions/publish@v2
+
+      - name: Create Pull Request for docs folder
+        id: cpr
+        uses: peter-evans/create-pull-request@v3
         with:
-          target: gh-pages
-          render: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Updated docs folder"
+          branch: update-docs-folder-${{ steps.date.outputs.date }}
+          title: 'Automatic PR to update docs folder'
+          body: 'This is an auto-generated PR with the updates to the docs folder.'
+          labels: 'website, automated pr'
+

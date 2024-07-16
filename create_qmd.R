@@ -93,7 +93,7 @@ ta_jns <- purrr::pmap_df(list(publisher = my_ta$publisher, collection = my_ta$co
 ta_dir_create(unique(ta_jns$dir_name))
 
 # Copy funding note
-funding_cp(unique(ta_jns$dir_name))
+# funding_cp(unique(ta_jns$dir_name))
 
 # Create templates
 # purrr::walk(my_ta$publisher, ta_template_create)
@@ -103,5 +103,5 @@ funding_cp(unique(ta_jns$dir_name))
 fs::file_copy("_jct_overview.qmd", "index.qmd", overwrite = TRUE)
 
 # OAM overview
-fs::file_copy("_oam_overview.qmd", "oam/index.qmd", overwrite = TRUE)
-funding_cp("oam/")
+#fs::file_copy("_oam_overview.qmd", "oam/index.qmd", overwrite = TRUE)
+# funding_cp("oam/")
