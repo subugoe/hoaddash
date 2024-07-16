@@ -26,6 +26,17 @@ jobs:
           cp -r fonts/ /usr/share/fonts/Atkinson_Hyperlegible/
           fc-cache -fv
 
+      - name: Check commit message
+        id: check_commit_message
+        run: |
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          if [[ "$COMMIT_MSG" != "Render dashboard"* ]]; then
+            echo "Commit message does not start with 'Render dashboard'."
+            echo "result=0" >> $GITHUB_ENV
+          else
+            echo "result=1" >> $GITHUB_ENV
+          fi
+
       - uses: quarto-dev/quarto-actions/setup@v2
       - run: |
           quarto --version
@@ -37,21 +48,33 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
       
       - name: Create dashboard documents
+        if: env.result == '1'
         run: |
          source("create_qmd.R")
         shell: Rscript {0}
 
-      - name: Staging - Render and Publish
-        if: github.event_name == 'pull_request'
+      - name: Preview - Render and Publish
+        if: env.result == '1'
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+      - name: Commit rendered dashboard documents
+        if: env.result == '1'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          DATE=$(date +'%Y-%m-%d %H:%M:%S')
+          git add docs/
+          git commit --allow-empty -m "Auto-update of the HOAD on $DATE" -a
+          git push origin ${{ github.head_ref }}
  
-      - name: Productive - Render and Publish 
-        if: github.event_name == 'push'
+      - name: Publish to GitHub Pages
+        if: env.result == '1' && github.event.pull_request.merged == 'true'
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
+          render: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

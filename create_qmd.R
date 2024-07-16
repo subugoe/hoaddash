@@ -96,7 +96,7 @@ ta_dir_create(unique(ta_jns$dir_name))
 funding_cp(unique(ta_jns$dir_name))
 
 # Create templates
-purrr::walk(my_ta$publisher, ta_template_create)
+# purrr::walk(my_ta$publisher, ta_template_create)
 
 # Move JCT overview
 
