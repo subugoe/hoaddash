@@ -1,0 +1,241 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hybrid Open Access Dashboard",
+    "section": "",
+    "text": "The share of Open Access articles with a Creative Commons license in 12,995 hybrid journals derived from cOAlition S Transformative Agreement Public Data is as follows:\n*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.",
+    "crumbs": [
+      "Publishers",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#creative-commons-licenses-over-time",
+    "href": "index.html#creative-commons-licenses-over-time",
+    "title": "Hybrid Open Access Dashboard",
+    "section": "Creative Commons licenses over time",
+    "text": "Creative Commons licenses over time\nPercentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types as provided by Crossref.\n\nGlobalGermany*\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.\n\n\n\n\nCreative Commons licenses over time by publisher\nPercentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2024.\n\nGlobalGermany*\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.",
+    "crumbs": [
+      "Publishers",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#publishing-market",
+    "href": "index.html#publishing-market",
+    "title": "Hybrid Open Access Dashboard",
+    "section": "Publishing market",
+    "text": "Publishing market\n\nPublishing market over time\nHybrid journal publisher portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Dashed lines represent median OA percentage (red) and median publication output (orange). Note that only hybrid journals included in transformative agreements are shown.\n\nGlobalGermany*\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n\n\n\n\n\n*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.\n\n\n\n\n\nMarket shares\nPublisher market shares as measured by articles published between 2017 and 2024 in hybrid journals included in transformative agreements.\n\nGlobalGermany*\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.\n\n\n\n\n\nPublisher league: Hybrid Open Access output\nThis interactive table highlights the output of hybrid Open Access publishers by year, sorted by total annual publication volume. It shows the number and proportion of Open Access articles made available under a Creative Commons licence in hybrid journals included in transformative agreements. The table also shows the number of hybrid journals per portfolio and the corresponding percentage of hybrid journals with at least one OA article. You can filter by publisher, publication year and between a global and a country-specific view with respect to lead author publications from Germany.\n\n\n\n\n\n\n\nSearch publisher\n\n\n\n\n\n\n\n\nPublication Year\n\n\n\n\n\n\n\n\nGlobal / Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)",
+    "crumbs": [
+      "Publishers",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#country-view",
+    "href": "index.html#country-view",
+    "title": "Hybrid Open Access Dashboard",
+    "section": "Country view",
+    "text": "Country view\nThis section shows how hybrid open access has been adopted in different parts of the world. The analysis is based on the country affiliation of lead authors. Lead authors are the first named authors of scholarly articles, who have typically conducted most of the research presented in the article, although the role of lead authors can vary across disciplines. We used OpenAlex as a data source to determine the affiliation of lead authors.\n\nOpen Access in hybrid journals by country\nOpen Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in transformative agreements between 2017 and 2024. The analysis is based on lead author country affiliations.\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n\n\n\nCountry League\nPublication volume in hybrid journals included in transformative agreements and Open Access share per country. You can search for specific countries, and filter by publisher and publication year. The analysis is based on country-affiliations of lead authors.\n\n\n\n\n\n\nCountries\n\n\n\n\n\n\n\n\nPublisher\n\n\n\n\n\n\n\n\nPublication Year\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)",
+    "crumbs": [
+      "Publishers",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#open-metadata",
+    "href": "index.html#open-metadata",
+    "title": "Hybrid Open Access Dashboard",
+    "section": "Open metadata",
+    "text": "Open metadata\nOpen and comprehensive metadata are a key requirement of many transformative agreements. The following tables illustrate potential gaps in Crossref metadata for Open Access articles in hybrid journals included in transformative agreements.\n\nLicense metadata gaps\nComparison of open licence metadata in Crossref with Unpaywall via OpenAlex per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publisher websites to determine whether an article has been published under an open licence. More Open Access articles derived from Crossref may indicate a delay between metadata changes and Unpaywall-indexing, while more Open Access articles identified by Unpaywall suggest that publishers have not deposited licensing metadata in Crossref for all articles.\n\n\n\n\n\n\nPublisher\n\n\n\n\n\n\n\n\nPublication Year\n\n\n\n\n\n\n\n\nGlobal / Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n\n\n\n\n\n\n\n\n\n\nCrossref metadata coverage\nThis table shows the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share information about Text and Data Mining (TDM), authors (ORCID) and funding. They can also open up abstracts and reference lists through Crossref.\n\n\n\n\n\n\nPublisher\n\n\n\n\n\n\n\n\nMetadata\n\n\n\n\n\n\n\n\nGlobal / Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)",
+    "crumbs": [
+      "Publishers",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#journal-table",
+    "href": "index.html#journal-table",
+    "title": "Hybrid Open Access Dashboard",
+    "section": "Journal table",
+    "text": "Journal table\nThis table presents the publication volume and Open Access share by journal between 2017 and 2024, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n\n\n\n\n\n\nDashboard last compiled on 16 July, 2024.",
+    "crumbs": [
+      "Publishers",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "oam/index.html",
+    "href": "oam/index.html",
+    "title": "Hybrid Open Access Dashboard: Consortial Transformative Agreements in Germany",
+    "section": "",
+    "text": "The share of Open Access articles with a Creative Commons license in 7,444 hybrid journals included in consortial transformative agreements in Germany is as follows:\n*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.",
+    "crumbs": [
+      "Agreements with German consortia",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "oam/index.html#creative-commons-licenses-over-time",
+    "href": "oam/index.html#creative-commons-licenses-over-time",
+    "title": "Hybrid Open Access Dashboard: Consortial Transformative Agreements in Germany",
+    "section": "Creative Commons licenses over time",
+    "text": "Creative Commons licenses over time\nPercentage of Open Access in hybrid journals included in consortial transformative agreements in Germany by Creative Commons license types as provided by Crossref.\n\nGlobalGermany*\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.\n\n\n\n\nCreative Commons licenses over time by publisher\nPercentage of Open Access in hybrid journals included in consortial transformative agreements in Germany by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2024.\n\nGlobalGermany*\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.",
+    "crumbs": [
+      "Agreements with German consortia",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "oam/index.html#publishing-market",
+    "href": "oam/index.html#publishing-market",
+    "title": "Hybrid Open Access Dashboard: Consortial Transformative Agreements in Germany",
+    "section": "Publishing market",
+    "text": "Publishing market\n\nPublishing market over time\nHybrid journal publisher portfolio analysis, showing publishing market shares in terms of total and Open Access article volume. Dashed lines represent median OA percentage (red) and median publication output (orange). Note that only hybrid journals included in consortial transformative agreements in Germany are shown.\n\nGlobalGermany*\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n\n\n\n\n\n*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.\n\n\n\n\n\nMarket shares\nPublisher market shares as measured by articles published between 2017 and 2024 in hybrid journals included in consortial transformative agreements in Germany.\n\nGlobalGermany*\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n*Journal articles from lead authors based in Germany. Country affiliation data derived from OpenAlex.\n\n\n\n\n\nPublisher league: Hybrid Open Access output\nThis interactive table highlights the output of hybrid Open Access publishers by year, sorted by total annual publication volume. It shows the number and proportion of Open Access articles made available under a Creative Commons licence in hybrid journals included in consortial transformative agreements in Germany. The table also shows the number of hybrid journals per portfolio and the corresponding percentage of hybrid journals with at least one OA article. You can filter by publisher, publication year and between a global and a country-specific view with respect to lead author publications from Germany.\n\n\n\n\n\n\n\nAgreement\n\n\n\n\n\n\n\n\nCONSORTIUM LEAD\n\n\n\n\n\n\n\n\nPublication Year\n\n\n\n\n\n\n\n\nGlobal / Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)",
+    "crumbs": [
+      "Agreements with German consortia",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "oam/index.html#country-view",
+    "href": "oam/index.html#country-view",
+    "title": "Hybrid Open Access Dashboard: Consortial Transformative Agreements in Germany",
+    "section": "Country view",
+    "text": "Country view\nThis section shows how hybrid open access has been adopted in different parts of the world. The analysis is based on the country affiliation of lead authors. Lead authors are the first named authors of scholarly articles, who have typically conducted most of the research presented in the article, although the role of lead authors can vary across disciplines. We used OpenAlex as a data source to determine the affiliation of lead authors.\n\nOpen Access in hybrid journals by country\nOpen Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in consortial transformative agreements in Germany between 2017 and 2024. The analysis is based on lead author country affiliations.\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n | \n\n\nPlot (.svg)\n\n\n\n\n\n\n\n\n\nCountry league\nPublication volume and Open Access share in hybrid journals included in consortial transformative agreements in Germany. You can search for specific countries, and filter by publisher and publication year. The analysis is based on country-affiliations of lead authors.\n\n\n\n\n\n\nCountries\n\n\n\n\n\n\n\n\nPublisher\n\n\n\n\n\n\n\n\nPublication Year\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)",
+    "crumbs": [
+      "Agreements with German consortia",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "oam/index.html#open-metadata",
+    "href": "oam/index.html#open-metadata",
+    "title": "Hybrid Open Access Dashboard: Consortial Transformative Agreements in Germany",
+    "section": "Open metadata",
+    "text": "Open metadata\nOpen and comprehensive metadata is a key requirement of many transformative agreements. The following tables illustrate potential gaps in Crossref metadata for Open Access articles in hybrid journals included in consortial transformative agreements in Germany.\n\nLicense metadata gaps\nComparison of open licence metadata in Crossref with Unpaywall via OpenAlex per year. You can compare global metrics with metrics only for articles by lead authors based in Germany. In addition to Crossref licence information, Unpaywall also analyses publisher websites to determine whether an article has been published under an open content licence. More Open Access articles derived from Crossref may indicate a delay between metadata changes and Unpaywall-indexing, while more Open Access articles identified by Unpaywall suggest that publishers have not deposited licensing metadata in Crossref for all articles.\n\n\n\n\n\n\nPublisher\n\n\n\n\n\n\n\n\nPublication Year\n\n\n\n\n\n\n\n\nGlobal / Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n\n\n\n\n\n\n\n\n\n\nCrossref metadata coverage\nThis table shows the proportion of Crossref metadata that is publicly available for Open Access articles in hybrid journals included in transformative agreements. Publishers can use Crossref to share information about Text and Data Mining (TDM), authors (ORCID) and funding. They can also open up abstracts and reference lists through Crossref.\n\n\n\n\n\n\nPublisher\n\n\n\n\n\n\n\n\nMetadata\n\n\n\n\n\n\n\n\nGlobal / Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)",
+    "crumbs": [
+      "Agreements with German consortia",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "oam/index.html#journal-table",
+    "href": "oam/index.html#journal-table",
+    "title": "Hybrid Open Access Dashboard: Consortial Transformative Agreements in Germany",
+    "section": "Journal table",
+    "text": "Journal table\nThis table presents the publication volume and Open Access share by hybrid journal included in consortial transformative agreements in Germany between 2017 and 2024, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData (.csv)\n\n\n\n\n\n\n\nDashboard last compiled on 16 July, 2024.",
+    "crumbs": [
+      "Agreements with German consortia",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "privacy.html",
+    "href": "privacy.html",
+    "title": "Privacy",
+    "section": "",
+    "text": "We do not collect, store or process any Personally Identifiable Information.\nThis website sets one technical cookie, which improves the sidebar appearence.\nFonts are distributed through the GDPR-compliant bunny.net.\nThis website is hosted on GitHub Pages. GitHub may collect User Personal Information as noted here:\n\nGitHub may collect User Personal Information from visitors to your GitHub Pages website, including logs of visitor IP addresses, to comply with legal obligations, and to maintain the security and integrity of the Website and the Service.\n\nGitHub Privacy Statement &gt; Additional Services &gt; GitHub Pages\nFor more information, see our privacy policy."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Hybrid Open Access Dashboards (HOAD)",
+    "section": "",
+    "text": "As library consortia increasingly negotiate transformative agreements, the goal of HOAD is to highlight the extent to which hybrid journals that are part of these agreements have transitioned to full open access.\nOur resources can help libraries and consortia to model for a fully open access future and derive key insights such as:\n\nHow much content in hybrid journals is already published openly under a Creative Commons license?\nWhat is the distribution of Germany’s output in hybrid journals compared to that of other countries?\nDo publishers make metadata openly available and if not, where are the gaps?\n\nHOAD is open source and licensed under CC0. We believe that in order to overcome cost barriers and the growing ownership of data analytics by academic publishers, Open Access monitoring needs to be as open and reproducible as possible.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#aim",
+    "href": "about.html#aim",
+    "title": "About Hybrid Open Access Dashboards (HOAD)",
+    "section": "",
+    "text": "As library consortia increasingly negotiate transformative agreements, the goal of HOAD is to highlight the extent to which hybrid journals that are part of these agreements have transitioned to full open access.\nOur resources can help libraries and consortia to model for a fully open access future and derive key insights such as:\n\nHow much content in hybrid journals is already published openly under a Creative Commons license?\nWhat is the distribution of Germany’s output in hybrid journals compared to that of other countries?\nDo publishers make metadata openly available and if not, where are the gaps?\n\nHOAD is open source and licensed under CC0. We believe that in order to overcome cost barriers and the growing ownership of data analytics by academic publishers, Open Access monitoring needs to be as open and reproducible as possible.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#data-and-methods",
+    "href": "about.html#data-and-methods",
+    "title": "About Hybrid Open Access Dashboards (HOAD)",
+    "section": "Data and methods",
+    "text": "Data and methods\nTo engage with everyone, our open source dashboards combine open data from multiple sources as follows:\n\nJournals included in transformative agreements were obtained from the cOAlition S Transformative Agreements Public Data (July 2021, July 2022, May 2023, and December 2023 snapshots). Agreements with German consortia were derived from Germany’s Open Access Monitor (March 2022). We enriched both journal data sources with ISSN-L, a linking identifier for ISSN variants. Then, we excluded fully open access journals from the cOAlition S Transformative Agreements Public Data by cross-checking with several datasets of fully open access journals: the Directory of Open Access Journals (DOAJ), Bielefeld GOLD OA and OpenAlex.\nCrossref is our main data source for determining the publication volume in hybrid journals including the uptake of Open Access through Creative Commons licenses. The ESAC guidelines, a community recommendation for negotiating transformative agreements, require publishers to make key metadata elements publicly available through Crossref, such as Creative Commons licensing information for Open Access articles. As a Crossref Metadata Plus subscriber, we used monthly Crossref snapshots to derive publication data.\nOpenAlex is our data source for determining the country affiliation of lead authors. A lead author is the first named author of a scholarly article who has usually carried out most of the research presented in the article, although author roles can vary across disciplines. We used OpenAlex monthly snaphots as a data source to determine lead author affiliations.\nTo highlight potential gaps between Crossref open licensing metadata and information provided via journal webpages, we used OpenAlex as a complementary data source for Open Access articles in hybrid journals.\n\nThis compiled data is openly available through an R package, hoaddata. hoaddata contains not only datasets about hybrid open access. It also includes code (mostly SQL) used to compile the data by connecting to our cloud-based Google Big Query data warehouse, where we store big scholarly data from Crossref, OpenAlex and Unpaywall. hoaddata is automatically built and updated per month using GitHub Actions, a continuous integration service.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#dashboard-implementation",
+    "href": "about.html#dashboard-implementation",
+    "title": "About Hybrid Open Access Dashboards (HOAD)",
+    "section": "Dashboard implementation",
+    "text": "Dashboard implementation\nHOAD is made with Quarto, an open source tool for scientific and technical publishing. Quarto documents contain text and analytical source code, in our case R, and are rendered to HTML. More specifically, we created parameterised reports from which Quarto generates publisher-specific views. The resulting website is published on GitHub pages.\nAs statistical tools, we used a bunch of tidyverse packages. Visualisations were made interactive through ggiraph and plotly. Interactive tables were implemented using reactable. These packages have great documentation with lots of examples that has helped us to build HOAD 😀.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#limitations",
+    "href": "about.html#limitations",
+    "title": "About Hybrid Open Access Dashboards (HOAD)",
+    "section": "Limitations",
+    "text": "Limitations\nOur work should be used in a responsible way. Limitations include:\n\nJournal-level data associated with publishers and transformative agreements are highly dynamic and are subject of change.\nAlthough we were able to exclude most full open access journals from our data, there are a few subscription-only journals in our dataset that do not offer open access publishing options.\nCrossref metadata does not distinguish between article types. We used an extended version of the Unpwaywall paratext recognition approach to exclude non-scientific content from our data. However, the annual publication volume of some journals may be inflated by proceedings supplements.\nOpenAlex, from which we obtained our affiliation data, is a relatively new scholarly data source. There is ongoing activity to improve the parsing, normalisation, and disambiguation of institutions (see here). We used pattern matching to increase the recall of country affiliations.\n\nTo better understand the strengths and limitations of our data work, we commissioned a study from the Deutsche Zentrum für Hochschul- und Wissenschaftsforschung. The aim is to compare our open data with information contained in the proprietary bibliometrics database Scopus in relation to hybrid open access. Key findings will be made available.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#funding",
+    "href": "about.html#funding",
+    "title": "About Hybrid Open Access Dashboards (HOAD)",
+    "section": "Funding",
+    "text": "Funding\nHOAD is a scholarly communication analytics project funded by the German Research Foundation (DFG) to support the implementation of consortial transformative agreements in Germany. The work is carried out by the scholarly communication analytics team at the Göttingen State and University Library (SUB Göttingen).",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#contribute",
+    "href": "about.html#contribute",
+    "title": "About Hybrid Open Access Dashboards (HOAD)",
+    "section": "Contribute",
+    "text": "Contribute\nThis dashboard has been developed in the open using open tools. There are a number of ways you can help make the dashboard better:\n\nIf you don’t understand something or find a bug, please let us know and submit an issue.\nDo you have an idea of what meaningful data analysis is missing? Please let everyone know and submit an issue.\nWant to provide more context about your agreement? Please email us!\nLet us know if we can help you to provide a detailed view of your consortial transformative agreements. We are not limited to Germany and can extend our dashboards to other countries and consortia. Please email us!",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#contributors",
+    "href": "about.html#contributors",
+    "title": "About Hybrid Open Access Dashboards (HOAD)",
+    "section": "Contributors",
+    "text": "Contributors\nSUB Göttingen Team: Dr. Inke Achterberg, Nick Haupka, Dr. Anne Hobert, Najko Jahn, Dr. Birgit Schmidt.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#license",
+    "href": "about.html#license",
+    "title": "About Hybrid Open Access Dashboards (HOAD)",
+    "section": "License",
+    "text": "License\nThis work is license under CC0.\nAnyone is free to copy, modify, publish, use, compile, sell, or distribute these materials in any form, for any purpose, commercial or non-commercial, and by any means.\nHOAD reflects our current understanding and is likely to change. We work hard to keep the dashboards and the underlying data up to date and accurate, but we do not accept any liability in relation to any errors or omissions.\nThis work re-used the following dataset:\nPollack, Philipp; Lindstrot, Barbara; Barbers, Irene, Stanzel, Franziska, 2022, “Open Access Monitor: Zeitschriftenlisten (V2)”, https://doi.org/10.26165/JUELICH-DATA/VTQXLM\npublished under CC BY 4.0.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About Hybrid Open Access Dashboards (HOAD)",
+    "section": "Contact",
+    "text": "Contact\nFeel free to contact Najko Jahn najko.jahn@sub.uni-goettingen.de.",
+    "crumbs": [
+      "About"
+    ]
+  }
+]
