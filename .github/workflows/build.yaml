@@ -9,9 +9,9 @@ on:
 name: build
 
 # you need these permissions to publish to GitHub pages
-# permissions: 
-     contents: write
-     pages: write
+permissions: 
+    contents: write
+    pages: write
 
 jobs:
   CICD:
