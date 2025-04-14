@@ -1,117 +1,119 @@
 cat,type,esac_publisher,name,value,prop
-global,Elsevier,Elsevier,Total Articles,4561707,0.3096220169647383
-global,Elsevier,Elsevier,Open Access Articles with Creative Commons License,382162,0.24719324969841625
-global,Springer Nature,Springer Nature,Total Articles,2528760,0.17163745317701282
-global,Springer Nature,Springer Nature,Open Access Articles with Creative Commons License,327187,0.21163385629412582
-global,Wiley,Wiley,Total Articles,1650548,0.11202955403692408
-global,Wiley,Wiley,Open Access Articles with Creative Commons License,299472,0.19370700612223116
-global,Top 4-13,Taylor and Francis,Total Articles,1031375,0.07000370864393679
-global,Top 4-13,Taylor and Francis,Open Access Articles with Creative Commons License,101942,0.06593898467340015
-global,Top 4-13,Wolters Kluwer Health,Total Articles,531210,0.03605543092352021
-global,Top 4-13,Wolters Kluwer Health,Open Access Articles with Creative Commons License,20396,0.013192712830812319
-global,Top 4-13,Sage,Total Articles,519282,0.03524582797919359
-global,Top 4-13,Sage,Open Access Articles with Creative Commons License,58204,0.03764800243207493
-global,Top 4-13,American Chemical Society,Total Articles,498684,0.033847756093945434
-global,Top 4-13,American Chemical Society,Open Access Articles with Creative Commons License,38206,0.02471272731976934
-global,Other,IEEE,Total Articles,497486,0.03376644285389653
-global,Other,IEEE,Open Access Articles with Creative Commons License,16827,0.010884182133951701
-global,Top 4-13,Oxford University Press,Total Articles,447124,0.030348164560622073
-global,Top 4-13,Oxford University Press,Open Access Articles with Creative Commons License,59846,0.038710094728024814
-global,Top 4-13,Royal Society of Chemistry,Total Articles,246942,0.01676098007024704
-global,Top 4-13,Royal Society of Chemistry,Open Access Articles with Creative Commons License,28427,0.018387392020077553
-global,Top 4-13,IOP Publishing,Total Articles,227939,0.015471167465364496
-global,Top 4-13,IOP Publishing,Open Access Articles with Creative Commons License,26081,0.016869932503452447
-global,Top 4-13,Cambridge University Press,Total Articles,221416,0.015028424339455492
-global,Top 4-13,Cambridge University Press,Open Access Articles with Creative Commons License,38071,0.02462540548057736
-global,Top 4-13,The Electrochemical Society,Total Articles,198371,0.013464264392104118
-global,Top 4-13,The Electrochemical Society,Open Access Articles with Creative Commons License,24678,0.015962432204294295
-global,Top 4-13,American Physical Society,Total Articles,153111,0.010392280047685668
-global,Top 4-13,American Physical Society,Open Access Articles with Creative Commons License,25295,0.016361525350823573
-global,Other,Walter de Gruyter,Total Articles,150513,0.010215942987880118
-global,Other,Walter de Gruyter,Open Access Articles with Creative Commons License,10967,0.0070937674845812275
-global,Other,Emerald,Total Articles,148018,0.010046596966242381
-global,Other,Emerald,Open Access Articles with Creative Commons License,85,5.498041726902565e-5
-global,Other,AIP Publishing,Total Articles,135244,0.009179572485119948
-global,Other,AIP Publishing,Open Access Articles with Creative Commons License,162,1.047862070303783e-4
-global,Other,BMJ Publishing,Total Articles,102789,0.00697671672068997
-global,Other,BMJ Publishing,Open Access Articles with Creative Commons License,9140,0.005912011927516405
-global,Other,Thieme,Total Articles,96516,0.0065509421340232245
-global,Other,Thieme,Open Access Articles with Creative Commons License,2056,0.0013298792694719616
-global,Other,World Scientific,Total Articles,73118,0.004962822609261782
+global,Elsevier,Elsevier,Total Articles,4872489,0.313872486639051
+global,Elsevier,Elsevier,Open Access Articles with Creative Commons License,430993,0.26250049486105825
+global,Springer Nature,Springer Nature,Total Articles,2605111,0.16781416387820366
+global,Springer Nature,Springer Nature,Open Access Articles with Creative Commons License,340896,0.20762603730491055
+global,Wiley,Wiley,Total Articles,1639042,0.10558262691734006
+global,Wiley,Wiley,Open Access Articles with Creative Commons License,302509,0.1842460601446517
+global,Top 4-13,Taylor and Francis,Total Articles,1064721,0.06858643043561863
+global,Top 4-13,Taylor and Francis,Open Access Articles with Creative Commons License,108478,0.06606958507803579
+global,Top 4-13,Sage,Total Articles,576699,0.03714938077279478
+global,Top 4-13,Sage,Open Access Articles with Creative Commons License,61385,0.037387133612485725
+global,Top 4-13,Wolters Kluwer Health,Total Articles,539215,0.03473476346135945
+global,Top 4-13,Wolters Kluwer Health,Open Access Articles with Creative Commons License,19024,0.011586752950133231
+global,Other,IEEE,Total Articles,521321,0.033582080658808404
+global,Other,IEEE,Open Access Articles with Creative Commons License,17898,0.010900951655881234
+global,Top 4-13,American Chemical Society,Total Articles,518286,0.03338657421498687
+global,Top 4-13,American Chemical Society,Open Access Articles with Creative Commons License,41651,0.02536794822992006
+global,Top 4-13,Oxford University Press,Total Articles,462221,0.029775019429861983
+global,Top 4-13,Oxford University Press,Open Access Articles with Creative Commons License,59365,0.036156832889227254
+global,Top 4-13,Royal Society of Chemistry,Total Articles,259088,0.016689744157111167
+global,Top 4-13,Royal Society of Chemistry,Open Access Articles with Creative Commons License,31207,0.019006928054815377
+global,Top 4-13,Cambridge University Press,Total Articles,229226,0.014766115351378546
+global,Top 4-13,Cambridge University Press,Open Access Articles with Creative Commons License,42175,0.025687095546250475
+global,Top 4-13,IOP Publishing,Total Articles,227263,0.014639664231371408
+global,Top 4-13,IOP Publishing,Open Access Articles with Creative Commons License,25694,0.01564918157594214
+global,Top 4-13,The Electrochemical Society,Total Articles,196793,0.012676869719594802
+global,Top 4-13,The Electrochemical Society,Open Access Articles with Creative Commons License,24213,0.014747164065473925
+global,Top 4-13,American Physical Society,Total Articles,158333,0.010199381143194138
+global,Top 4-13,American Physical Society,Open Access Articles with Creative Commons License,26655,0.016234488009135895
+global,Other,Emerald,Total Articles,154337,0.00994196969360243
+global,Other,Emerald,Open Access Articles with Creative Commons License,85,5.177007993909402e-5
+global,Other,Walter de Gruyter,Total Articles,152707,0.009836969527727935
+global,Other,Walter de Gruyter,Open Access Articles with Creative Commons License,11680,0.007113818043395509
+global,Other,American Physiological Society,Total Articles,151946,0.009787947977893278
+global,Other,American Physiological Society,Open Access Articles with Creative Commons License,1082,6.590026646364675e-4
+global,Other,AIP Publishing,Total Articles,140911,0.009077103296650913
+global,Other,AIP Publishing,Open Access Articles with Creative Commons License,1082,6.590026646364675e-4
+global,Other,BMJ Publishing,Total Articles,136902,0.008818854422423398
+global,Other,BMJ Publishing,Open Access Articles with Creative Commons License,12057,0.00734343357441949
+global,Other,Thieme,Total Articles,100591,0.006479798580049904
+global,Other,Thieme,Open Access Articles with Creative Commons License,2202,0.0013411496003045299
+global,Other,World Scientific,Total Articles,75276,0.004849075145011349
 global,Other,World Scientific,Open Access Articles with Creative Commons License,0,0
-global,Other,Bentham Science Publishers,Total Articles,63789,0.004329624598897669
-global,Other,Bentham Science Publishers,Open Access Articles with Creative Commons License,5407,0.0034974013667484903
-global,Other,American Psychological Association,Total Articles,60850,0.0041301424515656805
-global,Other,American Psychological Association,Open Access Articles with Creative Commons License,1375,8.893891028812973e-4
-global,Other,Brill,Total Articles,58027,0.003938533706442099
-global,Other,Brill,Open Access Articles with Creative Commons License,5397,0.003490933082363899
-global,Other,"Mary Ann Liebert, Inc.",Total Articles,52344,0.0035528048723870824
-global,Other,"Mary Ann Liebert, Inc.",Open Access Articles with Creative Commons License,0,0
-global,Other,Association for Computing Machinery,Total Articles,48306,0.0032787290265461257
-global,Other,Association for Computing Machinery,Open Access Articles with Creative Commons License,704,4.553672206752242e-4
-global,Other,IOS Press,Total Articles,43109,0.0029259870327780595
-global,Other,IOS Press,Open Access Articles with Creative Commons License,3884,0.0025122816549752428
-global,Other,Karger,Total Articles,39161,0.0026580198610643155
-global,Other,Karger,Open Access Articles with Creative Commons License,4946,0.0031992134566188337
-global,Other,EDP Sciences,Total Articles,37965,0.0025768423693293516
-global,Other,EDP Sciences,Open Access Articles with Creative Commons License,13478,0.008717953693552091
-global,Other,Trans Tech Publications,Total Articles,32137,0.0021812717825138253
-global,Other,Trans Tech Publications,Open Access Articles with Creative Commons License,1058,6.843444878897546e-4
-global,Other,National Academy of Sciences,Total Articles,32128,0.002180660915101104
-global,Other,National Academy of Sciences,Open Access Articles with Creative Commons License,17220,0.011138385710266138
-global,Other,Optica,Total Articles,30305,0.0020569263269465564
-global,Other,Optica,Open Access Articles with Creative Commons License,394,2.5485040475289536e-4
-global,Other,American Physiological Society,Total Articles,17860,0.0012122324434669359
-global,Other,American Physiological Society,Open Access Articles with Creative Commons License,0,0
-global,Other,The Royal Society,Total Articles,17416,0.001182096317772685
-global,Other,The Royal Society,Open Access Articles with Creative Commons License,1864,0.0012056882092878096
-global,Other,Canadian Science Publishing,Total Articles,16520,0.0011212810731284313
-global,Other,Canadian Science Publishing,Open Access Articles with Creative Commons License,975,6.306577274976472e-4
-global,Other,Future Science Group,Total Articles,16324,0.0011079777383625007
-global,Other,Future Science Group,Open Access Articles with Creative Commons License,2465,0.001594432100801744
-global,Other,American Meteorological Society,Total Articles,16005,0.001086325882289379
-global,Other,American Meteorological Society,Open Access Articles with Creative Commons License,407,2.63259174452864e-4
-global,Other,CSIRO,Total Articles,13714,9.308261886733235e-4
-global,Other,CSIRO,Open Access Articles with Creative Commons License,0,0
-global,Other,John Benjamins Publishing,Total Articles,12896,8.753051282726543e-4
-global,Other,John Benjamins Publishing,Open Access Articles with Creative Commons License,1459,9.437226917118638e-4
-global,Other,Company of Biologists,Total Articles,12163,8.255533712143528e-4
-global,Other,Company of Biologists,Open Access Articles with Creative Commons License,1963,0.001269724224695263
-global,Other,SPIE,Total Articles,11903,8.079060904024041e-4
-global,Other,SPIE,Open Access Articles with Creative Commons License,21,1.358339720764163e-5
-global,Other,Microbiology Society,Total Articles,8910,6.047587385940873e-4
-global,Other,Microbiology Society,Open Access Articles with Creative Commons License,1778,0.0011500609635803247
-global,Other,Akadémiai Kiadó,Total Articles,8655,5.874508285669838e-4
-global,Other,Akadémiai Kiadó,Open Access Articles with Creative Commons License,2927,0.0018932668393698596
-global,Other,Hogrefe,Total Articles,7750,5.260247165100086e-4
-global,Other,Hogrefe,Open Access Articles with Creative Commons License,1185,7.664916995740635e-4
-global,Other,Society for Neuroscience,Total Articles,6683,4.5360299102405e-4
+global,Other,"Mary Ann Liebert, Inc.",Total Articles,67815,0.004368457821336743
+global,Other,"Mary Ann Liebert, Inc.",Open Access Articles with Creative Commons License,7,4.2634183479253906e-6
+global,Other,Bentham Science Publishers,Total Articles,67401,0.004341789067550214
+global,Other,Bentham Science Publishers,Open Access Articles with Creative Commons License,5612,0.0034180433955081843
+global,Other,American Psychological Association,Total Articles,62999,0.004058224202409399
+global,Other,American Psychological Association,Open Access Articles with Creative Commons License,1540,9.379520365435858e-4
+global,Other,Brill,Total Articles,60045,0.003867935558241756
+global,Other,Brill,Open Access Articles with Creative Commons License,5749,0.003501484583174724
+global,Other,Association for Computing Machinery,Total Articles,49930,0.0032163547743027875
+global,Other,Association for Computing Machinery,Open Access Articles with Creative Commons License,700,4.26341834792539e-4
+global,Other,IOS Press,Total Articles,44459,0.002863927837186614
+global,Other,IOS Press,Open Access Articles with Creative Commons License,3877,0.002361324704986677
+global,Other,Karger,Total Articles,39903,0.0025704427109754483
+global,Other,Karger,Open Access Articles with Creative Commons License,5161,0.003143357441948991
+global,Other,EDP Sciences,Total Articles,39518,0.0025456420582995708
+global,Other,EDP Sciences,Open Access Articles with Creative Commons License,14734,0.008973886562618957
+global,Other,National Academy of Sciences,Total Articles,33147,0.002135239569473553
+global,Other,National Academy of Sciences,Open Access Articles with Creative Commons License,18227,0.011101332318233726
+global,Other,Trans Tech Publications,Total Articles,32370,0.0020851873431640545
+global,Other,Trans Tech Publications,Open Access Articles with Creative Commons License,1061,6.462124095926913e-4
+global,Other,Optica,Total Articles,31265,0.0020140062491203017
+global,Other,Optica,Open Access Articles with Creative Commons License,422,2.570232204035021e-4
+global,Other,The Royal Society,Total Articles,17940,0.0011556459974162228
+global,Other,The Royal Society,Open Access Articles with Creative Commons License,2177,0.0013259231062047964
+global,Other,Future Science Group,Total Articles,16819,0.0010834342268976284
+global,Other,Future Science Group,Open Access Articles with Creative Commons License,2591,0.0015780738484963838
+global,Other,Canadian Science Publishing,Total Articles,16754,0.001079247103718584
+global,Other,Canadian Science Publishing,Open Access Articles with Creative Commons License,1037,6.315949752569471e-4
+global,Other,American Meteorological Society,Total Articles,16319,0.0010512255870588263
+global,Other,American Meteorological Society,Open Access Articles with Creative Commons License,422,2.570232204035021e-4
+global,Other,CSIRO,Total Articles,14295,9.208450129913548e-4
+global,Other,CSIRO,Open Access Articles with Creative Commons License,43,2.6189569851541683e-5
+global,Other,John Benjamins Publishing,Total Articles,13308,8.572651579495593e-4
+global,Other,John Benjamins Publishing,Open Access Articles with Creative Commons License,1542,9.391701560715645e-4
+global,Other,Company of Biologists,Total Articles,12526,8.068908452416727e-4
+global,Other,Company of Biologists,Open Access Articles with Creative Commons License,2085,0.0012698896079177768
+global,Other,SPIE,Total Articles,12011,7.737159462077064e-4
+global,Other,SPIE,Open Access Articles with Creative Commons License,21,1.2790255043776171e-05
+global,Other,American Thoracic Society,Total Articles,10387,6.691022840112769e-4
+global,Other,American Thoracic Society,Open Access Articles with Creative Commons License,0,0
+global,Other,Microbiology Society,Total Articles,9131,5.881941807362057e-4
+global,Other,Microbiology Society,Open Access Articles with Creative Commons License,1901,0.0011578226113437382
+global,Other,Akadémiai Kiadó,Total Articles,8865,5.71059184341963e-4
+global,Other,Akadémiai Kiadó,Open Access Articles with Creative Commons License,3042,0.0018527598020555767
+global,Other,Hogrefe,Total Articles,7973,5.135989708695399e-4
+global,Other,Hogrefe,Open Access Articles with Creative Commons License,1259,7.668062428625809e-4
+global,Other,Society for Neuroscience,Total Articles,6907,4.449301507332136e-4
 global,Other,Society for Neuroscience,Open Access Articles with Creative Commons License,0,0
-global,Other,Radiological Society of North America,Total Articles,5605,3.80434649811432e-4
+global,Other,Radiological Society of North America,Total Articles,5808,3.7413556036752636e-4
 global,Other,Radiological Society of North America,Open Access Articles with Creative Commons License,0,0
-global,Other,Portland Press,Total Articles,5445,3.6957478469638665e-4
-global,Other,Portland Press,Open Access Articles with Creative Commons License,2566,0.0016597617730861156
-global,Other,Bioscientifica,Total Articles,4953,3.361806994676223e-4
-global,Other,Bioscientifica,Open Access Articles with Creative Commons License,698,4.5148625004446947e-4
-global,Other,The Geological Society of London,Total Articles,4583,3.110672613890799e-4
-global,Other,The Geological Society of London,Open Access Articles with Creative Commons License,750,4.85121328844344e-4
-global,Other,Rockefeller University Press,Total Articles,4389,2.9789967493708746e-4
-global,Other,Rockefeller University Press,Open Access Articles with Creative Commons License,956,6.183679871669238e-4
-global,Other,European Respiratory Society,Total Articles,4255,2.8880453790323696e-4
-global,Other,European Respiratory Society,Open Access Articles with Creative Commons License,882,5.705026827209485e-4
-global,Other,Bristol University Press,Total Articles,4172,2.831709828748072e-4
-global,Other,Bristol University Press,Open Access Articles with Creative Commons License,547,3.5381515583714153e-4
-global,Other,Inter-Research Science Publisher,Total Articles,4130,2.803202682821078e-4
-global,Other,Inter-Research Science Publisher,Open Access Articles with Creative Commons License,617,3.990931465292803e-4
-global,Other,Royal College of General Practitioners,Total Articles,3689,2.503877650587641e-4
-global,Other,Royal College of General Practitioners,Open Access Articles with Creative Commons License,548,3.544619842756007e-4
-global,Other,Cold Spring Harbor Laboratory Press,Total Articles,2500,1.6968539242258343e-4
+global,Other,Portland Press,Total Articles,5520,3.555833838203763e-4
+global,Other,Portland Press,Open Access Articles with Creative Commons License,2632,0.0016030452988199466
+global,Other,Bioscientifica,Total Articles,5096,3.28270457237072e-4
+global,Other,Bioscientifica,Open Access Articles with Creative Commons License,750,4.567948229920061e-4
+global,Other,The Geological Society of London,Total Articles,4717,3.0385630823925993e-4
+global,Other,The Geological Society of London,Open Access Articles with Creative Commons License,790,4.8115721355157975e-4
+global,Other,Rockefeller University Press,Total Articles,4500,2.898777585492198e-4
+global,Other,Rockefeller University Press,Open Access Articles with Creative Commons License,996,6.066235249333841e-4
+global,Other,Bristol University Press,Total Articles,4350,2.8021516659757916e-4
+global,Other,Bristol University Press,Open Access Articles with Creative Commons License,597,3.6360867910163687e-4
+global,Other,European Respiratory Society,Total Articles,4344,2.7982866291951353e-4
+global,Other,European Respiratory Society,Open Access Articles with Creative Commons License,906,5.518081461743433e-4
+global,Other,Inter-Research Science Publisher,Total Articles,4230,2.724850930362666e-4
+global,Other,Inter-Research Science Publisher,Open Access Articles with Creative Commons License,658,4.0076132470498666e-4
+global,Other,Royal College of General Practitioners,Total Articles,3794,2.443991590968311e-4
+global,Other,Royal College of General Practitioners,Open Access Articles with Creative Commons License,586,3.569090216977541e-4
+global,Other,Cold Spring Harbor Laboratory Press,Total Articles,2598,1.6735609260241623e-4
 global,Other,Cold Spring Harbor Laboratory Press,Open Access Articles with Creative Commons License,0,0
-global,Other,Edward Elgar Publishing,Total Articles,1496,1.0153973882567392e-4
-global,Other,Edward Elgar Publishing,Open Access Articles with Creative Commons License,71,4.5924819130597894e-5
-global,Other,Royal Irish Academy,Total Articles,1260,8.552143778098203e-5
-global,Other,Royal Irish Academy,Open Access Articles with Creative Commons License,23,1.4877054084559881e-5
-global,Other,White Horse Press,Total Articles,1100,7.466157266593671e-5
-global,Other,White Horse Press,Open Access Articles with Creative Commons License,10,6.468284384591253e-6
-global,Other,IWA Publishing,Total Articles,498,3.380133017057862e-5
-global,Other,IWA Publishing,Open Access Articles with Creative Commons License,226,1.461832270917623e-4
+global,Other,Edward Elgar Publishing,Total Articles,1549,9.978236622060922e-5
+global,Other,Edward Elgar Publishing,Open Access Articles with Creative Commons License,73,4.446136277122192e-5
+global,Other,Royal Irish Academy,Total Articles,1170,7.536821722279715e-5
+global,Other,Royal Irish Academy,Open Access Articles with Creative Commons License,23,1.4008374571754853e-5
+global,Other,White Horse Press,Total Articles,898,5.784671715048875e-5
+global,Other,White Horse Press,Open Access Articles with Creative Commons License,11,6.699657403882756e-6
+global,Other,IWA Publishing,Total Articles,646,4.161356267173244e-5
+global,Other,IWA Publishing,Open Access Articles with Creative Commons License,312,1.9002664636467452e-4

@@ -1,8 +1,8 @@
 cr_year,cat,article_total,name,oa_articles,oa_share
-2017,Germany,124,Crossref,0,0
-2017,Germany,124,Unpaywall,25,0.20161290322580644
-2018,Germany,148,Crossref,0,0
-2018,Germany,148,Unpaywall,37,0.25
+2017,Germany,120,Crossref,1,0.008333333333333333
+2017,Germany,120,Unpaywall,24,0.2
+2018,Germany,146,Crossref,0,0
+2018,Germany,146,Unpaywall,36,0.2465753424657534
 2019,Germany,125,Crossref,0,0
 2019,Germany,125,Unpaywall,23,0.184
 2020,Germany,187,Crossref,54,0.2887700534759358
@@ -12,6 +12,8 @@ cr_year,cat,article_total,name,oa_articles,oa_share
 2022,Germany,167,Crossref,1,0.005988023952095809
 2022,Germany,167,Unpaywall,116,0.6946107784431138
 2023,Germany,169,Crossref,27,0.15976331360946747
-2023,Germany,169,Unpaywall,109,0.6449704142011834
-2024,Germany,151,Crossref,110,0.7284768211920529
+2023,Germany,169,Unpaywall,110,0.650887573964497
+2024,Germany,151,Crossref,111,0.7350993377483444
 2024,Germany,151,Unpaywall,103,0.6821192052980133
+2025,Germany,55,Crossref,36,0.6545454545454545
+2025,Germany,55,Unpaywall,35,0.6363636363636364
