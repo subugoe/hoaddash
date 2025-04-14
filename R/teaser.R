@@ -20,25 +20,25 @@ cc_ind_global <- function(jn_ind_df = jn_ind_df) {
     distinct() %>%
     ungroup()
 }
-#' Publications 2017 - 2024
+#' Publications 2017 -
 all_publications <- cc_ind_global(jn_ind_df = jn_ind_df) |>
   distinct(cr_year, jn_all) |>
   pull(jn_all) |>
   sum(na.rm = TRUE)
-#' Publications 2023
-all_publications_2023 <-
+#' Publications 2024
+all_publications_2024 <-
   cc_ind_global(jn_ind_df = jn_ind_df) |>
   distinct(cr_year, jn_all) |>
-  filter(cr_year == "2023") |>
+  filter(cr_year == "2024") |>
   pull(jn_all) |>
   sum(na.rm = TRUE)
-#' CC publications 2017 - 2022
+#' CC publications 2017 -
 cc_publications <- cc_ind_global(jn_ind_df = jn_ind_df) |>
   pull(cc_total) |>
   sum(na.rm = TRUE)
-#' CC publications 2023
-cc_publications_23 <- cc_ind_global(jn_ind_df = jn_ind_df) |>
-  filter(cr_year == "2023") |>
+#' CC publications 2024
+cc_publications_24 <- cc_ind_global(jn_ind_df = jn_ind_df) |>
+  filter(cr_year == "2024") |>
   pull(cc_total) |>
   sum(na.rm = TRUE)
 
@@ -66,25 +66,25 @@ cc_ind_de <- function(jn_aff_df = jn_aff_df) {
     mutate_if(is.numeric, ~replace(., is.na(.), 0))
 }
 
-#' Publications 2017 - 2024
+#' Publications 2017 -
 all_publications_de <- cc_ind_de(jn_aff_df = jn_aff_df) |>
   distinct(cr_year, jn_all) |>
   pull(jn_all) |>
   sum(na.rm = TRUE)
 #' Publications 2023
-all_publications_2023_de <-
+all_publications_2024_de <-
   cc_ind_de(jn_aff_df = jn_aff_df) |>
   distinct(cr_year, jn_all) |>
-  filter(cr_year == "2023") |>
+  filter(cr_year == "2024") |>
   pull(jn_all) |>
   sum(na.rm = TRUE)
-#' CC publications 2017 - 2023
+#' CC publications 2017 - 
 cc_publications_de <- cc_ind_de(jn_aff_df = jn_aff_df) |>
   pull(cc_total) |>
   sum(na.rm = TRUE)
-#' CC publications 2023
-cc_publications_23_de <- cc_ind_de(jn_aff_df = jn_aff_df) |>
-  filter(cr_year == "2023") |>
+#' CC publications 2024
+cc_publications_24_de <- cc_ind_de(jn_aff_df = jn_aff_df) |>
+  filter(cr_year == "2024") |>
   pull(cc_total) |>
   sum(na.rm = TRUE)
 
@@ -97,10 +97,10 @@ basic_stat <- function(...) {
     cc_publications_de = cc_publications_de,
     all_publications_de = all_publications_de,
     all_publications = all_publications,
-    cc_publications_23 = cc_publications_23,
-    all_publications_2023 = all_publications_2023,
-    cc_publications_23_de = cc_publications_23_de,
-    all_publications_2023_de = all_publications_2023_de
+    cc_publications_24 = cc_publications_24,
+    all_publications_2024 = all_publications_2024,
+    cc_publications_24_de = cc_publications_24_de,
+    all_publications_2024_de = all_publications_2024_de
   ) |>
     mutate(across(everything(), ~ case_when(
     . < 1000 ~ as.character(.),
@@ -110,7 +110,7 @@ basic_stat <- function(...) {
 
   glue::glue('<div class="grid">
  <div class="g-col-lg-6 g-col-12">
- <p style="text-align: center;" class="text-muted">2017-2024</p>
+ <p style="text-align: center;" class="text-muted">2017-2025</p>
   <table style="margin:auto;padding:0;width:80%;text-align: center;">
   <colgroup>
        <col span="1" style="width: 50%;">
@@ -134,7 +134,7 @@ basic_stat <- function(...) {
    </table>
 </div>
  <div class="g-col-lg-6 g-col-12">
- <p style="text-align: center;" class="text-muted">2023</p>
+ <p style="text-align: center;" class="text-muted">2024</p>
  <table style="margin:auto;padding:0;width:80%;text-align: center;">
   <colgroup>
        <col span="1" style="width: 50%;">
@@ -147,16 +147,16 @@ basic_stat <- function(...) {
             <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); font-size: 100%; border-left: 1px solid rgb(26, 55, 113);">Germany*</td>
          </tr>
          <tr >
-            <td colspan="1"  scope="row" style="font-size: 157%;">{round(cc_publications_23 / all_publications_2023 * 100, 1)}%</td>
-            <td colspan="1"  style="font-size: 157%; border-left: 1px solid rgb(26, 55, 113);">{round(cc_publications_23_de / all_publications_2023_de * 100, 1)}%</td>
+            <td colspan="1"  scope="row" style="font-size: 157%;">{round(cc_publications_24 / all_publications_2024 * 100, 1)}%</td>
+            <td colspan="1"  style="font-size: 157%; border-left: 1px solid rgb(26, 55, 113);">{round(cc_publications_24_de / all_publications_2024_de * 100, 1)}%</td>
          </tr>
          <tr >
-            <td colspan="1"  scope="row" style="border-top: 1px solid rgb(255, 255, 255); color: rgb(102, 102, 102); font-size: 91%;">{number_format$cc_publications_23} out of {number_format$all_publications_2023}</td>
-            <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); color: rgb(102, 102, 102); font-size: 91%; border-left: 1px solid rgb(26, 55, 113);">{number_format$cc_publications_23_de} out of {number_format$all_publications_2023_de}</td>
+            <td colspan="1"  scope="row" style="border-top: 1px solid rgb(255, 255, 255); color: rgb(102, 102, 102); font-size: 91%;">{number_format$cc_publications_24} out of {number_format$all_publications_2024}</td>
+            <td colspan="1"  style="border-top: 1px solid rgb(255, 255, 255); color: rgb(102, 102, 102); font-size: 91%; border-left: 1px solid rgb(26, 55, 113);">{number_format$cc_publications_24_de} out of {number_format$all_publications_2024_de}</td>
          </tr>
       </tbody>
    </table>
 </div>
 </div>')
 }
-  
+

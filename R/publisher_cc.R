@@ -89,7 +89,7 @@ top_13_plot <- function(.collection = NULL, ...) {
                         `CC BY-NC-ND` = "#C82E6B"
                       )) +
     theme_minimal(base_family = "Atkinson Hyperlegible", base_size = 13) +
-    labs(y = NULL, x = "2017-2024") +
+    labs(y = NULL, x = "2017-2025") +
     theme(panel.grid.major.x = element_blank(),
           panel.grid.minor.x = element_blank(),
           axis.text.x=element_blank(),

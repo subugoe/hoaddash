@@ -421,7 +421,7 @@ export_files(
 ```{js, echo = FALSE}
  /* https://stackoverflow.com/a/66216595 */
 $(document).ready(function() {
-    document.getElementById("filter_year").getElementsByClassName("selectized")[0].selectize.setValue("2023", false);
+    document.getElementById("filter_year").getElementsByClassName("selectized")[0].selectize.setValue("2024", false);
      document.getElementById("filter_input").getElementsByClassName("selectized")[0].selectize.setValue("Global", false);
 });
 ```
@@ -523,7 +523,7 @@ export_files(
 ```{js,echo = FALSE}
  /* https://stackoverflow.com/a/66216595 */
 $(document).ready(function() {
-    document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2023", false);
+    document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2024", false);
     document.getElementById("filter_country_deal").getElementsByClassName("selectized")[0].selectize.setValue("All", false);
 });
 ```
@@ -615,7 +615,7 @@ export_files(.data =  shared_upw_cr_diff_year$data())
 ```{js, echo = FALSE}
  /* https://stackoverflow.com/a/66216595 */
 $(document).ready(function() {
-    document.getElementById("filter_cr_year").getElementsByClassName("selectized")[0].selectize.setValue("2023", false);
+    document.getElementById("filter_cr_year").getElementsByClassName("selectized")[0].selectize.setValue("2024", false);
      document.getElementById("filter_cr_input").getElementsByClassName("selectized")[0].selectize.setValue("Global", false);
 });
 ```
