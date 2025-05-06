@@ -14,13 +14,13 @@ summarise_oa_all <-
     pub_df <- .data |>
       inner_join(hoaddata::jct_hybrid_jns, by = "issn_l", multiple = "all")
     pub_all <- pub_df |>
-      distinct(issn_l, cr_year, jn_all, esac_publisher) |>
+      distinct(across({{ var_summary }}), issn_l, cr_year, jn_all) |>
       group_by(across({{ var_summary }})) |>
       summarise(articles = sum(jn_all))
 
     pub_cc <- pub_df |>
       filter(!is.na(cc)) |>
-      distinct(issn_l, cr_year, cc, cc_total, esac_publisher) |>
+      distinct(across({{ var_summary }}), issn_l, cr_year, cc, cc_total) |>
       group_by(across({{ var_summary }})) |>
       summarise(oa_articles = sum(cc_total))
 
@@ -39,17 +39,18 @@ summarise_oa_de <-
       filter(country_code == "DE") |>
       mutate(cr_year = as.factor(cr_year))
     pub_all_de <- pub_df_de |>
-      distinct(issn_l, cr_year, articles_total, esac_publisher) |>
+      distinct(across({{ var_summary }}), issn_l, cr_year, articles_total) |>
       group_by(across({{ var_summary }})) |>
       summarise(articles = sum(articles_total))
+
     pub_cc_de <- pub_df_de |>
       filter(!is.na(cc)) |>
       distinct(
+        across({{ var_summary }}),
         issn_l,
         cr_year,
         cc,
-        articles_under_cc_variant,
-        esac_publisher
+        articles_under_cc_variant
       ) |>
       group_by(across({{ var_summary }})) |>
       summarise(oa_articles = sum(articles_under_cc_variant))
