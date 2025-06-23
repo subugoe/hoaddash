@@ -55,6 +55,8 @@ website:
                 text: Wiley
               - section: "Others"
                 contents:
+                  - text: "AIP Publishing"
+                    href: jct/aippublishing/index.qmd
                   - text: American Chemical Society 
                     href: jct/americanchemicalsociety/index.qmd
                   - text: "American Physical Society"
