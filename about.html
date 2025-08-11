@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-90d44d20812781d8fb8a78b66c7e7a2e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6eab0263727efe9be21239f7e0f4c1f3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-119f5877f581f344c5a6eabeddb8f731.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-05c309b534599502c7a97c51f0de8dbf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -515,7 +515,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="data-and-methods">Data and methods</h2>
 <p>To engage with everyone, our open source dashboards combine open data from multiple sources as follows:</p>
 <ul>
-<li>Journals included in transformative agreements were obtained from the <a href="https://journalcheckertool.org/transformative-agreements/">cOAlition S Transformative Agreements Public Data</a> (July 2021, July 2022, May 2023, and December 2023 snapshots). Agreements with German consortia were derived from <a href="https://doi.org/10.26165/JUELICH-DATA/VTQXLM">Germany’s Open Access Monitor</a> (March 2022). We enriched both journal data sources with ISSN-L, a linking identifier for ISSN variants. Then, we excluded fully open access journals from the cOAlition S Transformative Agreements Public Data by cross-checking with several datasets of fully open access journals: the <a href="https://doaj.org/">Directory of Open Access Journals (DOAJ)</a>, <a href="https://doi.org/10.4119/unibi/2961544">Bielefeld GOLD OA</a> and <a href="https://openalex.org/">OpenAlex</a>.</li>
+<li>Journals included in transformative agreements were obtained from the <a href="https://journalcheckertool.org/transformative-agreements/">cOAlition S Transformative Agreements Public Data</a>, starting from July 2021. Agreements with German consortia were derived from <a href="https://doi.org/10.26165/JUELICH-DATA/VTQXLM">Germany’s Open Access Monitor</a> (March 2022). We enriched both journal data sources with ISSN-L, a linking identifier for ISSN variants. Then, we excluded fully open access journals from the cOAlition S Transformative Agreements Public Data by cross-checking with several datasets of fully open access journals: the <a href="https://doaj.org/">Directory of Open Access Journals (DOAJ)</a>, <a href="https://doi.org/10.4119/unibi/2961544">Bielefeld GOLD OA</a> and <a href="https://openalex.org/">OpenAlex</a>.</li>
 <li><a href="https://www.crossref.org/">Crossref</a> is our main data source for determining the publication volume in hybrid journals including the uptake of Open Access through Creative Commons licenses. The <a href="https://esac-initiative.org/about/transformative-agreements/reference-guide/">ESAC guidelines</a>, a community recommendation for negotiating transformative agreements, require publishers to make key metadata elements publicly available through Crossref, such as Creative Commons licensing information for Open Access articles. As a <a href="https://www.crossref.org/services/metadata-retrieval/metadata-plus/">Crossref Metadata Plus subscriber</a>, we used monthly Crossref snapshots to derive publication data.</li>
 <li><a href="https://openalex.org/">OpenAlex</a> is our data source for determining the country affiliation of lead authors. A <a href="https://en.wikipedia.org/wiki/Lead_author">lead author</a> is the first named author of a scholarly article who has usually carried out most of the research presented in the article, although author roles can vary across disciplines. We used OpenAlex monthly snaphots as a data source to determine lead author affiliations.</li>
 <li>To highlight potential gaps between Crossref open licensing metadata and information provided via journal webpages, we used <a href="https://openalex.org/">OpenAlex</a> as a complementary data source for Open Access articles in hybrid journals.</li>
@@ -536,7 +536,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Crossref metadata does not distinguish between article types. We used an extended version of the Unpwaywall paratext recognition approach to exclude non-scientific content from our data. However, the annual publication volume of some journals may be inflated by proceedings supplements.</li>
 <li>OpenAlex, from which we obtained our affiliation data, is a relatively new scholarly data source. There is ongoing activity to improve the parsing, normalisation, and disambiguation of institutions (see <a href="https://doi.org/10.48550/arXiv.2205.01833">here</a>). We used <a href="https://github.com/subugoe/hoaddata/blob/main/inst/sql/cr_openalex_inst_full.sql">pattern matching to increase the recall of country affiliations</a>.</li>
 </ul>
-<p>To better understand the strengths and limitations of our data work, we commissioned a study from the <a href="https://www.dzhw.eu/forschung/projekt?pr_id=484">Deutsche Zentrum für Hochschul- und Wissenschaftsforschung</a>. The aim is to compare our open data with information contained in the proprietary bibliometrics database Scopus in relation to hybrid open access. Key findings will be made available.</p>
+<p>To better understand the strengths and limitations of our data work, a comparision with Scopus and Web of Science as provided by the German <a href="https://bibliometrie.info/">Kompetenznetzwerk Bibliometrie</a> was carried out and <a href="https://doi.org/10.1007/s11192-025-05390-3">published in Scientometrics</a>. The analysis revealed strong alignment between first and corresponding authorship when measuring open access uptake by publisher and country across the investigated data sources.</p>
 </section>
 <section id="funding" class="level2">
 <h2 class="anchored" data-anchor-id="funding">Funding</h2>
