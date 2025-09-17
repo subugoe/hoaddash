@@ -1,11 +1,11 @@
 cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
-2017,Elsevier,Germany,0.055,0.055,-0.001
-2017,Elsevier,Global,0.031,0.034,-0.003
-2017,Springer Nature,Germany,0.063,0.057,0.005
+2017,Elsevier,Germany,0.054,0.055,-0.001
+2017,Elsevier,Global,0.03,0.034,-0.004
+2017,Springer Nature,Germany,0.063,0.058,0.005
 2017,Springer Nature,Global,0.065,0.061,0.004
 2017,Wiley,Germany,0.049,0.05,-0.002
 2017,Wiley,Global,0.044,0.046,-0.002
-2017,Taylor and Francis,Germany,0.065,0.064,0.001
+2017,Taylor and Francis,Germany,0.065,0.065,0
 2017,Taylor and Francis,Global,0.032,0.034,-0.002
 2017,Sage,Germany,0.012,0.024,-0.012
 2017,Sage,Global,0.008,0.026,-0.018
@@ -17,10 +17,10 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2017,American Chemical Society,Global,0.001,0.065,-0.064
 2017,Oxford University Press,Germany,0.035,0.073,-0.038
 2017,Oxford University Press,Global,0.026,0.063,-0.036
-2017,American Physiological Society,Germany,0.048,0.052,-0.003
-2017,American Physiological Society,Global,0.024,0.028,-0.004
-2017,AIP Publishing,Germany,0.051,0.053,-0.001
-2017,AIP Publishing,Global,0.024,0.03,-0.006
+2017,American Physiological Society,Germany,0.049,0.052,-0.003
+2017,American Physiological Society,Global,0.024,0.027,-0.003
+2017,AIP Publishing,Germany,0.052,0.053,-0.001
+2017,AIP Publishing,Global,0.024,0.029,-0.005
 2017,Royal Society of Chemistry,Germany,0.085,0.182,-0.097
 2017,Royal Society of Chemistry,Global,0.024,0.083,-0.059
 2017,Cambridge University Press,Germany,0.034,0.031,0.003
@@ -32,19 +32,19 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2017,American Physical Society,Germany,0.025,0.115,-0.09
 2017,American Physical Society,Global,0.023,0.189,-0.166
 2017,Emerald,Germany,0,0.027,-0.027
-2017,Emerald,Global,0.001,0.017,-0.015
+2017,Emerald,Global,0.002,0.017,-0.015
 2017,Walter de Gruyter,Germany,0.034,0.019,0.015
 2017,Walter de Gruyter,Global,0.023,0.02,0.003
-2017,BMJ Publishing,Germany,0.046,0.087,-0.041
-2017,BMJ Publishing,Global,0.023,0.066,-0.043
+2017,BMJ Publishing,Germany,0.02,0.087,-0.066
+2017,BMJ Publishing,Global,0.006,0.067,-0.061
 2017,Thieme,Germany,0.013,0.018,-0.005
 2017,Thieme,Global,0.009,0.014,-0.005
 2017,World Scientific,Germany,0,0.053,-0.053
 2017,World Scientific,Global,0,0.017,-0.017
-2017,"Mary Ann Liebert, Inc.",Germany,0,0.022,-0.022
-2017,"Mary Ann Liebert, Inc.",Global,0,0.01,-0.01
 2017,Bentham Science Publishers,Germany,0.01,0,0.01
 2017,Bentham Science Publishers,Global,0.002,0,0.002
+2017,"Mary Ann Liebert, Inc.",Germany,0,0.022,-0.022
+2017,"Mary Ann Liebert, Inc.",Global,0,0.01,-0.01
 2017,American Psychological Association,Germany,0.012,0.039,-0.027
 2017,American Psychological Association,Global,0.01,0.129,-0.118
 2017,Brill,Germany,0.01,0.013,-0.003
@@ -57,10 +57,10 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2017,EDP Sciences,Global,0.018,0.036,-0.018
 2017,Karger,Germany,0.031,0.033,-0.002
 2017,Karger,Global,0.041,0.043,-0.001
-2017,Trans Tech Publications,Germany,0.14,0.14,0
-2017,Trans Tech Publications,Global,0.009,0.009,0
 2017,National Academy of Sciences,Germany,0.067,0.088,-0.021
 2017,National Academy of Sciences,Global,0.053,0.073,-0.02
+2017,Trans Tech Publications,Germany,0.14,0.14,0
+2017,Trans Tech Publications,Global,0.009,0.009,0
 2017,Optica,Germany,0.008,0.015,-0.008
 2017,Optica,Global,0.01,0.024,-0.014
 2017,The Royal Society,Germany,0.017,0.2,-0.183
@@ -69,7 +69,7 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2017,American Thoracic Society,Global,0,0.002,-0.002
 2017,Canadian Science Publishing,Germany,0,0.077,-0.077
 2017,Canadian Science Publishing,Global,0,0.021,-0.021
-2017,Future Science Group,Germany,0.082,0.082,0
+2017,Future Science Group,Germany,0.083,0.083,0
 2017,Future Science Group,Global,0.093,0.092,0
 2017,American Meteorological Society,Germany,0.013,0.6,-0.588
 2017,American Meteorological Society,Global,0.021,0.717,-0.696
@@ -117,12 +117,12 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2017,IWA Publishing,Germany,0,0,0
 2017,IWA Publishing,Global,0.013,0.027,-0.013
 2018,Elsevier,Germany,0.065,0.068,-0.003
-2018,Elsevier,Global,0.034,0.038,-0.005
+2018,Elsevier,Global,0.033,0.038,-0.005
 2018,Springer Nature,Germany,0.071,0.071,0
 2018,Springer Nature,Global,0.069,0.07,-0.002
 2018,Wiley,Germany,0.061,0.062,-0.001
 2018,Wiley,Global,0.058,0.06,-0.002
-2018,Taylor and Francis,Germany,0.064,0.065,-0.001
+2018,Taylor and Francis,Germany,0.064,0.066,-0.002
 2018,Taylor and Francis,Global,0.024,0.026,-0.002
 2018,Sage,Germany,0.016,0.031,-0.015
 2018,Sage,Global,0.01,0.029,-0.02
@@ -134,10 +134,10 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2018,American Chemical Society,Global,0.001,0.055,-0.054
 2018,Oxford University Press,Germany,0.072,0.082,-0.01
 2018,Oxford University Press,Global,0.05,0.074,-0.024
-2018,American Physiological Society,Germany,0.055,0.059,-0.004
-2018,American Physiological Society,Global,0.022,0.027,-0.005
-2018,AIP Publishing,Germany,0.059,0.058,0.001
-2018,AIP Publishing,Global,0.023,0.029,-0.005
+2018,American Physiological Society,Germany,0.056,0.059,-0.003
+2018,American Physiological Society,Global,0.022,0.027,-0.004
+2018,AIP Publishing,Germany,0.06,0.058,0.002
+2018,AIP Publishing,Global,0.023,0.028,-0.005
 2018,Royal Society of Chemistry,Germany,0.192,0.192,0
 2018,Royal Society of Chemistry,Global,0.07,0.071,-0
 2018,Cambridge University Press,Germany,0.054,0.056,-0.001
@@ -152,16 +152,16 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2018,Emerald,Global,0.004,0.017,-0.013
 2018,Walter de Gruyter,Germany,0.025,0.017,0.008
 2018,Walter de Gruyter,Global,0.026,0.026,0
-2018,BMJ Publishing,Germany,0.024,0.065,-0.04
-2018,BMJ Publishing,Global,0.022,0.073,-0.05
+2018,BMJ Publishing,Germany,0.016,0.065,-0.048
+2018,BMJ Publishing,Global,0.007,0.073,-0.066
 2018,Thieme,Germany,0.181,0.199,-0.018
 2018,Thieme,Global,0.082,0.091,-0.009
 2018,World Scientific,Germany,0,0.043,-0.043
 2018,World Scientific,Global,0,0.012,-0.012
-2018,"Mary Ann Liebert, Inc.",Germany,0,0.073,-0.073
-2018,"Mary Ann Liebert, Inc.",Global,0,0.021,-0.021
 2018,Bentham Science Publishers,Germany,0.022,0,0.022
 2018,Bentham Science Publishers,Global,0.028,0,0.028
+2018,"Mary Ann Liebert, Inc.",Germany,0,0.073,-0.073
+2018,"Mary Ann Liebert, Inc.",Global,0,0.021,-0.021
 2018,American Psychological Association,Germany,0.023,0.05,-0.027
 2018,American Psychological Association,Global,0.011,0.134,-0.124
 2018,Brill,Germany,0.034,0.031,0.003
@@ -174,10 +174,10 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2018,EDP Sciences,Global,0.097,0.096,0.001
 2018,Karger,Germany,0.03,0.03,0
 2018,Karger,Global,0.048,0.049,-0.001
-2018,Trans Tech Publications,Germany,0.241,0.241,0
-2018,Trans Tech Publications,Global,0.031,0.031,0
 2018,National Academy of Sciences,Germany,0.442,0.446,-0.004
 2018,National Academy of Sciences,Global,0.29,0.309,-0.019
+2018,Trans Tech Publications,Germany,0.241,0.241,0
+2018,Trans Tech Publications,Global,0.031,0.031,0
 2018,Optica,Germany,0.006,0.019,-0.012
 2018,Optica,Global,0.011,0.024,-0.013
 2018,The Royal Society,Germany,0.014,0.247,-0.233
@@ -234,12 +234,12 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2018,IWA Publishing,Germany,0,0,0
 2018,IWA Publishing,Global,0.065,0.065,0
 2019,Elsevier,Germany,0.078,0.081,-0.003
-2019,Elsevier,Global,0.038,0.042,-0.004
+2019,Elsevier,Global,0.037,0.042,-0.005
 2019,Springer Nature,Germany,0.081,0.082,-0.001
 2019,Springer Nature,Global,0.074,0.076,-0.002
-2019,Wiley,Germany,0.356,0.341,0.015
+2019,Wiley,Germany,0.357,0.341,0.015
 2019,Wiley,Global,0.086,0.086,0
-2019,Taylor and Francis,Germany,0.115,0.114,0.002
+2019,Taylor and Francis,Germany,0.115,0.114,0.001
 2019,Taylor and Francis,Global,0.048,0.048,-0
 2019,Sage,Germany,0.072,0.149,-0.077
 2019,Sage,Global,0.02,0.037,-0.017
@@ -252,9 +252,9 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2019,Oxford University Press,Germany,0.163,0.173,-0.009
 2019,Oxford University Press,Global,0.082,0.108,-0.026
 2019,American Physiological Society,Germany,0.047,0.049,-0.002
-2019,American Physiological Society,Global,0.024,0.033,-0.009
+2019,American Physiological Society,Global,0.024,0.033,-0.008
 2019,AIP Publishing,Germany,0.049,0.049,0.001
-2019,AIP Publishing,Global,0.025,0.034,-0.008
+2019,AIP Publishing,Global,0.025,0.033,-0.008
 2019,Royal Society of Chemistry,Germany,0.292,0.292,0
 2019,Royal Society of Chemistry,Global,0.082,0.082,-0
 2019,Cambridge University Press,Germany,0.31,0.251,0.059
@@ -269,16 +269,16 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2019,Emerald,Global,0,0.014,-0.014
 2019,Walter de Gruyter,Germany,0.055,0.031,0.023
 2019,Walter de Gruyter,Global,0.033,0.02,0.014
-2019,BMJ Publishing,Germany,0.067,0.119,-0.052
-2019,BMJ Publishing,Global,0.039,0.079,-0.04
+2019,BMJ Publishing,Germany,0.052,0.122,-0.069
+2019,BMJ Publishing,Global,0.025,0.079,-0.054
 2019,Thieme,Germany,0.203,0.259,-0.056
 2019,Thieme,Global,0.081,0.103,-0.021
 2019,World Scientific,Germany,0,0.032,-0.032
 2019,World Scientific,Global,0,0.01,-0.01
-2019,"Mary Ann Liebert, Inc.",Germany,0,0.129,-0.129
-2019,"Mary Ann Liebert, Inc.",Global,0,0.066,-0.066
 2019,Bentham Science Publishers,Germany,0.239,0,0.239
 2019,Bentham Science Publishers,Global,0.194,0.003,0.192
+2019,"Mary Ann Liebert, Inc.",Germany,0,0.129,-0.129
+2019,"Mary Ann Liebert, Inc.",Global,0,0.066,-0.066
 2019,American Psychological Association,Germany,0.059,0.077,-0.018
 2019,American Psychological Association,Global,0.01,0.131,-0.121
 2019,Brill,Germany,0.048,0.033,0.014
@@ -291,10 +291,10 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2019,EDP Sciences,Global,0.184,0.185,-0.001
 2019,Karger,Germany,0.034,0.044,-0.009
 2019,Karger,Global,0.047,0.051,-0.004
-2019,Trans Tech Publications,Germany,0.132,0.132,0
-2019,Trans Tech Publications,Global,0.017,0.017,0
 2019,National Academy of Sciences,Germany,0.462,0.466,-0.005
 2019,National Academy of Sciences,Global,0.322,0.335,-0.013
+2019,Trans Tech Publications,Germany,0.132,0.132,0
+2019,Trans Tech Publications,Global,0.017,0.017,0
 2019,Optica,Germany,0,0,0
 2019,Optica,Global,0.007,0.021,-0.014
 2019,The Royal Society,Germany,0,0.184,-0.184
@@ -349,10 +349,10 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2019,White Horse Press,Germany,0,0,0
 2019,White Horse Press,Global,0,0,0
 2019,IWA Publishing,Global,0.129,0.139,-0.01
-2020,Elsevier,Germany,0.108,0.112,-0.005
-2020,Elsevier,Global,0.052,0.061,-0.009
+2020,Elsevier,Germany,0.107,0.112,-0.006
+2020,Elsevier,Global,0.051,0.061,-0.01
 2020,Springer Nature,Germany,0.478,0.484,-0.006
-2020,Springer Nature,Global,0.11,0.125,-0.015
+2020,Springer Nature,Global,0.11,0.125,-0.016
 2020,Wiley,Germany,0.746,0.698,0.048
 2020,Wiley,Global,0.141,0.134,0.006
 2020,Taylor and Francis,Germany,0.143,0.144,-0.001
@@ -369,8 +369,8 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2020,Oxford University Press,Global,0.105,0.166,-0.06
 2020,American Physiological Society,Germany,0.141,0.152,-0.011
 2020,American Physiological Society,Global,0.033,0.065,-0.032
-2020,AIP Publishing,Germany,0.151,0.157,-0.007
-2020,AIP Publishing,Global,0.035,0.069,-0.034
+2020,AIP Publishing,Germany,0.15,0.157,-0.007
+2020,AIP Publishing,Global,0.035,0.068,-0.033
 2020,Royal Society of Chemistry,Germany,0.35,0.35,0.001
 2020,Royal Society of Chemistry,Global,0.103,0.102,0
 2020,Cambridge University Press,Germany,0.397,0.389,0.007
@@ -381,25 +381,25 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2020,The Electrochemical Society,Global,0.105,0.105,-0
 2020,American Physical Society,Germany,0.281,0.293,-0.012
 2020,American Physical Society,Global,0.175,0.207,-0.032
-2020,Emerald,Germany,0,0.041,-0.041
+2020,Emerald,Germany,0,0.042,-0.042
 2020,Emerald,Global,0,0.032,-0.032
 2020,Walter de Gruyter,Germany,0.075,0.06,0.015
 2020,Walter de Gruyter,Global,0.063,0.067,-0.004
-2020,BMJ Publishing,Germany,0.19,0.148,0.042
-2020,BMJ Publishing,Global,0.124,0.116,0.008
+2020,BMJ Publishing,Germany,0.138,0.148,-0.01
+2020,BMJ Publishing,Global,0.103,0.116,-0.013
 2020,Thieme,Germany,0.233,0.234,-0.001
 2020,Thieme,Global,0.082,0.089,-0.007
 2020,World Scientific,Germany,0,0.046,-0.046
 2020,World Scientific,Global,0,0.027,-0.027
-2020,"Mary Ann Liebert, Inc.",Germany,0.006,0.109,-0.103
-2020,"Mary Ann Liebert, Inc.",Global,0.001,0.061,-0.061
 2020,Bentham Science Publishers,Germany,0.357,0.048,0.31
 2020,Bentham Science Publishers,Global,0.179,0.009,0.17
+2020,"Mary Ann Liebert, Inc.",Germany,0.006,0.109,-0.103
+2020,"Mary Ann Liebert, Inc.",Global,0.001,0.061,-0.061
 2020,American Psychological Association,Germany,0.028,0.053,-0.024
 2020,American Psychological Association,Global,0.009,0.124,-0.115
 2020,Brill,Germany,0.062,0.06,0.002
 2020,Brill,Global,0.095,0.084,0.011
-2020,Association for Computing Machinery,Germany,0.125,0.071,0.054
+2020,Association for Computing Machinery,Germany,0.126,0.071,0.054
 2020,Association for Computing Machinery,Global,0.037,0.025,0.012
 2020,IOS Press,Germany,0.215,0.12,0.095
 2020,IOS Press,Global,0.088,0.046,0.042
@@ -407,10 +407,10 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2020,EDP Sciences,Global,0.227,0.23,-0.003
 2020,Karger,Germany,0.182,0.218,-0.036
 2020,Karger,Global,0.089,0.116,-0.027
-2020,Trans Tech Publications,Germany,0.024,0.024,0
-2020,Trans Tech Publications,Global,0.004,0.004,0
 2020,National Academy of Sciences,Germany,0.508,0.525,-0.016
 2020,National Academy of Sciences,Global,0.36,0.386,-0.026
+2020,Trans Tech Publications,Germany,0.024,0.024,0
+2020,Trans Tech Publications,Global,0.004,0.004,0
 2020,Optica,Germany,0.028,0.028,0
 2020,Optica,Global,0.01,0.02,-0.009
 2020,The Royal Society,Germany,0.289,0.433,-0.144
@@ -440,7 +440,7 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2020,Society for Neuroscience,Germany,0,0.774,-0.774
 2020,Society for Neuroscience,Global,0,0.722,-0.722
 2020,Radiological Society of North America,Germany,0,0.029,-0.029
-2020,Radiological Society of North America,Global,0,0.019,-0.019
+2020,Radiological Society of North America,Global,0,0.021,-0.021
 2020,Portland Press,Germany,0.529,0.529,0
 2020,Portland Press,Global,0.599,0.597,0.001
 2020,Bioscientifica,Germany,0.061,0.061,0
@@ -465,68 +465,68 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2020,White Horse Press,Germany,0,0,0
 2020,White Horse Press,Global,0,0.01,-0.01
 2020,IWA Publishing,Global,0.242,0.242,0
-2021,Elsevier,Germany,0.162,0.164,-0.002
-2021,Elsevier,Global,0.079,0.086,-0.007
+2021,Elsevier,Germany,0.161,0.164,-0.003
+2021,Elsevier,Global,0.078,0.086,-0.008
 2021,Springer Nature,Germany,0.601,0.609,-0.008
 2021,Springer Nature,Global,0.136,0.149,-0.013
 2021,Wiley,Germany,0.827,0.598,0.229
 2021,Wiley,Global,0.179,0.126,0.052
-2021,Taylor and Francis,Germany,0.22,0.214,0.007
+2021,Taylor and Francis,Germany,0.22,0.214,0.006
 2021,Taylor and Francis,Global,0.114,0.114,-0
 2021,Sage,Germany,0.433,0.378,0.055
-2021,Sage,Global,0.137,0.129,0.008
-2021,Wolters Kluwer Health,Germany,0.078,0.111,-0.033
+2021,Sage,Global,0.136,0.13,0.007
+2021,Wolters Kluwer Health,Germany,0.077,0.11,-0.033
 2021,Wolters Kluwer Health,Global,0.041,0.051,-0.01
-2021,IEEE,Germany,0.147,0.152,-0.004
+2021,IEEE,Germany,0.147,0.151,-0.004
 2021,IEEE,Global,0.036,0.044,-0.008
 2021,American Chemical Society,Germany,0.221,0.208,0.013
 2021,American Chemical Society,Global,0.099,0.113,-0.014
 2021,Oxford University Press,Germany,0.283,0.291,-0.008
 2021,Oxford University Press,Global,0.149,0.185,-0.036
-2021,American Physiological Society,Germany,0.327,0.276,0.051
-2021,American Physiological Society,Global,0.056,0.077,-0.02
-2021,AIP Publishing,Germany,0.36,0.293,0.066
-2021,AIP Publishing,Global,0.06,0.079,-0.019
+2021,American Physiological Society,Germany,0.323,0.276,0.048
+2021,American Physiological Society,Global,0.056,0.076,-0.02
+2021,AIP Publishing,Germany,0.356,0.293,0.062
+2021,AIP Publishing,Global,0.059,0.078,-0.019
 2021,Royal Society of Chemistry,Germany,0.394,0.393,0.001
 2021,Royal Society of Chemistry,Global,0.116,0.116,0
 2021,Cambridge University Press,Germany,0.535,0.522,0.013
-2021,Cambridge University Press,Global,0.189,0.177,0.011
+2021,Cambridge University Press,Global,0.188,0.177,0.011
 2021,IOP Publishing,Germany,0.508,0.51,-0.002
 2021,IOP Publishing,Global,0.112,0.112,-0
 2021,The Electrochemical Society,Germany,0.51,0.512,-0.002
 2021,The Electrochemical Society,Global,0.124,0.124,-0
 2021,American Physical Society,Germany,0.283,0.282,0.001
-2021,American Physical Society,Global,0.183,0.187,-0.004
+2021,American Physical Society,Global,0.183,0.187,-0.003
 2021,Emerald,Germany,0,0.056,-0.056
 2021,Emerald,Global,0,0.051,-0.051
-2021,Walter de Gruyter,Germany,0.077,0.076,0.001
-2021,Walter de Gruyter,Global,0.062,0.071,-0.009
-2021,BMJ Publishing,Germany,0.264,0.245,0.018
-2021,BMJ Publishing,Global,0.137,0.128,0.009
+2021,Walter de Gruyter,Germany,0.077,0.077,-0.001
+2021,Walter de Gruyter,Global,0.062,0.072,-0.009
+2021,BMJ Publishing,Germany,0.237,0.253,-0.016
+2021,BMJ Publishing,Global,0.118,0.13,-0.012
 2021,Thieme,Germany,0.25,0.251,-0.001
 2021,Thieme,Global,0.084,0.087,-0.003
 2021,World Scientific,Germany,0,0.068,-0.068
 2021,World Scientific,Global,0,0.039,-0.039
-2021,"Mary Ann Liebert, Inc.",Germany,0,0.112,-0.112
-2021,"Mary Ann Liebert, Inc.",Global,0,0.069,-0.069
 2021,Bentham Science Publishers,Germany,0.298,0.021,0.277
 2021,Bentham Science Publishers,Global,0.11,0.011,0.099
+2021,"Mary Ann Liebert, Inc.",Germany,0,0.112,-0.112
+2021,"Mary Ann Liebert, Inc.",Global,0,0.069,-0.069
 2021,American Psychological Association,Germany,0.178,0.219,-0.041
 2021,American Psychological Association,Global,0.013,0.114,-0.101
 2021,Brill,Germany,0.104,0.071,0.032
-2021,Brill,Global,0.112,0.083,0.029
-2021,Association for Computing Machinery,Germany,0.171,0.075,0.096
-2021,Association for Computing Machinery,Global,0.076,0.03,0.046
-2021,IOS Press,Germany,0.158,0.152,0.005
-2021,IOS Press,Global,0.08,0.066,0.014
+2021,Brill,Global,0.112,0.084,0.029
+2021,Association for Computing Machinery,Germany,0.173,0.076,0.097
+2021,Association for Computing Machinery,Global,0.075,0.032,0.043
+2021,IOS Press,Germany,0.158,0.153,0.005
+2021,IOS Press,Global,0.08,0.067,0.014
 2021,EDP Sciences,Germany,0.525,0.525,0
 2021,EDP Sciences,Global,0.282,0.285,-0.003
-2021,Karger,Germany,0.274,0.311,-0.037
-2021,Karger,Global,0.144,0.161,-0.017
-2021,Trans Tech Publications,Germany,0.031,0.031,0
-2021,Trans Tech Publications,Global,0.003,0.003,0
+2021,Karger,Germany,0.274,0.317,-0.043
+2021,Karger,Global,0.144,0.162,-0.018
 2021,National Academy of Sciences,Germany,0.563,0.595,-0.032
 2021,National Academy of Sciences,Global,0.385,0.435,-0.049
+2021,Trans Tech Publications,Germany,0.031,0.031,0
+2021,Trans Tech Publications,Global,0.003,0.003,0
 2021,Optica,Germany,0.035,0.035,0
 2021,Optica,Global,0.009,0.016,-0.007
 2021,The Royal Society,Germany,0.024,0.485,-0.462
@@ -562,7 +562,7 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2021,Bioscientifica,Germany,0.118,0.206,-0.088
 2021,Bioscientifica,Global,0.115,0.135,-0.02
 2021,The Geological Society of London,Germany,0.222,0.222,0
-2021,The Geological Society of London,Global,0.117,0.11,0.007
+2021,The Geological Society of London,Global,0.117,0.112,0.005
 2021,Rockefeller University Press,Germany,0.229,1,-0.771
 2021,Rockefeller University Press,Global,0.194,0.993,-0.799
 2021,Bristol University Press,Germany,0.211,0.158,0.053
@@ -583,28 +583,28 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2021,White Horse Press,Global,0.01,0.01,0
 2021,IWA Publishing,Germany,1,1,0
 2021,IWA Publishing,Global,0.982,0.965,0.018
-2022,Elsevier,Germany,0.207,0.192,0.015
-2022,Elsevier,Global,0.105,0.098,0.007
+2022,Elsevier,Germany,0.206,0.192,0.014
+2022,Elsevier,Global,0.104,0.098,0.006
 2022,Springer Nature,Germany,0.627,0.628,-0.001
 2022,Springer Nature,Global,0.15,0.153,-0.003
 2022,Wiley,Germany,0.817,0.663,0.155
 2022,Wiley,Global,0.259,0.196,0.063
 2022,Taylor and Francis,Germany,0.231,0.22,0.011
-2022,Taylor and Francis,Global,0.133,0.132,0.002
+2022,Taylor and Francis,Global,0.134,0.132,0.001
 2022,Sage,Germany,0.467,0.385,0.081
 2022,Sage,Global,0.151,0.129,0.022
 2022,Wolters Kluwer Health,Germany,0.101,0.121,-0.02
 2022,Wolters Kluwer Health,Global,0.05,0.056,-0.006
 2022,IEEE,Germany,0.191,0.192,-0.001
-2022,IEEE,Global,0.043,0.045,-0.002
-2022,American Chemical Society,Germany,0.256,0.234,0.023
+2022,IEEE,Global,0.043,0.046,-0.003
+2022,American Chemical Society,Germany,0.256,0.234,0.022
 2022,American Chemical Society,Global,0.125,0.13,-0.005
 2022,Oxford University Press,Germany,0.319,0.288,0.032
 2022,Oxford University Press,Global,0.193,0.195,-0.002
-2022,American Physiological Society,Germany,0.41,0.377,0.033
+2022,American Physiological Society,Germany,0.414,0.381,0.032
 2022,American Physiological Society,Global,0.061,0.079,-0.018
-2022,AIP Publishing,Germany,0.436,0.387,0.049
-2022,AIP Publishing,Global,0.063,0.08,-0.017
+2022,AIP Publishing,Germany,0.439,0.392,0.048
+2022,AIP Publishing,Global,0.063,0.08,-0.016
 2022,Royal Society of Chemistry,Germany,0.499,0.495,0.004
 2022,Royal Society of Chemistry,Global,0.133,0.132,0
 2022,Cambridge University Press,Germany,0.62,0.584,0.036
@@ -614,37 +614,37 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2022,The Electrochemical Society,Germany,0.531,0.516,0.015
 2022,The Electrochemical Society,Global,0.132,0.13,0.002
 2022,American Physical Society,Germany,0.327,0.328,-0.001
-2022,American Physical Society,Global,0.19,0.202,-0.012
+2022,American Physical Society,Global,0.191,0.202,-0.011
 2022,Emerald,Germany,0,0.105,-0.105
 2022,Emerald,Global,0,0.075,-0.075
 2022,Walter de Gruyter,Germany,0.179,0.171,0.008
 2022,Walter de Gruyter,Global,0.107,0.109,-0.002
-2022,BMJ Publishing,Germany,0.24,0.198,0.042
-2022,BMJ Publishing,Global,0.118,0.102,0.016
+2022,BMJ Publishing,Germany,0.204,0.197,0.007
+2022,BMJ Publishing,Global,0.099,0.103,-0.004
 2022,Thieme,Germany,0.252,0.253,-0.001
 2022,Thieme,Global,0.098,0.099,-0.001
 2022,World Scientific,Germany,0,0.071,-0.071
 2022,World Scientific,Global,0,0.042,-0.042
-2022,"Mary Ann Liebert, Inc.",Germany,0,0.185,-0.185
-2022,"Mary Ann Liebert, Inc.",Global,0,0.075,-0.075
 2022,Bentham Science Publishers,Germany,0.059,0.039,0.02
 2022,Bentham Science Publishers,Global,0.017,0.015,0.001
+2022,"Mary Ann Liebert, Inc.",Germany,0,0.185,-0.185
+2022,"Mary Ann Liebert, Inc.",Global,0,0.075,-0.075
 2022,American Psychological Association,Germany,0.289,0.305,-0.016
 2022,American Psychological Association,Global,0.014,0.132,-0.117
-2022,Brill,Germany,0.1,0.082,0.018
+2022,Brill,Germany,0.099,0.082,0.018
 2022,Brill,Global,0.132,0.105,0.027
-2022,Association for Computing Machinery,Germany,0.181,0.047,0.134
-2022,Association for Computing Machinery,Global,0.113,0.029,0.084
+2022,Association for Computing Machinery,Germany,0.181,0.05,0.13
+2022,Association for Computing Machinery,Global,0.111,0.03,0.081
 2022,IOS Press,Germany,0.268,0.261,0.007
 2022,IOS Press,Global,0.1,0.103,-0.002
 2022,EDP Sciences,Germany,0.739,0.737,0.002
 2022,EDP Sciences,Global,0.494,0.493,0.002
 2022,Karger,Germany,0.306,0.312,-0.006
 2022,Karger,Global,0.19,0.196,-0.006
-2022,Trans Tech Publications,Germany,0.72,0.72,0
-2022,Trans Tech Publications,Global,0.113,0.113,-0
 2022,National Academy of Sciences,Germany,1,1,0
 2022,National Academy of Sciences,Global,0.987,0.987,-0.001
+2022,Trans Tech Publications,Germany,0.72,0.72,0
+2022,Trans Tech Publications,Global,0.113,0.113,-0
 2022,Optica,Germany,0.019,0.019,0
 2022,Optica,Global,0.014,0.02,-0.006
 2022,The Royal Society,Germany,0.006,0.695,-0.689
@@ -652,7 +652,7 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2022,American Thoracic Society,Germany,0,0.613,-0.613
 2022,American Thoracic Society,Global,0,0.438,-0.438
 2022,Canadian Science Publishing,Germany,0,0,0
-2022,Canadian Science Publishing,Global,0.074,0.171,-0.097
+2022,Canadian Science Publishing,Global,0.072,0.169,-0.097
 2022,Future Science Group,Germany,0.429,0.429,0
 2022,Future Science Group,Global,0.216,0.218,-0.002
 2022,American Meteorological Society,Germany,0.179,0.179,0
@@ -698,76 +698,76 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2022,White Horse Press,Global,0.009,0.019,-0.009
 2022,IWA Publishing,Germany,1,1,0
 2022,IWA Publishing,Global,1,1,0
-2023,Elsevier,Germany,0.238,0.233,0.005
+2023,Elsevier,Germany,0.237,0.233,0.004
 2023,Elsevier,Global,0.13,0.128,0.002
 2023,Springer Nature,Germany,0.632,0.634,-0.002
 2023,Springer Nature,Global,0.175,0.177,-0.003
-2023,Wiley,Germany,0.838,0.834,0.004
+2023,Wiley,Germany,0.838,0.834,0.003
 2023,Wiley,Global,0.314,0.315,-0.001
-2023,Taylor and Francis,Germany,0.268,0.268,0
+2023,Taylor and Francis,Germany,0.268,0.268,-0
 2023,Taylor and Francis,Global,0.174,0.18,-0.007
-2023,Sage,Germany,0.48,0.495,-0.015
-2023,Sage,Global,0.189,0.195,-0.005
+2023,Sage,Germany,0.478,0.495,-0.018
+2023,Sage,Global,0.187,0.195,-0.007
 2023,Wolters Kluwer Health,Germany,0.107,0.118,-0.011
 2023,Wolters Kluwer Health,Global,0.062,0.066,-0.004
 2023,IEEE,Germany,0.175,0.175,0
-2023,IEEE,Global,0.049,0.05,-0
-2023,American Chemical Society,Germany,0.356,0.348,0.008
-2023,American Chemical Society,Global,0.155,0.168,-0.014
+2023,IEEE,Global,0.049,0.05,-0.001
+2023,American Chemical Society,Germany,0.356,0.349,0.007
+2023,American Chemical Society,Global,0.155,0.169,-0.014
 2023,Oxford University Press,Germany,0.363,0.381,-0.017
 2023,Oxford University Press,Global,0.236,0.265,-0.028
-2023,American Physiological Society,Germany,0.518,0.426,0.091
-2023,American Physiological Society,Global,0.052,0.049,0.003
-2023,AIP Publishing,Germany,0.564,0.45,0.114
-2023,AIP Publishing,Global,0.054,0.048,0.006
+2023,American Physiological Society,Germany,0.514,0.428,0.086
+2023,American Physiological Society,Global,0.052,0.05,0.003
+2023,AIP Publishing,Germany,0.56,0.452,0.108
+2023,AIP Publishing,Global,0.054,0.049,0.005
 2023,Royal Society of Chemistry,Germany,0.519,0.53,-0.01
 2023,Royal Society of Chemistry,Global,0.164,0.191,-0.027
-2023,Cambridge University Press,Germany,0.621,0.565,0.056
+2023,Cambridge University Press,Germany,0.622,0.564,0.057
 2023,Cambridge University Press,Global,0.349,0.3,0.049
 2023,IOP Publishing,Germany,0.456,0.458,-0.002
 2023,IOP Publishing,Global,0.171,0.186,-0.015
 2023,The Electrochemical Society,Germany,0.45,0.451,-0.001
-2023,The Electrochemical Society,Global,0.187,0.203,-0.015
+2023,The Electrochemical Society,Global,0.187,0.203,-0.016
 2023,American Physical Society,Germany,0.348,0.349,-0.001
-2023,American Physical Society,Global,0.225,0.227,-0.002
+2023,American Physical Society,Global,0.226,0.228,-0.002
 2023,Emerald,Germany,0.004,0.239,-0.235
 2023,Emerald,Global,0.002,0.083,-0.08
 2023,Walter de Gruyter,Germany,0.235,0.212,0.023
 2023,Walter de Gruyter,Global,0.133,0.126,0.008
-2023,BMJ Publishing,Germany,0.261,0.222,0.039
-2023,BMJ Publishing,Global,0.132,0.114,0.018
+2023,BMJ Publishing,Germany,0.222,0.228,-0.006
+2023,BMJ Publishing,Global,0.107,0.114,-0.007
 2023,Thieme,Germany,0.04,0.042,-0.002
 2023,Thieme,Global,0.032,0.036,-0.004
 2023,World Scientific,Germany,0,0.03,-0.03
 2023,World Scientific,Global,0,0.035,-0.035
-2023,"Mary Ann Liebert, Inc.",Germany,0,0.157,-0.157
-2023,"Mary Ann Liebert, Inc.",Global,0,0.068,-0.068
 2023,Bentham Science Publishers,Germany,0.087,0.087,0
 2023,Bentham Science Publishers,Global,0.07,0.065,0.005
-2023,American Psychological Association,Germany,0.324,0.336,-0.012
-2023,American Psychological Association,Global,0.024,0.134,-0.111
+2023,"Mary Ann Liebert, Inc.",Germany,0,0.157,-0.157
+2023,"Mary Ann Liebert, Inc.",Global,0,0.068,-0.068
+2023,American Psychological Association,Germany,0.314,0.326,-0.013
+2023,American Psychological Association,Global,0.023,0.134,-0.111
 2023,Brill,Germany,0.134,0.118,0.016
 2023,Brill,Global,0.142,0.138,0.004
 2023,Association for Computing Machinery,Germany,0.288,0.177,0.111
-2023,Association for Computing Machinery,Global,0.148,0.101,0.047
+2023,Association for Computing Machinery,Global,0.144,0.101,0.043
 2023,IOS Press,Germany,0.27,0.33,-0.061
 2023,IOS Press,Global,0.107,0.111,-0.004
 2023,EDP Sciences,Germany,0.985,0.978,0.007
 2023,EDP Sciences,Global,0.697,0.696,0.001
 2023,Karger,Germany,0.348,0.352,-0.003
 2023,Karger,Global,0.246,0.248,-0.002
-2023,Trans Tech Publications,Germany,0.458,0.458,0
-2023,Trans Tech Publications,Global,0.053,0.053,0
 2023,National Academy of Sciences,Germany,1,0.99,0.01
 2023,National Academy of Sciences,Global,0.985,0.963,0.022
+2023,Trans Tech Publications,Germany,0.458,0.458,0
+2023,Trans Tech Publications,Global,0.053,0.053,0
 2023,Optica,Germany,0.053,0.043,0.011
-2023,Optica,Global,0.02,0.02,0
+2023,Optica,Global,0.02,0.02,-0
 2023,The Royal Society,Germany,0.16,0.651,-0.491
-2023,The Royal Society,Global,0.102,0.556,-0.454
+2023,The Royal Society,Global,0.102,0.557,-0.455
 2023,American Thoracic Society,Germany,0,0.541,-0.541
 2023,American Thoracic Society,Global,0,0.43,-0.43
 2023,Canadian Science Publishing,Germany,0.5,0.5,0
-2023,Canadian Science Publishing,Global,0.223,0.213,0.01
+2023,Canadian Science Publishing,Global,0.224,0.215,0.008
 2023,Future Science Group,Germany,0.571,0.571,0
 2023,Future Science Group,Global,0.201,0.207,-0.006
 2023,American Meteorological Society,Germany,0.176,0.216,-0.039
@@ -784,8 +784,8 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2023,Microbiology Society,Global,0.421,0,0.421
 2023,Akadémiai Kiadó,Germany,0.462,0.462,0
 2023,Akadémiai Kiadó,Global,0.533,0.523,0.009
-2023,Hogrefe,Germany,0.668,0.691,-0.023
-2023,Hogrefe,Global,0.291,0.3,-0.009
+2023,Hogrefe,Germany,0.662,0.685,-0.024
+2023,Hogrefe,Global,0.288,0.297,-0.009
 2023,Society for Neuroscience,Germany,0,0.844,-0.844
 2023,Society for Neuroscience,Global,0,0.891,-0.891
 2023,Radiological Society of North America,Germany,0,0.019,-0.019
@@ -794,12 +794,12 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2023,Portland Press,Global,0.682,0.684,-0.002
 2023,Bioscientifica,Germany,0.317,0.366,-0.049
 2023,Bioscientifica,Global,0.288,0.298,-0.01
-2023,The Geological Society of London,Germany,0.417,0.417,0
-2023,The Geological Society of London,Global,0.309,0.309,0
-2023,Rockefeller University Press,Germany,0.345,0.931,-0.586
-2023,Rockefeller University Press,Global,0.355,0.949,-0.593
+2023,The Geological Society of London,Germany,0.417,0.5,-0.083
+2023,The Geological Society of London,Global,0.309,0.311,-0.002
+2023,Rockefeller University Press,Germany,0.357,0.929,-0.571
+2023,Rockefeller University Press,Global,0.355,0.951,-0.595
 2023,Bristol University Press,Germany,0.185,0.185,0
-2023,Bristol University Press,Global,0.18,0.171,0.009
+2023,Bristol University Press,Global,0.179,0.17,0.009
 2023,European Respiratory Society,Germany,0.444,0.444,0
 2023,European Respiratory Society,Global,0.284,0.293,-0.009
 2023,Inter-Research Science Publisher,Germany,0.6,0.6,0
@@ -815,231 +815,233 @@ cr_year,esac_publisher,cat,perc_cr,perc_upw,perc_diff
 2023,White Horse Press,Global,0,0.051,-0.051
 2023,IWA Publishing,Global,1,1,0
 2024,Elsevier,Germany,0.638,0.62,0.018
-2024,Elsevier,Global,0.164,0.16,0.004
-2024,Springer Nature,Germany,0.642,0.667,-0.025
+2024,Elsevier,Global,0.164,0.161,0.004
+2024,Springer Nature,Germany,0.642,0.668,-0.025
 2024,Springer Nature,Global,0.204,0.225,-0.021
-2024,Wiley,Germany,0.842,0.752,0.09
-2024,Wiley,Global,0.33,0.304,0.026
-2024,Taylor and Francis,Germany,0.579,0.57,0.009
-2024,Taylor and Francis,Global,0.215,0.219,-0.004
-2024,Sage,Germany,0.469,0.407,0.061
-2024,Sage,Global,0.179,0.177,0.002
+2024,Wiley,Germany,0.842,0.753,0.09
+2024,Wiley,Global,0.331,0.305,0.026
+2024,Taylor and Francis,Germany,0.579,0.571,0.008
+2024,Taylor and Francis,Global,0.215,0.22,-0.005
+2024,Sage,Germany,0.437,0.408,0.029
+2024,Sage,Global,0.171,0.177,-0.006
 2024,Wolters Kluwer Health,Germany,0.149,0.116,0.033
 2024,Wolters Kluwer Health,Global,0.067,0.046,0.021
-2024,IEEE,Germany,0.28,0.277,0.002
+2024,IEEE,Germany,0.278,0.276,0.002
 2024,IEEE,Global,0.052,0.051,0.001
-2024,American Chemical Society,Germany,0.545,0.502,0.042
-2024,American Chemical Society,Global,0.172,0.186,-0.015
-2024,Oxford University Press,Germany,0.367,0.375,-0.008
-2024,Oxford University Press,Global,0.262,0.304,-0.042
-2024,American Physiological Society,Germany,0.498,0.323,0.175
-2024,American Physiological Society,Global,0.113,0.08,0.033
-2024,AIP Publishing,Germany,0.555,0.356,0.198
-2024,AIP Publishing,Global,0.117,0.082,0.035
-2024,Royal Society of Chemistry,Germany,0.766,0.768,-0.002
-2024,Royal Society of Chemistry,Global,0.216,0.227,-0.011
-2024,Cambridge University Press,Germany,0.76,0.62,0.14
-2024,Cambridge University Press,Global,0.419,0.26,0.159
-2024,IOP Publishing,Germany,0.776,0.751,0.024
-2024,IOP Publishing,Global,0.182,0.22,-0.038
-2024,The Electrochemical Society,Germany,0.776,0.755,0.022
-2024,The Electrochemical Society,Global,0.195,0.227,-0.032
+2024,American Chemical Society,Germany,0.545,0.504,0.041
+2024,American Chemical Society,Global,0.172,0.187,-0.015
+2024,Oxford University Press,Germany,0.369,0.377,-0.008
+2024,Oxford University Press,Global,0.266,0.306,-0.04
+2024,American Physiological Society,Germany,0.498,0.329,0.168
+2024,American Physiological Society,Global,0.113,0.082,0.031
+2024,AIP Publishing,Germany,0.554,0.363,0.191
+2024,AIP Publishing,Global,0.117,0.084,0.033
+2024,Royal Society of Chemistry,Germany,0.766,0.77,-0.004
+2024,Royal Society of Chemistry,Global,0.216,0.227,-0.012
+2024,Cambridge University Press,Germany,0.761,0.619,0.142
+2024,Cambridge University Press,Global,0.419,0.258,0.161
+2024,IOP Publishing,Germany,0.776,0.752,0.024
+2024,IOP Publishing,Global,0.182,0.219,-0.037
+2024,The Electrochemical Society,Germany,0.777,0.755,0.022
+2024,The Electrochemical Society,Global,0.195,0.226,-0.031
 2024,American Physical Society,Germany,0.358,0.323,0.035
 2024,American Physical Society,Global,0.235,0.215,0.02
-2024,Emerald,Germany,0.036,0.336,-0.3
+2024,Emerald,Germany,0.036,0.331,-0.295
 2024,Emerald,Global,0.008,0.065,-0.057
-2024,Walter de Gruyter,Germany,0.244,0.164,0.08
-2024,Walter de Gruyter,Global,0.149,0.106,0.043
-2024,BMJ Publishing,Germany,0.275,0.171,0.105
-2024,BMJ Publishing,Global,0.126,0.105,0.021
+2024,Walter de Gruyter,Germany,0.245,0.165,0.08
+2024,Walter de Gruyter,Global,0.15,0.106,0.044
+2024,BMJ Publishing,Germany,0.26,0.171,0.09
+2024,BMJ Publishing,Global,0.115,0.106,0.009
 2024,Thieme,Germany,0.04,0.043,-0.003
 2024,Thieme,Global,0.032,0.038,-0.006
 2024,World Scientific,Germany,0,0.009,-0.009
 2024,World Scientific,Global,0,0.013,-0.013
-2024,"Mary Ann Liebert, Inc.",Germany,0,0.088,-0.088
-2024,"Mary Ann Liebert, Inc.",Global,0,0.031,-0.031
 2024,Bentham Science Publishers,Germany,0.138,0.138,0
-2024,Bentham Science Publishers,Global,0.079,0.063,0.016
-2024,American Psychological Association,Germany,0.329,0.232,0.097
-2024,American Psychological Association,Global,0.061,0.098,-0.037
+2024,Bentham Science Publishers,Global,0.086,0.069,0.017
+2024,"Mary Ann Liebert, Inc.",Germany,0,0.089,-0.089
+2024,"Mary Ann Liebert, Inc.",Global,0,0.032,-0.032
+2024,American Psychological Association,Germany,0.328,0.226,0.101
+2024,American Psychological Association,Global,0.061,0.101,-0.04
 2024,Brill,Germany,0.124,0.088,0.035
-2024,Brill,Global,0.17,0.15,0.02
-2024,Association for Computing Machinery,Germany,0.379,0.253,0.125
-2024,Association for Computing Machinery,Global,0.22,0.159,0.06
+2024,Brill,Global,0.171,0.149,0.021
+2024,Association for Computing Machinery,Germany,0.38,0.254,0.126
+2024,Association for Computing Machinery,Global,0.221,0.161,0.06
 2024,IOS Press,Germany,0.307,0.252,0.055
-2024,IOS Press,Global,0.116,0.099,0.017
-2024,EDP Sciences,Germany,0.972,0.794,0.178
-2024,EDP Sciences,Global,0.774,0.56,0.214
+2024,IOS Press,Global,0.114,0.099,0.016
+2024,EDP Sciences,Germany,0.972,0.792,0.18
+2024,EDP Sciences,Global,0.775,0.564,0.211
 2024,Karger,Germany,0.357,0.387,-0.029
 2024,Karger,Global,0.26,0.26,0.001
-2024,Trans Tech Publications,Germany,0.465,0.488,-0.023
-2024,Trans Tech Publications,Global,0.086,0.082,0.004
 2024,National Academy of Sciences,Germany,1,0.704,0.296
-2024,National Academy of Sciences,Global,0.987,0.599,0.387
+2024,National Academy of Sciences,Global,0.987,0.599,0.388
+2024,Trans Tech Publications,Germany,0.465,0.488,-0.023
+2024,Trans Tech Publications,Global,0.086,0.086,0
 2024,Optica,Germany,0.093,0.074,0.019
-2024,Optica,Global,0.02,0.016,0.005
-2024,The Royal Society,Germany,0.755,0.682,0.073
+2024,Optica,Global,0.02,0.016,0.004
+2024,The Royal Society,Germany,0.753,0.68,0.073
 2024,The Royal Society,Global,0.621,0.588,0.033
 2024,American Thoracic Society,Germany,0,0.179,-0.179
-2024,American Thoracic Society,Global,0,0.13,-0.13
-2024,Canadian Science Publishing,Germany,0.364,0.091,0.273
-2024,Canadian Science Publishing,Global,0.261,0.106,0.155
+2024,American Thoracic Society,Global,0,0.131,-0.131
+2024,Canadian Science Publishing,Germany,0.4,0.1,0.3
+2024,Canadian Science Publishing,Global,0.275,0.119,0.157
 2024,Future Science Group,Germany,0.519,0.556,-0.037
 2024,Future Science Group,Global,0.215,0.243,-0.028
 2024,American Meteorological Society,Germany,0.145,0.164,-0.018
-2024,American Meteorological Society,Global,0.051,0.126,-0.075
+2024,American Meteorological Society,Global,0.051,0.126,-0.074
 2024,CSIRO,Germany,0,0,0
 2024,CSIRO,Global,0,0.293,-0.293
-2024,John Benjamins Publishing,Germany,0.359,0.207,0.152
-2024,John Benjamins Publishing,Global,0.181,0.113,0.068
+2024,John Benjamins Publishing,Germany,0.37,0.207,0.163
+2024,John Benjamins Publishing,Global,0.182,0.111,0.07
 2024,Company of Biologists,Germany,0.552,0.552,0
-2024,Company of Biologists,Global,0.342,0.438,-0.096
+2024,Company of Biologists,Global,0.343,0.435,-0.092
 2024,SPIE,Germany,0,0.514,-0.514
 2024,SPIE,Global,0,0.138,-0.138
 2024,Microbiology Society,Germany,0.654,0,0.654
 2024,Microbiology Society,Global,0.483,0,0.483
 2024,Akadémiai Kiadó,Germany,0.077,0.077,0
-2024,Akadémiai Kiadó,Global,0.512,0.35,0.162
-2024,Hogrefe,Germany,0.65,0.46,0.189
-2024,Hogrefe,Global,0.326,0.233,0.093
+2024,Akadémiai Kiadó,Global,0.513,0.35,0.163
+2024,Hogrefe,Germany,0.648,0.464,0.184
+2024,Hogrefe,Global,0.325,0.234,0.091
 2024,Society for Neuroscience,Germany,0,0.36,-0.36
-2024,Society for Neuroscience,Global,0,0.236,-0.236
+2024,Society for Neuroscience,Global,0,0.239,-0.239
 2024,Radiological Society of North America,Germany,0,0,0
 2024,Radiological Society of North America,Global,0,0.001,-0.001
 2024,Portland Press,Germany,0.8,0.65,0.15
-2024,Portland Press,Global,0.732,0.653,0.078
+2024,Portland Press,Global,0.731,0.653,0.078
 2024,Bioscientifica,Germany,0.385,0.308,0.077
 2024,Bioscientifica,Global,0.298,0.226,0.072
 2024,The Geological Society of London,Germany,0.176,0.118,0.059
-2024,The Geological Society of London,Global,0.282,0.216,0.066
-2024,Rockefeller University Press,Germany,0.375,0.542,-0.167
-2024,Rockefeller University Press,Global,0.385,0.558,-0.173
+2024,The Geological Society of London,Global,0.284,0.218,0.066
+2024,Rockefeller University Press,Germany,0.375,0.583,-0.208
+2024,Rockefeller University Press,Global,0.385,0.596,-0.21
 2024,Bristol University Press,Germany,0.243,0.27,-0.027
-2024,Bristol University Press,Global,0.221,0.212,0.008
+2024,Bristol University Press,Global,0.223,0.215,0.007
 2024,European Respiratory Society,Germany,0.444,0.407,0.037
 2024,European Respiratory Society,Global,0.379,0.381,-0.003
 2024,Inter-Research Science Publisher,Germany,0.875,0.75,0.125
-2024,Inter-Research Science Publisher,Global,0.382,0.358,0.024
+2024,Inter-Research Science Publisher,Global,0.381,0.362,0.019
 2024,Royal College of General Practitioners,Germany,0,1,-1
-2024,Royal College of General Practitioners,Global,0.253,0.221,0.033
-2024,Cold Spring Harbor Laboratory Press,Germany,0,0.217,-0.217
+2024,Royal College of General Practitioners,Global,0.262,0.221,0.041
+2024,Cold Spring Harbor Laboratory Press,Germany,0,0.208,-0.208
 2024,Cold Spring Harbor Laboratory Press,Global,0,0.235,-0.235
 2024,Edward Elgar Publishing,Germany,0,0,0
-2024,Edward Elgar Publishing,Global,0.022,0.039,-0.017
+2024,Edward Elgar Publishing,Global,0.023,0.04,-0.017
 2024,Royal Irish Academy,Global,0,0.051,-0.051
 2024,White Horse Press,Germany,0,0.143,-0.143
-2024,White Horse Press,Global,0.056,0.161,-0.105
+2024,White Horse Press,Global,0.059,0.168,-0.109
 2024,IWA Publishing,Global,1,1,0
-2025,Elsevier,Germany,0.75,0.601,0.149
-2025,Elsevier,Global,0.185,0.15,0.035
-2025,Springer Nature,Germany,0.627,0.623,0.004
-2025,Springer Nature,Global,0.233,0.233,0
-2025,Wiley,Germany,0.818,0.672,0.146
-2025,Wiley,Global,0.329,0.293,0.036
-2025,Taylor and Francis,Germany,0.631,0.604,0.027
-2025,Taylor and Francis,Global,0.22,0.208,0.011
-2025,Sage,Germany,0.104,0.047,0.057
-2025,Sage,Global,0.05,0.025,0.026
-2025,Wolters Kluwer Health,Germany,0.138,0.017,0.121
-2025,Wolters Kluwer Health,Global,0.053,0.005,0.048
-2025,IEEE,Germany,0.305,0.286,0.02
-2025,IEEE,Global,0.048,0.047,0.002
-2025,American Chemical Society,Germany,0.573,0.454,0.119
-2025,American Chemical Society,Global,0.188,0.148,0.039
-2025,Oxford University Press,Germany,0.24,0.155,0.085
-2025,Oxford University Press,Global,0.229,0.168,0.061
-2025,American Physiological Society,Germany,0.525,0.465,0.06
-2025,American Physiological Society,Global,0.142,0.11,0.032
-2025,AIP Publishing,Germany,0.549,0.525,0.024
-2025,AIP Publishing,Global,0.129,0.116,0.013
-2025,Royal Society of Chemistry,Germany,0.832,0.816,0.015
-2025,Royal Society of Chemistry,Global,0.244,0.238,0.006
-2025,Cambridge University Press,Germany,0.734,0.092,0.642
-2025,Cambridge University Press,Global,0.5,0.052,0.448
-2025,IOP Publishing,Germany,0.8,0.167,0.633
-2025,IOP Publishing,Global,0.229,0.142,0.087
-2025,The Electrochemical Society,Germany,0.824,0.176,0.647
-2025,The Electrochemical Society,Global,0.266,0.17,0.096
-2025,American Physical Society,Germany,0.65,0.578,0.072
-2025,American Physical Society,Global,0.23,0.184,0.046
-2025,Emerald,Germany,0.2,0.067,0.133
-2025,Emerald,Global,0.066,0.032,0.034
-2025,Walter de Gruyter,Germany,0.437,0.046,0.391
-2025,Walter de Gruyter,Global,0.216,0.016,0.2
-2025,BMJ Publishing,Germany,0.471,0.118,0.353
-2025,BMJ Publishing,Global,0.095,0.018,0.077
-2025,Thieme,Germany,0.069,0.068,0.001
-2025,Thieme,Global,0.038,0.036,0.001
+2025,Elsevier,Germany,0.757,0.607,0.149
+2025,Elsevier,Global,0.188,0.145,0.042
+2025,Springer Nature,Germany,0.63,0.622,0.008
+2025,Springer Nature,Global,0.23,0.218,0.012
+2025,Wiley,Germany,0.842,0.709,0.133
+2025,Wiley,Global,0.338,0.289,0.049
+2025,Taylor and Francis,Germany,0.639,0.613,0.026
+2025,Taylor and Francis,Global,0.222,0.2,0.021
+2025,Sage,Germany,0.144,0.081,0.063
+2025,Sage,Global,0.076,0.036,0.04
+2025,Wolters Kluwer Health,Germany,0.158,0.022,0.136
+2025,Wolters Kluwer Health,Global,0.059,0.005,0.054
+2025,IEEE,Germany,0.324,0.3,0.025
+2025,IEEE,Global,0.047,0.044,0.004
+2025,American Chemical Society,Germany,0.579,0.454,0.125
+2025,American Chemical Society,Global,0.189,0.14,0.049
+2025,Oxford University Press,Germany,0.285,0.168,0.117
+2025,Oxford University Press,Global,0.246,0.167,0.079
+2025,American Physiological Society,Germany,0.495,0.451,0.044
+2025,American Physiological Society,Global,0.127,0.099,0.028
+2025,AIP Publishing,Germany,0.524,0.508,0.016
+2025,AIP Publishing,Global,0.118,0.103,0.015
+2025,Royal Society of Chemistry,Germany,0.83,0.806,0.024
+2025,Royal Society of Chemistry,Global,0.245,0.229,0.017
+2025,Cambridge University Press,Germany,0.735,0.093,0.642
+2025,Cambridge University Press,Global,0.494,0.042,0.452
+2025,IOP Publishing,Germany,0.83,0.214,0.616
+2025,IOP Publishing,Global,0.208,0.133,0.075
+2025,The Electrochemical Society,Germany,0.849,0.217,0.632
+2025,The Electrochemical Society,Global,0.235,0.153,0.081
+2025,American Physical Society,Germany,0.658,0.544,0.113
+2025,American Physical Society,Global,0.263,0.181,0.083
+2025,Emerald,Germany,0.269,0.038,0.231
+2025,Emerald,Global,0.062,0.03,0.032
+2025,Walter de Gruyter,Germany,0.422,0.064,0.359
+2025,Walter de Gruyter,Global,0.21,0.019,0.191
+2025,BMJ Publishing,Germany,0.463,0.14,0.324
+2025,BMJ Publishing,Global,0.105,0.018,0.087
+2025,Thieme,Germany,0.077,0.076,0.002
+2025,Thieme,Global,0.038,0.036,0.003
 2025,World Scientific,Germany,0,0,0
-2025,World Scientific,Global,0,0.004,-0.004
+2025,World Scientific,Global,0,0.003,-0.003
+2025,Bentham Science Publishers,Germany,0,0,0
+2025,Bentham Science Publishers,Global,0.049,0.021,0.028
 2025,"Mary Ann Liebert, Inc.",Germany,0,0,0
 2025,"Mary Ann Liebert, Inc.",Global,0,0.001,-0.001
-2025,Bentham Science Publishers,Germany,0,0,0
-2025,Bentham Science Publishers,Global,0.04,0.019,0.021
-2025,American Psychological Association,Germany,0.282,0.282,0
-2025,American Psychological Association,Global,0.088,0.096,-0.008
-2025,Brill,Germany,0.158,0,0.158
-2025,Brill,Global,0.169,0.016,0.153
-2025,Association for Computing Machinery,Germany,0.224,0.077,0.148
-2025,Association for Computing Machinery,Global,0.192,0.054,0.138
-2025,IOS Press,Germany,0,0.154,-0.154
-2025,IOS Press,Global,0.003,0.051,-0.048
-2025,EDP Sciences,Germany,1,0.75,0.25
-2025,EDP Sciences,Global,0.673,0.188,0.484
-2025,Karger,Germany,0.296,0.259,0.037
-2025,Karger,Global,0.268,0.256,0.011
+2025,American Psychological Association,Germany,0.291,0.291,0
+2025,American Psychological Association,Global,0.088,0.092,-0.004
+2025,Brill,Germany,0.171,0,0.171
+2025,Brill,Global,0.167,0.013,0.154
+2025,Association for Computing Machinery,Germany,0.188,0.059,0.13
+2025,Association for Computing Machinery,Global,0.151,0.042,0.109
+2025,IOS Press,Germany,0.068,0.136,-0.068
+2025,IOS Press,Global,0.024,0.043,-0.019
+2025,EDP Sciences,Germany,0.941,0.706,0.235
+2025,EDP Sciences,Global,0.687,0.22,0.468
+2025,Karger,Germany,0.304,0.268,0.036
+2025,Karger,Global,0.273,0.251,0.023
+2025,National Academy of Sciences,Germany,1,0.992,0.008
+2025,National Academy of Sciences,Global,0.988,0.9,0.088
 2025,Trans Tech Publications,Germany,0,0,0
 2025,Trans Tech Publications,Global,0.003,0.002,0.001
-2025,National Academy of Sciences,Germany,1,0.991,0.009
-2025,National Academy of Sciences,Global,0.988,0.934,0.054
-2025,Optica,Germany,0.2,0,0.2
+2025,Optica,Germany,0.15,0.05,0.1
 2025,Optica,Global,0.024,0.002,0.022
-2025,The Royal Society,Germany,0.67,0.643,0.027
-2025,The Royal Society,Global,0.596,0.58,0.016
+2025,The Royal Society,Germany,0.707,0.669,0.038
+2025,The Royal Society,Global,0.592,0.546,0.046
 2025,American Thoracic Society,Germany,0,0,0
 2025,American Thoracic Society,Global,0,0.001,-0.001
-2025,Canadian Science Publishing,Germany,0.083,0,0.083
-2025,Canadian Science Publishing,Global,0.232,0.003,0.229
-2025,Future Science Group,Germany,0.5,0.433,0.067
-2025,Future Science Group,Global,0.243,0.244,-0.001
-2025,American Meteorological Society,Germany,0.143,0.036,0.107
-2025,American Meteorological Society,Global,0.037,0.025,0.012
-2025,CSIRO,Global,0,0.019,-0.019
-2025,John Benjamins Publishing,Germany,0.233,0,0.233
-2025,John Benjamins Publishing,Global,0.197,0.011,0.186
-2025,Company of Biologists,Germany,0.587,0.609,-0.022
-2025,Company of Biologists,Global,0.305,0.365,-0.06
+2025,Canadian Science Publishing,Germany,0.071,0,0.071
+2025,Canadian Science Publishing,Global,0.227,0.006,0.221
+2025,Future Science Group,Germany,0.462,0.385,0.077
+2025,Future Science Group,Global,0.221,0.212,0.01
+2025,American Meteorological Society,Germany,0.103,0.026,0.077
+2025,American Meteorological Society,Global,0.039,0.019,0.019
+2025,CSIRO,Germany,0,0,0
+2025,CSIRO,Global,0,0.015,-0.015
+2025,John Benjamins Publishing,Germany,0.288,0,0.288
+2025,John Benjamins Publishing,Global,0.2,0.009,0.19
+2025,Company of Biologists,Germany,0.604,0.585,0.019
+2025,Company of Biologists,Global,0.308,0.346,-0.038
 2025,SPIE,Germany,0,0,0
-2025,SPIE,Global,0.009,0.014,-0.006
+2025,SPIE,Global,0.015,0.011,0.004
 2025,Microbiology Society,Germany,1,0,1
-2025,Microbiology Society,Global,0.616,0,0.616
-2025,Akadémiai Kiadó,Germany,0.333,0,0.333
-2025,Akadémiai Kiadó,Global,0.494,0.07,0.424
-2025,Hogrefe,Germany,0.593,0.458,0.134
-2025,Hogrefe,Global,0.358,0.28,0.078
+2025,Microbiology Society,Global,0.629,0,0.629
+2025,Akadémiai Kiadó,Germany,0.278,0,0.278
+2025,Akadémiai Kiadó,Global,0.497,0.056,0.441
+2025,Hogrefe,Germany,0.616,0.509,0.108
+2025,Hogrefe,Global,0.351,0.278,0.073
 2025,Society for Neuroscience,Germany,0,0,0
 2025,Society for Neuroscience,Global,0,0,0
 2025,Radiological Society of North America,Germany,0,0,0
-2025,Radiological Society of North America,Global,0,0,0
-2025,Portland Press,Germany,0.889,0.778,0.111
-2025,Portland Press,Global,0.974,0.879,0.095
-2025,Bioscientifica,Germany,0.353,0.118,0.235
-2025,Bioscientifica,Global,0.372,0.084,0.289
-2025,The Geological Society of London,Germany,0.25,0.5,-0.25
-2025,The Geological Society of London,Global,0.224,0.227,-0.003
-2025,Rockefeller University Press,Germany,0.667,0.556,0.111
-2025,Rockefeller University Press,Global,0.364,0.338,0.027
-2025,Bristol University Press,Germany,0.366,0.073,0.293
-2025,Bristol University Press,Global,0.241,0.057,0.184
-2025,European Respiratory Society,Germany,0.444,0.222,0.222
-2025,European Respiratory Society,Global,0.227,0.267,-0.04
-2025,Inter-Research Science Publisher,Global,0.345,0.155,0.19
+2025,Radiological Society of North America,Global,0,0.002,-0.002
+2025,Portland Press,Germany,0.9,0.8,0.1
+2025,Portland Press,Global,0.981,0.842,0.139
+2025,Bioscientifica,Germany,0.364,0.091,0.273
+2025,Bioscientifica,Global,0.361,0.076,0.285
+2025,The Geological Society of London,Germany,0.8,0.6,0.2
+2025,The Geological Society of London,Global,0.237,0.216,0.021
+2025,Rockefeller University Press,Germany,0.636,0.545,0.091
+2025,Rockefeller University Press,Global,0.342,0.309,0.033
+2025,Bristol University Press,Germany,0.409,0.091,0.318
+2025,Bristol University Press,Global,0.251,0.058,0.193
+2025,European Respiratory Society,Germany,0.333,0.25,0.083
+2025,European Respiratory Society,Global,0.204,0.241,-0.037
+2025,Inter-Research Science Publisher,Germany,0,0,0
+2025,Inter-Research Science Publisher,Global,0.317,0.118,0.199
 2025,Royal College of General Practitioners,Germany,0,0,0
-2025,Royal College of General Practitioners,Global,0.086,0.041,0.045
+2025,Royal College of General Practitioners,Global,0.181,0.075,0.106
 2025,Cold Spring Harbor Laboratory Press,Germany,0,0,0
-2025,Cold Spring Harbor Laboratory Press,Global,0,0.022,-0.022
+2025,Cold Spring Harbor Laboratory Press,Global,0,0.024,-0.024
 2025,Edward Elgar Publishing,Germany,0,0,0
-2025,Edward Elgar Publishing,Global,0.065,0.013,0.052
+2025,Edward Elgar Publishing,Global,0.042,0.008,0.033
 2025,Royal Irish Academy,Global,0,0,0
 2025,White Horse Press,Germany,0,0,0
-2025,White Horse Press,Global,0.022,0.022,0
+2025,White Horse Press,Global,0.016,0.031,-0.016

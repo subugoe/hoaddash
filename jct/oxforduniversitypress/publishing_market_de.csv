@@ -1,16 +1,16 @@
 cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
-2017,AIP Publishing,de,1387,71,0.05118961788031723
+2017,AIP Publishing,de,1387,72,0.05191059841384282
 2017,Akadémiai Kiadó,de,17,0,0
 2017,American Chemical Society,de,2527,2,7.914523149980214e-4
 2017,American Meteorological Society,de,80,1,0.0125
 2017,American Physical Society,de,1970,50,0.025380710659898477
-2017,American Physiological Society,de,1471,71,0.04826648538409246
+2017,American Physiological Society,de,1471,72,0.04894629503738953
 2017,American Psychological Association,de,256,3,0.01171875
 2017,American Thoracic Society,de,30,0,0
 2017,Association for Computing Machinery,de,230,2,0.008695652173913044
 2017,Bentham Science Publishers,de,97,1,0.010309278350515464
 2017,Bioscientifica,de,33,6,0.18181818181818182
-2017,BMJ Publishing,de,392,18,0.04591836734693878
+2017,BMJ Publishing,de,392,8,0.02040816326530612
 2017,Brill,de,305,3,0.009836065573770493
 2017,Bristol University Press,de,10,0,0
 2017,Cambridge University Press,de,764,26,0.034031413612565446
@@ -20,10 +20,10 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2017,CSIRO,de,40,0,0
 2017,EDP Sciences,de,509,20,0.03929273084479371
 2017,Edward Elgar Publishing,de,1,0,0
-2017,Elsevier,de,16856,921,0.05463929757949691
+2017,Elsevier,de,16856,911,0.054046037019458947
 2017,Emerald,de,298,0,0
 2017,European Respiratory Society,de,44,0,0
-2017,Future Science Group,de,61,5,0.08196721311475409
+2017,Future Science Group,de,60,5,0.08333333333333333
 2017,Hogrefe,de,288,7,0.024305555555555556
 2017,IEEE,de,1076,11,0.010223048327137546
 2017,Inter-Research Science Publisher,de,16,0,0
@@ -46,41 +46,41 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2017,Sage,de,1648,20,0.012135922330097087
 2017,Society for Neuroscience,de,60,0,0
 2017,SPIE,de,42,0,0
-2017,Springer Nature,de,15657,984,0.06284728875263461
-2017,Taylor and Francis,de,2943,191,0.06489976214746856
+2017,Springer Nature,de,15659,986,0.06296698384315728
+2017,Taylor and Francis,de,2942,191,0.06492182188987083
 2017,The Electrochemical Society,de,1444,106,0.07340720221606649
 2017,The Geological Society of London,de,12,1,0.08333333333333333
 2017,The Royal Society,de,120,2,0.016666666666666666
 2017,Thieme,de,3300,43,0.013030303030303031
 2017,Trans Tech Publications,de,221,31,0.14027149321266968
-2017,Walter de Gruyter,de,2796,95,0.033977110157367665
+2017,Walter de Gruyter,de,2795,95,0.03398926654740608
 2017,White Horse Press,de,2,0,0
-2017,Wiley,de,10100,491,0.048613861386138615
+2017,Wiley,de,10099,491,0.04861867511634815
 2017,Wolters Kluwer Health,de,1691,35,0.02069781194559432
 2017,World Scientific,de,207,0,0
-2018,AIP Publishing,de,1228,72,0.05863192182410423
+2018,AIP Publishing,de,1225,73,0.05959183673469388
 2018,Akadémiai Kiadó,de,14,0,0
 2018,American Chemical Society,de,2684,7,0.0026080476900149033
 2018,American Meteorological Society,de,82,0,0
 2018,American Physical Society,de,2036,261,0.12819253438113948
-2018,American Physiological Society,de,1313,72,0.05483625285605483
+2018,American Physiological Society,de,1310,73,0.055725190839694655
 2018,American Psychological Association,de,260,6,0.023076923076923078
 2018,American Thoracic Society,de,31,0,0
 2018,Association for Computing Machinery,de,240,1,0.004166666666666667
 2018,Bentham Science Publishers,de,92,2,0.021739130434782608
 2018,Bioscientifica,de,40,6,0.15
-2018,BMJ Publishing,de,372,9,0.024193548387096774
+2018,BMJ Publishing,de,372,6,0.016129032258064516
 2018,Brill,de,324,11,0.033950617283950615
 2018,Bristol University Press,de,7,0,0
-2018,Cambridge University Press,de,828,45,0.05434782608695652
+2018,Cambridge University Press,de,827,45,0.05441354292623942
 2018,Canadian Science Publishing,de,19,0,0
 2018,Cold Spring Harbor Laboratory Press,de,17,0,0
 2018,Company of Biologists,de,104,10,0.09615384615384616
 2018,CSIRO,de,28,0,0
 2018,EDP Sciences,de,549,34,0.061930783242258654
 2018,Edward Elgar Publishing,de,2,0,0
-2018,Elsevier,de,16854,1095,0.06496974012103951
-2018,Emerald,de,320,1,0.003125
+2018,Elsevier,de,16854,1094,0.06491040702503857
+2018,Emerald,de,321,1,0.003115264797507788
 2018,European Respiratory Society,de,32,0,0
 2018,Future Science Group,de,67,7,0.1044776119402985
 2018,Hogrefe,de,320,8,0.025
@@ -105,31 +105,31 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2018,Sage,de,1604,25,0.015586034912718205
 2018,Society for Neuroscience,de,51,0,0
 2018,SPIE,de,44,0,0
-2018,Springer Nature,de,15661,1110,0.07087670008300875
+2018,Springer Nature,de,15668,1112,0.07097268317589993
 2018,Taylor and Francis,de,2802,179,0.06388294075660243
 2018,The Electrochemical Society,de,1310,240,0.183206106870229
 2018,The Geological Society of London,de,31,3,0.0967741935483871
 2018,The Royal Society,de,146,2,0.0136986301369863
 2018,Thieme,de,5599,1016,0.18146097517413823
 2018,Trans Tech Publications,de,158,38,0.24050632911392406
-2018,Walter de Gruyter,de,2961,74,0.024991556906450524
+2018,Walter de Gruyter,de,2960,74,0.025
 2018,White Horse Press,de,4,0,0
-2018,Wiley,de,10448,638,0.061064318529862174
+2018,Wiley,de,10449,638,0.061058474495167
 2018,Wolters Kluwer Health,de,1428,30,0.02100840336134454
 2018,World Scientific,de,188,0,0
-2019,AIP Publishing,de,1318,65,0.04931714719271624
+2019,AIP Publishing,de,1315,65,0.049429657794676805
 2019,Akadémiai Kiadó,de,13,0,0
 2019,American Chemical Society,de,2811,10,0.0035574528637495554
 2019,American Meteorological Society,de,106,3,0.02830188679245283
 2019,American Physical Society,de,1886,253,0.13414634146341464
-2019,American Physiological Society,de,1394,65,0.046628407460545196
+2019,American Physiological Society,de,1391,65,0.04672897196261682
 2019,American Psychological Association,de,222,13,0.05855855855855856
 2019,American Thoracic Society,de,39,0,0
-2019,Association for Computing Machinery,de,247,17,0.06882591093117409
+2019,Association for Computing Machinery,de,245,17,0.06938775510204082
 2019,Bentham Science Publishers,de,46,11,0.2391304347826087
 2019,Bioscientifica,de,34,1,0.029411764705882353
-2019,BMJ Publishing,de,403,27,0.06699751861042183
-2019,Brill,de,419,20,0.0477326968973747
+2019,BMJ Publishing,de,403,21,0.052109181141439205
+2019,Brill,de,418,20,0.04784688995215311
 2019,Bristol University Press,de,15,1,0.06666666666666667
 2019,Cambridge University Press,de,709,220,0.31029619181946405
 2019,Canadian Science Publishing,de,22,0,0
@@ -138,8 +138,8 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2019,CSIRO,de,29,0,0
 2019,EDP Sciences,de,577,158,0.2738301559792028
 2019,Edward Elgar Publishing,de,2,0,0
-2019,Elsevier,de,16299,1278,0.07840971838763114
-2019,Emerald,de,391,0,0
+2019,Elsevier,de,16299,1272,0.07804159764402724
+2019,Emerald,de,392,0,0
 2019,European Respiratory Society,de,32,4,0.125
 2019,Future Science Group,de,68,17,0.25
 2019,Hogrefe,de,348,26,0.07471264367816093
@@ -160,11 +160,11 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2019,Rockefeller University Press,de,40,9,0.225
 2019,Royal College of General Practitioners,de,2,0,0
 2019,Royal Irish Academy,de,0,0,NA
-2019,Royal Society of Chemistry,de,1367,399,0.2918800292611558
-2019,Sage,de,1706,123,0.07209847596717468
+2019,Royal Society of Chemistry,de,1366,399,0.29209370424597364
+2019,Sage,de,1708,123,0.07201405152224824
 2019,Society for Neuroscience,de,49,0,0
 2019,SPIE,de,38,0,0
-2019,Springer Nature,de,15788,1274,0.08069419812515835
+2019,Springer Nature,de,15794,1277,0.08085348866658225
 2019,Taylor and Francis,de,3044,351,0.11530880420499343
 2019,The Electrochemical Society,de,1031,370,0.3588748787584869
 2019,The Geological Society of London,de,16,0,0
@@ -173,21 +173,21 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2019,Trans Tech Publications,de,136,18,0.1323529411764706
 2019,Walter de Gruyter,de,3154,173,0.05485098287888396
 2019,White Horse Press,de,5,0,0
-2019,Wiley,de,10093,3598,0.3564846923610423
+2019,Wiley,de,10091,3598,0.3565553463482311
 2019,Wolters Kluwer Health,de,1472,54,0.036684782608695655
 2019,World Scientific,de,221,0,0
-2020,AIP Publishing,de,1036,156,0.15057915057915058
+2020,AIP Publishing,de,1040,156,0.15
 2020,Akadémiai Kiadó,de,14,3,0.21428571428571427
 2020,American Chemical Society,de,2689,30,0.011156563778356266
 2020,American Meteorological Society,de,80,1,0.0125
 2020,American Physical Society,de,1867,525,0.2811997857525442
-2020,American Physiological Society,de,1104,156,0.14130434782608695
+2020,American Physiological Society,de,1108,156,0.1407942238267148
 2020,American Psychological Association,de,246,7,0.028455284552845527
 2020,American Thoracic Society,de,38,0,0
-2020,Association for Computing Machinery,de,240,30,0.125
+2020,Association for Computing Machinery,de,239,30,0.12552301255230125
 2020,Bentham Science Publishers,de,42,15,0.35714285714285715
 2020,Bioscientifica,de,33,2,0.06060606060606061
-2020,BMJ Publishing,de,384,73,0.19010416666666666
+2020,BMJ Publishing,de,384,53,0.13802083333333334
 2020,Brill,de,450,28,0.06222222222222222
 2020,Bristol University Press,de,14,1,0.07142857142857142
 2020,Cambridge University Press,de,819,325,0.3968253968253968
@@ -197,8 +197,8 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2020,CSIRO,de,13,0,0
 2020,EDP Sciences,de,537,235,0.4376163873370577
 2020,Edward Elgar Publishing,de,5,2,0.4
-2020,Elsevier,de,15351,1655,0.10781056608689987
-2020,Emerald,de,338,0,0
+2020,Elsevier,de,15350,1635,0.10651465798045602
+2020,Emerald,de,336,0,0
 2020,European Respiratory Society,de,41,14,0.34146341463414637
 2020,Future Science Group,de,59,20,0.3389830508474576
 2020,Hogrefe,de,360,34,0.09444444444444444
@@ -212,7 +212,7 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2020,"Mary Ann Liebert, Inc.",de,175,1,0.005714285714285714
 2020,Microbiology Society,de,48,9,0.1875
 2020,National Academy of Sciences,de,244,124,0.5081967213114754
-2020,Optica,de,142,4,0.028169014084507043
+2020,Optica,de,141,4,0.028368794326241134
 2020,Oxford University Press,de,1945,442,0.22724935732647814
 2020,Portland Press,de,34,18,0.5294117647058824
 2020,Radiological Society of North America,de,34,0,0
@@ -223,7 +223,7 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2020,Sage,de,1721,411,0.23881464264962232
 2020,Society for Neuroscience,de,62,0,0
 2020,SPIE,de,32,0,0
-2020,Springer Nature,de,17818,8518,0.4780558985295768
+2020,Springer Nature,de,17821,8521,0.47814376297626393
 2020,Taylor and Francis,de,2972,426,0.14333781965006728
 2020,The Electrochemical Society,de,1258,469,0.3728139904610493
 2020,The Geological Society of London,de,14,2,0.14285714285714285
@@ -235,18 +235,18 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2020,Wiley,de,10937,8159,0.7459998171344976
 2020,Wolters Kluwer Health,de,1471,57,0.03874915023793338
 2020,World Scientific,de,196,0,0
-2021,AIP Publishing,de,876,315,0.3595890410958904
+2021,AIP Publishing,de,880,313,0.35568181818181815
 2021,Akadémiai Kiadó,de,7,1,0.14285714285714285
 2021,American Chemical Society,de,2679,592,0.2209779768570362
 2021,American Meteorological Society,de,72,8,0.1111111111111111
 2021,American Physical Society,de,1796,508,0.2828507795100223
-2021,American Physiological Society,de,964,315,0.32676348547717843
+2021,American Physiological Society,de,968,313,0.32334710743801653
 2021,American Psychological Association,de,219,39,0.1780821917808219
 2021,American Thoracic Society,de,40,0,0
-2021,Association for Computing Machinery,de,281,48,0.1708185053380783
+2021,Association for Computing Machinery,de,278,48,0.17266187050359713
 2021,Bentham Science Publishers,de,47,14,0.2978723404255319
 2021,Bioscientifica,de,34,4,0.11764705882352941
-2021,BMJ Publishing,de,379,100,0.2638522427440633
+2021,BMJ Publishing,de,379,90,0.23746701846965698
 2021,Brill,de,463,48,0.10367170626349892
 2021,Bristol University Press,de,19,4,0.21052631578947367
 2021,Cambridge University Press,de,853,456,0.5345838218053928
@@ -256,15 +256,15 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2021,CSIRO,de,14,0,0
 2021,EDP Sciences,de,550,289,0.5254545454545455
 2021,Edward Elgar Publishing,de,3,0,0
-2021,Elsevier,de,15669,2534,0.16172059480502904
+2021,Elsevier,de,15669,2524,0.16108239198417257
 2021,Emerald,de,288,0,0
 2021,European Respiratory Society,de,33,17,0.5151515151515151
 2021,Future Science Group,de,49,15,0.30612244897959184
 2021,Hogrefe,de,371,148,0.39892183288409705
-2021,IEEE,de,1390,205,0.1474820143884892
+2021,IEEE,de,1389,204,0.1468682505399568
 2021,Inter-Research Science Publisher,de,10,3,0.3
 2021,IOP Publishing,de,1032,524,0.5077519379844961
-2021,IOS Press,de,184,29,0.15760869565217392
+2021,IOS Press,de,183,29,0.15846994535519127
 2021,IWA Publishing,de,1,1,1
 2021,John Benjamins Publishing,de,114,6,0.05263157894736842
 2021,Karger,de,489,134,0.2740286298568507
@@ -274,16 +274,16 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2021,Optica,de,173,6,0.03468208092485549
 2021,Oxford University Press,de,1953,552,0.282642089093702
 2021,Portland Press,de,48,31,0.6458333333333334
-2021,Radiological Society of North America,de,31,0,0
+2021,Radiological Society of North America,de,30,0,0
 2021,Rockefeller University Press,de,35,8,0.22857142857142856
 2021,Royal College of General Practitioners,de,1,1,1
 2021,Royal Irish Academy,de,3,0,0
 2021,Royal Society of Chemistry,de,1208,476,0.39403973509933776
-2021,Sage,de,1709,740,0.43300175541252195
+2021,Sage,de,1708,740,0.4332552693208431
 2021,Society for Neuroscience,de,45,0,0
 2021,SPIE,de,44,0,0
-2021,Springer Nature,de,18376,11047,0.6011645624727906
-2021,Taylor and Francis,de,3009,663,0.22033898305084745
+2021,Springer Nature,de,18378,11048,0.6011535531613886
+2021,Taylor and Francis,de,3010,663,0.220265780730897
 2021,The Electrochemical Society,de,987,503,0.5096251266464032
 2021,The Geological Society of London,de,9,2,0.2222222222222222
 2021,The Royal Society,de,169,4,0.023668639053254437
@@ -291,22 +291,22 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2021,Trans Tech Publications,de,65,2,0.03076923076923077
 2021,Walter de Gruyter,de,3327,255,0.07664562669071236
 2021,White Horse Press,de,3,0,0
-2021,Wiley,de,11130,9206,0.8271338724168913
-2021,Wolters Kluwer Health,de,1215,95,0.07818930041152264
+2021,Wiley,de,11131,9207,0.8271494025694007
+2021,Wolters Kluwer Health,de,1214,94,0.07742998352553541
 2021,World Scientific,de,161,0,0
-2022,AIP Publishing,de,904,394,0.4358407079646018
+2022,AIP Publishing,de,904,397,0.4391592920353982
 2022,Akadémiai Kiadó,de,16,2,0.125
 2022,American Chemical Society,de,2329,597,0.25633319021039075
 2022,American Meteorological Society,de,56,10,0.17857142857142858
 2022,American Physical Society,de,1668,545,0.32673860911270985
-2022,American Physiological Society,de,960,394,0.41041666666666665
+2022,American Physiological Society,de,960,397,0.41354166666666664
 2022,American Psychological Association,de,187,54,0.2887700534759358
 2022,American Thoracic Society,de,31,0,0
 2022,Association for Computing Machinery,de,299,54,0.1806020066889632
 2022,Bentham Science Publishers,de,51,3,0.058823529411764705
 2022,Bioscientifica,de,23,11,0.4782608695652174
-2022,BMJ Publishing,de,405,97,0.23950617283950618
-2022,Brill,de,452,45,0.09955752212389381
+2022,BMJ Publishing,de,406,83,0.2044334975369458
+2022,Brill,de,453,45,0.09933774834437085
 2022,Bristol University Press,de,27,6,0.2222222222222222
 2022,Cambridge University Press,de,844,523,0.6196682464454977
 2022,Canadian Science Publishing,de,3,0,0
@@ -315,7 +315,7 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2022,CSIRO,de,25,1,0.04
 2022,EDP Sciences,de,544,402,0.7389705882352942
 2022,Edward Elgar Publishing,de,4,0,0
-2022,Elsevier,de,13964,2886,0.20667430535663134
+2022,Elsevier,de,13965,2872,0.20565699964196205
 2022,Emerald,de,256,0,0
 2022,European Respiratory Society,de,31,18,0.5806451612903226
 2022,Future Science Group,de,35,15,0.42857142857142855
@@ -341,44 +341,44 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2022,Sage,de,1731,808,0.4667822068168689
 2022,Society for Neuroscience,de,36,0,0
 2022,SPIE,de,34,0,0
-2022,Springer Nature,de,16153,10128,0.6270042716523246
+2022,Springer Nature,de,16156,10130,0.627011636543699
 2022,Taylor and Francis,de,2741,632,0.23057278365560013
 2022,The Electrochemical Society,de,1061,563,0.530631479736098
 2022,The Geological Society of London,de,13,3,0.23076923076923078
 2022,The Royal Society,de,167,1,0.005988023952095809
-2022,Thieme,de,4568,1153,0.25240805604203154
+2022,Thieme,de,4567,1153,0.25246332384497483
 2022,Trans Tech Publications,de,125,90,0.72
 2022,Walter de Gruyter,de,3126,559,0.17882277671145233
 2022,White Horse Press,de,0,0,NA
-2022,Wiley,de,9410,7691,0.8173219978746015
-2022,Wolters Kluwer Health,de,1100,111,0.1009090909090909
+2022,Wiley,de,9410,7692,0.8174282678002125
+2022,Wolters Kluwer Health,de,1099,111,0.10100090991810737
 2022,World Scientific,de,169,0,0
-2023,AIP Publishing,de,773,436,0.5640362225097024
+2023,AIP Publishing,de,768,430,0.5598958333333334
 2023,Akadémiai Kiadó,de,13,6,0.46153846153846156
 2023,American Chemical Society,de,2304,820,0.3559027777777778
 2023,American Meteorological Society,de,51,9,0.17647058823529413
 2023,American Physical Society,de,1522,530,0.34822601839684625
-2023,American Physiological Society,de,842,436,0.517814726840855
-2023,American Psychological Association,de,244,79,0.3237704918032787
+2023,American Physiological Society,de,837,430,0.5137395459976105
+2023,American Psychological Association,de,236,74,0.3135593220338983
 2023,American Thoracic Society,de,37,0,0
 2023,Association for Computing Machinery,de,361,104,0.2880886426592798
 2023,Bentham Science Publishers,de,23,2,0.08695652173913043
 2023,Bioscientifica,de,41,13,0.3170731707317073
-2023,BMJ Publishing,de,356,93,0.2612359550561798
-2023,Brill,de,559,75,0.13416815742397137
+2023,BMJ Publishing,de,356,79,0.22191011235955055
+2023,Brill,de,560,75,0.13392857142857142
 2023,Bristol University Press,de,27,5,0.18518518518518517
-2023,Cambridge University Press,de,892,554,0.6210762331838565
+2023,Cambridge University Press,de,893,555,0.6215005599104143
 2023,Canadian Science Publishing,de,10,5,0.5
 2023,Cold Spring Harbor Laboratory Press,de,13,0,0
 2023,Company of Biologists,de,82,42,0.5121951219512195
 2023,CSIRO,de,19,0,0
 2023,EDP Sciences,de,461,454,0.9848156182212582
 2023,Edward Elgar Publishing,de,7,0,0
-2023,Elsevier,de,13346,3173,0.23774913831859734
+2023,Elsevier,de,13343,3160,0.23682829948287493
 2023,Emerald,de,255,1,0.00392156862745098
 2023,European Respiratory Society,de,27,12,0.4444444444444444
 2023,Future Science Group,de,21,12,0.5714285714285714
-2023,Hogrefe,de,343,229,0.6676384839650146
+2023,Hogrefe,de,337,223,0.6617210682492581
 2023,IEEE,de,1232,216,0.17532467532467533
 2023,Inter-Research Science Publisher,de,10,6,0.6
 2023,IOP Publishing,de,1384,631,0.4559248554913295
@@ -393,14 +393,14 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2023,Oxford University Press,de,1602,582,0.36329588014981273
 2023,Portland Press,de,16,8,0.5
 2023,Radiological Society of North America,de,54,0,0
-2023,Rockefeller University Press,de,29,10,0.3448275862068966
+2023,Rockefeller University Press,de,28,10,0.35714285714285715
 2023,Royal College of General Practitioners,de,2,1,0.5
 2023,Royal Irish Academy,de,0,0,NA
 2023,Royal Society of Chemistry,de,965,501,0.5191709844559586
-2023,Sage,de,1649,791,0.4796846573681019
+2023,Sage,de,1648,787,0.47754854368932037
 2023,Society for Neuroscience,de,45,0,0
 2023,SPIE,de,30,0,0
-2023,Springer Nature,de,15762,9968,0.6324070549422662
+2023,Springer Nature,de,15767,9972,0.632460201687068
 2023,Taylor and Francis,de,2518,674,0.2676727561556791
 2023,The Electrochemical Society,de,1347,606,0.44988864142538976
 2023,The Geological Society of London,de,12,5,0.4166666666666667
@@ -409,124 +409,124 @@ cr_year,esac_publisher,collection,articles,oa_articles,oa_prop
 2023,Trans Tech Publications,de,48,22,0.4583333333333333
 2023,Walter de Gruyter,de,2923,687,0.23503250085528565
 2023,White Horse Press,de,6,0,0
-2023,Wiley,de,10098,8460,0.8377896613190731
-2023,Wolters Kluwer Health,de,1028,110,0.10700389105058365
+2023,Wiley,de,10095,8457,0.837741456166419
+2023,Wolters Kluwer Health,de,1029,110,0.10689990281827016
 2023,World Scientific,de,132,0,0
-2024,AIP Publishing,de,853,473,0.5545134818288394
+2024,AIP Publishing,de,848,470,0.5542452830188679
 2024,Akadémiai Kiadó,de,13,1,0.07692307692307693
 2024,American Chemical Society,de,2424,1321,0.54496699669967
 2024,American Meteorological Society,de,55,8,0.14545454545454545
 2024,American Physical Society,de,1607,576,0.358431860609832
-2024,American Physiological Society,de,949,473,0.49841938883034775
-2024,American Psychological Association,de,289,95,0.328719723183391
+2024,American Physiological Society,de,944,470,0.4978813559322034
+2024,American Psychological Association,de,287,94,0.32752613240418116
 2024,American Thoracic Society,de,28,0,0
-2024,Association for Computing Machinery,de,359,136,0.3788300835654596
+2024,Association for Computing Machinery,de,358,136,0.37988826815642457
 2024,Bentham Science Publishers,de,29,4,0.13793103448275862
 2024,Bioscientifica,de,26,10,0.38461538461538464
-2024,BMJ Publishing,de,334,92,0.2754491017964072
+2024,BMJ Publishing,de,334,87,0.26047904191616766
 2024,Brill,de,510,63,0.12352941176470589
 2024,Bristol University Press,de,37,9,0.24324324324324326
-2024,Cambridge University Press,de,521,396,0.7600767754318618
-2024,Canadian Science Publishing,de,11,4,0.36363636363636365
-2024,Cold Spring Harbor Laboratory Press,de,23,0,0
+2024,Cambridge University Press,de,522,397,0.7605363984674329
+2024,Canadian Science Publishing,de,10,4,0.4
+2024,Cold Spring Harbor Laboratory Press,de,24,0,0
 2024,Company of Biologists,de,67,37,0.5522388059701493
 2024,CSIRO,de,10,0,0
-2024,EDP Sciences,de,359,349,0.9721448467966574
+2024,EDP Sciences,de,361,351,0.9722991689750693
 2024,Edward Elgar Publishing,de,5,0,0
-2024,Elsevier,de,11781,7516,0.6379764026822851
-2024,Emerald,de,140,5,0.03571428571428571
+2024,Elsevier,de,11764,7501,0.6376232573954437
+2024,Emerald,de,139,5,0.03597122302158273
 2024,European Respiratory Society,de,27,12,0.4444444444444444
 2024,Future Science Group,de,27,14,0.5185185185185185
-2024,Hogrefe,de,391,254,0.649616368286445
-2024,IEEE,de,1283,359,0.2798129384255651
+2024,Hogrefe,de,386,250,0.6476683937823834
+2024,IEEE,de,1265,352,0.2782608695652174
 2024,Inter-Research Science Publisher,de,8,7,0.875
-2024,IOP Publishing,de,615,477,0.775609756097561
+2024,IOP Publishing,de,616,478,0.775974025974026
 2024,IOS Press,de,127,39,0.30708661417322836
 2024,IWA Publishing,de,0,0,NA
-2024,John Benjamins Publishing,de,92,33,0.358695652173913
+2024,John Benjamins Publishing,de,92,34,0.3695652173913043
 2024,Karger,de,238,85,0.35714285714285715
-2024,"Mary Ann Liebert, Inc.",de,136,0,0
+2024,"Mary Ann Liebert, Inc.",de,135,0,0
 2024,Microbiology Society,de,26,17,0.6538461538461539
 2024,National Academy of Sciences,de,213,213,1
 2024,Optica,de,54,5,0.09259259259259259
-2024,Oxford University Press,de,1574,577,0.36658195679796696
+2024,Oxford University Press,de,1579,583,0.36922102596580114
 2024,Portland Press,de,20,16,0.8
 2024,Radiological Society of North America,de,61,0,0
 2024,Rockefeller University Press,de,24,9,0.375
 2024,Royal College of General Practitioners,de,1,0,0
 2024,Royal Irish Academy,de,0,0,NA
 2024,Royal Society of Chemistry,de,1012,775,0.7658102766798419
-2024,Sage,de,1654,775,0.46856106408706166
+2024,Sage,de,1655,723,0.4368580060422961
 2024,Society for Neuroscience,de,50,0,0
 2024,SPIE,de,35,0,0
-2024,Springer Nature,de,14533,9330,0.6419872015413197
-2024,Taylor and Francis,de,2742,1588,0.5791393143690736
-2024,The Electrochemical Society,de,595,462,0.7764705882352941
+2024,Springer Nature,de,14530,9335,0.6424638678596009
+2024,Taylor and Francis,de,2752,1594,0.5792151162790697
+2024,The Electrochemical Society,de,596,463,0.7768456375838926
 2024,The Geological Society of London,de,17,3,0.17647058823529413
-2024,The Royal Society,de,151,114,0.7549668874172185
+2024,The Royal Society,de,150,113,0.7533333333333333
 2024,Thieme,de,4380,177,0.04041095890410959
 2024,Trans Tech Publications,de,43,20,0.46511627906976744
-2024,Walter de Gruyter,de,2676,654,0.24439461883408073
+2024,Walter de Gruyter,de,2674,655,0.24495138369483918
 2024,White Horse Press,de,7,0,0
-2024,Wiley,de,9484,7986,0.8420497680303669
-2024,Wolters Kluwer Health,de,973,145,0.14902363823227133
-2024,World Scientific,de,108,0,0
-2025,AIP Publishing,de,335,184,0.5492537313432836
-2025,Akadémiai Kiadó,de,15,5,0.3333333333333333
-2025,American Chemical Society,de,1416,811,0.5727401129943502
-2025,American Meteorological Society,de,28,4,0.14285714285714285
-2025,American Physical Society,de,718,467,0.6504178272980501
-2025,American Physiological Society,de,381,200,0.5249343832020997
-2025,American Psychological Association,de,195,55,0.28205128205128205
-2025,American Thoracic Society,de,99,0,0
-2025,Association for Computing Machinery,de,196,44,0.22448979591836735
-2025,Bentham Science Publishers,de,10,0,0
-2025,Bioscientifica,de,17,6,0.35294117647058826
-2025,BMJ Publishing,de,102,48,0.47058823529411764
-2025,Brill,de,202,32,0.15841584158415842
-2025,Bristol University Press,de,41,15,0.36585365853658536
-2025,Cambridge University Press,de,109,80,0.7339449541284404
-2025,Canadian Science Publishing,de,12,1,0.08333333333333333
-2025,Cold Spring Harbor Laboratory Press,de,6,0,0
-2025,Company of Biologists,de,46,27,0.5869565217391305
-2025,CSIRO,de,0,0,NA
-2025,EDP Sciences,de,16,16,1
+2024,Wiley,de,9484,7990,0.8424715309995783
+2024,Wolters Kluwer Health,de,974,145,0.14887063655030802
+2024,World Scientific,de,112,0,0
+2025,AIP Publishing,de,443,232,0.5237020316027088
+2025,Akadémiai Kiadó,de,18,5,0.2777777777777778
+2025,American Chemical Society,de,1823,1056,0.5792649478880966
+2025,American Meteorological Society,de,39,4,0.10256410256410256
+2025,American Physical Society,de,838,551,0.6575178997613366
+2025,American Physiological Society,de,501,248,0.49500998003992014
+2025,American Psychological Association,de,251,73,0.2908366533864542
+2025,American Thoracic Society,de,104,0,0
+2025,Association for Computing Machinery,de,239,45,0.18828451882845187
+2025,Bentham Science Publishers,de,12,0,0
+2025,Bioscientifica,de,22,8,0.36363636363636365
+2025,BMJ Publishing,de,136,63,0.4632352941176471
+2025,Brill,de,263,45,0.17110266159695817
+2025,Bristol University Press,de,44,18,0.4090909090909091
+2025,Cambridge University Press,de,151,111,0.7350993377483444
+2025,Canadian Science Publishing,de,14,1,0.07142857142857142
+2025,Cold Spring Harbor Laboratory Press,de,9,0,0
+2025,Company of Biologists,de,53,32,0.6037735849056604
+2025,CSIRO,de,1,0,0
+2025,EDP Sciences,de,17,16,0.9411764705882353
 2025,Edward Elgar Publishing,de,4,0,0
-2025,Elsevier,de,3914,2936,0.7501277465508431
-2025,Emerald,de,15,3,0.2
-2025,European Respiratory Society,de,9,4,0.4444444444444444
-2025,Future Science Group,de,30,15,0.5
-2025,Hogrefe,de,216,128,0.5925925925925926
-2025,IEEE,de,766,234,0.30548302872062666
-2025,Inter-Research Science Publisher,de,0,0,NA
-2025,IOP Publishing,de,90,72,0.8
-2025,IOS Press,de,39,0,0
+2025,Elsevier,de,4659,3525,0.7566001287830006
+2025,Emerald,de,26,7,0.2692307692307692
+2025,European Respiratory Society,de,12,4,0.3333333333333333
+2025,Future Science Group,de,39,18,0.46153846153846156
+2025,Hogrefe,de,279,172,0.6164874551971327
+2025,IEEE,de,931,302,0.32438238453276047
+2025,Inter-Research Science Publisher,de,1,0,0
+2025,IOP Publishing,de,112,93,0.8303571428571429
+2025,IOS Press,de,44,3,0.06818181818181818
 2025,IWA Publishing,de,0,0,NA
-2025,John Benjamins Publishing,de,43,10,0.23255813953488372
-2025,Karger,de,54,16,0.2962962962962963
-2025,"Mary Ann Liebert, Inc.",de,75,0,0
-2025,Microbiology Society,de,8,8,1
-2025,National Academy of Sciences,de,106,106,1
-2025,Optica,de,5,1,0.2
-2025,Oxford University Press,de,741,178,0.24021592442645073
-2025,Portland Press,de,9,8,0.8888888888888888
-2025,Radiological Society of North America,de,28,0,0
-2025,Rockefeller University Press,de,9,6,0.6666666666666666
+2025,John Benjamins Publishing,de,52,15,0.28846153846153844
+2025,Karger,de,56,17,0.30357142857142855
+2025,"Mary Ann Liebert, Inc.",de,81,0,0
+2025,Microbiology Society,de,9,9,1
+2025,National Academy of Sciences,de,133,133,1
+2025,Optica,de,20,3,0.15
+2025,Oxford University Press,de,949,270,0.2845100105374078
+2025,Portland Press,de,10,9,0.9
+2025,Radiological Society of North America,de,32,0,0
+2025,Rockefeller University Press,de,11,7,0.6363636363636364
 2025,Royal College of General Practitioners,de,1,0,0
 2025,Royal Irish Academy,de,0,0,NA
-2025,Royal Society of Chemistry,de,463,385,0.8315334773218143
-2025,Sage,de,789,82,0.10392902408111533
-2025,Society for Neuroscience,de,32,0,0
-2025,SPIE,de,15,0,0
-2025,Springer Nature,de,4571,2865,0.6267775103915992
-2025,Taylor and Francis,de,1388,876,0.6311239193083573
-2025,The Electrochemical Society,de,85,70,0.8235294117647058
-2025,The Geological Society of London,de,4,1,0.25
-2025,The Royal Society,de,112,75,0.6696428571428571
-2025,Thieme,de,1555,107,0.06881028938906752
-2025,Trans Tech Publications,de,7,0,0
-2025,Walter de Gruyter,de,1170,511,0.43675213675213675
+2025,Royal Society of Chemistry,de,589,489,0.830220713073005
+2025,Sage,de,984,142,0.1443089430894309
+2025,Society for Neuroscience,de,36,0,0
+2025,SPIE,de,20,0,0
+2025,Springer Nature,de,5750,3622,0.6299130434782608
+2025,Taylor and Francis,de,1764,1127,0.6388888888888888
+2025,The Electrochemical Society,de,106,90,0.8490566037735849
+2025,The Geological Society of London,de,5,4,0.8
+2025,The Royal Society,de,133,94,0.706766917293233
+2025,Thieme,de,1758,136,0.07736063708759955
+2025,Trans Tech Publications,de,15,0,0
+2025,Walter de Gruyter,de,1527,645,0.4223968565815324
 2025,White Horse Press,de,2,0,0
-2025,Wiley,de,4670,3822,0.8184154175588865
-2025,Wolters Kluwer Health,de,537,74,0.1378026070763501
-2025,World Scientific,de,32,0,0
+2025,Wiley,de,5843,4917,0.8415197672428547
+2025,Wolters Kluwer Health,de,647,102,0.15765069551777433
+2025,World Scientific,de,41,0,0

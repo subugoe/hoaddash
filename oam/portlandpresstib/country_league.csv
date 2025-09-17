@@ -336,7 +336,7 @@ cr_year,country_name,cc_total,articles,prop
 2024,Canada,14,17,0.8235294117647058
 2024,Switzerland,4,8,0.5
 2024,Chile,0,1,0
-2024,China,14,23,0.6086956521739131
+2024,China,13,22,0.5909090909090909
 2024,Czechia,0,1,0
 2024,Germany,16,20,0.8
 2024,Denmark,4,5,0.8
@@ -369,28 +369,33 @@ cr_year,country_name,cc_total,articles,prop
 2024,South Africa,0,3,0
 2025,United Arab Emirates,1,1,1
 2025,Argentina,1,1,1
-2025,Australia,13,13,1
+2025,Austria,1,1,1
+2025,Australia,18,18,1
 2025,Belgium,1,1,1
-2025,Brazil,3,4,0.75
-2025,Canada,8,8,1
+2025,Brazil,5,6,0.8333333333333334
+2025,Canada,14,14,1
 2025,Switzerland,3,4,0.75
-2025,China,23,23,1
+2025,China,25,25,1
 2025,Czechia,1,1,1
-2025,Germany,8,9,0.8888888888888888
-2025,Denmark,2,2,1
+2025,Germany,9,10,0.9
+2025,Denmark,3,3,1
 2025,Spain,2,2,1
-2025,France,3,4,0.75
-2025,United Kingdom,23,23,1
+2025,France,5,6,0.8333333333333334
+2025,United Kingdom,31,31,1
 2025,Hong Kong SAR China,2,2,1
 2025,Hungary,1,1,1
-2025,India,5,5,1
-2025,Italy,3,3,1
+2025,Israel,1,1,1
+2025,India,6,6,1
+2025,Italy,4,4,1
 2025,Japan,3,3,1
-2025,South Korea,2,2,1
+2025,South Korea,3,3,1
 2025,Macao SAR China,1,1,1
+2025,Mexico,1,1,1
+2025,Netherlands,1,1,1
 2025,New Zealand,2,2,1
-2025,Portugal,1,1,1
+2025,Philippines,1,1,1
+2025,Portugal,2,2,1
 2025,Saudi Arabia,1,1,1
-2025,Sweden,2,2,1
-2025,United States,52,53,0.9811320754716981
+2025,Sweden,4,4,1
+2025,United States,69,70,0.9857142857142858
 2025,South Africa,1,1,1
