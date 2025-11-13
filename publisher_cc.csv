@@ -3,19 +3,19 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2017,American Physical Society,global,CC BY,438,18989,0.0230659855705935
 2017,Cambridge University Press,global,CC BY,525,28179,0.018630895347599277
 2017,IOP Publishing,global,CC BY,1028,27165,0.03784281244248113
-2017,Oxford University Press,global,CC BY,1040,67882,0.015320703573848737
+2017,Oxford University Press,global,CC BY,1040,67883,0.015320477881060059
 2017,Royal Society of Chemistry,global,CC BY,484,29221,0.016563430409636905
-2017,Sage,global,CC BY,83,66483,0.0012484394506866417
-2017,Taylor and Francis,global,CC BY,1043,129869,0.00803116987117788
+2017,Sage,global,CC BY,83,66535,0.0012474637408882543
+2017,Taylor and Francis,global,CC BY,1043,129870,0.008031108031108031
 2017,The Electrochemical Society,global,CC BY,868,23287,0.03727401554515395
 2017,Wolters Kluwer Health,global,CC BY,103,69605,0.0014797787515264708
 2018,American Chemical Society,global,CC BY,38,57240,6.638714185883997e-4
 2018,American Physical Society,global,CC BY,2745,19404,0.1414656771799629
 2018,Cambridge University Press,global,CC BY,729,28962,0.02517091361093847
 2018,IOP Publishing,global,CC BY,1595,26782,0.05955492494959301
-2018,Oxford University Press,global,CC BY,1754,66555,0.02635414318984299
+2018,Oxford University Press,global,CC BY,1754,66556,0.026353747220385842
 2018,Royal Society of Chemistry,global,CC BY,1474,29907,0.04928612030628281
-2018,Sage,global,CC BY,134,66723,0.002008302983978538
+2018,Sage,global,CC BY,134,66775,0.0020067390490453012
 2018,Taylor and Francis,global,CC BY,1170,123173,0.009498834971950022
 2018,The Electrochemical Society,global,CC BY,1430,22967,0.062263247267819045
 2018,Wolters Kluwer Health,global,CC BY,127,72272,0.0017572503874252823
@@ -25,7 +25,7 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2019,IOP Publishing,global,CC BY,1812,25798,0.0702380029459648
 2019,Oxford University Press,global,CC BY,1928,53914,0.035760655859331525
 2019,Royal Society of Chemistry,global,CC BY,1472,31303,0.0470242468772961
-2019,Sage,global,CC BY,250,67245,0.00371774853148933
+2019,Sage,global,CC BY,250,67301,0.003714655057131395
 2019,Taylor and Francis,global,CC BY,1546,134970,0.011454397273468179
 2019,The Electrochemical Society,global,CC BY,1715,22350,0.0767337807606264
 2019,Wolters Kluwer Health,global,CC BY,167,69178,0.002414062274133395
@@ -35,7 +35,7 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2020,IOP Publishing,global,CC BY,2585,28680,0.09013249651324966
 2020,Oxford University Press,global,CC BY,3082,59662,0.051657671549730146
 2020,Royal Society of Chemistry,global,CC BY,1865,32267,0.05779898967985868
-2020,Sage,global,CC BY,3934,74412,0.052867817018760414
+2020,Sage,global,CC BY,3932,74456,0.05280971311915762
 2020,Taylor and Francis,global,CC BY,1773,136777,0.012962705718066634
 2020,The Electrochemical Society,global,CC BY,2417,25092,0.0963255220787502
 2020,Wolters Kluwer Health,global,CC BY,252,75986,0.0033164003895454425
@@ -45,50 +45,50 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2021,IOP Publishing,global,CC BY,2785,26539,0.10493989977014959
 2021,Oxford University Press,global,CC BY,4436,55971,0.07925532865233782
 2021,Royal Society of Chemistry,global,CC BY,2042,31199,0.06545081573127344
-2021,Sage,global,CC BY,6183,74174,0.08335804999056273
+2021,Sage,global,CC BY,6182,74230,0.08328169203825947
 2021,Taylor and Francis,global,CC BY,3294,135477,0.024314090214575167
 2021,The Electrochemical Society,global,CC BY,2591,22426,0.11553553910639436
 2021,Wolters Kluwer Health,global,CC BY,441,61087,0.0072192119436213925
 2022,American Chemical Society,global,CC BY,5886,62475,0.09421368547418968
 2022,American Physical Society,global,CC BY,3538,18550,0.1907277628032345
-2022,Cambridge University Press,global,CC BY,7378,27396,0.2693093882318587
+2022,Cambridge University Press,global,CC BY,7379,27396,0.2693458899109359
 2022,IOP Publishing,global,CC BY,3069,26396,0.11626761630550084
-2022,Oxford University Press,global,CC BY,5039,48968,0.10290393726515275
+2022,Oxford University Press,global,CC BY,5046,48976,0.10303005553740607
 2022,Royal Society of Chemistry,global,CC BY,2614,30479,0.08576396863414154
-2022,Sage,global,CC BY,6258,72010,0.08690459658380781
-2022,Taylor and Francis,global,CC BY,4291,125052,0.03431372549019608
+2022,Sage,global,CC BY,6256,72072,0.0868020868020868
+2022,Taylor and Francis,global,CC BY,4290,125062,0.034302985719083336
 2022,The Electrochemical Society,global,CC BY,2880,22694,0.12690579007667224
 2022,Wolters Kluwer Health,global,CC BY,606,60128,0.010078499201703034
 2023,American Chemical Society,global,CC BY,8346,66233,0.1260096930533118
 2023,American Physical Society,global,CC BY,4103,18188,0.22558829997800747
-2023,Cambridge University Press,global,CC BY,8637,27573,0.31324121423131324
+2023,Cambridge University Press,global,CC BY,8639,27579,0.3132455854091882
 2023,IOP Publishing,global,CC BY,4332,25930,0.16706517547242578
-2023,Oxford University Press,global,CC BY,6897,48152,0.1432339259013125
+2023,Oxford University Press,global,CC BY,6879,48120,0.14295511221945137
 2023,Royal Society of Chemistry,global,CC BY,2967,30713,0.09660404389020935
-2023,Sage,global,CC BY,7355,69773,0.10541326874292348
+2023,Sage,global,CC BY,7365,69830,0.10547042818272949
 2023,Taylor and Francis,global,CC BY,8466,120863,0.07004625071361789
 2023,The Electrochemical Society,global,CC BY,4119,22517,0.18292845405693475
 2023,Wolters Kluwer Health,global,CC BY,810,55334,0.014638377850869267
-2024,American Chemical Society,global,CC BY,10125,74546,0.13582217691090065
+2024,American Chemical Society,global,CC BY,10131,74546,0.13590266412684784
 2024,American Physical Society,global,CC BY,4705,20020,0.23501498501498502
-2024,Cambridge University Press,global,CC BY,8984,24176,0.37160820648577103
-2024,IOP Publishing,global,CC BY,5883,32737,0.17970492103735833
-2024,Oxford University Press,global,CC BY,8321,49736,0.1673033617500402
+2024,Cambridge University Press,global,CC BY,9002,24240,0.37136963696369635
+2024,IOP Publishing,global,CC BY,5883,32736,0.17971041055718476
+2024,Oxford University Press,global,CC BY,8264,49626,0.16652561157457785
 2024,Royal Society of Chemistry,global,CC BY,3994,31401,0.12719340148402916
-2024,Sage,global,CC BY,6575,70304,0.09352241693218025
-2024,Taylor and Francis,global,CC BY,11581,127812,0.09060964541670578
-2024,The Electrochemical Society,global,CC BY,5665,29400,0.19268707482993197
-2024,Wolters Kluwer Health,global,CC BY,945,60002,0.015749475017499417
-2025,American Chemical Society,global,CC BY,8157,54222,0.1504370919552949
-2025,American Physical Society,global,CC BY,3809,14468,0.263270666298037
-2025,Cambridge University Press,global,CC BY,6795,15724,0.43214194861358435
-2025,IOP Publishing,global,CC BY,4045,19688,0.20545509955302724
-2025,Oxford University Press,global,CC BY,4950,32437,0.15260350833924222
-2025,Royal Society of Chemistry,global,CC BY,3780,27045,0.13976705490848584
-2025,Sage,global,CC BY,2133,47163,0.04522613065326633
-2025,Taylor and Francis,global,CC BY,8681,88503,0.09808707049478549
-2025,The Electrochemical Society,global,CC BY,3898,16802,0.23199619092965124
-2025,Wolters Kluwer Health,global,CC BY,710,45856,0.015483251919050943
+2024,Sage,global,CC BY,6595,70338,0.09376155136626006
+2024,Taylor and Francis,global,CC BY,11594,127931,0.0906269786056546
+2024,The Electrochemical Society,global,CC BY,5665,29399,0.1926936290350012
+2024,Wolters Kluwer Health,global,CC BY,946,60060,0.01575091575091575
+2025,American Chemical Society,global,CC BY,9223,60815,0.15165666365205951
+2025,American Physical Society,global,CC BY,4323,16232,0.2663257762444554
+2025,Cambridge University Press,global,CC BY,7891,18242,0.4325731827650477
+2025,IOP Publishing,global,CC BY,4563,21891,0.2084418254077018
+2025,Oxford University Press,global,CC BY,5780,37367,0.154681938608933
+2025,Royal Society of Chemistry,global,CC BY,4119,29719,0.13859820316968943
+2025,Sage,global,CC BY,3417,53636,0.06370721157431576
+2025,Taylor and Francis,global,CC BY,9905,100758,0.09830484924274004
+2025,The Electrochemical Society,global,CC BY,4360,18683,0.23336723224321576
+2025,Wolters Kluwer Health,global,CC BY,819,51758,0.01582364078982959
 2017,American Chemical Society,global,CC BY-SA,0,0,0
 2017,American Physical Society,global,CC BY-SA,0,0,0
 2017,Cambridge University Press,global,CC BY-SA,0,0,0
@@ -151,51 +151,51 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2022,Wolters Kluwer Health,global,CC BY-SA,0,0,0
 2023,American Chemical Society,global,CC BY-SA,0,0,0
 2023,American Physical Society,global,CC BY-SA,0,0,0
-2023,Cambridge University Press,global,CC BY-SA,35,27573,0.0012693577050012694
+2023,Cambridge University Press,global,CC BY-SA,35,27579,0.0012690815475542986
 2023,IOP Publishing,global,CC BY-SA,0,0,0
 2023,Oxford University Press,global,CC BY-SA,0,0,0
 2023,Royal Society of Chemistry,global,CC BY-SA,0,0,0
-2023,Sage,global,CC BY-SA,2,69773,2.866438307081536e-5
+2023,Sage,global,CC BY-SA,2,69830,2.8640985249892597e-5
 2023,Taylor and Francis,global,CC BY-SA,1,120863,8.273830700876198e-6
 2023,The Electrochemical Society,global,CC BY-SA,0,0,0
 2023,Wolters Kluwer Health,global,CC BY-SA,0,0,0
 2024,American Chemical Society,global,CC BY-SA,0,0,0
 2024,American Physical Society,global,CC BY-SA,0,0,0
-2024,Cambridge University Press,global,CC BY-SA,24,24176,9.927200529450694e-4
+2024,Cambridge University Press,global,CC BY-SA,24,24240,9.900990099009901e-4
 2024,IOP Publishing,global,CC BY-SA,0,0,0
 2024,Oxford University Press,global,CC BY-SA,0,0,0
 2024,Royal Society of Chemistry,global,CC BY-SA,0,0,0
-2024,Sage,global,CC BY-SA,3,70304,4.2671825216203915e-5
+2024,Sage,global,CC BY-SA,3,70338,4.265119849867781e-5
 2024,Taylor and Francis,global,CC BY-SA,0,0,0
 2024,The Electrochemical Society,global,CC BY-SA,0,0,0
 2024,Wolters Kluwer Health,global,CC BY-SA,0,0,0
 2025,American Chemical Society,global,CC BY-SA,0,0,0
 2025,American Physical Society,global,CC BY-SA,0,0,0
-2025,Cambridge University Press,global,CC BY-SA,49,15724,0.003116255405749173
+2025,Cambridge University Press,global,CC BY-SA,57,18242,0.0031246573840587656
 2025,IOP Publishing,global,CC BY-SA,0,0,0
 2025,Oxford University Press,global,CC BY-SA,0,0,0
 2025,Royal Society of Chemistry,global,CC BY-SA,0,0,0
-2025,Sage,global,CC BY-SA,1,47163,2.1203061722112674e-5
-2025,Taylor and Francis,global,CC BY-SA,2,88503,2.25981040190728e-5
+2025,Sage,global,CC BY-SA,1,53636,1.8644194197926765e-5
+2025,Taylor and Francis,global,CC BY-SA,2,100758,1.9849540483137815e-5
 2025,The Electrochemical Society,global,CC BY-SA,0,0,0
 2025,Wolters Kluwer Health,global,CC BY-SA,0,0,0
 2017,American Chemical Society,global,CC BY-NC,5,51961,9.622601566559535e-5
 2017,American Physical Society,global,CC BY-NC,0,0,0
 2017,Cambridge University Press,global,CC BY-NC,0,0,0
 2017,IOP Publishing,global,CC BY-NC,0,0,0
-2017,Oxford University Press,global,CC BY-NC,486,67882,0.007159482631625468
+2017,Oxford University Press,global,CC BY-NC,487,67883,0.007174108392381008
 2017,Royal Society of Chemistry,global,CC BY-NC,209,29221,0.007152390404161391
-2017,Sage,global,CC BY-NC,349,66483,0.005249462268549855
-2017,Taylor and Francis,global,CC BY-NC,88,129869,6.77605895171288e-4
+2017,Sage,global,CC BY-NC,340,66535,0.005110092432554295
+2017,Taylor and Francis,global,CC BY-NC,88,129870,6.776006776006776e-4
 2017,The Electrochemical Society,global,CC BY-NC,0,0,0
 2017,Wolters Kluwer Health,global,CC BY-NC,72,69605,0.0010344084476689892
 2018,American Chemical Society,global,CC BY-NC,3,57240,5.241090146750524e-5
 2018,American Physical Society,global,CC BY-NC,0,0,0
 2018,Cambridge University Press,global,CC BY-NC,4,28962,1.3811200883916857e-4
 2018,IOP Publishing,global,CC BY-NC,0,0,0
-2018,Oxford University Press,global,CC BY-NC,1185,66555,0.01780482307865675
+2018,Oxford University Press,global,CC BY-NC,1185,66556,0.017804555562233308
 2018,Royal Society of Chemistry,global,CC BY-NC,633,29907,0.02116561340154479
-2018,Sage,global,CC BY-NC,470,66723,0.0070440477796262155
+2018,Sage,global,CC BY-NC,470,66775,0.007038562336203669
 2018,Taylor and Francis,global,CC BY-NC,52,123173,4.2217044319777875e-4
 2018,The Electrochemical Society,global,CC BY-NC,0,0,0
 2018,Wolters Kluwer Health,global,CC BY-NC,35,72272,4.8428160283373923e-4
@@ -205,7 +205,7 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2019,IOP Publishing,global,CC BY-NC,0,0,0
 2019,Oxford University Press,global,CC BY-NC,1917,53914,0.03555662722112995
 2019,Royal Society of Chemistry,global,CC BY-NC,1107,31303,0.03536402261764048
-2019,Sage,global,CC BY-NC,1026,67245,0.01525763997323221
+2019,Sage,global,CC BY-NC,1026,67301,0.015244944354467244
 2019,Taylor and Francis,global,CC BY-NC,61,134970,4.51952285693117e-4
 2019,The Electrochemical Society,global,CC BY-NC,0,0,0
 2019,Wolters Kluwer Health,global,CC BY-NC,48,69178,6.938622105293591e-4
@@ -215,7 +215,7 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2020,IOP Publishing,global,CC BY-NC,0,0,0
 2020,Oxford University Press,global,CC BY-NC,2254,59662,0.03777949113338473
 2020,Royal Society of Chemistry,global,CC BY-NC,1451,32267,0.04496854371339139
-2020,Sage,global,CC BY-NC,2942,74412,0.03953663387625652
+2020,Sage,global,CC BY-NC,2942,74456,0.03951326958203503
 2020,Taylor and Francis,global,CC BY-NC,81,136777,5.922048297593894e-4
 2020,The Electrochemical Society,global,CC BY-NC,0,0,0
 2020,Wolters Kluwer Health,global,CC BY-NC,42,75986,5.527333982575738e-4
@@ -225,7 +225,7 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2021,IOP Publishing,global,CC BY-NC,0,0,0
 2021,Oxford University Press,global,CC BY-NC,2577,55971,0.046041700166157475
 2021,Royal Society of Chemistry,global,CC BY-NC,1573,31199,0.050418282637264014
-2021,Sage,global,CC BY-NC,3833,74174,0.05167578936015315
+2021,Sage,global,CC BY-NC,3834,74230,0.05165027616866496
 2021,Taylor and Francis,global,CC BY-NC,140,135477,0.001033385740753043
 2021,The Electrochemical Society,global,CC BY-NC,0,0,0
 2021,Wolters Kluwer Health,global,CC BY-NC,69,61087,0.0011295365626074287
@@ -233,42 +233,42 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2022,American Physical Society,global,CC BY-NC,0,0,0
 2022,Cambridge University Press,global,CC BY-NC,72,27396,0.002628120893561104
 2022,IOP Publishing,global,CC BY-NC,0,0,0
-2022,Oxford University Press,global,CC BY-NC,2827,48968,0.057731579807221045
+2022,Oxford University Press,global,CC BY-NC,2827,48976,0.05772214962430578
 2022,Royal Society of Chemistry,global,CC BY-NC,1430,30479,0.046917549788378886
-2022,Sage,global,CC BY-NC,4483,72010,0.06225524232745452
-2022,Taylor and Francis,global,CC BY-NC,230,125052,0.0018392348782906311
+2022,Sage,global,CC BY-NC,4483,72072,0.0622016872016872
+2022,Taylor and Francis,global,CC BY-NC,230,125062,0.0018390878124450274
 2022,The Electrochemical Society,global,CC BY-NC,0,0,0
 2022,Wolters Kluwer Health,global,CC BY-NC,57,60128,9.479776476849388e-4
 2023,American Chemical Society,global,CC BY-NC,7,66233,1.0568749716908489e-4
 2023,American Physical Society,global,CC BY-NC,0,0,0
-2023,Cambridge University Press,global,CC BY-NC,144,27573,0.005222500272005223
+2023,Cambridge University Press,global,CC BY-NC,144,27579,0.005221364081366257
 2023,IOP Publishing,global,CC BY-NC,0,0,0
-2023,Oxford University Press,global,CC BY-NC,3035,48152,0.06302957301877388
+2023,Oxford University Press,global,CC BY-NC,3025,48120,0.06286367414796343
 2023,Royal Society of Chemistry,global,CC BY-NC,2082,30713,0.06778888418584963
-2023,Sage,global,CC BY-NC,5560,69773,0.0796869849368667
+2023,Sage,global,CC BY-NC,5572,69830,0.07979378490620077
 2023,Taylor and Francis,global,CC BY-NC,489,120863,0.004045903212728462
 2023,The Electrochemical Society,global,CC BY-NC,0,0,0
 2023,Wolters Kluwer Health,global,CC BY-NC,47,55334,8.49387356778834e-4
 2024,American Chemical Society,global,CC BY-NC,4,74546,5.365814396480026e-5
 2024,American Physical Society,global,CC BY-NC,0,0,0
-2024,Cambridge University Press,global,CC BY-NC,233,24176,0.00963765718067505
+2024,Cambridge University Press,global,CC BY-NC,232,24240,0.00957095709570957
 2024,IOP Publishing,global,CC BY-NC,0,0,0
-2024,Oxford University Press,global,CC BY-NC,2956,49736,0.05943381051954319
+2024,Oxford University Press,global,CC BY-NC,2921,49626,0.058860274855922295
 2024,Royal Society of Chemistry,global,CC BY-NC,2780,31401,0.08853221234992516
-2024,Sage,global,CC BY-NC,5307,70304,0.07548645880746473
-2024,Taylor and Francis,global,CC BY-NC,682,127812,0.0053359621944731326
+2024,Sage,global,CC BY-NC,5345,70338,0.07599021865847763
+2024,Taylor and Francis,global,CC BY-NC,684,127931,0.00534663216890355
 2024,The Electrochemical Society,global,CC BY-NC,0,0,0
-2024,Wolters Kluwer Health,global,CC BY-NC,40,60002,6.666444451851605e-4
-2025,American Chemical Society,global,CC BY-NC,3,54222,5.5328095606949206e-5
+2024,Wolters Kluwer Health,global,CC BY-NC,40,60060,6.66000666000666e-4
+2025,American Chemical Society,global,CC BY-NC,3,60815,4.9329935048918856e-5
 2025,American Physical Society,global,CC BY-NC,0,0,0
-2025,Cambridge University Press,global,CC BY-NC,225,15724,0.014309336046807428
+2025,Cambridge University Press,global,CC BY-NC,262,18242,0.014362460256550818
 2025,IOP Publishing,global,CC BY-NC,0,0,0
-2025,Oxford University Press,global,CC BY-NC,1711,32437,0.05274840459968554
-2025,Royal Society of Chemistry,global,CC BY-NC,2857,27045,0.10563875023109633
-2025,Sage,global,CC BY-NC,1381,47163,0.0292814282382376
-2025,Taylor and Francis,global,CC BY-NC,453,88503,0.005118470560319989
+2025,Oxford University Press,global,CC BY-NC,1960,37367,0.05245269890545133
+2025,Royal Society of Chemistry,global,CC BY-NC,3102,29719,0.10437767085029778
+2025,Sage,global,CC BY-NC,2286,53636,0.042620627936460584
+2025,Taylor and Francis,global,CC BY-NC,552,100758,0.005478473173346037
 2025,The Electrochemical Society,global,CC BY-NC,0,0,0
-2025,Wolters Kluwer Health,global,CC BY-NC,29,45856,6.324145150034892e-4
+2025,Wolters Kluwer Health,global,CC BY-NC,31,51758,5.989412264770663e-4
 2017,American Chemical Society,global,CC BY-NC-SA,0,0,0
 2017,American Physical Society,global,CC BY-NC-SA,0,0,0
 2017,Cambridge University Press,global,CC BY-NC-SA,28,28179,9.936477518719615e-4
@@ -283,7 +283,7 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2018,American Physical Society,global,CC BY-NC-SA,0,0,0
 2018,Cambridge University Press,global,CC BY-NC-SA,29,28962,0.0010013120640839721
 2018,IOP Publishing,global,CC BY-NC-SA,0,0,0
-2018,Oxford University Press,global,CC BY-NC-SA,1,66555,1.50251671549846e-5
+2018,Oxford University Press,global,CC BY-NC-SA,1,66556,1.502494140272853e-5
 2018,Royal Society of Chemistry,global,CC BY-NC-SA,0,0,0
 2018,Sage,global,CC BY-NC-SA,0,0,0
 2018,Taylor and Francis,global,CC BY-NC-SA,0,0,0
@@ -315,7 +315,7 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2021,IOP Publishing,global,CC BY-NC-SA,0,0,0
 2021,Oxford University Press,global,CC BY-NC-SA,2,55971,3.573279019492237e-5
 2021,Royal Society of Chemistry,global,CC BY-NC-SA,0,0,0
-2021,Sage,global,CC BY-NC-SA,4,74174,5.392725213686737e-5
+2021,Sage,global,CC BY-NC-SA,4,74230,5.38865687727334e-5
 2021,Taylor and Francis,global,CC BY-NC-SA,3,135477,2.214398015899378e-5
 2021,The Electrochemical Society,global,CC BY-NC-SA,0,0,0
 2021,Wolters Kluwer Health,global,CC BY-NC-SA,0,0,0
@@ -323,40 +323,40 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2022,American Physical Society,global,CC BY-NC-SA,0,0,0
 2022,Cambridge University Press,global,CC BY-NC-SA,231,27396,0.008431887866841875
 2022,IOP Publishing,global,CC BY-NC-SA,0,0,0
-2022,Oxford University Press,global,CC BY-NC-SA,1,48968,2.0421499754942002e-5
+2022,Oxford University Press,global,CC BY-NC-SA,1,48976,2.0418163998693237e-5
 2022,Royal Society of Chemistry,global,CC BY-NC-SA,0,0,0
-2022,Sage,global,CC BY-NC-SA,2,72010,2.7773920288848772e-5
-2022,Taylor and Francis,global,CC BY-NC-SA,4,125052,3.198669353548924e-5
+2022,Sage,global,CC BY-NC-SA,2,72072,2.775002775002775e-5
+2022,Taylor and Francis,global,CC BY-NC-SA,4,125062,3.198413586860917e-5
 2022,The Electrochemical Society,global,CC BY-NC-SA,0,0,0
 2022,Wolters Kluwer Health,global,CC BY-NC-SA,0,0,0
 2023,American Chemical Society,global,CC BY-NC-SA,0,0,0
 2023,American Physical Society,global,CC BY-NC-SA,0,0,0
-2023,Cambridge University Press,global,CC BY-NC-SA,286,27573,0.010372465818010372
+2023,Cambridge University Press,global,CC BY-NC-SA,286,27579,0.010370209217157983
 2023,IOP Publishing,global,CC BY-NC-SA,0,0,0
 2023,Oxford University Press,global,CC BY-NC-SA,0,0,0
 2023,Royal Society of Chemistry,global,CC BY-NC-SA,0,0,0
-2023,Sage,global,CC BY-NC-SA,6,69773,8.599314921244607e-5
+2023,Sage,global,CC BY-NC-SA,6,69830,8.592295574967779e-5
 2023,Taylor and Francis,global,CC BY-NC-SA,2,120863,1.6547661401752397e-5
 2023,The Electrochemical Society,global,CC BY-NC-SA,0,0,0
 2023,Wolters Kluwer Health,global,CC BY-NC-SA,2,55334,3.614414284165251e-5
 2024,American Chemical Society,global,CC BY-NC-SA,0,0,0
 2024,American Physical Society,global,CC BY-NC-SA,0,0,0
-2024,Cambridge University Press,global,CC BY-NC-SA,319,24176,0.013194904037061549
+2024,Cambridge University Press,global,CC BY-NC-SA,319,24240,0.01316006600660066
 2024,IOP Publishing,global,CC BY-NC-SA,0,0,0
 2024,Oxford University Press,global,CC BY-NC-SA,0,0,0
 2024,Royal Society of Chemistry,global,CC BY-NC-SA,0,0,0
-2024,Sage,global,CC BY-NC-SA,2,70304,2.8447883477469277e-5
-2024,Taylor and Francis,global,CC BY-NC-SA,18,127812,1.408318467749507e-4
+2024,Sage,global,CC BY-NC-SA,2,70338,2.8434132332451874e-5
+2024,Taylor and Francis,global,CC BY-NC-SA,18,127931,1.407008465500934e-4
 2024,The Electrochemical Society,global,CC BY-NC-SA,0,0,0
-2024,Wolters Kluwer Health,global,CC BY-NC-SA,1,60002,1.6666111129629014e-5
+2024,Wolters Kluwer Health,global,CC BY-NC-SA,1,60060,1.665001665001665e-5
 2025,American Chemical Society,global,CC BY-NC-SA,0,0,0
 2025,American Physical Society,global,CC BY-NC-SA,0,0,0
-2025,Cambridge University Press,global,CC BY-NC-SA,204,15724,0.012973798015772068
+2025,Cambridge University Press,global,CC BY-NC-SA,246,18242,0.013485363446990462
 2025,IOP Publishing,global,CC BY-NC-SA,0,0,0
 2025,Oxford University Press,global,CC BY-NC-SA,0,0,0
 2025,Royal Society of Chemistry,global,CC BY-NC-SA,0,0,0
-2025,Sage,global,CC BY-NC-SA,4,47163,8.48122468884507e-5
-2025,Taylor and Francis,global,CC BY-NC-SA,15,88503,1.69485780143046e-4
+2025,Sage,global,CC BY-NC-SA,5,53636,9.322097098963382e-5
+2025,Taylor and Francis,global,CC BY-NC-SA,15,100758,1.4887155362353362e-4
 2025,The Electrochemical Society,global,CC BY-NC-SA,0,0,0
 2025,Wolters Kluwer Health,global,CC BY-NC-SA,0,0,0
 2017,American Chemical Society,global,CC BY-ND,0,0,0
@@ -421,7 +421,7 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2022,Wolters Kluwer Health,global,CC BY-ND,0,0,0
 2023,American Chemical Society,global,CC BY-ND,0,0,0
 2023,American Physical Society,global,CC BY-ND,0,0,0
-2023,Cambridge University Press,global,CC BY-ND,13,27573,4.714757190004715e-4
+2023,Cambridge University Press,global,CC BY-ND,13,27579,4.713731462344538e-4
 2023,IOP Publishing,global,CC BY-ND,0,0,0
 2023,Oxford University Press,global,CC BY-ND,0,0,0
 2023,Royal Society of Chemistry,global,CC BY-ND,0,0,0
@@ -431,7 +431,7 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2023,Wolters Kluwer Health,global,CC BY-ND,1,55334,1.8072071420826256e-5
 2024,American Chemical Society,global,CC BY-ND,0,0,0
 2024,American Physical Society,global,CC BY-ND,0,0,0
-2024,Cambridge University Press,global,CC BY-ND,22,24176,9.099933818663137e-4
+2024,Cambridge University Press,global,CC BY-ND,22,24240,9.075907590759076e-4
 2024,IOP Publishing,global,CC BY-ND,0,0,0
 2024,Oxford University Press,global,CC BY-ND,0,0,0
 2024,Royal Society of Chemistry,global,CC BY-ND,0,0,0
@@ -441,11 +441,11 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2024,Wolters Kluwer Health,global,CC BY-ND,0,0,0
 2025,American Chemical Society,global,CC BY-ND,0,0,0
 2025,American Physical Society,global,CC BY-ND,0,0,0
-2025,Cambridge University Press,global,CC BY-ND,34,15724,0.0021622996692953447
+2025,Cambridge University Press,global,CC BY-ND,37,18242,0.0020282863721083214
 2025,IOP Publishing,global,CC BY-ND,0,0,0
 2025,Oxford University Press,global,CC BY-ND,0,0,0
 2025,Royal Society of Chemistry,global,CC BY-ND,0,0,0
-2025,Sage,global,CC BY-ND,1,47163,2.1203061722112674e-5
+2025,Sage,global,CC BY-ND,2,53636,3.728838839585353e-5
 2025,Taylor and Francis,global,CC BY-ND,0,0,0
 2025,The Electrochemical Society,global,CC BY-ND,0,0,0
 2025,Wolters Kluwer Health,global,CC BY-ND,0,0,0
@@ -453,30 +453,30 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2017,American Physical Society,global,CC BY-NC-ND,0,0,0
 2017,Cambridge University Press,global,CC BY-NC-ND,21,28179,7.45235813903971e-4
 2017,IOP Publishing,global,CC BY-NC-ND,1,27165,3.6812074360390207e-5
-2017,Oxford University Press,global,CC BY-NC-ND,260,67882,0.0038301758934621843
+2017,Oxford University Press,global,CC BY-NC-ND,260,67883,0.0038301194702650147
 2017,Royal Society of Chemistry,global,CC BY-NC-ND,0,0,0
-2017,Sage,global,CC BY-NC-ND,72,66483,0.0010829836198727495
-2017,Taylor and Francis,global,CC BY-NC-ND,2969,129869,0.022861498895040386
+2017,Sage,global,CC BY-NC-ND,72,66535,0.0010821372210114977
+2017,Taylor and Francis,global,CC BY-NC-ND,2969,129870,0.02286132286132286
 2017,The Electrochemical Society,global,CC BY-NC-ND,1,23287,4.294241422252759e-5
 2017,Wolters Kluwer Health,global,CC BY-NC-ND,574,69605,0.008246534013361109
 2018,American Chemical Society,global,CC BY-NC-ND,14,57240,2.445842068483578e-4
 2018,American Physical Society,global,CC BY-NC-ND,0,0,0
 2018,Cambridge University Press,global,CC BY-NC-ND,55,28962,0.0018990401215385677
 2018,IOP Publishing,global,CC BY-NC-ND,163,26782,0.006086177283249944
-2018,Oxford University Press,global,CC BY-NC-ND,394,66555,0.005919915859063932
+2018,Oxford University Press,global,CC BY-NC-ND,394,66556,0.00591982691267504
 2018,Royal Society of Chemistry,global,CC BY-NC-ND,0,0,0
-2018,Sage,global,CC BY-NC-ND,35,66723,5.245567495466331e-4
+2018,Sage,global,CC BY-NC-ND,35,66775,5.241482590789966e-4
 2018,Taylor and Francis,global,CC BY-NC-ND,1753,123173,0.014232015133186657
 2018,The Electrochemical Society,global,CC BY-NC-ND,163,22967,0.007097139373884269
-2018,Wolters Kluwer Health,global,CC BY-NC-ND,784,72272,0.010847907903475758
+2018,Wolters Kluwer Health,global,CC BY-NC-ND,785,72272,0.010861744520699579
 2019,American Chemical Society,global,CC BY-NC-ND,28,60089,4.6597546971991545e-4
 2019,American Physical Society,global,CC BY-NC-ND,0,0,0
 2019,Cambridge University Press,global,CC BY-NC-ND,105,28865,0.003637623419366014
 2019,IOP Publishing,global,CC BY-NC-ND,185,25798,0.007171098534770137
 2019,Oxford University Press,global,CC BY-NC-ND,549,53914,0.01018288385206069
 2019,Royal Society of Chemistry,global,CC BY-NC-ND,0,0,0
-2019,Sage,global,CC BY-NC-ND,45,67245,6.691947356680794e-4
-2019,Taylor and Francis,global,CC BY-NC-ND,4903,134970,0.036326591094317254
+2019,Sage,global,CC BY-NC-ND,45,67301,6.686379102836511e-4
+2019,Taylor and Francis,global,CC BY-NC-ND,4904,134970,0.03633400014818108
 2019,The Electrochemical Society,global,CC BY-NC-ND,185,22350,0.008277404921700223
 2019,Wolters Kluwer Health,global,CC BY-NC-ND,1194,69178,0.017259822486917806
 2020,American Chemical Society,global,CC BY-NC-ND,133,62014,0.002144677008417454
@@ -485,7 +485,7 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2020,IOP Publishing,global,CC BY-NC-ND,225,28680,0.007845188284518828
 2020,Oxford University Press,global,CC BY-NC-ND,951,59662,0.015939794173846
 2020,Royal Society of Chemistry,global,CC BY-NC-ND,0,0,0
-2020,Sage,global,CC BY-NC-ND,63,74412,8.466376390904693e-4
+2020,Sage,global,CC BY-NC-ND,63,74456,8.461373159987107e-4
 2020,Taylor and Francis,global,CC BY-NC-ND,6386,136777,0.046689136331400746
 2020,The Electrochemical Society,global,CC BY-NC-ND,225,25092,0.008967001434720229
 2020,Wolters Kluwer Health,global,CC BY-NC-ND,1661,75986,0.021859289869186428
@@ -495,47 +495,47 @@ cr_year,esac_publisher,collection,cc,cc_articles,articles,prop
 2021,IOP Publishing,global,CC BY-NC-ND,189,26539,0.007121594634311767
 2021,Oxford University Press,global,CC BY-NC-ND,1351,55971,0.02413749977667006
 2021,Royal Society of Chemistry,global,CC BY-NC-ND,0,0,0
-2021,Sage,global,CC BY-NC-ND,102,74174,0.001375144929490118
+2021,Sage,global,CC BY-NC-ND,102,74230,0.0013741075037047017
 2021,Taylor and Francis,global,CC BY-NC-ND,11942,135477,0.08814780368623457
 2021,The Electrochemical Society,global,CC BY-NC-ND,189,22426,0.008427717827521627
-2021,Wolters Kluwer Health,global,CC BY-NC-ND,2018,61087,0.03303485193248973
+2021,Wolters Kluwer Health,global,CC BY-NC-ND,2021,61087,0.033083962217820485
 2022,American Chemical Society,global,CC BY-NC-ND,1913,62475,0.030620248099239696
 2022,American Physical Society,global,CC BY-NC-ND,0,0,0
 2022,Cambridge University Press,global,CC BY-NC-ND,418,27396,0.015257701854285297
 2022,IOP Publishing,global,CC BY-NC-ND,115,26396,0.0043567207152598875
-2022,Oxford University Press,global,CC BY-NC-ND,1584,48968,0.03234765561182813
+2022,Oxford University Press,global,CC BY-NC-ND,1584,48976,0.03234237177393009
 2022,Royal Society of Chemistry,global,CC BY-NC-ND,0,0,0
-2022,Sage,global,CC BY-NC-ND,112,72010,0.0015553395361755313
-2022,Taylor and Francis,global,CC BY-NC-ND,12171,125052,0.09732751175510987
+2022,Sage,global,CC BY-NC-ND,112,72072,0.001554001554001554
+2022,Taylor and Francis,global,CC BY-NC-ND,12180,125062,0.09739169371991492
 2022,The Electrochemical Society,global,CC BY-NC-ND,115,22694,0.005067418700978232
-2022,Wolters Kluwer Health,global,CC BY-NC-ND,2350,60128,0.039083288983501864
+2022,Wolters Kluwer Health,global,CC BY-NC-ND,2352,60128,0.039116551357104845
 2023,American Chemical Society,global,CC BY-NC-ND,1901,66233,0.0287017045883472
 2023,American Physical Society,global,CC BY-NC-ND,0,0,0
-2023,Cambridge University Press,global,CC BY-NC-ND,501,27573,0.01816994886301817
+2023,Cambridge University Press,global,CC BY-NC-ND,501,27579,0.018165995866420103
 2023,IOP Publishing,global,CC BY-NC-ND,96,25930,0.0037022753567296568
-2023,Oxford University Press,global,CC BY-NC-ND,1443,48152,0.029967602591792656
+2023,Oxford University Press,global,CC BY-NC-ND,1444,48120,0.03000831255195345
 2023,Royal Society of Chemistry,global,CC BY-NC-ND,0,0,0
-2023,Sage,global,CC BY-NC-ND,135,69773,0.0019348458572800366
+2023,Sage,global,CC BY-NC-ND,135,69830,0.0019332665043677501
 2023,Taylor and Francis,global,CC BY-NC-ND,12037,120863,0.0995921001464468
 2023,The Electrochemical Society,global,CC BY-NC-ND,95,22517,0.00421903450726118
 2023,Wolters Kluwer Health,global,CC BY-NC-ND,2575,55334,0.04653558390862761
-2024,American Chemical Society,global,CC BY-NC-ND,2691,74546,0.03609851635231937
+2024,American Chemical Society,global,CC BY-NC-ND,2696,74546,0.036165589032275375
 2024,American Physical Society,global,CC BY-NC-ND,0,0,0
-2024,Cambridge University Press,global,CC BY-NC-ND,556,24176,0.02299801455989411
-2024,IOP Publishing,global,CC BY-NC-ND,75,32737,0.0022909857347954915
-2024,Oxford University Press,global,CC BY-NC-ND,1938,49736,0.038965739102461
+2024,Cambridge University Press,global,CC BY-NC-ND,557,24240,0.022978547854785477
+2024,IOP Publishing,global,CC BY-NC-ND,75,32736,0.0022910557184750734
+2024,Oxford University Press,global,CC BY-NC-ND,1948,49626,0.03925361705557571
 2024,Royal Society of Chemistry,global,CC BY-NC-ND,0,0,0
-2024,Sage,global,CC BY-NC-ND,151,70304,0.0021478152025489303
-2024,Taylor and Francis,global,CC BY-NC-ND,15201,127812,0.11893249460144588
-2024,The Electrochemical Society,global,CC BY-NC-ND,75,29400,0.002551020408163265
-2024,Wolters Kluwer Health,global,CC BY-NC-ND,3036,60002,0.05059831338955368
-2025,American Chemical Society,global,CC BY-NC-ND,2073,54222,0.0382317140644019
+2024,Sage,global,CC BY-NC-ND,151,70338,0.0021467769911001165
+2024,Taylor and Francis,global,CC BY-NC-ND,15220,127931,0.11897038247180121
+2024,The Electrochemical Society,global,CC BY-NC-ND,75,29399,0.002551107180516344
+2024,Wolters Kluwer Health,global,CC BY-NC-ND,3036,60060,0.05054945054945055
+2025,American Chemical Society,global,CC BY-NC-ND,2280,60815,0.03749075063717833
 2025,American Physical Society,global,CC BY-NC-ND,0,0,0
-2025,Cambridge University Press,global,CC BY-NC-ND,465,15724,0.029572627830068685
-2025,IOP Publishing,global,CC BY-NC-ND,44,19688,0.0022348638764729785
-2025,Oxford University Press,global,CC BY-NC-ND,1319,32437,0.04066343989888091
-2025,Royal Society of Chemistry,global,CC BY-NC-ND,1,27045,3.6975411351451285e-5
-2025,Sage,global,CC BY-NC-ND,83,47163,0.001759854122935352
-2025,Taylor and Francis,global,CC BY-NC-ND,10478,88503,0.1183914669559224
-2025,The Electrochemical Society,global,CC BY-NC-ND,44,16802,0.0026187358647780028
-2025,Wolters Kluwer Health,global,CC BY-NC-ND,1982,45856,0.04322226099092812
+2025,Cambridge University Press,global,CC BY-NC-ND,561,18242,0.030753206885209956
+2025,IOP Publishing,global,CC BY-NC-ND,49,21891,0.0022383627974966883
+2025,Oxford University Press,global,CC BY-NC-ND,1551,37367,0.0415072122460995
+2025,Royal Society of Chemistry,global,CC BY-NC-ND,1,29719,3.364850768868401e-5
+2025,Sage,global,CC BY-NC-ND,91,53636,0.0016966216720113356
+2025,Taylor and Francis,global,CC BY-NC-ND,11945,100758,0.1185513805355406
+2025,The Electrochemical Society,global,CC BY-NC-ND,49,18683,0.0026227051330086175
+2025,Wolters Kluwer Health,global,CC BY-NC-ND,2226,51758,0.04300784419799838
