@@ -145,6 +145,7 @@ format:
     toc-location: right
     grid:
       sidebar-width: 300px
+
       
 execute:
   cache: false

@@ -294,7 +294,7 @@ export_files(
 ```{js,echo = FALSE}
  /* https://stackoverflow.com/a/66216595 */
 $(document).ready(function() {
-    document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2024", false);
+    document.getElementById("filter_country_year").getElementsByClassName("selectized")[0].selectize.setValue("2025", false);
 });
 ```
 
