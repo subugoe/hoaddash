@@ -47,94 +47,413 @@ website:
             contents:
               - text: Overview
                 href: index.qmd
+                contents:
+                  - text: "CC over time"
+                    href: "index.html#creative-commons-licenses-over-time"
+                  - text: "Publishing market"
+                    href: "index.html#publishing-market"
+                  - text: "Country view"
+                    href: "index.html#country-view"
+                  - text: "Open metadata"
+                    href: "index.html#open-metadata"
+                  - text: "Journal table"
+                    href: "index.html#journal-table"
               - href: jct/elsevier/index.qmd
                 text: "Elsevier"
+                contents:
+                  - text: "CC over time"
+                    href: "jct/elsevier/index.html#creative-commons-licenses-over-time"
+                  - text: "Country view"
+                    href: "jct/elsevier/index.html#country-view"
+                  - text: "Open metadata"
+                    href: "jct/elsevier/index.html#open-metadata"
+                  - text: "Journal table"
+                    href: "jct/elsevier/index.html#journal-table"
               - href: jct/springernature/index.qmd
                 text: Springer Nature
+                contents:
+                  - text: "CC over time"
+                    href: "jct/springernature/index.html#creative-commons-licenses-over-time"
+                  - text: "Country view"
+                    href: "jct/springernature/index.html#country-view"
+                  - text: "Open metadata"
+                    href: "jct/springernature/index.html#open-metadata"
+                  - text: "Journal table"
+                    href: "jct/springernature/index.html#journal-table"
               - href: jct/wiley/index.qmd
                 text: Wiley
+                contents:
+                  - text: "CC over time"
+                    href: "jct/wiley/index.html#creative-commons-licenses-over-time"
+                  - text: "Country view"
+                    href: "jct/wiley/index.html#country-view"
+                  - text: "Open metadata"
+                    href: "jct/wiley/index.html#open-metadata"
+                  - text: "Journal table"
+                    href: "jct/wiley/index.html#journal-table"
               - section: "Others"
                 contents:
                   - text: "AIP Publishing"
                     href: jct/aippublishing/index.qmd
-                  - text: American Chemical Society 
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/aippublishing/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/aippublishing/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/aippublishing/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/aippublishing/index.html#journal-table"
+                  - text: American Chemical Society
                     href: jct/americanchemicalsociety/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/americanchemicalsociety/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/americanchemicalsociety/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/americanchemicalsociety/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/americanchemicalsociety/index.html#journal-table"
                   - text: "American Physical Society"
                     href: jct/americanphysicalsociety/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/americanphysicalsociety/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/americanphysicalsociety/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/americanphysicalsociety/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/americanphysicalsociety/index.html#journal-table"
                   - text: "BMJ Publishing"
                     href: jct/bmjpublishing/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/bmjpublishing/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/bmjpublishing/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/bmjpublishing/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/bmjpublishing/index.html#journal-table"
                   - text: "Cambridge University Press"
                     href: jct/cambridgeuniversitypress/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/cambridgeuniversitypress/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/cambridgeuniversitypress/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/cambridgeuniversitypress/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/cambridgeuniversitypress/index.html#journal-table"
                   - text: "Karger"
                     href: jct/karger/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/karger/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/karger/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/karger/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/karger/index.html#journal-table"
                   - text: "IEEE"
                     href: jct/ieee/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/ieee/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/ieee/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/ieee/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/ieee/index.html#journal-table"
                   - text: "IOP Publishing"
                     href: jct/ioppublishing/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/ioppublishing/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/ioppublishing/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/ioppublishing/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/ioppublishing/index.html#journal-table"
                   - text: "Oxford University Press"
                     href: jct/oxforduniversitypress/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/oxforduniversitypress/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/oxforduniversitypress/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/oxforduniversitypress/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/oxforduniversitypress/index.html#journal-table"
                   - text: "Royal Society of Chemistry"
                     href: jct/royalsocietyofchemistry/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/royalsocietyofchemistry/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/royalsocietyofchemistry/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/royalsocietyofchemistry/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/royalsocietyofchemistry/index.html#journal-table"
                   - text: "Sage"
                     href: jct/sage/index.qmd
-                  - href: jct/taylorandfrancis/index.qmd
-                    text: Taylor and Francis
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/sage/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/sage/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/sage/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/sage/index.html#journal-table"
+                  - text: Taylor and Francis
+                    href: jct/taylorandfrancis/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/taylorandfrancis/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/taylorandfrancis/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/taylorandfrancis/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/taylorandfrancis/index.html#journal-table"
                   - text: "Thieme"
                     href: jct/thieme/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/thieme/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/thieme/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/thieme/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/thieme/index.html#journal-table"
                   - text: "Walter de Gruyter"
                     href: jct/walterdegruyter/index.qmd
+                    contents:
+                      - text: "CC over time"
+                        href: "jct/walterdegruyter/index.html#creative-commons-licenses-over-time"
+                      - text: "Country view"
+                        href: "jct/walterdegruyter/index.html#country-view"
+                      - text: "Open metadata"
+                        href: "jct/walterdegruyter/index.html#open-metadata"
+                      - text: "Journal table"
+                        href: "jct/walterdegruyter/index.html#journal-table"
           - section: "Agreements with German consortia"
             contents:
               - text: "Overview"
                 href: oam/index.qmd
+                contents:
+                  - text: "CC over time"
+                    href: "oam/index.html#creative-commons-licenses-over-time"
+                  - text: "Publishing market"
+                    href: "oam/index.html#publishing-market"
+                  - text: "Country view"
+                    href: "oam/index.html#country-view"
+                  - text: "Open metadata"
+                    href: "oam/index.html#open-metadata"
+                  - text: "Journal table"
+                    href: "oam/index.html#journal-table"
               - section: "Consortia"
                 contents:
                   - section: "DEAL"
                     contents:
                       - text: "Elsevier"
                         href: "oam/elsevierdeal/index.qmd"
+                        contents:
+                          - text: "CC over time"
+                            href: "oam/elsevierdeal/index.html#creative-commons-licenses-over-time"
+                          - text: "Country view"
+                            href: "oam/elsevierdeal/index.html#country-view"
+                          - text: "Open metadata"
+                            href: "oam/elsevierdeal/index.html#open-metadata"
+                          - text: "Journal table"
+                            href: "oam/elsevierdeal/index.html#journal-table"
                       - text: "Springer"
                         href: oam/springerhybriddeal/index.qmd
+                        contents:
+                          - text: "CC over time"
+                            href: "oam/springerhybriddeal/index.html#creative-commons-licenses-over-time"
+                          - text: "Country view"
+                            href: "oam/springerhybriddeal/index.html#country-view"
+                          - text: "Open metadata"
+                            href: "oam/springerhybriddeal/index.html#open-metadata"
+                          - text: "Journal table"
+                            href: "oam/springerhybriddeal/index.html#journal-table"
                       - text: "Wiley"
                         href: oam/wileyhybriddeal/index.qmd
+                        contents:
+                          - text: "CC over time"
+                            href: "oam/wileyhybriddeal/index.html#creative-commons-licenses-over-time"
+                          - text: "Country view"
+                            href: "oam/wileyhybriddeal/index.html#country-view"
+                          - text: "Open metadata"
+                            href: "oam/wileyhybriddeal/index.html#open-metadata"
+                          - text: "Journal table"
+                            href: "oam/wileyhybriddeal/index.html#journal-table"
                   - section: "BSB"
-                    contents: 
+                    contents:
                       - text: "BMJ"
                         href: oam/bmjbsb/index.qmd
+                        contents:
+                          - text: "CC over time"
+                            href: "oam/bmjbsb/index.html#creative-commons-licenses-over-time"
+                          - text: "Country view"
+                            href: "oam/bmjbsb/index.html#country-view"
+                          - text: "Open metadata"
+                            href: "oam/bmjbsb/index.html#open-metadata"
+                          - text: "Journal table"
+                            href: "oam/bmjbsb/index.html#journal-table"
                       - text: "CUP"
                         href: oam/cupbsb/index.qmd
+                        contents:
+                          - text: "CC over time"
+                            href: "oam/cupbsb/index.html#creative-commons-licenses-over-time"
+                          - text: "Country view"
+                            href: "oam/cupbsb/index.html#country-view"
+                          - text: "Open metadata"
+                            href: "oam/cupbsb/index.html#open-metadata"
+                          - text: "Journal table"
+                            href: "oam/cupbsb/index.html#journal-table"
                       - text: "Karger"
                         href: oam/kargerbsb/index.qmd
+                        contents:
+                          - text: "CC over time"
+                            href: "oam/kargerbsb/index.html#creative-commons-licenses-over-time"
+                          - text: "Country view"
+                            href: "oam/kargerbsb/index.html#country-view"
+                          - text: "Open metadata"
+                            href: "oam/kargerbsb/index.html#open-metadata"
+                          - text: "Journal table"
+                            href: "oam/kargerbsb/index.html#journal-table"
                       - text: "Sage"
                         href: oam/sagebsb/index.qmd
+                        contents:
+                          - text: "CC over time"
+                            href: "oam/sagebsb/index.html#creative-commons-licenses-over-time"
+                          - text: "Country view"
+                            href: "oam/sagebsb/index.html#country-view"
+                          - text: "Open metadata"
+                            href: "oam/sagebsb/index.html#open-metadata"
+                          - text: "Journal table"
+                            href: "oam/sagebsb/index.html#journal-table"
                   - section: "MPDL"
                     contents:
                       - text: "Nature"
                         href: oam/naturempdl/index.qmd
+                        contents:
+                          - text: "CC over time"
+                            href: "oam/naturempdl/index.html#creative-commons-licenses-over-time"
+                          - text: "Country view"
+                            href: "oam/naturempdl/index.html#country-view"
+                          - text: "Open metadata"
+                            href: "oam/naturempdl/index.html#open-metadata"
+                          - text: "Journal table"
+                            href: "oam/naturempdl/index.html#journal-table"
                   - section: "SUB Göttingen"
                     contents:
                        - text: "De Gruyter"
                          href: oam/degruytersubgöttingen/index.qmd
+                         contents:
+                           - text: "CC over time"
+                             href: "oam/degruytersubgöttingen/index.html#creative-commons-licenses-over-time"
+                           - text: "Country view"
+                             href: "oam/degruytersubgöttingen/index.html#country-view"
+                           - text: "Open metadata"
+                             href: "oam/degruytersubgöttingen/index.html#open-metadata"
+                           - text: "Journal table"
+                             href: "oam/degruytersubgöttingen/index.html#journal-table"
                        - text: "Hogrefe"
                          href: oam/hogrefesubgöttingen/index.qmd
+                         contents:
+                           - text: "CC over time"
+                             href: "oam/hogrefesubgöttingen/index.html#creative-commons-licenses-over-time"
+                           - text: "Country view"
+                             href: "oam/hogrefesubgöttingen/index.html#country-view"
+                           - text: "Open metadata"
+                             href: "oam/hogrefesubgöttingen/index.html#open-metadata"
+                           - text: "Journal table"
+                             href: "oam/hogrefesubgöttingen/index.html#journal-table"
                   - section: "TIB"
                     contents:
                         - text: "ESC"
-                          href: oam/ecstib/index.qmd 
+                          href: oam/ecstib/index.qmd
+                          contents:
+                            - text: "CC over time"
+                              href: "oam/ecstib/index.html#creative-commons-licenses-over-time"
+                            - text: "Country view"
+                              href: "oam/ecstib/index.html#country-view"
+                            - text: "Open metadata"
+                              href: "oam/ecstib/index.html#open-metadata"
+                            - text: "Journal table"
+                              href: "oam/ecstib/index.html#journal-table"
                         - text: "IOP"
-                          href: oam/ioptib/index.qmd 
+                          href: oam/ioptib/index.qmd
+                          contents:
+                            - text: "CC over time"
+                              href: "oam/ioptib/index.html#creative-commons-licenses-over-time"
+                            - text: "Country view"
+                              href: "oam/ioptib/index.html#country-view"
+                            - text: "Open metadata"
+                              href: "oam/ioptib/index.html#open-metadata"
+                            - text: "Journal table"
+                              href: "oam/ioptib/index.html#journal-table"
                         - text: "Portland Press"
                           href: oam/portlandpresstib/index.qmd
+                          contents:
+                            - text: "CC over time"
+                              href: "oam/portlandpresstib/index.html#creative-commons-licenses-over-time"
+                            - text: "Country view"
+                              href: "oam/portlandpresstib/index.html#country-view"
+                            - text: "Open metadata"
+                              href: "oam/portlandpresstib/index.html#open-metadata"
+                            - text: "Journal table"
+                              href: "oam/portlandpresstib/index.html#journal-table"
                         - text: "RSC"
                           href: oam/rsctib/index.qmd
+                          contents:
+                            - text: "CC over time"
+                              href: "oam/rsctib/index.html#creative-commons-licenses-over-time"
+                            - text: "Country view"
+                              href: "oam/rsctib/index.html#country-view"
+                            - text: "Open metadata"
+                              href: "oam/rsctib/index.html#open-metadata"
+                            - text: "Journal table"
+                              href: "oam/rsctib/index.html#journal-table"
                   - section: "ZB MED"
                     contents:
                        - text: "Thieme"
                          href: oam/thiemezbmed/index.qmd
+                         contents:
+                           - text: "CC over time"
+                             href: "oam/thiemezbmed/index.html#creative-commons-licenses-over-time"
+                           - text: "Country view"
+                             href: "oam/thiemezbmed/index.html#country-view"
+                           - text: "Open metadata"
+                             href: "oam/thiemezbmed/index.html#open-metadata"
+                           - text: "Journal table"
+                             href: "oam/thiemezbmed/index.html#journal-table"
                   - section: "ZBW"
                     contents:
                        - text: "Taylor and Francis"
                          href: oam/taylorfranciszbw/index.qmd
+                         contents:
+                           - text: "CC over time"
+                             href: "oam/taylorfranciszbw/index.html#creative-commons-licenses-over-time"
+                           - text: "Country view"
+                             href: "oam/taylorfranciszbw/index.html#country-view"
+                           - text: "Open metadata"
+                             href: "oam/taylorfranciszbw/index.html#open-metadata"
+                           - text: "Journal table"
+                             href: "oam/taylorfranciszbw/index.html#journal-table"
           - text: "About"
             href: "about.qmd"
     footer: funding_note.md
@@ -145,7 +464,6 @@ format:
     toc-location: right
     grid:
       sidebar-width: 300px
-
       
 execute:
   cache: false

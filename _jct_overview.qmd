@@ -137,7 +137,7 @@ export_files(.data = cc_df, .plot = cc_de_plot, width = 9, height = 6 * 0.618)
 
 ### Creative Commons licenses over time by publisher
 
-Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2025.
+Percentage of Open Access in hybrid journals included in transformative agreements by Creative Commons license types and Top 13 publishers in terms of total Open Access articles published in these journals between 2017 and 2026.
 
 ```{r}
 #| echo: false
@@ -272,7 +272,7 @@ my_df |>
 
 ### Market shares
 
-Publisher market shares as measured by articles published between 2017 and 2025 in hybrid journals included in transformative agreements.
+Publisher market shares as measured by articles published between 2017 and 2026 in hybrid journals included in transformative agreements.
 
 ```{r}
 #| echo: FALSE
@@ -337,7 +337,7 @@ export_files(
 
 This interactive table highlights the output of hybrid Open Access publishers by year, sorted by total annual publication volume. It shows the number and proportion of Open Access articles made available under a Creative Commons licence in hybrid journals included in transformative agreements. The table also shows the number of hybrid journals per portfolio and the corresponding percentage of hybrid journals with at least one OA article. You can filter by publisher, publication year and between a global and a country-specific view with respect to lead author publications from Germany.
 
-::: column-body-outset
+::: {.column-page-inset-right}
 
 ```{r publisher_league}
 #| echo: false
@@ -416,9 +416,10 @@ This section shows how hybrid open access has been adopted in different parts of
 
 ### Open Access in hybrid journals by country
 
-Open Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in transformative agreements between 2017 and 2025. The analysis is based on lead author country affiliations.
+Open Access uptake in hybrid journals with a Creative Commons license per country. Shown are the Top 20 most productive countries in terms of articles published in hybrid journals included in transformative agreements between 2017 and 2026. The analysis is based on lead author country affiliations.
 
-::: column-body-outset
+::: {.column-page-inset-right}
+
 ```{r country_top_20}
 #| echo: false
 #| message: false
@@ -672,9 +673,9 @@ $(document).ready(function() {
 
 ## Journal table
 
-This table presents the publication volume and Open Access share by journal between 2017 and 2025, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
+This table presents the publication volume and Open Access share by journal between 2017 and 2026, comparing global metrics with metrics only for articles by lead authors based in Germany. Charts show the yearly Open Access share. You can search for journals or select a table header to sort by journal name or a metric.
 
-::: column-body-outset
+::: {.column-page-inset-right}
 
 
 ```{r}
