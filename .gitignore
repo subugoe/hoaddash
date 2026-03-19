@@ -9,3 +9,5 @@ oam/
 /_freeze/
 index_files/
 .DS_Store
+
+**/*.quarto_ipynb
