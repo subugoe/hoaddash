@@ -8,6 +8,11 @@ jct_hybrid_jns <- hoaddata::jct_hybrid_jns |>
     esac_publisher
   ))
 
+# jct_hybrid_jns holds one row per ISSN variant and agreement (~50 per
+# journal). Only use journal-publisher pairs, so join on the
+# deduplicated table to avoid a massive fan-out.
+jct_pub_jns <- dplyr::distinct(jct_hybrid_jns, issn_l, esac_publisher)
+
 summarize_pubs <- function(...) {
   pub_df_all <- summarise_oa_all(var_summary = ...)
   pub_df_de <- summarise_oa_de(var_summary = ...)
@@ -20,7 +25,7 @@ summarise_oa_all <-
   function(.data = hoaddata::jn_ind,
            var_summary = NULL) {
     pub_df <- .data |>
-      inner_join(jct_hybrid_jns, by = "issn_l", multiple = "all")
+      inner_join(jct_pub_jns, by = "issn_l", multiple = "all")
     pub_all <- pub_df |>
       distinct(across({{ var_summary }}), issn_l, cr_year, jn_all) |>
       group_by(across({{ var_summary }})) |>
@@ -43,8 +48,8 @@ summarise_oa_de <-
   function(.data = hoaddata::jn_aff,
            var_summary = NULL) {
     pub_df_de <- .data |>
-      inner_join(jct_hybrid_jns, by = "issn_l", multiple = "all") |>
       filter(country_code == "DE") |>
+      inner_join(jct_pub_jns, by = "issn_l", multiple = "all") |>
       mutate(cr_year = as.factor(cr_year))
     pub_all_de <- pub_df_de |>
       distinct(across({{ var_summary }}), issn_l, cr_year, articles_total) |>
