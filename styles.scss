@@ -43,6 +43,12 @@ $primary: #006bd5;
     src: url('./fonts/atkinson-hyperlegible-v11-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
+/* scrollspy active sidebar link */
+.scrollspy-active {
+  color: $primary !important;
+  font-weight: 700;
+}
+
 /* fira-mono-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

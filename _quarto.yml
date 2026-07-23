@@ -462,6 +462,7 @@ format:
     theme: [cosmo, styles.scss]
     toc: true
     toc-location: right
+    include-after-body: scrollspy.html
     grid:
       sidebar-width: 300px
       
