@@ -44,8 +44,8 @@ summarise_oa_de <-
   function(.data = hoaddata::jn_aff,
            var_summary = NULL) {
     pub_df_de <- .data |>
-      inner_join(oam, by = "issn_l", multiple = "all") |>
       filter(country_code == "DE") |>
+      inner_join(oam, by = "issn_l", multiple = "all") |>
       mutate(cr_year = as.factor(cr_year))
     pub_all_de <- pub_df_de |>
       distinct(issn_l, cr_year, articles_total, esac_publisher) |>
