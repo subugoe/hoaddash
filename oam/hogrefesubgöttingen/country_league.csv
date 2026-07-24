@@ -6,9 +6,9 @@ cr_year,country_name,cc_total,articles,prop
 2017,Brazil,0,1,0
 2017,Canada,0,14,0
 2017,Switzerland,0,29,0
-2017,China,0,13,0
+2017,China,0,12,0
 2017,Czechia,0,1,0
-2017,Germany,8,291,0.027491408934707903
+2017,Germany,8,292,0.0273972602739726
 2017,Denmark,0,5,0
 2017,Estonia,0,2,0
 2017,Spain,0,11,0
@@ -16,7 +16,7 @@ cr_year,country_name,cc_total,articles,prop
 2017,France,0,7,0
 2017,United Kingdom,1,19,0.05263157894736842
 2017,Greece,0,4,0
-2017,Hong Kong SAR China,0,2,0
+2017,Hong Kong SAR China,0,3,0
 2017,Croatia,1,2,0.5
 2017,Hungary,0,2,0
 2017,Ireland,0,3,0
@@ -35,7 +35,7 @@ cr_year,country_name,cc_total,articles,prop
 2017,Portugal,0,3,0
 2017,Romania,0,1,0
 2017,Sweden,0,2,0
-2017,Singapore,0,1,0
+2017,Singapore,0,2,0
 2017,Turkey,0,2,0
 2017,Taiwan,0,1,0
 2017,United States,0,82,0
@@ -45,20 +45,20 @@ cr_year,country_name,cc_total,articles,prop
 2018,Canada,0,17,0
 2018,Switzerland,0,30,0
 2018,Chile,0,1,0
-2018,China,1,17,0.058823529411764705
+2018,China,1,16,0.0625
 2018,Czechia,0,2,0
-2018,Germany,8,326,0.024539877300613498
+2018,Germany,8,327,0.024464831804281346
 2018,Denmark,0,4,0
 2018,Spain,0,10,0
 2018,Finland,0,3,0
 2018,France,0,9,0
 2018,United Kingdom,3,23,0.13043478260869565
 2018,Greece,0,1,0
-2018,Hong Kong SAR China,0,1,0
+2018,Hong Kong SAR China,0,2,0
 2018,Croatia,0,2,0
 2018,Hungary,0,3,0
 2018,Ireland,0,2,0
-2018,Israel,0,7,0
+2018,Israel,0,8,0
 2018,India,0,1,0
 2018,Italy,0,21,0
 2018,Japan,1,5,0.2
@@ -68,7 +68,7 @@ cr_year,country_name,cc_total,articles,prop
 2018,Luxembourg,0,3,0
 2018,Macao SAR China,0,2,0
 2018,Nigeria,0,1,0
-2018,Netherlands,2,22,0.09090909090909091
+2018,Netherlands,2,23,0.08695652173913043
 2018,Norway,0,2,0
 2018,New Zealand,0,7,0
 2018,Peru,0,1,0
@@ -90,21 +90,21 @@ cr_year,country_name,cc_total,articles,prop
 2019,Brazil,0,2,0
 2019,Canada,0,15,0
 2019,Switzerland,2,27,0.07407407407407407
-2019,China,0,9,0
+2019,China,0,8,0
 2019,Cyprus,0,3,0
 2019,Czechia,0,1,0
-2019,Germany,26,350,0.07428571428571429
+2019,Germany,26,351,0.07407407407407407
 2019,Denmark,0,3,0
 2019,Estonia,0,1,0
 2019,Spain,0,12,0
 2019,Finland,0,1,0
 2019,France,0,9,0
 2019,United Kingdom,3,41,0.07317073170731707
-2019,Hong Kong SAR China,0,1,0
+2019,Hong Kong SAR China,0,2,0
 2019,Croatia,0,1,0
 2019,Hungary,0,1,0
 2019,Ireland,0,6,0
-2019,Israel,1,12,0.08333333333333333
+2019,Israel,1,11,0.09090909090909091
 2019,India,0,1,0
 2019,Iran,0,2,0
 2019,Italy,0,16,0
@@ -125,7 +125,7 @@ cr_year,country_name,cc_total,articles,prop
 2019,Serbia,1,5,0.2
 2019,Russia,0,1,0
 2019,Saudi Arabia,0,1,0
-2019,Sweden,0,7,0
+2019,Sweden,0,8,0
 2019,Slovakia,0,1,0
 2019,Thailand,0,1,0
 2019,Turkey,0,3,0
@@ -139,18 +139,18 @@ cr_year,country_name,cc_total,articles,prop
 2020,Brazil,0,3,0
 2020,Canada,0,20,0
 2020,Switzerland,5,39,0.1282051282051282
-2020,China,0,13,0
+2020,China,0,11,0
 2020,Cyprus,0,1,0
 2020,Czechia,1,2,0.5
-2020,Germany,34,361,0.09418282548476455
+2020,Germany,34,364,0.09340659340659341
 2020,Denmark,0,4,0
 2020,Estonia,0,2,0
 2020,Spain,0,6,0
 2020,France,0,9,0
-2020,United Kingdom,1,17,0.058823529411764705
+2020,United Kingdom,1,18,0.05555555555555555
 2020,Greece,0,1,0
 2020,Guam,0,1,0
-2020,Hong Kong SAR China,1,6,0.16666666666666666
+2020,Hong Kong SAR China,1,7,0.14285714285714285
 2020,Croatia,0,2,0
 2020,Hungary,0,1,0
 2020,Ireland,0,1,0
@@ -182,7 +182,7 @@ cr_year,country_name,cc_total,articles,prop
 2020,Turkey,0,4,0
 2020,Trinidad & Tobago,0,1,0
 2020,Taiwan,0,1,0
-2020,United States,3,121,0.024793388429752067
+2020,United States,3,122,0.02459016393442623
 2020,Uruguay,0,1,0
 2020,South Africa,0,5,0
 2021,Argentina,0,2,0
@@ -192,11 +192,11 @@ cr_year,country_name,cc_total,articles,prop
 2021,Bulgaria,1,1,1
 2021,Brazil,0,1,0
 2021,Canada,1,15,0.06666666666666667
-2021,Switzerland,3,37,0.08108108108108109
-2021,China,0,18,0
+2021,Switzerland,3,38,0.07894736842105263
+2021,China,0,17,0
 2021,Colombia,0,1,0
 2021,Cyprus,0,1,0
-2021,Germany,149,390,0.382051282051282
+2021,Germany,149,393,0.3791348600508906
 2021,Denmark,1,5,0.2
 2021,Ecuador,0,1,0
 2021,Estonia,0,2,0
@@ -206,7 +206,7 @@ cr_year,country_name,cc_total,articles,prop
 2021,France,2,13,0.15384615384615385
 2021,United Kingdom,5,35,0.14285714285714285
 2021,Greece,0,1,0
-2021,Hong Kong SAR China,0,2,0
+2021,Hong Kong SAR China,0,3,0
 2021,Croatia,0,1,0
 2021,Hungary,1,4,0.25
 2021,Indonesia,0,3,0
@@ -236,10 +236,10 @@ cr_year,country_name,cc_total,articles,prop
 2021,Slovakia,0,3,0
 2021,Tunisia,0,1,0
 2021,Turkey,0,6,0
-2021,United States,5,105,0.047619047619047616
+2021,United States,6,106,0.05660377358490566
 2021,South Africa,1,4,0.25
 2022,United Arab Emirates,0,1,0
-2022,Austria,11,36,0.3055555555555556
+2022,Austria,11,37,0.2972972972972973
 2022,Australia,5,26,0.19230769230769232
 2022,Belgium,1,9,0.1111111111111111
 2022,Bulgaria,0,1,0
@@ -252,7 +252,7 @@ cr_year,country_name,cc_total,articles,prop
 2022,Costa Rica,0,1,0
 2022,Cyprus,0,1,0
 2022,Czechia,0,1,0
-2022,Germany,207,370,0.5594594594594594
+2022,Germany,207,371,0.5579514824797843
 2022,Denmark,0,3,0
 2022,Estonia,0,1,0
 2022,Spain,1,5,0.2
@@ -286,7 +286,7 @@ cr_year,country_name,cc_total,articles,prop
 2022,Serbia,0,2,0
 2022,Sweden,0,2,0
 2022,Taiwan,1,2,0.5
-2022,United States,3,91,0.03296703296703297
+2022,United States,3,92,0.03260869565217391
 2022,South Africa,0,2,0
 2023,United Arab Emirates,0,1,0
 2023,Argentina,0,2,0
@@ -297,7 +297,7 @@ cr_year,country_name,cc_total,articles,prop
 2023,Canada,3,25,0.12
 2023,Switzerland,3,35,0.08571428571428572
 2023,Chile,0,1,0
-2023,China,1,15,0.06666666666666667
+2023,China,1,13,0.07692307692307693
 2023,Cyprus,0,1,0
 2023,Czechia,0,1,0
 2023,Germany,223,363,0.6143250688705234
@@ -336,29 +336,29 @@ cr_year,country_name,cc_total,articles,prop
 2023,Togo,0,1,0
 2023,Turkey,0,3,0
 2023,Taiwan,1,2,0.5
-2023,United States,6,105,0.05714285714285714
+2023,United States,7,106,0.0660377358490566
 2023,South Africa,0,2,0
 2024,Argentina,0,1,0
 2024,Austria,3,11,0.2727272727272727
 2024,Australia,5,19,0.2631578947368421
 2024,Bosnia & Herzegovina,0,1,0
-2024,Belgium,1,10,0.1
+2024,Belgium,1,9,0.1111111111111111
 2024,Bulgaria,0,1,0
 2024,Brazil,0,3,0
 2024,Canada,4,27,0.14814814814814814
-2024,Switzerland,4,22,0.18181818181818182
-2024,China,0,16,0
+2024,Switzerland,4,23,0.17391304347826086
+2024,China,0,15,0
 2024,Colombia,0,1,0
 2024,Czechia,1,2,0.5
-2024,Germany,239,370,0.6459459459459459
+2024,Germany,233,363,0.6418732782369146
 2024,Denmark,0,3,0
 2024,Spain,0,11,0
-2024,Finland,0,3,0
-2024,France,1,11,0.09090909090909091
-2024,United Kingdom,11,23,0.4782608695652174
+2024,Finland,0,2,0
+2024,France,1,10,0.1
+2024,United Kingdom,11,22,0.5
 2024,Greece,0,2,0
 2024,Guam,0,2,0
-2024,Hong Kong SAR China,0,1,0
+2024,Hong Kong SAR China,0,2,0
 2024,Croatia,0,3,0
 2024,Hungary,0,1,0
 2024,Indonesia,1,2,0.5
@@ -374,7 +374,7 @@ cr_year,country_name,cc_total,articles,prop
 2024,Macao SAR China,0,1,0
 2024,Malaysia,0,2,0
 2024,Netherlands,5,19,0.2631578947368421
-2024,Norway,1,6,0.16666666666666666
+2024,Norway,1,5,0.2
 2024,New Zealand,0,5,0
 2024,Oman,0,1,0
 2024,Peru,1,2,0.5
@@ -389,43 +389,44 @@ cr_year,country_name,cc_total,articles,prop
 2024,Thailand,0,1,0
 2024,Turkey,0,2,0
 2024,Taiwan,0,3,0
-2024,United States,6,109,0.05504587155963303
+2024,United States,6,105,0.05714285714285714
 2024,Vietnam,0,1,0
-2024,South Africa,0,6,0
+2024,South Africa,0,5,0
+2025,Antigua & Barbuda,0,1,0
 2025,Argentina,0,1,0
-2025,Austria,11,32,0.34375
-2025,Australia,2,17,0.11764705882352941
+2025,Austria,11,29,0.3793103448275862
+2025,Australia,2,15,0.13333333333333333
 2025,Belgium,0,3,0
-2025,Brazil,1,3,0.3333333333333333
-2025,Canada,3,19,0.15789473684210525
-2025,Switzerland,4,26,0.15384615384615385
+2025,Brazil,0,2,0
+2025,Canada,3,18,0.16666666666666666
+2025,Switzerland,4,25,0.16
 2025,Chile,0,1,0
-2025,China,0,19,0
+2025,China,1,18,0.05555555555555555
 2025,Colombia,0,1,0
 2025,Czechia,1,5,0.2
-2025,Germany,243,423,0.574468085106383
-2025,Denmark,2,5,0.4
+2025,Germany,234,411,0.5693430656934306
+2025,Denmark,2,4,0.5
 2025,Spain,2,9,0.2222222222222222
 2025,Finland,0,4,0
-2025,France,2,15,0.13333333333333333
-2025,United Kingdom,7,22,0.3181818181818182
+2025,France,3,16,0.1875
+2025,United Kingdom,7,23,0.30434782608695654
 2025,Ghana,0,1,0
 2025,Hong Kong SAR China,0,2,0
 2025,Croatia,0,1,0
 2025,Hungary,0,2,0
-2025,Israel,3,6,0.5
+2025,Israel,2,5,0.4
 2025,India,0,2,0
 2025,Iraq,0,1,0
 2025,Iceland,0,1,0
-2025,Italy,6,14,0.42857142857142855
-2025,Japan,2,6,0.3333333333333333
-2025,South Korea,1,6,0.16666666666666666
+2025,Italy,6,13,0.46153846153846156
+2025,Japan,2,5,0.4
+2025,South Korea,0,4,0
 2025,Luxembourg,1,1,1
-2025,Netherlands,3,11,0.2727272727272727
-2025,Norway,1,6,0.16666666666666666
+2025,Netherlands,3,10,0.3
+2025,Norway,1,7,0.14285714285714285
 2025,New Zealand,0,4,0
 2025,Philippines,0,3,0
-2025,Poland,2,11,0.18181818181818182
+2025,Poland,2,12,0.16666666666666666
 2025,Portugal,1,11,0.09090909090909091
 2025,Romania,0,6,0
 2025,Serbia,0,3,0
@@ -435,39 +436,57 @@ cr_year,country_name,cc_total,articles,prop
 2025,Slovenia,0,1,0
 2025,Slovakia,1,1,1
 2025,Somalia,0,1,0
-2025,Turkey,1,3,0.3333333333333333
+2025,Turkey,1,4,0.25
 2025,Taiwan,0,1,0
 2025,Ukraine,0,1,0
-2025,United States,10,107,0.09345794392523364
-2025,Venezuela,1,1,1
+2025,United States,10,102,0.09803921568627451
 2025,South Africa,0,3,0
-2026,United Arab Emirates,0,1,0
-2026,Austria,1,6,0.16666666666666666
-2026,Australia,1,5,0.2
-2026,Belgium,0,1,0
-2026,Brazil,0,1,0
+2026,United Arab Emirates,0,2,0
+2026,Austria,7,19,0.3684210526315789
+2026,Australia,1,11,0.09090909090909091
+2026,Bosnia & Herzegovina,0,1,0
+2026,Belgium,0,3,0
+2026,Brazil,1,2,0.5
 2026,Botswana,0,1,0
-2026,Canada,1,1,1
-2026,Switzerland,1,5,0.2
-2026,China,0,2,0
-2026,Germany,36,56,0.6428571428571429
-2026,Denmark,2,2,1
+2026,Canada,2,7,0.2857142857142857
+2026,Switzerland,4,14,0.2857142857142857
+2026,China,3,11,0.2727272727272727
+2026,Cyprus,1,1,1
+2026,Czechia,2,3,0.6666666666666666
+2026,Germany,133,208,0.6394230769230769
+2026,Denmark,3,6,0.5
 2026,Algeria,1,1,1
-2026,France,0,5,0
-2026,United Kingdom,2,3,0.6666666666666666
-2026,Israel,0,1,0
-2026,India,0,1,0
+2026,Spain,0,3,0
+2026,Finland,0,3,0
+2026,France,0,6,0
+2026,United Kingdom,2,9,0.2222222222222222
+2026,Croatia,0,1,0
+2026,Ireland,0,1,0
+2026,Israel,1,3,0.3333333333333333
+2026,India,0,4,0
+2026,Iraq,0,1,0
 2026,Iran,0,1,0
-2026,Italy,0,3,0
+2026,Italy,0,7,0
+2026,Japan,0,6,0
+2026,South Korea,1,2,0.5
 2026,Kuwait,0,1,0
+2026,Sri Lanka,0,1,0
 2026,Latvia,1,1,1
 2026,Morocco,0,3,0
 2026,Malaysia,0,1,0
-2026,Netherlands,1,3,0.3333333333333333
+2026,Netherlands,4,8,0.5
+2026,Norway,0,1,0
+2026,New Zealand,0,2,0
+2026,Pakistan,0,1,0
 2026,Poland,0,1,0
 2026,Portugal,0,1,0
-2026,Sweden,1,1,1
-2026,Slovenia,0,1,0
-2026,Taiwan,0,2,0
-2026,United States,0,12,0
-2026,South Africa,0,1,0
+2026,Romania,0,1,0
+2026,Serbia,0,3,0
+2026,Sweden,1,2,0.5
+2026,Slovenia,0,2,0
+2026,Turkey,1,2,0.5
+2026,Taiwan,0,4,0
+2026,Ukraine,0,1,0
+2026,United States,6,48,0.125
+2026,Venezuela,1,1,1
+2026,South Africa,0,3,0

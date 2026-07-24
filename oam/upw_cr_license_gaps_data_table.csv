@@ -1,28 +1,28 @@
 cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
-2017,Elsevier (DEAL),Germany,DEAL,Elsevier,0.055,0.053,0.002
-2017,Elsevier (DEAL),Global,DEAL,Elsevier,0.031,0.03,0.001
-2017,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.076,0.08,-0.004
+2017,Elsevier (DEAL),Germany,DEAL,Elsevier,0.054,0.053,0.001
+2017,Elsevier (DEAL),Global,DEAL,Elsevier,0.031,0.031,-0
+2017,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.078,0.082,-0.004
 2017,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.088,0.093,-0.005
 2017,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.051,0.048,0.003
 2017,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.045,0.045,-0
-2017,Sage (BSB),Germany,BSB,Sage,0.004,0.025,-0.022
-2017,Sage (BSB),Global,BSB,Sage,0.003,0.021,-0.018
-2017,RSC (TIB),Germany,TIB,RSC,0.081,0.179,-0.097
-2017,RSC (TIB),Global,TIB,RSC,0.023,0.084,-0.061
+2017,Sage (BSB),Germany,BSB,Sage,0.004,0.025,-0.021
+2017,Sage (BSB),Global,BSB,Sage,0.003,0.021,-0.019
 2017,AIP (TIB),Germany,TIB,AIP,0.05,0.053,-0.003
 2017,AIP (TIB),Global,TIB,AIP,0.025,0.027,-0.001
-2017,CUP (BSB),Germany,BSB,CUP,0.036,0.041,-0.005
+2017,RSC (TIB),Germany,TIB,RSC,0.082,0.178,-0.096
+2017,RSC (TIB),Global,TIB,RSC,0.023,0.084,-0.061
+2017,CUP (BSB),Germany,BSB,CUP,0.036,0.042,-0.006
 2017,CUP (BSB),Global,BSB,CUP,0.024,0.031,-0.007
-2017,IOP (TIB),Germany,TIB,IOP,0.103,0.111,-0.008
-2017,IOP (TIB),Global,TIB,IOP,0.059,0.062,-0.003
+2017,IOP (TIB),Germany,TIB,IOP,0.096,0.104,-0.008
+2017,IOP (TIB),Global,TIB,IOP,0.059,0.063,-0.004
 2017,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.072,0.061,0.011
 2017,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.045,0.036,0.009
-2017,Nature (MPDL),Germany,MPDL,Nature,0.011,0.02,-0.009
+2017,Nature (MPDL),Germany,MPDL,Nature,0.011,0.019,-0.009
 2017,Nature (MPDL),Global,MPDL,Nature,0.006,0.019,-0.013
-2017,BMJ (BSB),Germany,BSB,BMJ,0.022,0.079,-0.057
+2017,BMJ (BSB),Germany,BSB,BMJ,0.022,0.076,-0.054
 2017,BMJ (BSB),Global,BSB,BMJ,0.009,0.068,-0.059
-2017,Karger (BSB),Germany,BSB,Karger,0.033,0.035,-0.002
-2017,Karger (BSB),Global,BSB,Karger,0.036,0.035,0.001
+2017,Karger (BSB),Germany,BSB,Karger,0.034,0.036,-0.002
+2017,Karger (BSB),Global,BSB,Karger,0.036,0.036,0.001
 2017,ACM (hebis),Germany,hebis,ACM,0.015,0.015,0
 2017,ACM (hebis),Global,hebis,ACM,0.016,0.013,0.003
 2017,SPIE (TIB),Germany,TIB,SPIE,0,0.02,-0.02
@@ -31,37 +31,37 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2017,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.009,0.005,0.005
 2017,ECS (TIB),Germany,TIB,ECS,0,0.652,-0.652
 2017,ECS (TIB),Global,TIB,ECS,0,0.388,-0.388
-2017,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.043,0.007,0.036
+2017,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.043,0.007,0.035
 2017,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.016,0.008,0.008
 2017,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.027,0.017,0.01
 2017,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.013,0.008,0.005
 2017,Portland Press (TIB),Germany,TIB,Portland Press,0.121,0.091,0.03
-2017,Portland Press (TIB),Global,TIB,Portland Press,0.21,0.183,0.027
+2017,Portland Press (TIB),Global,TIB,Portland Press,0.21,0.184,0.026
 2017,Thieme (ZB MED),Germany,ZB MED,Thieme,0.008,0.008,0
-2017,Thieme (ZB MED),Global,ZB MED,Thieme,0.022,0.032,-0.01
-2018,Elsevier (DEAL),Germany,DEAL,Elsevier,0.065,0.069,-0.003
-2018,Elsevier (DEAL),Global,DEAL,Elsevier,0.034,0.039,-0.005
-2018,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.085,0.089,-0.003
+2017,Thieme (ZB MED),Global,ZB MED,Thieme,0.022,0.03,-0.008
+2018,Elsevier (DEAL),Germany,DEAL,Elsevier,0.065,0.071,-0.005
+2018,Elsevier (DEAL),Global,DEAL,Elsevier,0.034,0.04,-0.006
+2018,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.087,0.091,-0.004
 2018,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.093,0.096,-0.003
 2018,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.065,0.06,0.005
 2018,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.059,0.058,0.001
-2018,Sage (BSB),Germany,BSB,Sage,0.007,0.025,-0.017
-2018,Sage (BSB),Global,BSB,Sage,0.005,0.022,-0.017
-2018,RSC (TIB),Germany,TIB,RSC,0.185,0.187,-0.001
-2018,RSC (TIB),Global,TIB,RSC,0.07,0.07,-0
+2018,Sage (BSB),Germany,BSB,Sage,0.007,0.027,-0.02
+2018,Sage (BSB),Global,BSB,Sage,0.005,0.023,-0.017
 2018,AIP (TIB),Germany,TIB,AIP,0.058,0.06,-0.002
 2018,AIP (TIB),Global,TIB,AIP,0.024,0.026,-0.002
-2018,CUP (BSB),Germany,BSB,CUP,0.048,0.056,-0.008
-2018,CUP (BSB),Global,BSB,CUP,0.033,0.041,-0.008
-2018,IOP (TIB),Germany,TIB,IOP,0.176,0.177,-0.001
-2018,IOP (TIB),Global,TIB,IOP,0.064,0.066,-0.002
-2018,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.109,0.116,-0.008
-2018,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.034,0.046,-0.013
-2018,Nature (MPDL),Germany,MPDL,Nature,0.012,0.021,-0.009
-2018,Nature (MPDL),Global,MPDL,Nature,0.008,0.024,-0.015
+2018,RSC (TIB),Germany,TIB,RSC,0.185,0.187,-0.001
+2018,RSC (TIB),Global,TIB,RSC,0.07,0.07,-0
+2018,CUP (BSB),Germany,BSB,CUP,0.049,0.057,-0.008
+2018,CUP (BSB),Global,BSB,CUP,0.033,0.04,-0.008
+2018,IOP (TIB),Germany,TIB,IOP,0.161,0.163,-0.002
+2018,IOP (TIB),Global,TIB,IOP,0.064,0.067,-0.004
+2018,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.108,0.116,-0.008
+2018,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.034,0.047,-0.013
+2018,Nature (MPDL),Germany,MPDL,Nature,0.017,0.023,-0.005
+2018,Nature (MPDL),Global,MPDL,Nature,0.008,0.023,-0.015
 2018,BMJ (BSB),Germany,BSB,BMJ,0.017,0.047,-0.029
 2018,BMJ (BSB),Global,BSB,BMJ,0.01,0.068,-0.058
-2018,Karger (BSB),Germany,BSB,Karger,0.032,0.032,0
+2018,Karger (BSB),Germany,BSB,Karger,0.032,0.034,-0.002
 2018,Karger (BSB),Global,BSB,Karger,0.043,0.044,-0.001
 2018,ACM (hebis),Germany,hebis,ACM,0.007,0.007,0
 2018,ACM (hebis),Global,hebis,ACM,0.026,0.019,0.007
@@ -73,78 +73,78 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2018,ECS (TIB),Global,TIB,ECS,0.354,0.414,-0.061
 2018,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.069,0.049,0.021
 2018,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.023,0.011,0.012
-2018,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.025,0.009,0.015
+2018,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.024,0.009,0.015
 2018,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.021,0.005,0.016
 2018,Portland Press (TIB),Germany,TIB,Portland Press,0.229,0.171,0.057
 2018,Portland Press (TIB),Global,TIB,Portland Press,0.211,0.189,0.022
-2018,Thieme (ZB MED),Germany,ZB MED,Thieme,0.03,0.04,-0.01
-2018,Thieme (ZB MED),Global,ZB MED,Thieme,0.034,0.052,-0.018
-2019,Elsevier (DEAL),Germany,DEAL,Elsevier,0.079,0.076,0.003
-2019,Elsevier (DEAL),Global,DEAL,Elsevier,0.038,0.038,0.001
-2019,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.099,0.102,-0.003
-2019,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.098,0.1,-0.003
-2019,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.355,0.331,0.023
+2018,Thieme (ZB MED),Germany,ZB MED,Thieme,0.028,0.037,-0.009
+2018,Thieme (ZB MED),Global,ZB MED,Thieme,0.034,0.048,-0.015
+2019,Elsevier (DEAL),Germany,DEAL,Elsevier,0.08,0.078,0.002
+2019,Elsevier (DEAL),Global,DEAL,Elsevier,0.038,0.039,-0.001
+2019,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.102,0.105,-0.003
+2019,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.097,0.101,-0.003
+2019,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.354,0.331,0.023
 2019,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.087,0.084,0.003
-2019,Sage (BSB),Germany,BSB,Sage,0.07,0.122,-0.052
-2019,Sage (BSB),Global,BSB,Sage,0.015,0.028,-0.012
+2019,Sage (BSB),Germany,BSB,Sage,0.07,0.125,-0.055
+2019,Sage (BSB),Global,BSB,Sage,0.015,0.029,-0.014
+2019,AIP (TIB),Germany,TIB,AIP,0.049,0.051,-0.002
+2019,AIP (TIB),Global,TIB,AIP,0.026,0.027,-0.002
 2019,RSC (TIB),Germany,TIB,RSC,0.28,0.279,0.001
 2019,RSC (TIB),Global,TIB,RSC,0.082,0.083,-0
-2019,AIP (TIB),Germany,TIB,AIP,0.049,0.052,-0.003
-2019,AIP (TIB),Global,TIB,AIP,0.026,0.027,-0.002
-2019,CUP (BSB),Germany,BSB,CUP,0.337,0.329,0.008
+2019,CUP (BSB),Germany,BSB,CUP,0.335,0.327,0.008
 2019,CUP (BSB),Global,BSB,CUP,0.052,0.058,-0.006
-2019,IOP (TIB),Germany,TIB,IOP,0.347,0.366,-0.019
-2019,IOP (TIB),Global,TIB,IOP,0.077,0.08,-0.003
+2019,IOP (TIB),Germany,TIB,IOP,0.328,0.35,-0.023
+2019,IOP (TIB),Global,TIB,IOP,0.077,0.082,-0.006
 2019,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.159,0.128,0.031
-2019,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.075,0.051,0.024
-2019,Nature (MPDL),Germany,MPDL,Nature,0.007,0.023,-0.017
-2019,Nature (MPDL),Global,MPDL,Nature,0.008,0.019,-0.011
-2019,BMJ (BSB),Germany,BSB,BMJ,0.049,0.101,-0.052
+2019,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.075,0.051,0.023
+2019,Nature (MPDL),Germany,MPDL,Nature,0.006,0.021,-0.014
+2019,Nature (MPDL),Global,MPDL,Nature,0.008,0.018,-0.011
+2019,BMJ (BSB),Germany,BSB,BMJ,0.049,0.104,-0.055
 2019,BMJ (BSB),Global,BSB,BMJ,0.035,0.08,-0.045
-2019,Karger (BSB),Germany,BSB,Karger,0.036,0.047,-0.011
+2019,Karger (BSB),Germany,BSB,Karger,0.042,0.053,-0.011
 2019,Karger (BSB),Global,BSB,Karger,0.046,0.049,-0.003
-2019,ACM (hebis),Germany,hebis,ACM,0.088,0.057,0.031
+2019,ACM (hebis),Germany,hebis,ACM,0.088,0.063,0.025
 2019,ACM (hebis),Global,hebis,ACM,0.029,0.023,0.006
 2019,SPIE (TIB),Germany,TIB,SPIE,0,0.45,-0.45
 2019,SPIE (TIB),Global,TIB,SPIE,0.003,0.105,-0.102
 2019,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.04,0.029,0.011
-2019,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.046,0.035,0.011
+2019,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.047,0.035,0.011
 2019,ECS (TIB),Germany,TIB,ECS,0.783,0.765,0.017
 2019,ECS (TIB),Global,TIB,ECS,0.408,0.406,0.002
-2019,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.169,0.099,0.07
+2019,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.168,0.098,0.069
 2019,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.062,0.023,0.039
 2019,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.074,0.02,0.054
-2019,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.045,0.013,0.032
+2019,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.045,0.014,0.031
 2019,Portland Press (TIB),Germany,TIB,Portland Press,0.208,0.146,0.062
 2019,Portland Press (TIB),Global,TIB,Portland Press,0.22,0.188,0.032
 2019,Thieme (ZB MED),Germany,ZB MED,Thieme,0.079,0.087,-0.008
 2019,Thieme (ZB MED),Global,ZB MED,Thieme,0.058,0.065,-0.007
-2020,Elsevier (DEAL),Germany,DEAL,Elsevier,0.108,0.099,0.008
-2020,Elsevier (DEAL),Global,DEAL,Elsevier,0.052,0.051,0.001
-2020,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.579,0.583,-0.005
-2020,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.139,0.144,-0.004
-2020,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.746,0.696,0.051
-2020,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.142,0.135,0.007
-2020,Sage (BSB),Germany,BSB,Sage,0.247,0.203,0.043
-2020,Sage (BSB),Global,BSB,Sage,0.098,0.086,0.012
-2020,RSC (TIB),Germany,TIB,RSC,0.328,0.325,0.004
-2020,RSC (TIB),Global,TIB,RSC,0.103,0.103,0
-2020,AIP (TIB),Germany,TIB,AIP,0.139,0.153,-0.013
+2020,Elsevier (DEAL),Germany,DEAL,Elsevier,0.107,0.1,0.007
+2020,Elsevier (DEAL),Global,DEAL,Elsevier,0.052,0.052,-0
+2020,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.576,0.58,-0.005
+2020,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.139,0.144,-0.005
+2020,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.745,0.697,0.048
+2020,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.141,0.135,0.006
+2020,Sage (BSB),Germany,BSB,Sage,0.246,0.209,0.037
+2020,Sage (BSB),Global,BSB,Sage,0.098,0.088,0.01
+2020,AIP (TIB),Germany,TIB,AIP,0.139,0.152,-0.013
 2020,AIP (TIB),Global,TIB,AIP,0.034,0.039,-0.004
-2020,CUP (BSB),Germany,BSB,CUP,0.419,0.408,0.011
-2020,CUP (BSB),Global,BSB,CUP,0.129,0.134,-0.004
-2020,IOP (TIB),Germany,TIB,IOP,0.451,0.456,-0.006
-2020,IOP (TIB),Global,TIB,IOP,0.109,0.112,-0.003
-2020,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.18,0.117,0.063
+2020,RSC (TIB),Germany,TIB,RSC,0.328,0.324,0.004
+2020,RSC (TIB),Global,TIB,RSC,0.103,0.103,0
+2020,CUP (BSB),Germany,BSB,CUP,0.418,0.408,0.011
+2020,CUP (BSB),Global,BSB,CUP,0.129,0.133,-0.004
+2020,IOP (TIB),Germany,TIB,IOP,0.425,0.432,-0.007
+2020,IOP (TIB),Global,TIB,IOP,0.109,0.114,-0.005
+2020,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.181,0.117,0.064
 2020,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.086,0.047,0.039
-2020,Nature (MPDL),Germany,MPDL,Nature,0.02,0.036,-0.016
-2020,Nature (MPDL),Global,MPDL,Nature,0.014,0.029,-0.015
-2020,BMJ (BSB),Germany,BSB,BMJ,0.137,0.11,0.027
-2020,BMJ (BSB),Global,BSB,BMJ,0.122,0.118,0.004
-2020,Karger (BSB),Germany,BSB,Karger,0.188,0.176,0.011
+2020,Nature (MPDL),Germany,MPDL,Nature,0.019,0.03,-0.012
+2020,Nature (MPDL),Global,MPDL,Nature,0.014,0.028,-0.013
+2020,BMJ (BSB),Germany,BSB,BMJ,0.136,0.107,0.029
+2020,BMJ (BSB),Global,BSB,BMJ,0.121,0.118,0.003
+2020,Karger (BSB),Germany,BSB,Karger,0.19,0.177,0.013
 2020,Karger (BSB),Global,BSB,Karger,0.089,0.089,0
-2020,ACM (hebis),Germany,hebis,ACM,0.102,0.064,0.038
-2020,ACM (hebis),Global,hebis,ACM,0.032,0.027,0.004
+2020,ACM (hebis),Germany,hebis,ACM,0.101,0.063,0.038
+2020,ACM (hebis),Global,hebis,ACM,0.032,0.028,0.004
 2020,SPIE (TIB),Germany,TIB,SPIE,0,0.375,-0.375
 2020,SPIE (TIB),Global,TIB,SPIE,0.007,0.115,-0.108
 2020,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.04,0.051,-0.011
@@ -152,39 +152,39 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2020,ECS (TIB),Germany,TIB,ECS,0.685,0.685,0
 2020,ECS (TIB),Global,TIB,ECS,0.425,0.404,0.021
 2020,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.098,0.123,-0.025
-2020,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.083,0.073,0.011
-2020,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.094,0.055,0.039
+2020,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.083,0.072,0.011
+2020,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.093,0.055,0.038
 2020,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.058,0.033,0.024
 2020,Portland Press (TIB),Germany,TIB,Portland Press,0.529,0.412,0.118
 2020,Portland Press (TIB),Global,TIB,Portland Press,0.599,0.555,0.044
 2020,Thieme (ZB MED),Germany,ZB MED,Thieme,0.057,0.063,-0.006
-2020,Thieme (ZB MED),Global,ZB MED,Thieme,0.054,0.062,-0.008
-2021,Elsevier (DEAL),Germany,DEAL,Elsevier,0.163,0.152,0.011
-2021,Elsevier (DEAL),Global,DEAL,Elsevier,0.08,0.078,0.003
-2021,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.679,0.687,-0.008
-2021,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.169,0.175,-0.006
-2021,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.824,0.739,0.085
-2021,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.18,0.162,0.018
-2021,Sage (BSB),Germany,BSB,Sage,0.484,0.385,0.099
-2021,Sage (BSB),Global,BSB,Sage,0.152,0.125,0.026
-2021,RSC (TIB),Germany,TIB,RSC,0.379,0.374,0.005
-2021,RSC (TIB),Global,TIB,RSC,0.116,0.114,0.001
+2020,Thieme (ZB MED),Global,ZB MED,Thieme,0.054,0.059,-0.005
+2021,Elsevier (DEAL),Germany,DEAL,Elsevier,0.162,0.154,0.008
+2021,Elsevier (DEAL),Global,DEAL,Elsevier,0.08,0.08,0.001
+2021,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.676,0.684,-0.008
+2021,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.169,0.175,-0.007
+2021,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.822,0.745,0.077
+2021,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.18,0.163,0.017
+2021,Sage (BSB),Germany,BSB,Sage,0.484,0.398,0.085
+2021,Sage (BSB),Global,BSB,Sage,0.152,0.129,0.022
 2021,AIP (TIB),Germany,TIB,AIP,0.34,0.359,-0.019
 2021,AIP (TIB),Global,TIB,AIP,0.06,0.066,-0.005
-2021,CUP (BSB),Germany,BSB,CUP,0.521,0.509,0.012
-2021,CUP (BSB),Global,BSB,CUP,0.21,0.212,-0.002
-2021,IOP (TIB),Germany,TIB,IOP,0.588,0.596,-0.009
-2021,IOP (TIB),Global,TIB,IOP,0.14,0.144,-0.004
-2021,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.292,0.141,0.151
-2021,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.157,0.061,0.095
-2021,Nature (MPDL),Germany,MPDL,Nature,0.238,0.259,-0.02
-2021,Nature (MPDL),Global,MPDL,Nature,0.049,0.065,-0.016
-2021,BMJ (BSB),Germany,BSB,BMJ,0.25,0.219,0.031
-2021,BMJ (BSB),Global,BSB,BMJ,0.155,0.148,0.007
-2021,Karger (BSB),Germany,BSB,Karger,0.274,0.282,-0.008
-2021,Karger (BSB),Global,BSB,Karger,0.145,0.141,0.004
+2021,RSC (TIB),Germany,TIB,RSC,0.378,0.374,0.005
+2021,RSC (TIB),Global,TIB,RSC,0.116,0.114,0.001
+2021,CUP (BSB),Germany,BSB,CUP,0.521,0.51,0.011
+2021,CUP (BSB),Global,BSB,CUP,0.211,0.213,-0.002
+2021,IOP (TIB),Germany,TIB,IOP,0.546,0.557,-0.011
+2021,IOP (TIB),Global,TIB,IOP,0.14,0.148,-0.008
+2021,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.294,0.14,0.154
+2021,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.157,0.062,0.095
+2021,Nature (MPDL),Germany,MPDL,Nature,0.242,0.258,-0.016
+2021,Nature (MPDL),Global,MPDL,Nature,0.049,0.064,-0.015
+2021,BMJ (BSB),Germany,BSB,BMJ,0.238,0.211,0.027
+2021,BMJ (BSB),Global,BSB,BMJ,0.155,0.149,0.006
+2021,Karger (BSB),Germany,BSB,Karger,0.27,0.278,-0.008
+2021,Karger (BSB),Global,BSB,Karger,0.144,0.14,0.004
 2021,ACM (hebis),Germany,hebis,ACM,0.153,0.124,0.028
-2021,ACM (hebis),Global,hebis,ACM,0.079,0.064,0.015
+2021,ACM (hebis),Global,hebis,ACM,0.079,0.065,0.014
 2021,SPIE (TIB),Germany,TIB,SPIE,0,0.528,-0.528
 2021,SPIE (TIB),Global,TIB,SPIE,0.002,0.129,-0.127
 2021,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.063,0.083,-0.02
@@ -192,210 +192,210 @@ cr_year,esac_publisher,cat,lead,agreement,perc_cr,perc_upw,perc_diff
 2021,ECS (TIB),Germany,TIB,ECS,0.767,0.728,0.039
 2021,ECS (TIB),Global,TIB,ECS,0.306,0.288,0.018
 2021,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.133,0.148,-0.016
-2021,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.122,0.062,0.059
-2021,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.382,0.331,0.051
+2021,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.122,0.063,0.059
+2021,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.379,0.328,0.051
 2021,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.19,0.16,0.03
-2021,Portland Press (TIB),Germany,TIB,Portland Press,0.633,0.612,0.02
-2021,Portland Press (TIB),Global,TIB,Portland Press,0.613,0.566,0.047
+2021,Portland Press (TIB),Germany,TIB,Portland Press,0.633,0.633,0
+2021,Portland Press (TIB),Global,TIB,Portland Press,0.613,0.572,0.041
 2021,Thieme (ZB MED),Germany,ZB MED,Thieme,0.314,0.329,-0.014
 2021,Thieme (ZB MED),Global,ZB MED,Thieme,0.113,0.127,-0.013
-2022,Elsevier (DEAL),Germany,DEAL,Elsevier,0.211,0.2,0.01
-2022,Elsevier (DEAL),Global,DEAL,Elsevier,0.107,0.103,0.004
-2022,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.741,0.744,-0.003
+2022,Elsevier (DEAL),Germany,DEAL,Elsevier,0.206,0.199,0.007
+2022,Elsevier (DEAL),Global,DEAL,Elsevier,0.107,0.106,0.001
+2022,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.738,0.741,-0.003
 2022,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.184,0.189,-0.005
-2022,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.817,0.727,0.09
-2022,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.264,0.228,0.037
-2022,Sage (BSB),Germany,BSB,Sage,0.529,0.428,0.101
-2022,Sage (BSB),Global,BSB,Sage,0.172,0.139,0.032
-2022,RSC (TIB),Germany,TIB,RSC,0.493,0.487,0.007
-2022,RSC (TIB),Global,TIB,RSC,0.131,0.13,0.001
-2022,AIP (TIB),Germany,TIB,AIP,0.444,0.473,-0.029
+2022,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.815,0.736,0.079
+2022,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.264,0.231,0.033
+2022,Sage (BSB),Germany,BSB,Sage,0.526,0.442,0.083
+2022,Sage (BSB),Global,BSB,Sage,0.172,0.144,0.028
+2022,AIP (TIB),Germany,TIB,AIP,0.443,0.472,-0.029
 2022,AIP (TIB),Global,TIB,AIP,0.066,0.071,-0.005
-2022,CUP (BSB),Germany,BSB,CUP,0.623,0.591,0.032
-2022,CUP (BSB),Global,BSB,CUP,0.335,0.319,0.017
-2022,IOP (TIB),Germany,TIB,IOP,0.768,0.776,-0.008
-2022,IOP (TIB),Global,TIB,IOP,0.182,0.197,-0.015
-2022,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.307,0.198,0.109
+2022,RSC (TIB),Germany,TIB,RSC,0.493,0.486,0.007
+2022,RSC (TIB),Global,TIB,RSC,0.131,0.13,0.001
+2022,CUP (BSB),Germany,BSB,CUP,0.622,0.59,0.032
+2022,CUP (BSB),Global,BSB,CUP,0.337,0.32,0.017
+2022,IOP (TIB),Germany,TIB,IOP,0.729,0.738,-0.009
+2022,IOP (TIB),Global,TIB,IOP,0.182,0.201,-0.019
+2022,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.308,0.199,0.109
 2022,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.182,0.101,0.081
-2022,Nature (MPDL),Germany,MPDL,Nature,0.407,0.422,-0.015
-2022,Nature (MPDL),Global,MPDL,Nature,0.128,0.152,-0.025
-2022,BMJ (BSB),Germany,BSB,BMJ,0.2,0.163,0.037
+2022,Nature (MPDL),Germany,MPDL,Nature,0.399,0.416,-0.017
+2022,Nature (MPDL),Global,MPDL,Nature,0.128,0.151,-0.024
+2022,BMJ (BSB),Germany,BSB,BMJ,0.193,0.16,0.033
 2022,BMJ (BSB),Global,BSB,BMJ,0.114,0.11,0.004
-2022,Karger (BSB),Germany,BSB,Karger,0.319,0.302,0.017
-2022,Karger (BSB),Global,BSB,Karger,0.204,0.183,0.022
+2022,Karger (BSB),Germany,BSB,Karger,0.322,0.305,0.017
+2022,Karger (BSB),Global,BSB,Karger,0.204,0.183,0.021
 2022,ACM (hebis),Germany,hebis,ACM,0.207,0.169,0.038
-2022,ACM (hebis),Global,hebis,ACM,0.141,0.121,0.021
+2022,ACM (hebis),Global,hebis,ACM,0.141,0.122,0.02
 2022,SPIE (TIB),Germany,TIB,SPIE,0,0.433,-0.433
 2022,SPIE (TIB),Global,TIB,SPIE,0.002,0.119,-0.117
 2022,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.505,0.547,-0.042
 2022,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.208,0.217,-0.009
 2022,ECS (TIB),Germany,TIB,ECS,0.734,0.716,0.018
 2022,ECS (TIB),Global,TIB,ECS,0.258,0.265,-0.007
-2022,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.215,0.238,-0.023
+2022,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.212,0.235,-0.023
 2022,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.183,0.099,0.084
-2022,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.559,0.511,0.049
+2022,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.558,0.509,0.049
 2022,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.271,0.254,0.017
 2022,Portland Press (TIB),Germany,TIB,Portland Press,0.792,0.75,0.042
 2022,Portland Press (TIB),Global,TIB,Portland Press,0.637,0.596,0.041
-2022,Thieme (ZB MED),Germany,ZB MED,Thieme,0.231,0.256,-0.026
+2022,Thieme (ZB MED),Germany,ZB MED,Thieme,0.228,0.253,-0.025
 2022,Thieme (ZB MED),Global,ZB MED,Thieme,0.157,0.164,-0.006
-2023,Elsevier (DEAL),Germany,DEAL,Elsevier,0.239,0.235,0.004
-2023,Elsevier (DEAL),Global,DEAL,Elsevier,0.134,0.141,-0.008
-2023,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.775,0.775,-0.001
+2023,Elsevier (DEAL),Germany,DEAL,Elsevier,0.239,0.236,0.003
+2023,Elsevier (DEAL),Global,DEAL,Elsevier,0.134,0.143,-0.009
+2023,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.767,0.769,-0.002
 2023,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.214,0.216,-0.002
-2023,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.839,0.701,0.139
-2023,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.343,0.289,0.054
-2023,Sage (BSB),Germany,BSB,Sage,0.567,0.537,0.029
-2023,Sage (BSB),Global,BSB,Sage,0.22,0.207,0.013
-2023,RSC (TIB),Germany,TIB,RSC,0.527,0.518,0.009
-2023,RSC (TIB),Global,TIB,RSC,0.164,0.184,-0.02
+2023,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.839,0.736,0.102
+2023,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.343,0.299,0.044
+2023,Sage (BSB),Germany,BSB,Sage,0.565,0.538,0.027
+2023,Sage (BSB),Global,BSB,Sage,0.22,0.211,0.009
 2023,AIP (TIB),Germany,TIB,AIP,0.502,0.521,-0.018
 2023,AIP (TIB),Global,TIB,AIP,0.053,0.06,-0.007
-2023,CUP (BSB),Germany,BSB,CUP,0.639,0.602,0.036
-2023,CUP (BSB),Global,BSB,CUP,0.391,0.363,0.027
-2023,IOP (TIB),Germany,TIB,IOP,0.818,0.851,-0.033
-2023,IOP (TIB),Global,TIB,IOP,0.268,0.708,-0.44
-2023,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.341,0.303,0.038
-2023,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.22,0.189,0.031
-2023,Nature (MPDL),Germany,MPDL,Nature,0.476,0.486,-0.01
+2023,RSC (TIB),Germany,TIB,RSC,0.527,0.519,0.007
+2023,RSC (TIB),Global,TIB,RSC,0.164,0.187,-0.023
+2023,CUP (BSB),Germany,BSB,CUP,0.639,0.606,0.032
+2023,CUP (BSB),Global,BSB,CUP,0.391,0.365,0.026
+2023,IOP (TIB),Germany,TIB,IOP,0.81,0.844,-0.034
+2023,IOP (TIB),Global,TIB,IOP,0.268,0.709,-0.44
+2023,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.341,0.309,0.032
+2023,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.22,0.193,0.027
+2023,Nature (MPDL),Germany,MPDL,Nature,0.477,0.488,-0.011
 2023,Nature (MPDL),Global,MPDL,Nature,0.183,0.207,-0.024
-2023,BMJ (BSB),Germany,BSB,BMJ,0.24,0.243,-0.003
-2023,BMJ (BSB),Global,BSB,BMJ,0.132,0.133,-0.001
-2023,Karger (BSB),Germany,BSB,Karger,0.365,0.262,0.103
-2023,Karger (BSB),Global,BSB,Karger,0.263,0.144,0.119
-2023,ACM (hebis),Germany,hebis,ACM,0.342,0.295,0.047
-2023,ACM (hebis),Global,hebis,ACM,0.171,0.173,-0.002
+2023,BMJ (BSB),Germany,BSB,BMJ,0.234,0.237,-0.003
+2023,BMJ (BSB),Global,BSB,BMJ,0.132,0.134,-0.003
+2023,Karger (BSB),Germany,BSB,Karger,0.38,0.262,0.118
+2023,Karger (BSB),Global,BSB,Karger,0.263,0.145,0.118
+2023,ACM (hebis),Germany,hebis,ACM,0.34,0.294,0.047
+2023,ACM (hebis),Global,hebis,ACM,0.171,0.174,-0.002
 2023,SPIE (TIB),Germany,TIB,SPIE,0,0.536,-0.536
 2023,SPIE (TIB),Global,TIB,SPIE,0.002,0.143,-0.141
 2023,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.52,0.527,-0.007
 2023,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.254,0.258,-0.004
 2023,ECS (TIB),Germany,TIB,ECS,0.912,0.931,-0.02
-2023,ECS (TIB),Global,TIB,ECS,0.312,0.361,-0.049
-2023,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.565,0.588,-0.023
+2023,ECS (TIB),Global,TIB,ECS,0.312,0.362,-0.049
+2023,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.568,0.591,-0.023
 2023,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.256,0.169,0.087
-2023,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.614,0.617,-0.003
-2023,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.288,0.288,0
+2023,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.614,0.62,-0.006
+2023,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.288,0.289,-0.001
 2023,Portland Press (TIB),Germany,TIB,Portland Press,0.529,0.471,0.059
-2023,Portland Press (TIB),Global,TIB,Portland Press,0.682,0.663,0.019
+2023,Portland Press (TIB),Global,TIB,Portland Press,0.682,0.665,0.017
 2023,Thieme (ZB MED),Germany,ZB MED,Thieme,0.364,0.382,-0.018
-2023,Thieme (ZB MED),Global,ZB MED,Thieme,0.173,0.171,0.002
-2024,Elsevier (DEAL),Germany,DEAL,Elsevier,0.642,0.609,0.033
-2024,Elsevier (DEAL),Global,DEAL,Elsevier,0.171,0.179,-0.008
-2024,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.775,0.76,0.015
-2024,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.251,0.244,0.007
-2024,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.85,0.695,0.155
-2024,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.36,0.31,0.05
-2024,Sage (BSB),Germany,BSB,Sage,0.623,0.592,0.031
-2024,Sage (BSB),Global,BSB,Sage,0.24,0.223,0.017
+2023,Thieme (ZB MED),Global,ZB MED,Thieme,0.173,0.173,0
+2024,Elsevier (DEAL),Germany,DEAL,Elsevier,0.642,0.61,0.032
+2024,Elsevier (DEAL),Global,DEAL,Elsevier,0.171,0.182,-0.011
+2024,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.764,0.75,0.014
+2024,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.251,0.245,0.006
+2024,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.848,0.732,0.116
+2024,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.359,0.319,0.04
+2024,Sage (BSB),Germany,BSB,Sage,0.623,0.599,0.024
+2024,Sage (BSB),Global,BSB,Sage,0.241,0.229,0.012
+2024,AIP (TIB),Germany,TIB,AIP,0.533,0.508,0.026
+2024,AIP (TIB),Global,TIB,AIP,0.12,0.115,0.004
 2024,RSC (TIB),Germany,TIB,RSC,0.781,0.785,-0.004
-2024,RSC (TIB),Global,TIB,RSC,0.216,0.249,-0.033
-2024,AIP (TIB),Germany,TIB,AIP,0.532,0.506,0.026
-2024,AIP (TIB),Global,TIB,AIP,0.119,0.115,0.004
-2024,CUP (BSB),Germany,BSB,CUP,0.73,0.659,0.071
-2024,CUP (BSB),Global,BSB,CUP,0.464,0.418,0.046
-2024,IOP (TIB),Germany,TIB,IOP,0.817,0.768,0.049
+2024,RSC (TIB),Global,TIB,RSC,0.216,0.25,-0.034
+2024,CUP (BSB),Germany,BSB,CUP,0.731,0.654,0.077
+2024,CUP (BSB),Global,BSB,CUP,0.464,0.417,0.047
+2024,IOP (TIB),Germany,TIB,IOP,0.82,0.771,0.049
 2024,IOP (TIB),Global,TIB,IOP,0.282,0.458,-0.176
-2024,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.58,0.404,0.176
-2024,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.259,0.129,0.13
-2024,Nature (MPDL),Germany,MPDL,Nature,0.492,0.499,-0.007
-2024,Nature (MPDL),Global,MPDL,Nature,0.206,0.221,-0.015
-2024,BMJ (BSB),Germany,BSB,BMJ,0.246,0.246,0
-2024,BMJ (BSB),Global,BSB,BMJ,0.138,0.141,-0.003
-2024,Karger (BSB),Germany,BSB,Karger,0.326,0.239,0.086
-2024,Karger (BSB),Global,BSB,Karger,0.28,0.155,0.126
-2024,ACM (hebis),Germany,hebis,ACM,0.496,0.43,0.066
+2024,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.58,0.411,0.169
+2024,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.259,0.133,0.125
+2024,Nature (MPDL),Germany,MPDL,Nature,0.503,0.511,-0.008
+2024,Nature (MPDL),Global,MPDL,Nature,0.206,0.222,-0.015
+2024,BMJ (BSB),Germany,BSB,BMJ,0.254,0.251,0.003
+2024,BMJ (BSB),Global,BSB,BMJ,0.137,0.142,-0.005
+2024,Karger (BSB),Germany,BSB,Karger,0.335,0.251,0.085
+2024,Karger (BSB),Global,BSB,Karger,0.28,0.156,0.125
+2024,ACM (hebis),Germany,hebis,ACM,0.496,0.43,0.065
 2024,ACM (hebis),Global,hebis,ACM,0.279,0.26,0.019
 2024,SPIE (TIB),Germany,TIB,SPIE,0,0.516,-0.516
 2024,SPIE (TIB),Global,TIB,SPIE,0,0.133,-0.133
-2024,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.604,0.555,0.049
-2024,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.346,0.284,0.062
+2024,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.605,0.556,0.049
+2024,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.347,0.284,0.062
 2024,ECS (TIB),Germany,TIB,ECS,0.885,0.885,0
 2024,ECS (TIB),Global,TIB,ECS,0.327,0.315,0.012
-2024,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.556,0.565,-0.008
-2024,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.262,0.186,0.075
-2024,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.646,0.643,0.003
-2024,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.326,0.329,-0.002
+2024,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.56,0.568,-0.008
+2024,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.263,0.187,0.075
+2024,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.642,0.642,0
+2024,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.326,0.33,-0.004
 2024,Portland Press (TIB),Germany,TIB,Portland Press,0.81,0.81,0
-2024,Portland Press (TIB),Global,TIB,Portland Press,0.729,0.72,0.008
+2024,Portland Press (TIB),Global,TIB,Portland Press,0.729,0.722,0.006
 2024,Thieme (ZB MED),Germany,ZB MED,Thieme,0.217,0.217,0
 2024,Thieme (ZB MED),Global,ZB MED,Thieme,0.185,0.18,0.005
-2025,Elsevier (DEAL),Germany,DEAL,Elsevier,0.742,0.715,0.027
-2025,Elsevier (DEAL),Global,DEAL,Elsevier,0.193,0.189,0.004
-2025,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.769,0.746,0.023
-2025,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.265,0.256,0.009
-2025,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.855,0.788,0.068
-2025,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.369,0.318,0.051
-2025,Sage (BSB),Germany,BSB,Sage,0.622,0.565,0.057
-2025,Sage (BSB),Global,BSB,Sage,0.256,0.231,0.025
-2025,RSC (TIB),Germany,TIB,RSC,0.826,0.823,0.003
-2025,RSC (TIB),Global,TIB,RSC,0.246,0.274,-0.028
-2025,AIP (TIB),Germany,TIB,AIP,0.506,0.544,-0.038
-2025,AIP (TIB),Global,TIB,AIP,0.129,0.126,0.003
-2025,CUP (BSB),Germany,BSB,CUP,0.756,0.603,0.153
-2025,CUP (BSB),Global,BSB,CUP,0.544,0.451,0.093
-2025,IOP (TIB),Germany,TIB,IOP,0.833,0.776,0.057
-2025,IOP (TIB),Global,TIB,IOP,0.308,0.313,-0.006
-2025,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.696,0.478,0.218
-2025,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.254,0.132,0.121
-2025,Nature (MPDL),Germany,MPDL,Nature,0.573,0.572,0.001
-2025,Nature (MPDL),Global,MPDL,Nature,0.228,0.238,-0.01
-2025,BMJ (BSB),Germany,BSB,BMJ,0.231,0.706,-0.475
-2025,BMJ (BSB),Global,BSB,BMJ,0.153,0.468,-0.315
-2025,Karger (BSB),Germany,BSB,Karger,0.302,0.272,0.03
-2025,Karger (BSB),Global,BSB,Karger,0.295,0.247,0.048
-2025,ACM (hebis),Germany,hebis,ACM,0.167,0.484,-0.318
-2025,ACM (hebis),Global,hebis,ACM,0.127,0.325,-0.198
+2025,Elsevier (DEAL),Germany,DEAL,Elsevier,0.754,0.729,0.025
+2025,Elsevier (DEAL),Global,DEAL,Elsevier,0.193,0.201,-0.008
+2025,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.77,0.747,0.023
+2025,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.265,0.255,0.009
+2025,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.857,0.791,0.066
+2025,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.37,0.33,0.04
+2025,Sage (BSB),Germany,BSB,Sage,0.623,0.58,0.043
+2025,Sage (BSB),Global,BSB,Sage,0.258,0.242,0.016
+2025,AIP (TIB),Germany,TIB,AIP,0.497,0.533,-0.037
+2025,AIP (TIB),Global,TIB,AIP,0.124,0.121,0.002
+2025,RSC (TIB),Germany,TIB,RSC,0.826,0.821,0.005
+2025,RSC (TIB),Global,TIB,RSC,0.247,0.277,-0.029
+2025,CUP (BSB),Germany,BSB,CUP,0.765,0.617,0.148
+2025,CUP (BSB),Global,BSB,CUP,0.546,0.455,0.092
+2025,IOP (TIB),Germany,TIB,IOP,0.837,0.778,0.06
+2025,IOP (TIB),Global,TIB,IOP,0.309,0.315,-0.006
+2025,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.698,0.486,0.211
+2025,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.257,0.141,0.117
+2025,Nature (MPDL),Germany,MPDL,Nature,0.581,0.585,-0.003
+2025,Nature (MPDL),Global,MPDL,Nature,0.228,0.242,-0.014
+2025,BMJ (BSB),Germany,BSB,BMJ,0.248,0.687,-0.439
+2025,BMJ (BSB),Global,BSB,BMJ,0.153,0.472,-0.319
+2025,Karger (BSB),Germany,BSB,Karger,0.31,0.283,0.027
+2025,Karger (BSB),Global,BSB,Karger,0.298,0.251,0.047
+2025,ACM (hebis),Germany,hebis,ACM,0.171,0.488,-0.317
+2025,ACM (hebis),Global,hebis,ACM,0.135,0.334,-0.199
 2025,SPIE (TIB),Germany,TIB,SPIE,0,0.407,-0.407
-2025,SPIE (TIB),Global,TIB,SPIE,0.013,0.153,-0.141
-2025,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.554,0.488,0.066
-2025,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.4,0.315,0.085
-2025,ECS (TIB),Germany,TIB,ECS,0.778,0.694,0.083
-2025,ECS (TIB),Global,TIB,ECS,0.332,0.297,0.035
-2025,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.626,0.633,-0.007
-2025,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.295,0.198,0.097
-2025,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.574,0.553,0.021
-2025,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.346,0.336,0.011
+2025,SPIE (TIB),Global,TIB,SPIE,0.013,0.154,-0.141
+2025,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.561,0.497,0.065
+2025,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.414,0.331,0.083
+2025,ECS (TIB),Germany,TIB,ECS,0.81,0.714,0.095
+2025,ECS (TIB),Global,TIB,ECS,0.332,0.296,0.036
+2025,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.645,0.652,-0.007
+2025,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.368,0.262,0.106
+2025,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.569,0.555,0.015
+2025,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.343,0.335,0.008
 2025,Portland Press (TIB),Germany,TIB,Portland Press,0.944,0.944,0
-2025,Portland Press (TIB),Global,TIB,Portland Press,0.988,0.972,0.017
-2025,Thieme (ZB MED),Germany,ZB MED,Thieme,0.152,0.136,0.015
-2025,Thieme (ZB MED),Global,ZB MED,Thieme,0.117,0.109,0.008
-2026,Elsevier (DEAL),Germany,DEAL,Elsevier,0.758,0.737,0.021
-2026,Elsevier (DEAL),Global,DEAL,Elsevier,0.201,0.186,0.015
-2026,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.762,0.72,0.042
-2026,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.283,0.253,0.03
-2026,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.839,0.776,0.063
-2026,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.341,0.293,0.048
-2026,Sage (BSB),Germany,BSB,Sage,0.657,0.616,0.041
-2026,Sage (BSB),Global,BSB,Sage,0.261,0.214,0.047
-2026,RSC (TIB),Germany,TIB,RSC,0.834,0.829,0.005
-2026,RSC (TIB),Global,TIB,RSC,0.239,0.245,-0.006
-2026,AIP (TIB),Germany,TIB,AIP,0.568,0.559,0.009
-2026,AIP (TIB),Global,TIB,AIP,0.158,0.148,0.01
-2026,CUP (BSB),Germany,BSB,CUP,0.753,0.613,0.14
-2026,CUP (BSB),Global,BSB,CUP,0.568,0.432,0.136
-2026,IOP (TIB),Germany,TIB,IOP,0.718,0.758,-0.04
-2026,IOP (TIB),Global,TIB,IOP,0.256,0.371,-0.115
-2026,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.571,0.33,0.242
-2026,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.234,0.135,0.099
-2026,Nature (MPDL),Germany,MPDL,Nature,0.631,0.631,0
-2026,Nature (MPDL),Global,MPDL,Nature,0.226,0.211,0.014
-2026,BMJ (BSB),Germany,BSB,BMJ,0.28,0.2,0.08
-2026,BMJ (BSB),Global,BSB,BMJ,0.217,0.17,0.048
-2026,Karger (BSB),Germany,BSB,Karger,0.333,0.333,0
-2026,Karger (BSB),Global,BSB,Karger,0.308,0.246,0.062
-2026,ACM (hebis),Germany,hebis,ACM,0,0.27,-0.27
-2026,ACM (hebis),Global,hebis,ACM,0.014,0.212,-0.198
-2026,SPIE (TIB),Germany,TIB,SPIE,0,0.5,-0.5
-2026,SPIE (TIB),Global,TIB,SPIE,0,0.132,-0.132
-2026,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.421,0.421,0
-2026,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.448,0.292,0.156
-2026,ECS (TIB),Germany,TIB,ECS,0.5,1,-0.5
-2026,ECS (TIB),Global,TIB,ECS,0.265,0.294,-0.029
-2026,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.667,0.667,0
-2026,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.33,0.188,0.142
-2026,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.643,0.607,0.036
-2026,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.359,0.303,0.056
-2026,Portland Press (TIB),Germany,TIB,Portland Press,1,1,0
-2026,Portland Press (TIB),Global,TIB,Portland Press,0.913,0.884,0.029
-2026,Thieme (ZB MED),Germany,ZB MED,Thieme,0,0,0
-2026,Thieme (ZB MED),Global,ZB MED,Thieme,0.176,0.162,0.014
+2025,Portland Press (TIB),Global,TIB,Portland Press,0.989,0.982,0.007
+2025,Thieme (ZB MED),Germany,ZB MED,Thieme,0.149,0.149,0
+2025,Thieme (ZB MED),Global,ZB MED,Thieme,0.12,0.118,0.002
+2026,Elsevier (DEAL),Germany,DEAL,Elsevier,0.764,0.748,0.016
+2026,Elsevier (DEAL),Global,DEAL,Elsevier,0.21,0.202,0.008
+2026,Springer Hybrid (DEAL),Germany,DEAL,Springer Hybrid,0.772,0.737,0.035
+2026,Springer Hybrid (DEAL),Global,DEAL,Springer Hybrid,0.308,0.288,0.021
+2026,Wiley Hybrid (DEAL),Germany,DEAL,Wiley Hybrid,0.847,0.785,0.062
+2026,Wiley Hybrid (DEAL),Global,DEAL,Wiley Hybrid,0.383,0.336,0.046
+2026,Sage (BSB),Germany,BSB,Sage,0.631,0.583,0.048
+2026,Sage (BSB),Global,BSB,Sage,0.265,0.235,0.03
+2026,AIP (TIB),Germany,TIB,AIP,0.597,0.602,-0.005
+2026,AIP (TIB),Global,TIB,AIP,0.111,0.113,-0.001
+2026,RSC (TIB),Germany,TIB,RSC,0.844,0.838,0.006
+2026,RSC (TIB),Global,TIB,RSC,0.246,0.257,-0.011
+2026,CUP (BSB),Germany,BSB,CUP,0.757,0.63,0.127
+2026,CUP (BSB),Global,BSB,CUP,0.581,0.47,0.111
+2026,IOP (TIB),Germany,TIB,IOP,0.747,0.815,-0.068
+2026,IOP (TIB),Global,TIB,IOP,0.283,0.605,-0.322
+2026,TaylorFrancis (ZBW),Germany,ZBW,TaylorFrancis,0.688,0.518,0.17
+2026,TaylorFrancis (ZBW),Global,ZBW,TaylorFrancis,0.266,0.162,0.104
+2026,Nature (MPDL),Germany,MPDL,Nature,0.6,0.6,0
+2026,Nature (MPDL),Global,MPDL,Nature,0.231,0.241,-0.01
+2026,BMJ (BSB),Germany,BSB,BMJ,0.467,0.391,0.076
+2026,BMJ (BSB),Global,BSB,BMJ,0.229,0.196,0.033
+2026,Karger (BSB),Germany,BSB,Karger,0.382,0.318,0.064
+2026,Karger (BSB),Global,BSB,Karger,0.34,0.271,0.069
+2026,ACM (hebis),Germany,hebis,ACM,0.225,0.467,-0.242
+2026,ACM (hebis),Global,hebis,ACM,0.232,0.381,-0.149
+2026,SPIE (TIB),Germany,TIB,SPIE,0,0.458,-0.458
+2026,SPIE (TIB),Global,TIB,SPIE,0.014,0.111,-0.097
+2026,De Gruyter (SUB Göttingen),Germany,SUB Göttingen,De Gruyter,0.617,0.553,0.064
+2026,De Gruyter (SUB Göttingen),Global,SUB Göttingen,De Gruyter,0.53,0.409,0.121
+2026,ECS (TIB),Germany,TIB,ECS,0.771,0.886,-0.114
+2026,ECS (TIB),Global,TIB,ECS,0.348,0.349,-0.001
+2026,De Gruyter (ZBW),Germany,ZBW,De Gruyter,0.891,0.891,0
+2026,De Gruyter (ZBW),Global,ZBW,De Gruyter,0.617,0.497,0.12
+2026,Hogrefe (SUB Göttingen),Germany,SUB Göttingen,Hogrefe,0.639,0.625,0.014
+2026,Hogrefe (SUB Göttingen),Global,SUB Göttingen,Hogrefe,0.374,0.361,0.013
+2026,Portland Press (TIB),Germany,TIB,Portland Press,0.917,0.917,0
+2026,Portland Press (TIB),Global,TIB,Portland Press,0.911,0.904,0.007
+2026,Thieme (ZB MED),Germany,ZB MED,Thieme,0.238,0.238,0
+2026,Thieme (ZB MED),Global,ZB MED,Thieme,0.16,0.16,0
